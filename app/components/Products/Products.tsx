@@ -48,31 +48,36 @@ const products = [
 
 export const Products = () => {
   return (
-    <section className="w-full px-4 py-24">
-      <div className="mx-auto max-w-7xl space-y-24">
+    <section className="w-full px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl space-y-12 sm:space-y-16 lg:space-y-24">
         {products.map((product, index) => (
           <div
             key={index}
-            className="grid items-center gap-12 lg:grid-cols-2"
+            className="grid items-center gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-2"
           >
             {/* Content */}
-            <div className={`space-y-6 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-              <span className="text-sm font-medium text-blue-600">
+            <div className={`space-y-4 sm:space-y-5 lg:space-y-6 ${
+              index % 2 === 1 ? "lg:order-2" : ""
+            }`}>
+              <span className="text-xs sm:text-sm font-medium text-blue-600">
                 {product.tag}
               </span>
-              <h2 className="text-4xl font-bold text-[#19191B] md:text-5xl">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-[#19191B]">
                 {product.title}
               </h2>
-              <p className="text-lg text-gray-600">{product.description}</p>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600">
+                {product.description}
+              </p>
               <div>
                 <Link
                   href="#"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                  className="inline-flex h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
                 >
                   <svg
-                    width="24"
-                    height="24"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
+                    className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -89,14 +94,12 @@ export const Products = () => {
             </div>
 
             {/* Image */}
-            <div
-              className={`relative h-[600px] w-[600px]`}
-            >
+            <div className="relative aspect-square w-full max-w-[200px] sm:max-w-[300px] lg:max-w-[600px] mx-auto">
               <Image
                 src={product.image}
                 alt={product.imageAlt}
                 fill
-                className="object-contain p-12"
+                className="object-contain p-4 sm:p-6 lg:p-12"
                 priority
               />
             </div>

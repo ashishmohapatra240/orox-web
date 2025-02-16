@@ -36,19 +36,19 @@ const partners = [
 
 export const Partners = () => {
   return (
-    <section className="w-full bg-[#0A0B1E] px-4 py-16">
+    <section className="w-full bg-[#0A0B1E] px-4 py-8 sm:py-12 lg:py-16">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-20">
           {/* Partners List */}
-          <div className="flex items-center gap-8 md:gap-8">
-            <h3 className="text-sm font-medium text-white/60 w-[100px]">
+          <div className="flex flex-col space-y-6 lg:max-w-[50%]">
+            <h3 className="text-sm font-medium text-white/60 lg:min-w-[180px]">
               Global partners working with OROX
             </h3>
-            <div className="flex items-center gap-8 md:gap-12">
+            <div className="flex flex-wrap gap-8 lg:gap-12">
               {partners.map((partner) => (
                 <div
                   key={partner.name}
-                  className="relative h-36 w-36 opacity-80 transition-opacity hover:opacity-100"
+                  className="relative h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 opacity-80 transition-opacity hover:opacity-100"
                 >
                   <Image
                     src={partner.logo}
@@ -62,13 +62,13 @@ export const Partners = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="flex items-center gap-8 md:gap-12 mt-8 md:mt-0">
+          <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold text-white md:text-3xl whitespace-nowrap">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
                   {stat.value}
                 </div>
-                <p className="text-sm text-white/60 whitespace-nowrap mt-2">{stat.label}</p>
+                <p className="mt-1 text-xs sm:text-sm text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
