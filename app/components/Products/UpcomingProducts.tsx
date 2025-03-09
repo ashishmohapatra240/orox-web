@@ -3,12 +3,14 @@ import Image from "next/image";
 const upcomingProducts = [
   {
     title: "Fast, secure and frictionless asset swap",
-    description: "Easily swap between assets using the OROX app. No more waiting for transactions or dealing with complex exchanges of your assets.",
+    description:
+      "Easily swap between assets using the OROX app. No more waiting for transactions or dealing with complex exchanges of your assets.",
     image: "/images/products/asset-swap.png",
   },
   {
     title: "Spend your gains with the OROX card",
-    description: "Coming soon: Use your OROX card to spend your gains without selling your assets. Make purchases online or in-store without extra hassle for your everyday expenses.",
+    description:
+      "Coming soon: Use your OROX card to spend your gains without selling your assets. Make purchases online or in-store without extra hassle for your everyday expenses.",
     image: "/images/products/orox-card.png",
   },
 ];
@@ -21,12 +23,16 @@ export const UpcomingProducts = () => {
           New products coming soon to OROX
         </h2>
         <p className="text-center text-white/80 max-w-2xl mx-auto">
-          We're building something new together with marketplace and products designed for flexibility, security, and ease.
+          We&apos;re building something new together with marketplace and
+          products designed for flexibility, security, and ease.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {upcomingProducts.map((product) => (
-            <div key={product.title} className="bg-white rounded-xl overflow-hidden">
+            <div
+              key={product.title}
+              className="bg-white rounded-xl overflow-hidden"
+            >
               <div className="p-8">
                 <div className="relative aspect-video w-full mb-6">
                   <Image
@@ -39,9 +45,7 @@ export const UpcomingProducts = () => {
                 <h3 className="text-xl font-bold text-[#19191B] mb-2">
                   {product.title}
                 </h3>
-                <p className="text-gray-600">
-                  {product.description}
-                </p>
+                <p className="text-gray-600">{product.description}</p>
               </div>
             </div>
           ))}
@@ -49,4 +53,4 @@ export const UpcomingProducts = () => {
       </div>
     </section>
   );
-}; 
+};
