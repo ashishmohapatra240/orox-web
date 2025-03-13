@@ -31,7 +31,7 @@ const AboutHero = () => {
       {/* Right Content - Image */}
       <div className="relative aspect-square w-full max-w-[600px] mx-auto">
         <Image
-          src="/images/about/coins.png"
+          src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/about/coins.png"
           alt="Gold coins on a curved surface"
           fill
           className="object-cover"

@@ -5,13 +5,13 @@ const upcomingProducts = [
     title: "Fast, secure and frictionless asset swap",
     description:
       "Easily swap between assets using the OROX app. No more waiting for transactions or dealing with complex exchanges of your assets.",
-    image: "/images/products/asset-swap.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/asset-swap.png",
   },
   {
     title: "Spend your gains with the OROX card",
     description:
       "Coming soon: Use your OROX card to spend your gains without selling your assets. Make purchases online or in-store without extra hassle for your everyday expenses.",
-    image: "/images/products/orox-card.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-card.png",
   },
 ];
 

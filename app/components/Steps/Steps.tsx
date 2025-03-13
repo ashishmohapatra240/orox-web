@@ -25,35 +25,35 @@ const steps = [
         in minutes and access, stress-free high-growth investing.
       </>
     ),
-    image: "/images/steps/step1.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step1.png",
   },
   {
     number: 2,
     title: "Create your account and get verified",
     description:
       "Sign up with your details and complete a quick verification process to keep your investments secure and compliant.",
-    image: "/images/steps/step2.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step2.png",
   },
   {
     number: 3,
     title: "Choose your investment type",
     description:
       "Want steady, stress-free returns? ODN offers a 90-day cycle with market-neutral strategies for stable, risk-adjusted investment. Looking for crypto exposure with less volatility? DVOX offers the benefits of a professionally managed, auto-balanced portfolio of high-quality, high-growth digital assets.",
-    image: "/images/steps/step3.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step3.png",
   },
   {
     number: 4,
     title: "Fund your portfolio",
     description:
       "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
-    image: "/images/steps/step4.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step4.png",
   },
   {
     number: 5,
     title: "Sit back and grow",
     description:
       "No market timing, no day trading—just automated, smart investing on autopilot. Track your progress anytime through the OROX app and let your money work for you. Download OROX today and start investing smarter!",
-    image: "/images/steps/step5.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step5.png",
   },
 ];
 

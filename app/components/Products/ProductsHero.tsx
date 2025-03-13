@@ -22,7 +22,7 @@ const ProductsHero = () => {
         {/* Hero Image */}
         <div className="relative aspect-[16/9] w-full max-w-4xl mx-auto rounded-xl overflow-hidden">
           <Image
-            src="/images/products/wave-track.jpg"
+            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/wave-track.jpg"
             alt="OROX product visualization with curved track and coins"
             fill
             className="object-cover"

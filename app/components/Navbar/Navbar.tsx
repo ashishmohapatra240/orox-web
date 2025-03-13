@@ -104,7 +104,7 @@ const ProductsDropdown = () => (
             transition={{ delay: 0.3, duration: 0.4 }}
           >
             <Image
-              src="/images/products/blog.png"
+              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/blog.png"
               alt="Blog Image"
               width={400}
               height={400}
@@ -267,7 +267,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/images/logo.png"
+            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo.png"
             alt="OROX"
             width={116}
             height={40}
@@ -596,7 +596,7 @@ export const Navbar = () => {
                       {/* QR Code - at the top */}
                       <div className="flex-1 flex items-center justify-center sm:block pt-8 sm:pt-0 mb-8">
                         <Image
-                          src="/images/qr-code.png"
+                          src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
                           alt="OROX App QR Code"
                           width={300}
                           height={300}

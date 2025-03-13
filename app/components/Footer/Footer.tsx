@@ -42,7 +42,7 @@ export const Footer = () => {
           <div className="w-full lg:max-w-md">
             {/* Logo */}
             <Image
-              src="/images/logo-footer.png"
+              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-footer.png"
               alt="OROX Logo"
               width={116}
               height={40}

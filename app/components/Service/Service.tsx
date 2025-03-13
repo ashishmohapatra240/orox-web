@@ -20,7 +20,7 @@ const Service = () => {
       <div className="relative h-[500px] sm:h-[400px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 sm:mb-12 overflow-visible py-60">
         <div className="absolute inset-0 h-full w-full overflow-hidden rounded-2xl">
           <Image
-            src="/Images/service/bg-tile.png"
+            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/bg-tile.png"
             alt="Background pattern"
             layout="fill"
             objectFit="cover"
@@ -49,7 +49,7 @@ const Service = () => {
           <div className="absolute right-[0%] sm:right-[-60%] lg:right-[10%] top-[80%] sm:top-[40%] lg:top-[-80%] transform -translate-y-1/2">
             <div className="relative w-[400px] sm:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] lg:h-[500px]">
               <Image
-                src="/Images/service/phone-tilt.png"
+                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/phone-tilt.png"
                 alt="OROX App Interface"
                 layout="fill"
                 objectFit="contain"

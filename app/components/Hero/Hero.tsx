@@ -58,7 +58,7 @@ export const Hero = () => {
             onClick={() => console.log("Hero image clicked")}
           >
             <Image
-              src="/images/hero.png"
+              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/hero.png"
               alt="OROX Trading Platform Interface"
               width={800}
               height={1200}

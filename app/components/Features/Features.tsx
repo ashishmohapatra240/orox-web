@@ -3,22 +3,22 @@ import { Button } from "../ui/Button";
 
 const features = [
   {
-    icon: "/images/features/smart-investing.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/smart-investing.png",
     title: "Easy, smart investing",
     description: "Smarter investing made easy with AI and our sleek OROX app.",
   },
   {
-    icon: "/images/features/growth.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.png",
     title: "Stress-free growth",
     description: "Stress-free gains with our proven market-neutral strategies.",
   },
   {
-    icon: "/images/features/secure.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.png",
     title: "Secure and transparent",
     description: "Secure and transparent with blockchain-backed tech.",
   },
   {
-    icon: "/images/features/trust.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/trust.png",
     title: "Built with trust",
     description: "Aussie-built, trusted and accessible to investors worldwide.",
   },

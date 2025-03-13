@@ -5,7 +5,7 @@ const products = [
   {
     title: "OROX app let's you invest on autopilot",
     description: "OROX is your all-in-one investment platform, offering a secure, automated investing experience. Whether you're after steady growth with ODN or crypto exposure with DVOX, our AI-powered platform makes investing effortless. Easily connect with OROX and the new OROX token—all in one place.",
-    image: "/images/products/orox-app-phone.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-app-phone.png",
     bgColor: "bg-[#293483]",
     textColor: "text-white",
     buttonColor: "bg-white text-[#293483]",
@@ -15,7 +15,7 @@ const products = [
   {
     title: "ODN is your shortcut to stable investment",
     description: "Hands-off investing made simple with Opus Diversified Nexus (ODN). Focused on risk reduction, hands-off investing with a 90-day cycle and market-neutral strategies designed for long-term stability. No wild swings, no constant monitoring—just steady returns while you go about your life.",
-    image: "/images/products/odn-chart.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
     bgColor: "bg-[#4A90E2]",
     textColor: "text-white",
     buttonColor: "bg-white text-[#4A90E2]",
@@ -25,7 +25,7 @@ const products = [
   {
     title: "DVOX lets you HODL with confidence",
     description: "Crypto exposure for real-world investors! DVOX gives you high-growth potential with less volatility. Unlike holding BTC directly, DVOX app uses the OROX token to rebalance to premium digital assets—no stress, just smarter investing. DVOX offers exposure to a professionally managed crypto portfolio—perfect for high-growth without the hassle.",
-    image: "/images/products/dvox-token.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
     bgColor: "bg-[#FFD700]",
     textColor: "text-black",
     buttonColor: "bg-black text-white",

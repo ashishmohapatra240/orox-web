@@ -17,7 +17,7 @@ export const ReadyToInvest = () => {
           
           <div className="relative h-[300px] md:h-[400px]">
             <Image
-              src="/images/products/orox-app-screens.png"
+              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-app-screens.png"
               alt="OROX app screens showing investment dashboard"
               fill
               className="object-contain"

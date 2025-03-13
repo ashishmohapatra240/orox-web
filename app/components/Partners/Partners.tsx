@@ -22,15 +22,15 @@ const stats = [
 const partners = [
   {
     name: "Binance",
-    logo: "/images/partners/binance.png",
+    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/binance.png",
   },
   {
     name: "Trading Technologies",
-    logo: "/images/partners/trading-tech.png",
+    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/trading-tech.png",
   },
   {
     name: "Ethereum",
-    logo: "/images/partners/eth.png",
+    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/eth.png",
   },
 ];
 

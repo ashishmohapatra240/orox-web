@@ -4,21 +4,21 @@ import Link from "next/link";
 const products = [
   {
     title: "OROX app",
-    image: "/images/products/orox-app.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-app.png",
     bgColor: "bg-[#293483]",
     description:
       "OROX is your AI-powered investment platform, offering secure, automated investing. Get steady growth with ODN or crypto exposure with DVOX—all in one place.",
   },
   {
     title: "Opus Diversified Nexus",
-    image: "/images/products/odn-chart.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
     bgColor: "bg-[#4A90E2]",
     description:
       "ODN offers risk-adjusted, hands-off investing with a 90-day cycle and market-neutral strategies for long-term stability—no wild swings, no constant monitoring.",
   },
   {
     title: "DVOX utility token",
-    image: "/images/products/dvox-token.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
     bgColor: "bg-[#FFD700]",
     description:
       "DVOX offers high-growth potential with less volatility. It gives you auto-balanced exposure to premium digital assets—no stress, just smarter investing.",

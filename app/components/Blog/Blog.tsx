@@ -5,28 +5,28 @@ import { useState, useEffect } from "react";
 
 const articles = [
   {
-    image: "/images/blog/time-horizon.jpg",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/time-horizon.jpg",
     title: "The Relationship Between Time Horizon and Investing Risk",
     description:
       "Risk is a fact of investing. Your willingness to take risk as an investor is a big part of why you...",
     link: "#",
   },
   {
-    image: "/images/blog/government-bonds.jpg",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/government-bonds.jpg",
     title: "An introduction to the appeal of Australian Government Bonds",
     description:
       "Australian Government Bonds (AGBs), or Australian treasuries, are debt securities issued...",
     link: "#",
   },
   {
-    image: "/images/blog/aussie-websites.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/aussie-websites.png",
     title: "Aussie websites to help you make (or save) money",
     description:
       "We've done the research for you and found some awesome websites that might help you...",
     link: "#",
   },
   {
-    image: "/images/blog/robo-advisor.jpg",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/robo-advisor.jpg",
     title: "Difference between stand-alone adviser and robo",
     description:
       "All independent advisers are standalone, but not all robo advisors are...",

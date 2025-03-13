@@ -23,7 +23,7 @@ const products = [
         go about your life.
       </>
     ),
-    image: "/images/products/odn-chart.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
   },
@@ -40,7 +40,7 @@ const products = [
     ),
     description:
       "Love crypto but hate the rollercoaster? DVOX gives you high-growth potential without the crazy ups and downs³. Powered by the OROX app and using the DVOX token, it's designed to help you grow your portfolio with more confidence. Forget diamond hands—DVOX offers exposure to a professionally managed, auto-balanced portfolio of high-grade digital assets, designed for high-growth without the hassle.",
-    image: "/images/products/dvox-token.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",
   },
