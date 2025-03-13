@@ -16,7 +16,7 @@ const products = [
     description: (
       <>
         Want steady returns without the stress?{" "}
-        <span className="font-medium">Opus Diversified Nexus (ODN)</span> focuses
+        <span className="font-bold">Opus Diversified Nexus (ODN)</span> focuses
         on risk-adjusted, hands-off investing with a 90-day cycle and
         market-neutral strategies designed for long-term stability. No wild swings
         <sup>2</sup>, no constant monitoring—just smart, steady returns while you
@@ -59,13 +59,13 @@ export const Products = () => {
             <div className={`space-y-3 sm:space-y-4 lg:space-y-6 ${
               index % 2 === 1 ? "lg:order-2" : ""
             }`}>
-              <span className="text-sm font-medium text-blue-600">
+              <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#19191B]">
+              <h2 className="text-2xl sm:text-[56px] font-bold text-[#19191B] leading-[1]">
                 {product.title}
               </h2>
-              <p className="text-base sm:text-lg text-gray-600">
+              <p className="text-base sm:text-[20px] text-[#19191B] leading-[1.5]">
                 {product.description}
               </p>
               <div>
