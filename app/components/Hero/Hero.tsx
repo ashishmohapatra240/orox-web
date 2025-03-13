@@ -7,13 +7,13 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 export const Hero = () => {
   return (
     <section className="min-h-screen relative w-full overflow-hidden bg-white px-4">
-      <div className="absolute top-0 right-0 w-full h-auto right-[-1000px]">
+      <div className="absolute w-[180%] h-[180%] bottom-[0] left-[180px]">
         <Image
           src="/Pattern.png"
           alt="Hero Background"
-          width={1000}
-          height={1000}
-          className="w-full h-full object-cover"
+          width={1620}
+          height={1620}
+          className="w-full h-full object-contain"
         />
       </div>
       <div className="mx-auto max-w-7xl py-8 md:py-12 lg:py-16">
@@ -29,7 +29,7 @@ export const Hero = () => {
                   <br />
                   <span className="relative">
                     {/* Yellow background decoration */}
-                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFD700]/40 rounded-[8px]"></span>
+                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFDE82] rounded-[8px]"></span>
                     Build wealth.
                   </span>
                 </h1>
