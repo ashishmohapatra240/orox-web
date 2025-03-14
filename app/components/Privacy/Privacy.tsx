@@ -175,7 +175,11 @@ const privacyData = [
     title: "Global privacy policy",
     content: (
       <>
-        This Privacy Policy is global in scope yet is not intended to override any legal rights or prohibitions in any jurisdiction where such rights or prohibitions prevail. In such event, the rights and obligations set out in this Privacy Policy will apply, subject only to amendment under any applicable local laws or regulations having precedence.
+        This Privacy Policy is global in scope yet is not intended to override
+        any legal rights or prohibitions in any jurisdiction where such rights
+        or prohibitions prevail. In such event, the rights and obligations set
+        out in this Privacy Policy will apply, subject only to amendment under
+        any applicable local laws or regulations having precedence.
       </>
     ),
   },
@@ -202,7 +206,7 @@ export const Privacy = () => {
 
         {/* Introduction */}
         <div className="prose max-w-none mb-16">
-          <p className="text-lg md:text-xl text-[#19191B] leading-relaxed">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
             OROX Management Limited, a company registered in the British Virgin
             Islands, and its subsidiaries, affiliates, and transferees,
             successors, and their officers, directors, employees, and agents,
@@ -248,10 +252,10 @@ export const Privacy = () => {
         <div className="space-y-16">
           {privacyData.map((section, index) => (
             <div key={index} className="space-y-6">
-              <h2 className="text-2xl md:text-[28px] font-bold text-[#19191B]">
+              <h2 className="text-[28px] md:text-[28px] font-bold text-[#19191B]">
                 {section.title}
               </h2>
-              <div className="text-[20px]text-[#19191B] leading-relaxed">
+              <div className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
                 {section.content}
               </div>
 
@@ -260,23 +264,31 @@ export const Privacy = () => {
                 <div className="mt-8 border rounded-lg overflow-hidden">
                   <div className="bg-[#F4F4F4] px-6 py-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="font-bold text-[20px]">Types of personal data</div>
-                      <div className="font-bold text-[20px]">Examples of personal data</div>
+                      <div className="font-bold text-[16px] md:text-[20px]">
+                        Types of personal data
+                      </div>
+                      <div className="font-bold text-[16px] md:text-[20px]">
+                        Examples of personal data
+                      </div>
                     </div>
                   </div>
                   <div className="divide-y">
                     {section.table.map((row, idx) => (
                       <div key={idx} className="px-6 py-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div className="text-[#19191B] text-[20px]">{row.type}</div>
-                          <div className="text-[#19191B] text-[20px]">{row.examples}</div>
+                          <div className="text-[#19191B] text-[16px] md:text-[20px]">
+                            {row.type}
+                          </div>
+                          <div className="text-[#19191B] text-[16px] md:text-[20px]">
+                            {row.examples}
+                          </div>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
-              <p>
+              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
                 We do not process special category data related to your health,
                 ethnicity, or religious or political beliefs unless required by
                 law or in specific circumstances where, for example, you reveal
