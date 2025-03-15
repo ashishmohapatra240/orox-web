@@ -42,7 +42,7 @@ export default function ContactForm() {
         <div className="flex flex-col items-center text-center gap-8">
           {/* Header */}
           <div className="space-y-2">
-            <span className="text-sm md:text-base font-semibold text-[#4296E4]">
+            <span className="text-sm md:text-base font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
               GET IN TOUCH WITH US
             </span>
             <h1 className="text-[40px] md:text-[64px] font-bold text-[#19191B] leading-tight">
