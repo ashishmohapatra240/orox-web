@@ -455,7 +455,7 @@ export const Navbar = () => {
                     Log in
                   </Button>
                 </Link>
-                <Link href="/join" className="w-full">
+                <Link href="/signup" className="w-full">
                   <Button className="w-full">Join for free</Button>
                 </Link>
               </div>
@@ -545,7 +545,7 @@ export const Navbar = () => {
               Log in
             </Button>
           </Link>
-          <Link href="/join">
+          <Link href="/signup">
             <Button className="px-4 lg:px-8">Join for free</Button>
           </Link>
 
