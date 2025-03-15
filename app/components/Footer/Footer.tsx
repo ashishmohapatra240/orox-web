@@ -131,9 +131,17 @@ export const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <div className="text-[12px] text-[#19191B] text-right">
-                <p>© 2025 — Copyright</p>
-                <p>All Rights reserved</p>
+              <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end">
+                <p>© 2025 — Copyright. All Rights reserved</p>
+                <div className="flex gap-2 justify-end">
+                  <Link href="/privacy-policy" className="underline">
+                    Privacy Policy
+                  </Link>
+                  <span>|</span>
+                  <Link href="/terms-of-service" className="underline">
+                    Terms of Service
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -155,6 +163,7 @@ export const Footer = () => {
               <div>
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
                 <div className="space-y-2 text-black/50 text-[14px]">
+                  <p>+61 295 336 214</p>
                   <p>hello@oroxglobal.com</p>
                 </div>
               </div>
