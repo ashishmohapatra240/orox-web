@@ -130,7 +130,7 @@ const SupportDropdown = () => (
             </Link>
           </li>
           <li>
-            <Link href="/support/contact" className="hover:text-[#2F5DFD]">
+            <Link href="/contact" className="hover:text-[#2F5DFD]">
               Contact Us
             </Link>
           </li>
