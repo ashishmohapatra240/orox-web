@@ -11,7 +11,7 @@ const upcomingProducts = [
     title: "Spend your gains with the OROX card",
     description:
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
-    image: "/images/products/orox-card.png",
+    image: "/images/products/spend-gains.png",
   },
 ];
 
@@ -31,25 +31,25 @@ export const UpcomingProducts = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {upcomingProducts.map((product, index) => (
-            <div
-              key={index}
-              className="bg-[#19191B]/10 rounded-2xl p-6 space-y-4"
-            >
-              <div className="relative aspect-[4/3] w-full">
+            <div key={index} className="bg-[#ffffff] rounded-2xl space-y-4">
+              <div className="relative aspect-[2/1] w-full">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-t-xl"
+                  quality={100}
                 />
-                <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFD700] rounded-full">
-                  <span className="text-sm font-medium">Coming soon</span>
+                <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFDE82]">
+                  <span className="text-sm font-medium">COMING SOON</span>
                 </div>
               </div>
-              <h3 className="text-[20px] md:text-[24px] font-bold text-white">
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#293483] px-6">
                 {product.title}
               </h3>
-              <p className="text-[16px] text-white/80">{product.description}</p>
+              <p className="text-[16px] text-[#19191B] px-6 pb-6">
+                {product.description}
+              </p>
             </div>
           ))}
         </div>
