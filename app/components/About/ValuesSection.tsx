@@ -8,13 +8,13 @@ const values = [
       "No hidden fees, no complicated jargon—just clear, honest investing with visibility.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/accountability.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/accountability.png",
     title: "Accountability",
     description:
       "We take responsibility for every decision, ensuring trust and reliability in all we do.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/challenge.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/challenge.png",
     title: "Challenge the status quo",
     description:
       "Embracing innovation to create smarter, more secure investment solutions.",
@@ -42,18 +42,18 @@ export const ValuesSection = () => {
           <div className="grid gap-8 md:grid-cols-3">
             {values.map((value) => (
               <div key={value.title} className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-50">
+                <div className="mx-auto relative h-24 w-24">
                   <Image
                     src={value.icon}
-                    alt={`${value.title} Icon`}
-                    width={40}
-                    height={40}
+                    alt={value.title}
+                    fill
+                    className="object-contain transition-transform duration-300 hover:scale-110"
                   />
                 </div>
-                <h3 className="mb-2 text-[28px] font-bold text-[#19191B]">
+                <h3 className="mb-2 text-[20px] md:text-[28px] font-bold text-[#19191B] mt-4">
                   {value.title}
                 </h3>
-                <p className="text-[#19191B] text-[20px]">
+                <p className="text-[#19191B] text-[16px] md:text-[20px]">
                   {value.description}
                 </p>
               </div>
