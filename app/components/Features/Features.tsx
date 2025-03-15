@@ -24,7 +24,15 @@ const features = [
   },
 ];
 
-export const Features = () => {
+export const Features = ({
+  title,
+  description,
+  cta,
+}: {
+  title: string;
+  description: string;
+  cta?: string;
+}) => {
   return (
     <section className="w-full bg-white px-4 py-24">
       <div className="mx-auto max-w-7xl">
@@ -32,12 +40,9 @@ export const Features = () => {
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
             <h2 className="text-4xl font-bold text-[#19191B] md:text-[56px]">
-              With OROX there&apos;s no guesswork, just gains
+              {title}
             </h2>
-            <p className="text-lg text-gray-600 text-[20px]">
-              Skip the FOMO and stress—AI-powered quantitative investing with
-              expert strategies from top minds in the industry.
-            </p>
+            <p className="text-lg text-gray-600 text-[20px]">{description}</p>
           </div>
 
           {/* Features Grid */}
@@ -65,9 +70,11 @@ export const Features = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="text-center">
-            <Button className="py-4 text-[20px] font-bold">Create an account</Button>
-          </div>
+          {cta && (
+            <div className="text-center">
+              <Button className="py-4 text-[20px] font-bold">{cta}</Button>
+            </div>
+          )}
         </div>
       </div>
     </section>

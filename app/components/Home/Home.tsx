@@ -15,7 +15,13 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <Partners />
-      <Features />
+      <Features
+        title={"With OROX there’s no guesswork, just gains"}
+        description={
+          "Skip the FOMO and stress—AI-powered quantitative investing with expert strategies from top minds in the industry."
+        }
+        cta="Create an account"
+      />
       <Steps />
       <HomeProducts />
       <Blog />
