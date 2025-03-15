@@ -90,6 +90,41 @@ export const Footer = () => {
             {/* Divider */}
             <hr className="lg:hidden border-t-2 border-[#999999] mb-8" />
 
+            <div className="lg:hidden mb-4">
+              <div className="flex flex-col space-y-2">
+                <Link
+                  href="/products"
+                  className="text-[18px] font-semibold text-[#293483]"
+                >
+                  Products
+                </Link>
+                <Link
+                  href="/our-approach"
+                  className="text-[18px] font-semibold text-[#293483]"
+                >
+                  Our approach
+                </Link>
+                <Link
+                  href="/blog"
+                  className="text-[18px] font-semibold text-[#293483]"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/about"
+                  className="text-[18px] font-semibold text-[#293483]"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/careers"
+                  className="text-[18px] font-semibold text-[#293483]"
+                >
+                  Careers
+                </Link>
+              </div>
+            </div>
+
             {/* Contact and Location */}
             <div className="lg:hidden mb-12">
               <div className="mb-8">
@@ -157,6 +192,40 @@ export const Footer = () => {
               </div>
             </div>
             <hr className="my-8 border-t-2 border-[#999999] hidden lg:block" />
+
+            {/* Navigation Links - Desktop */}
+            <div className="hidden lg:flex gap-8 mb-8">
+              <Link
+                href="/products"
+                className="text-[16px] font-semibold text-[#293483]"
+              >
+                Products
+              </Link>
+              <Link
+                href="/our-approach"
+                className="text-[16px] font-semibold text-[#293483]"
+              >
+                Our approach
+              </Link>
+              <Link
+                href="/blog"
+                className="text-[16px] font-semibold text-[#293483]"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/about"
+                className="text-[16px] font-semibold text-[#293483]"
+              >
+                About
+              </Link>
+              <Link
+                href="/careers"
+                className="text-[16px] font-semibold text-[#293483]"
+              >
+                Careers
+              </Link>
+            </div>
 
             {/* Contact and Location Section */}
             <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-72">
