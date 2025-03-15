@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const values = [
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/transparency.svg",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/transparency.png",
     title: "Transparency",
     description:
       "No hidden fees, no complicated jargon—just clear, honest investing with visibility.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/accountability.svg",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/accountability.png",
     title: "Accountability",
     description:
       "We take responsibility for every decision, ensuring trust and reliability in all we do.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/challenge.svg",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/values/challenge.png",
     title: "Challenge the status quo",
     description:
       "Embracing innovation to create smarter, more secure investment solutions.",
@@ -50,10 +50,12 @@ export const ValuesSection = () => {
                     height={40}
                   />
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-[#19191B]">
+                <h3 className="mb-2 text-[28px] font-bold text-[#19191B]">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-[#19191B] text-[20px]">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -61,4 +63,4 @@ export const ValuesSection = () => {
       </div>
     </section>
   );
-}; 
+};
