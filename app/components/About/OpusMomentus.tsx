@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const MissionSection = () => {
+export const OpusMomentus = () => {
   return (
     <section className="w-full bg-[#F1F2F8] px-4 py-24">
       <div className="mx-auto max-w-7xl">
