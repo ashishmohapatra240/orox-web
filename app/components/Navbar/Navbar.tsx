@@ -317,29 +317,31 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
-          <Dropdown
-            label="Products"
-            trigger={
-              <div className="flex items-center space-x-1">
-                <span>Products</span>
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-            }
-          >
-            <ProductsDropdown />
-          </Dropdown>
+          <Link href="/products">
+            <Dropdown
+              label="Products"
+              trigger={
+                <div className="flex items-center space-x-1">
+                  <span>Products</span>
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              }
+            >
+              <ProductsDropdown />
+            </Dropdown>
+          </Link>
 
           <Link
             href="/blog"
