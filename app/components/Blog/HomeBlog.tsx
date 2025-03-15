@@ -1,40 +1,41 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
+import { BlogCard } from "./BlogCard";
 import { useState, useEffect } from "react";
-
 const articles = [
   {
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/time-horizon.jpg",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/time-horizon.jpg",
     title: "The Relationship Between Time Horizon and Investing Risk",
     description:
       "Risk is a fact of investing. Your willingness to take risk as an investor is a big part of why you...",
     link: "#",
   },
   {
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/government-bonds.jpg",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/government-bonds.jpg",
     title: "An introduction to the appeal of Australian Government Bonds",
     description:
       "Australian Government Bonds (AGBs), or Australian treasuries, are debt securities issued...",
     link: "#",
   },
   {
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/aussie-websites.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/aussie-websites.png",
     title: "Aussie websites to help you make (or save) money",
     description:
       "We've done the research for you and found some awesome websites that might help you...",
     link: "#",
   },
   {
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/robo-advisor.jpg",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/robo-advisor.jpg",
     title: "Difference between stand-alone adviser and robo",
     description:
       "All independent advisers are standalone, but not all robo advisors are...",
     link: "#",
   },
 ];
-
-export const Blog = () => {
+export const HomeBlog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -64,7 +65,6 @@ export const Blog = () => {
       return prev === 0 ? maxSlides : prev - 1;
     });
   };
-
   return (
     <section className="w-full px-4 py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl">
@@ -85,44 +85,34 @@ export const Blog = () => {
                 transition: "transform 0.5s ease-in-out",
               }}
             >
-              {articles.map((article, index) => (
-                <Link
-                  key={index}
-                  href={article.link}
-                  className="group space-y-4 w-[295px] md:w-[356px] flex-shrink-0"
-                >
-                  {/* Image Container */}
-                  <div className="relative overflow-hidden rounded-3xl w-[295px] h-[372px] md:w-[356px] md:h-[448px]">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="space-y-2">
-                    <h3 className="text-[28px] font-bold text-[#19191B] group-hover:text-blue-600 leading-[1.2]">
-                      {article.title}
-                    </h3>
-                    <p className="text-[20px] text-[#19191B]">
-                      {article.description}
-                    </p>
-                    <div className="flex items-center space-x-2 text-[#2F5DFD]">
-                      <span className="text-[14px] font-bold">Read more</span>
-                      <Image
-                        src="/icons/arrow.svg"
-                        alt="Read more"
-                        width={14}
-                        height={14}
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ))}
+              {" "}
+              <div className="flex flex-row gap-4">
+                <BlogCard
+                  image={articles[0].image}
+                  title={articles[0].title}
+                  description={articles[0].description}
+                  link={articles[0].link}
+                />
+                <BlogCard
+                  image={articles[1].image}
+                  title={articles[1].title}
+                  description={articles[1].description}
+                  link={articles[1].link}
+                />
+                <BlogCard
+                  image={articles[2].image}
+                  title={articles[2].title}
+                  description={articles[2].description}
+                  link={articles[2].link}
+                />
+                <BlogCard
+                  image={articles[3].image}
+                  title={articles[3].title}
+                  description={articles[3].description}
+                  link={articles[3].link}
+                />
+              </div>
             </div>
-
             {/* Navigation Buttons */}
             <div className="mt-8 flex justify-center space-x-4">
               <button

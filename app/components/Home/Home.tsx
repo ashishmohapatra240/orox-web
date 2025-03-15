@@ -5,9 +5,9 @@ import { Partners } from "../Partners/Partners";
 import { Features } from "../Features/Features";
 import { Steps } from "../Steps/Steps";
 import { HomeProducts } from "../Products/HomeProducts";
-import { Blog } from "../Blog/Blog";
 import { FAQ } from "../FAQ/FAQ";
 import Service from "../Service/Service";
+import { HomeBlog } from "../Blog/HomeBlog";
 
 export default function LandingPage() {
   return (
@@ -24,7 +24,7 @@ export default function LandingPage() {
       />
       <Steps />
       <HomeProducts />
-      <Blog />
+      <HomeBlog />
       <FAQ />
       <Service />
       <Footer />
