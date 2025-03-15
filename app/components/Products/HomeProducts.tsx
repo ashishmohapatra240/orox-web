@@ -3,27 +3,10 @@ import Link from "next/link";
 
 const products = [
   {
-    tag: "OROX: THE APP TO DO IT ALL",
-    title: (
-      <>
-        <span className="relative inline-block z-0">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
-          OROX app
-        </span>{" "}
-        invest on autopilot
-      </>
-    ),
-    description:
-      "OROX is your all-in-one investment app and platform, blending AI-powered quantitative strategies, blockchain security and seamless automation. Whether you’re after steady, low-risk growth or crypto exposure with less volatility, OROX makes investing effortless. Easily connect with ODN, and the new OROX token—all in one place.",
-    image: "/images/products/orox-app.png",
-    imageAlt: "ODN",
-    bgColor: "#ADE0EE",
-  },
-  {
     tag: "ODN: SET AND LET GROW",
     title: (
       <>
-        <span className="relative inline-block z-0">
+        <span className="relative inline-block">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[8px]"></span>
           ODN
         </span>{" "}
@@ -50,7 +33,7 @@ const products = [
     tag: "DVOX: SUPERCHARGE YOUR INVESTMENT",
     title: (
       <>
-        <span className="relative inline-block z-0">
+        <span className="relative inline-block">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[8px]"></span>
           DVOX
         </span>{" "}
@@ -66,7 +49,7 @@ const products = [
   },
 ];
 
-export const Products = () => {
+export const HomeProducts = () => {
   return (
     <section className="w-full px-4 sm:px-6 py-6 sm:py-8 md:py-12 lg:py-24">
       <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-24">

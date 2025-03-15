@@ -4,7 +4,7 @@ import { Footer } from "../Footer/Footer";
 import { Partners } from "../Partners/Partners";
 import { Features } from "../Features/Features";
 import { Steps } from "../Steps/Steps";
-import { Products } from "../Products/Products";
+import { HomeProducts } from "../Products/HomeProducts";
 import { Blog } from "../Blog/Blog";
 import { FAQ } from "../FAQ/FAQ";
 import Service from "../Service/Service";
@@ -17,7 +17,7 @@ export default function LandingPage() {
       <Partners />
       <Features />
       <Steps />
-      <Products />
+      <HomeProducts />
       <Blog />
       <FAQ />
       <Service />
