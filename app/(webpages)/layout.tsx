@@ -1,14 +1,16 @@
-import { Footer } from "../components/Footer/Footer";
 import { Navbar } from "../components/Navbar/Navbar";
+import { Footer } from "../components/Footer/Footer";
 
-const WebpagesLayout = ({ children }: { children: React.ReactNode }) => {
+export default function WebpagesLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="pt-[70px]">{children}</main>
       <Footer />
     </>
   );
-};
-
-export default WebpagesLayout;
+}
