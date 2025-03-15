@@ -7,9 +7,9 @@ import { Products } from "../components/Products/Products";
 import Service from "../components/Service/Service";
 import { Steps } from "../components/Steps/Steps";
 
-export default function Webpages() {
+export default function HomePage() {
   return (
-    <main>
+    <>
       <Hero />
       <Partners />
       <Features />
@@ -18,6 +18,6 @@ export default function Webpages() {
       <Blog />
       <FAQ />
       <Service />
-    </main>
+    </>
   );
 }
