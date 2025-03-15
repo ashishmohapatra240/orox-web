@@ -34,6 +34,7 @@ const AboutHero = () => {
               fill
               className="object-cover lg:rounded-l-[32px]"
               priority
+              quality={100}
             />
             {/* Pause Button */}
             <button className="absolute bottom-4 right-4 flex h-9 w-9 sm:h-10 sm:w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-white text-[#293483] shadow-lg">

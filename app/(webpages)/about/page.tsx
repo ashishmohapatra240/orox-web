@@ -5,6 +5,7 @@ import { ProductsSection } from "@/app/components/About/ProductsSection";
 import { StatsSection } from "@/app/components/About/StatsSection";
 import { TeamSection } from "@/app/components/About/TeamSection";
 import { ValuesSection } from "@/app/components/About/ValuesSection";
+import { InvestingSection } from "@/app/components/About/InvestingSection";
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <MissionSection />
       <TeamSection />
       <StatsSection />
+      <InvestingSection />
     </div>
   );
 }
