@@ -210,7 +210,7 @@ export const Signup = () => {
                       Privacy Policy
                     </Link>{" "}
                     and{" "}
-                    <Link href="/terms" className="text-[#2F5DFD] underline">
+                    <Link href="/terms-of-service" className="text-[#2F5DFD] underline">
                       Terms of Service
                     </Link>{" "}
                     for more information on how we may benefit your financial
