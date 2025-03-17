@@ -22,53 +22,56 @@ const stats = [
 const partners = [
   {
     name: "Binance",
-    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/binance.png",
+    logo: "/images/partners/binance.png",
   },
   {
     name: "Trading Technologies",
-    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/trading-tech.png",
+    logo: "/images/partners/trading-tech.png",
   },
   {
     name: "Ethereum",
-    logo: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/partners/eth.png",
+    logo: "/images/partners/eth.png",
   },
 ];
 
 export const Partners = () => {
   return (
-    <section className="w-full bg-[#0A0B1E] px-4 py-8 sm:py-12 lg:py-16">
+    <section className="w-full bg-[#070926] px-4 py-12 lg:px-20 lg:py-16">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-20">
-          {/* Partners List */}
-          <div className="flex flex-col space-y-6 lg:max-w-[50%]">
-            <h3 className="text-sm font-medium text-white/60 lg:min-w-[180px]">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          <div className="flex flex-col items-center lg:flex-row lg:items-center gap-6">
+            <h3 className="text-center text-[14px] text-white max-w-[150px] lg:text-left">
               Global partners working with OROX
             </h3>
-            <div className="flex flex-wrap gap-8 lg:gap-12">
-              {partners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="relative h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 opacity-80 transition-opacity hover:opacity-100"
-                >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+            <div className="relative flex items-center justify-center lg:justify-start gap-10 overflow-hidden">
+              <div className="flex gap-4">
+                {partners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="relative h-8 w-32 lg:h-[104px] lg:w-[160px]"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      className="object-contain opacity-80 transition-opacity hover:opacity-100"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#070926] to-transparent" />
+              <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-[#070926] to-transparent lg:hidden" />
             </div>
           </div>
 
-          {/* Stats Grid */}
-          <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
+          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-4">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+              <div key={stat.label} className="flex flex-col gap-2">
+                <div className="text-3xl font-bold text-white lg:text-[40px] lg:leading-[48px]">
                   {stat.value}
                 </div>
-                <p className="mt-1 text-xs sm:text-sm text-white/60">{stat.label}</p>
+                <p className="text-base text-white/70">{stat.label}</p>
               </div>
             ))}
           </div>
