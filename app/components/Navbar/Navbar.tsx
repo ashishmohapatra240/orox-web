@@ -106,9 +106,9 @@ const ProductsDropdown = () => (
             <Image
               src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/blog.png"
               alt="Blog Image"
-              width={400}
+              width={600}
               height={400}
-              className="w-[400px] h-auto"
+              className="w-[600px] h-auto"
             />
           </motion.div>
         </div>
@@ -609,11 +609,11 @@ export const Navbar = () => {
                       {/* Bottom section with OR and Install APK - pushed to bottom on mobile */}
                       <div className="mt-auto sm:mt-0 space-y-6 sm:space-y-4">
                         <div className="flex items-center justify-center space-x-2 w-full">
-                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
+                          <hr className="w-full h-[1px] bg-[#E5E5E5]" />
                           <span className="text-xs text-[#293483] whitespace-nowrap px-2">
                             OR
                           </span>
-                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
+                          <hr className="w-full h-[1px] bg-[#E5E5E5]" />
                         </div>
 
                         <a

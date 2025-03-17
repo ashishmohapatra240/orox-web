@@ -148,32 +148,6 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
           >
             <div className="w-full border-t border-[#F4F4F4] bg-white shadow-lg">
               <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 relative">
-                {/* Bottom close button with divider */}
-                <div className="absolute right-4 bottom-0 flex flex-col items-center">
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-2 mb-2 text-[#2F5DFD] hover:opacity-80 transition-opacity"
-                  >
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                    <span className="text-[#2F5DFD] font-semibold text-[16px]">
-                      Close
-                    </span>
-                  </button>
-                  <div className="h-6 w-px bg-[#F4F4F4]"></div>
-                </div>
-
                 <motion.div
                   className="staggered-container"
                   initial="hidden"
@@ -181,6 +155,30 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
                   custom={0}
                 >
                   {children}
+                  <hr className="my-10 h-[1px] bg-[#E5E5E5]" />
+                  <div className="absolute right-8 bottom-0 flex flex-col items-center">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center space-x-2 mb-6 text-[#2F5DFD] hover:opacity-80 transition-opacity"
+                    >
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                      <span className="text-[#2F5DFD] font-semibold text-[16px]">
+                        Close
+                      </span>
+                    </button>
+                  </div>
                 </motion.div>
               </div>
             </div>
