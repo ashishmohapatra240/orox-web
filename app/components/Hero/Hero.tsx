@@ -33,17 +33,18 @@ export const Hero = () => {
                     Build wealth.
                   </span>
                 </h1>
-                <p className="max-w-[540px] text-sm sm:text-base md:text-lg text-[#19191B]">
+                <p className="max-w-[570px] text-sm sm:text-base md:text-lg text-[#19191B]">
                   Forget stock-picking, market timing and waiting for the next
                   bull run—OROX puts your money on autopilot for high-growth
                   returns.
                 </p>
               </div>
 
-              <div className="space-y-4 md:space-y-6">
-                <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-indigo-900 rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-sm sm:text-base hover:bg-indigo-800 transition-colors">
+              <div>
+                <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-indigo-900 rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-sm sm:text-base hover:bg-indigo-800 transition-colors mb-[20px]">
                   Join for free
                 </button>
+                <hr className="w-[50%] bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 my-8" />
                 <div className="flex flex-wrap items-center gap-2">
                   <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
                   <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
