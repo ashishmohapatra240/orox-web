@@ -539,7 +539,7 @@ export const Navbar = () => {
                           sm:mt-5 sm:w-64 md:w-80 sm:rounded-b-xl sm:border sm:border-[#F4F4F4] sm:p-8
                           flex flex-col sm:block shadow-[0px_8px_32px_0px_rgba(0,0,0,0.15)] z-50"
               >
-                <div className="w-full flex flex-col sm:block max-w-[90%] sm:w-auto mx-auto px-6 pt-8">
+                <div className="w-full h-full flex flex-col sm:block max-w-[90%] sm:w-auto mx-auto">
                   {/* Close button for mobile - top right */}
                   <button
                     onClick={() => setIsQROpen(false)}
@@ -561,8 +561,8 @@ export const Navbar = () => {
                     </svg>
                   </button>
 
-                  <div className="bg-white rounded-2xl p-6 sm:p-0 flex flex-col">
-                    <div className="flex flex-col sm:h-auto">
+                  <div className="bg-white rounded-2xl p-6 sm:p-0 h-full flex flex-col">
+                    <div className="flex flex-col h-full sm:h-auto">
                       {/* QR Code - at the top */}
                       <div className="flex-1 flex items-center justify-center sm:block pt-8 sm:pt-0 mb-8">
                         <Image
@@ -577,11 +577,11 @@ export const Navbar = () => {
                       {/* Bottom section with OR and Install APK - pushed to bottom on mobile */}
                       <div className="mt-auto sm:mt-0 space-y-6 sm:space-y-4">
                         <div className="flex items-center justify-center space-x-2 w-full">
-                          <hr className="w-full h-[1px] bg-[#E5E5E5]" />
+                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
                           <span className="text-xs text-[#293483] whitespace-nowrap px-2">
                             OR
                           </span>
-                          <hr className="w-full h-[1px] bg-[#E5E5E5]" />
+                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
                         </div>
 
                         <a
