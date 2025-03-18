@@ -257,9 +257,9 @@ export const Navbar = () => {
     };
   }, [isMobileMenuOpen, activeDropdown, isQROpen]);
 
-  const toggleMobileDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  // const toggleMobileDropdown = (dropdown: string) => {
+  //   setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  // };
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white" ref={navbarRef}>
@@ -275,45 +275,64 @@ export const Navbar = () => {
           />
         </Link>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => {
-            setIsMobileMenuOpen(!isMobileMenuOpen);
-            setActiveDropdown(null);
-          }}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? (
-            <svg
+        {/* Mobile menu button and QR section */}
+        <div className="flex items-center space-x-4">
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => {
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+              setActiveDropdown(null);
+            }}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+          <hr className="md:hidden h-[24px] w-[2px] bg-[#C9CCE0]" />
+
+          {/* QR Code Button - visible on all screens */}
+          <button
+            onClick={() => setIsQROpen(!isQROpen)}
+            className="relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2 md:hidden"
+            aria-label="QR code"
+          >
+            <Image
+              src="/icons/QR.svg"
+              alt="QR Icon"
+              width={20}
+              height={20}
               className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
-        </button>
+            />
+          </button>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
@@ -385,174 +404,123 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 z-40 bg-white md:hidden"
+            className="fixed inset-y-0 right-0 z-40 bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen"
             style={{ top: `${navbarHeight}px` }}
           >
-            <div className="px-4 py-2 space-y-1 overflow-y-auto max-h-[calc(100vh-70px)]">
-              <button
-                onClick={() => toggleMobileDropdown("products")}
-                className="flex w-full justify-between items-center px-3 py-4 border-b border-gray-200"
-              >
-                <span>Products</span>
-                <svg
-                  className={`h-4 w-4 transition-transform ${
-                    activeDropdown === "products" ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+            <div className="flex flex-col">
+              <div className="px-6 pt-8 space-y-6">
+                {/* Navigation Links */}
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B]">
+                    <Link href="/products">Products</Link>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      className="text-[#999999]"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
 
-              <Link
-                href="/blog"
-                className="block px-3 py-4 border-b border-gray-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
+                  <Link
+                    href="/blog"
+                    className="block text-[16px] text-[#19191B]"
+                  >
+                    Blog
+                  </Link>
 
-              <Link
-                href="/about"
-                className="block px-3 py-4 border-b border-gray-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </Link>
+                  <Link
+                    href="/about"
+                    className="block text-[16px] text-[#19191B]"
+                  >
+                    About
+                  </Link>
 
-              <button
-                onClick={() => toggleMobileDropdown("support")}
-                className="flex w-full justify-between items-center px-3 py-4 border-b border-gray-200"
-              >
-                <span>Support</span>
-                <svg
-                  className={`h-4 w-4 transition-transform ${
-                    activeDropdown === "support" ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B]">
+                    <Link href="/support">Support</Link>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      className="text-[#999999]"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
 
-              <div className="pt-6 flex flex-col space-y-3">
-                <Link href="/login" className="w-full">
-                  <Button variant="secondary" className="w-full">
-                    Log in
-                  </Button>
-                </Link>
-                <Link href="/signup" className="w-full">
-                  <Button className="w-full">Join for free</Button>
-                </Link>
+                {/* Auth Buttons */}
+                <div className="space-y-3 mt-[24px] mb-[24px]">
+                  <Link href="/login">
+                    <Button variant="secondary" className="w-full block">
+                      Log in
+                    </Button>
+                  </Link>
+                  <Link href="/signup" className="w-full block">
+                    <Button className="w-full bg-[#293483] rounded-full">
+                      Join for free
+                    </Button>
+                  </Link>
+                </div>
               </div>
+            </div>
+            {/* Divider */}
+            <hr className="border-t border-[#F4F4F4] mt-[24px] mb-[24px]" />
+
+            {/* QR Code Section */}
+            <div className="mb-[16px]">
+              <Image
+                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                alt="QR Code"
+                width={160}
+                height={160}
+                className="mx-auto rounded-2xl bg-white shadow-sm "
+              />
             </div>
           </div>
         )}
 
-        {/* Mobile Dropdowns */}
-        {activeDropdown === "products" && (
+        {/* Mobile menu backdrop */}
+        {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 z-50 bg-white md:hidden"
+            className="fixed inset-0 bg-black/30 z-30 md:hidden"
             style={{ top: `${navbarHeight}px` }}
-          >
-            <div className="px-4 py-4">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold text-[#293483]">
-                  Products
-                </h2>
-                <button
-                  onClick={() => setActiveDropdown(null)}
-                  className="p-2 text-gray-500"
-                  aria-label="Close dropdown"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="overflow-y-auto max-h-[calc(100vh-120px)]">
-                <ProductsDropdown />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeDropdown === "support" && (
-          <div
-            className="fixed inset-0 z-50 bg-white md:hidden"
-            style={{ top: `${navbarHeight}px` }}
-          >
-            <div className="px-4 py-4">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold text-[#293483]">
-                  Support
-                </h2>
-                <button
-                  onClick={() => setActiveDropdown(null)}
-                  className="p-2 text-gray-500"
-                  aria-label="Close dropdown"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="overflow-y-auto max-h-[calc(100vh-120px)]">
-                <SupportDropdown />
-              </div>
-            </div>
-          </div>
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
         )}
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
           <Link href="/login">
-            <Button variant="secondary" className="px-4 lg:px-8">
+            <Button variant="secondary" className="px-4 lg:px-6">
               Log in
             </Button>
           </Link>
           <Link href="/signup">
-            <Button className="px-4 lg:px-8">Join for free</Button>
+            <Button className="px-4 lg:px-6">Join for free</Button>
           </Link>
+
+          <hr className="h-[24px] w-[2px] bg-[#C9CCE0]" />
 
           {/* QR Code Button */}
           <button
             onClick={() => setIsQROpen(!isQROpen)}
-            className="relative flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2"
+            className="relative flex h-10 w-10 lg:h-10 lg:w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2"
             aria-label="QR code"
           >
             <Image
@@ -560,7 +528,7 @@ export const Navbar = () => {
               alt="QR Icon"
               width={20}
               height={20}
-              className="h-6 w-6 lg:h-8 lg:w-8"
+              className="h-6 w-6 lg:h-[24px] lg:w-[24px]"
             />
 
             {/* QR Code Modal */}
@@ -571,7 +539,7 @@ export const Navbar = () => {
                           sm:mt-5 sm:w-64 md:w-80 sm:rounded-b-xl sm:border sm:border-[#F4F4F4] sm:p-8
                           flex flex-col sm:block shadow-[0px_8px_32px_0px_rgba(0,0,0,0.15)] z-50"
               >
-                <div className="w-full h-full flex flex-col sm:block max-w-[90%] sm:w-auto mx-auto">
+                <div className="w-full flex flex-col sm:block max-w-[90%] sm:w-auto mx-auto px-6 pt-8">
                   {/* Close button for mobile - top right */}
                   <button
                     onClick={() => setIsQROpen(false)}
@@ -593,8 +561,8 @@ export const Navbar = () => {
                     </svg>
                   </button>
 
-                  <div className="bg-white rounded-2xl p-6 sm:p-0 h-full flex flex-col">
-                    <div className="flex flex-col h-full sm:h-auto">
+                  <div className="bg-white rounded-2xl p-6 sm:p-0 flex flex-col">
+                    <div className="flex flex-col sm:h-auto">
                       {/* QR Code - at the top */}
                       <div className="flex-1 flex items-center justify-center sm:block pt-8 sm:pt-0 mb-8">
                         <Image
