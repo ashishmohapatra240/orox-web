@@ -30,10 +30,12 @@ export const BlogCard = ({
 
       {/* Content */}
       <div className="space-y-2">
-        <h3 className="text-[28px] font-bold text-[#19191B] group-hover:text-blue-600 leading-[1.2]">
+        <h3 className="text-[28px] font-bold text-[#19191B] group-hover:text-blue-600 leading-[1.4]">
           {title}
         </h3>
-        <p className="text-[20px] text-[#19191B]">{description}</p>
+        <p className="text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
+          {description}
+        </p>
         <div className="flex items-center space-x-2 text-[#2F5DFD]">
           <span className="text-[14px] font-bold">Read more</span>
           <Image

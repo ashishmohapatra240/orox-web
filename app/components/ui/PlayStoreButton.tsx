@@ -17,7 +17,7 @@ export const PlayStoreButton = ({ href, target, rel }: PlayStoreProps) => {
         alt="Get it on Google Play"
         width={270}
         height={80}
-        className="h-10 w-auto"
+        className="h-[48px] w-auto"
       />
     </a>
   );

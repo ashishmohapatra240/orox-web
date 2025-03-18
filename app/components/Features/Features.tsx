@@ -39,10 +39,12 @@ export const Features = ({
         <div className="space-y-20">
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
-            <h2 className="text-4xl font-bold text-[#19191B] md:text-[56px]">
+            <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
               {title}
             </h2>
-            <p className="text-lg text-gray-600 text-[20px]">{description}</p>
+            <p className="text-[16px] text-gray-600 text-[20px] leading-[24px] md:leading-[32px]">
+              {description}
+            </p>
           </div>
 
           {/* Features Grid */}
@@ -58,10 +60,10 @@ export const Features = ({
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-[20px] font-bold text-[#19191B]">
+                  <h3 className="text-[20px] font-bold text-[#19191B] leading-[24px] md:leading-[32px]">
                     {feature.title}
                   </h3>
-                  <p className="text-[#19191B] text-[16px]">
+                  <p className="text-[#19191B] text-[16px] leading-[24px] md:leading-[32px]">
                     {feature.description}
                   </p>
                 </div>

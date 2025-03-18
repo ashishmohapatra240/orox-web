@@ -70,7 +70,7 @@ export const HomeBlog = () => {
       <div className="mx-auto max-w-7xl">
         <div className="space-y-16">
           {/* Header */}
-          <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] text-center">
+          <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] text-center leading-[40px] md:leading-[68px]">
             Insights, trends and smart investing
           </h2>
 

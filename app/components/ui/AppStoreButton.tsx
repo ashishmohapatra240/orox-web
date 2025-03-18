@@ -19,7 +19,7 @@ export const AppStoreButton = ({ href, target, rel }: StoreButtonProps) => {
         alt="Download on the App Store"
         width={270}
         height={80}
-        className="h-10 w-auto"
+        className="h-[48px] w-auto"
       />
     </a>
   );
