@@ -50,7 +50,7 @@ export const Footer = () => {
             />
 
             {/* Description */}
-            <p className="text-[#19191B] max-w-[400px] mb-6 text-[16px]">
+            <p className="text-[#19191B] max-w-[400px] mb-6 text-[16px] leading-[2]">
               OROX puts your money on autopilot with AI-powered quantitative
               investing, risk-adjusted strategies and secure blockchain-backed
               growth.
@@ -227,7 +227,7 @@ export const Footer = () => {
               </Link>
             </div>
 
-            {/* Contact and Location Section */}
+            {/* Contact and Location Section Desktop*/}
             <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-72">
               <div>
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
