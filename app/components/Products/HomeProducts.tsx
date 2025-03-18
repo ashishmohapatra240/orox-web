@@ -104,7 +104,7 @@ export const HomeProducts = () => {
                 src={product.image}
                 alt={product.imageAlt}
                 fill
-                className="object-contain p-3 sm:p-4 lg:p-12"
+                className="object-contain"
                 priority
               />
             </div>
