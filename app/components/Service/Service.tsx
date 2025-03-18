@@ -12,10 +12,6 @@ const Service = () => {
 
   return (
     <div className="container mx-auto px-4 sm:px-8 lg:px-24 py-8 sm:py-16 overflow-hidden">
-      <h3 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-16">
-        Our products and services
-      </h3>
-
       {/* Hero Section */}
       <div className="relative h-[500px] sm:h-[400px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 sm:mb-12 overflow-visible py-60">
         <div className="absolute inset-0 h-full w-full overflow-hidden rounded-2xl">

@@ -7,7 +7,7 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 export const Hero = () => {
   return (
     <section className="min-h-screen relative w-full overflow-hidden bg-white px-4 pt-[70px]">
-      <div className="absolute w-[180%] h-[180%] top-[10%] right-[-35%] md:w-[180%] md:h-[180%] md:bottom-[0] md:left-[180px]">
+      <div className="absolute w-[180%] h-[180%] top-[10%] right-[-40%] md:top-[-50%] md:right-[0]  md:bottom-[35%] md:left-[20%]">
         <Image
           src="/Pattern.png"
           alt="Hero Background"
