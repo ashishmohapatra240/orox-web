@@ -7,7 +7,7 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 export const Hero = () => {
   return (
     <section className="min-h-screen relative w-full overflow-hidden bg-white px-4 pt-[70px]">
-      <div className="absolute w-[180%] h-[180%] bottom-[0] left-[180px]">
+      <div className="absolute w-[180%] h-[180%] top-[10%] right-[-35%] md:w-[180%] md:h-[180%] md:bottom-[0] md:left-[180px]">
         <Image
           src="/Pattern.png"
           alt="Hero Background"
@@ -22,7 +22,7 @@ export const Hero = () => {
           <div className="relative z-10 pt-8 md:pt-12 lg:pt-16">
             <div className="space-y-4 md:space-y-6 lg:space-y-8">
               <div className="space-y-2 md:space-y-4">
-                <h1 className="relative text-3xl font-bold leading-tight text-[#19191B] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                <h1 className="relative text-[40px] font-bold leading-[48px] md:leading-[80px] text-[#19191B] md:text-[76px]">
                   Invest smarter.
                   <br />
                   Grow faster.
@@ -33,29 +33,24 @@ export const Hero = () => {
                     Build wealth.
                   </span>
                 </h1>
-                <p className="max-w-[570px] text-sm sm:text-base md:text-lg text-[#19191B]">
+                <p className="max-w-[570px] text-sm sm:text-base md:text-lg text-[#19191B] sm:leading-[32px]">
                   Forget stock-picking, market timing and waiting for the next
                   bull run—OROX puts your money on autopilot for high-growth
                   returns.
                 </p>
               </div>
 
-              <div>
+              <div className="lg:block">
                 <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-indigo-900 rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-sm sm:text-base hover:bg-indigo-800 transition-colors mb-[20px]">
                   Join for free
                 </button>
-                <hr className="w-[50%] bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 my-8" />
-                <div className="flex flex-wrap items-center gap-2">
-                  <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
-                  <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
-                </div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Interactive Hero Image */}
           <div
-            className="relative w-full max-w-[200px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] mx-auto h-auto flex justify-center items-center cursor-pointer"
+            className="relative w-full max-w-[240px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] mx-auto h-auto flex justify-center items-center cursor-pointer"
             onClick={() => console.log("Hero image clicked")}
           >
             <Image
@@ -66,6 +61,22 @@ export const Hero = () => {
               className="w-full object-contain hover:scale-90 transition-transform duration-500 ease-in-out"
               priority
             />
+          </div>
+
+          <div className="lg:hidden items-center justify-center w-full">
+            <hr className="w-full bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 mb-[32px]" />
+            <div className="flex flex-wrap items-center gap-[8px] justify-center">
+              <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
+              <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
+            </div>
+          </div>
+
+          <div className="hidden lg:block">
+            <hr className="w-[50%] bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 my-8" />
+            <div className="flex flex-wrap items-center gap-2">
+              <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
+              <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
+            </div>
           </div>
         </div>
       </div>
