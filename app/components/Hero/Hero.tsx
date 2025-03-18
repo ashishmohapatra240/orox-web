@@ -6,7 +6,7 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen relative w-full overflow-hidden bg-white px-4 pt-[70px]">
+    <section className="relative w-full overflow-hidden bg-white px-4 pt-[70px]">
       <div className="absolute w-[180%] h-[180%] top-[10%] right-[-40%] md:top-[-50%] md:right-[0]  md:bottom-[35%] md:left-[20%]">
         <Image
           src="/Pattern.png"
@@ -17,7 +17,7 @@ export const Hero = () => {
         />
       </div>
       <div className="mx-auto max-w-7xl py-8 md:py-12 lg:py-16">
-        <div className="grid items-center gap-8 md:gap-12 lg:gap-24 lg:grid-cols-2">
+        <div className="grid items-center gap-8 lg:gap-0 md:grid-cols-2">
           {/* Left Content */}
           <div className="relative z-10 pt-8 md:pt-12 lg:pt-16">
             <div className="space-y-4 md:space-y-6 lg:space-y-8">
@@ -49,10 +49,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Content - Interactive Hero Image */}
-          <div
-            className="relative w-full max-w-[240px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] mx-auto h-auto flex justify-center items-center cursor-pointer"
-            onClick={() => console.log("Hero image clicked")}
-          >
+          <div className="relative w-full max-w-[240px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] mx-auto h-auto flex justify-center items-center cursor-pointer">
             <Image
               src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/hero.png"
               alt="OROX Trading Platform Interface"
