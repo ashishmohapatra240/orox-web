@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image"
+import Image from "next/image";
 
 const faqs = [
   {
@@ -18,8 +18,7 @@ const faqs = [
     question: "Difference between ODN and DVOX?",
     answer:
       "ODN offers steady, low-risk investing, while DVOX provides high-growth potential with crypto exposure. Choose what fits your goal.",
-      action: "Learn more",
-
+    action: "Learn more",
   },
   {
     question: "What is a market-neutral strategy?",
@@ -37,10 +36,10 @@ export const FAQ = () => {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left Content */}
           <div>
-            <span className="text-sm font-medium text-blue-600">
+            <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h2 className="mt-4 text-4xl font-bold text-[#19191B] md:text-5xl">
+            <h2 className="mt-4 text-[34px] font-bold text-[#19191B] md:text-5xl leading-[40px] md:leading-[68px] max-w-[400px]">
               Still have questions?
             </h2>
           </div>
@@ -50,7 +49,7 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-b border-gray-200 pb-4 last:border-0"
+                className="border-b border-[#999999] pb-4 relative"
               >
                 <button
                   onClick={() =>
@@ -58,7 +57,7 @@ export const FAQ = () => {
                   }
                   className="flex w-full items-center justify-between py-4 text-left"
                 >
-                  <span className="text-lg font-medium text-[#293483]">
+                  <span className="text-[20px] font-medium text-[#293483] leading-[24px] md:leading-[32px]">
                     {faq.question}
                   </span>
                   <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center">
@@ -77,7 +76,7 @@ export const FAQ = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className={`transform origin-center transition-all duration-300 ease-in-out ${
-                          openIndex === index ? 'scale-y-0' : ''
+                          openIndex === index ? "scale-y-0" : ""
                         }`}
                       />
                       <path
@@ -91,12 +90,19 @@ export const FAQ = () => {
                   </span>
                 </button>
                 <div
+                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left transition-transform duration-300 ease-in-out ${
+                    openIndex === index ? "scale-x-50" : "scale-x-0"
+                  }`}
+                />
+                <div
                   className={`grid transition-all duration-300 ease-in-out ${
-                    openIndex === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                    openIndex === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-4 text-gray-600">{faq.answer}</div>
+                    <div className="pb-4 text-[20px] leading-[24px] md:leading-[32px]">
+                      {faq.answer}
+                    </div>
                     {faq.action && (
                       <a
                         href="#"
