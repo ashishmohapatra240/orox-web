@@ -45,7 +45,7 @@ export const FAQ = () => {
           </div>
 
           {/* Right Content - FAQ List */}
-          <div className="space-y-4">
+          <div>
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -55,7 +55,7 @@ export const FAQ = () => {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="flex w-full items-center justify-between py-4 text-left"
+                  className="flex w-full items-center justify-between py-[24px] text-left"
                 >
                   <span className="text-[20px] font-medium text-[#293483] leading-[24px] md:leading-[32px]">
                     {faq.question}
