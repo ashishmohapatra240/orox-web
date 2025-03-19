@@ -166,7 +166,7 @@ export const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end">
+              <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end mr-[24px] md:mr-0">
                 <p>© 2025 — Copyright. All Rights reserved</p>
                 <div className="flex flex-col md:flex-row gap-[16px] md:gap-[4px] justify-end mt-[24px] md:mt-[8px]">
                   <Link href="/privacy-policy" className="underline">
