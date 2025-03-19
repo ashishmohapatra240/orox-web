@@ -81,7 +81,7 @@ const Service = () => {
           </div>
 
           {/* Phone Image - Desktop */}
-          <div className="absolute right-10 top-20 z-10">
+          <div className="absolute right-10 -top-20 z-10">
             <div className="relative w-[800px] h-[600px]">
               <Image
                 src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/phone-tilt.png"
