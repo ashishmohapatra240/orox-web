@@ -262,8 +262,8 @@ export const Navbar = () => {
   // };
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white" ref={navbarRef}>
-      <nav className="mx-auto max-w-7xl flex items-center justify-between py-5 border-b border-[#F4F4F4] px-4 md:px-0">
+    <header className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]" ref={navbarRef}>
+      <nav className="mx-auto max-w-7xl flex items-center justify-between py-5  px-4 md:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -335,7 +335,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1">
+        <div className="hidden md:flex items-center space-x-1 gap-5">
           <Link href="/products">
             <Dropdown
               label="Products"
