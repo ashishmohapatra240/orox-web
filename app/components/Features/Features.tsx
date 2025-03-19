@@ -50,7 +50,7 @@ export const Features = ({
           {/* Features Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-[40px] md:mt-[48px]">
             {features.map((feature) => (
-              <div key={feature.title} className="group space-y-4 text-center">
+              <div key={feature.title} className="group space-y-6 text-center">
                 <div className="mx-auto relative h-24 w-24">
                   <Image
                     src={feature.icon}
@@ -59,7 +59,7 @@ export const Features = ({
                     className="object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="space-y-[24px]">
+                <div className="space-y-[8px]">
                   <h3 className="text-[20px] font-bold text-[#19191B] leading-[24px] md:leading-[32px]">
                     {feature.title}
                   </h3>

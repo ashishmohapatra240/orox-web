@@ -10,7 +10,8 @@ const Service = () => {
     }
   };
   return (
-    <div className="container mx-auto px-4 py-16 overflow-hidden max-w-[1280px]">
+    <div className="container mx-auto px-[16px] sm:[0px]  py-[44px] md:py-[88px] overflow-hidden max-w-[1280px]">
+      {/*<section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">*/}
       {/* Hero Section */}
       <div className="relative h-[600px] md:h-[500px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 md:mb-12 overflow-visible">
         {/* Mobile Background */}
@@ -36,7 +37,7 @@ const Service = () => {
         {/* Mobile Layout - Vertical Stacking */}
         <div className="relative h-full flex flex-col items-center p-[24px] sm:hidden">
           {/* Text Content */}
-          <div className="text-white w-full max-w-xs text-left mt-12">
+          <div className="text-white w-full max-w-xs text-left mt-[10px] md:mt:12">
             <h3 className="text-[16px] md:text-[28px] font-regular mb-[32px] leading-[24px] md:leading-[40px]">
               Ready to invest smarter? OROX takes the guesswork out of investing
               with AI-powered quantitative, risk-adjusted strategies designed
@@ -52,12 +53,12 @@ const Service = () => {
 
           {/* Phone Image - Mobile (Bottom Position) */}
           <div className="mt-[32px] flex justify-center items-center">
-            <div className="relative w-[400px] h-[320px] right-12">
+            <div className="relative w-[427px] h-[330px]">
               <Image
-                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/phone-tilt.png"
+                src="/images/service/MobileCallToAction.png"
                 alt="OROX App Interface"
                 fill
-                className="drop-shadow-2xl object-contain"
+                className=" object-contain"
               />
             </div>
           </div>
@@ -81,12 +82,13 @@ const Service = () => {
           </div>
 
           {/* Phone Image - Desktop */}
-          <div className="absolute right-10 -top-20 z-10">
-            <div className="relative w-[800px] h-[600px]">
+          <div className="absolute right-[-60px] -top-40 z-10">
+            <div className="relative w-[900px] h-700px]">
               <Image
-                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/phone-tilt.png"
+                src="/images/service/MobileCallToActionWeb.png"
                 alt="OROX App Interface"
-                fill
+                width={1096}
+                height={846}
                 className="drop-shadow-2xl object-contain"
               />
             </div>
