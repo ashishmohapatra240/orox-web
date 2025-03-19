@@ -51,8 +51,8 @@ const products = [
 
 export const HomeProducts = () => {
   return (
-    <section className="w-full px-4 sm:px-6 py-6 sm:py-8 md:py-12 lg:py-24">
-      <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-24">
+      <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
+      <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-44">
         {products.map((product, index) => (
           <div
             key={index}
@@ -61,7 +61,7 @@ export const HomeProducts = () => {
             {/* Content */}
             <div
               className={`space-y-3 sm:space-y-4 lg:space-y-6 ${
-                index % 2 === 0 ? "lg:order-2" : ""
+                index % 2 === 0 ? "lg:order-2 order-1" : "lg:order-1 order-2"
               }`}
             >
               <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
@@ -100,14 +100,16 @@ export const HomeProducts = () => {
 
             {/* Image */}
             <div
-              className={`relative aspect-square w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] mx-auto ${
-                index % 2 === 0 ? "lg:order-1" : ""
+              className={`relative w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] mx-auto ${
+                index % 2 === 0 ? "lg:order-1" : "lg:order-2"
               }`}
             >
               <Image
                 src={product.image}
                 alt={product.imageAlt}
-                fill
+                // fill
+                  width={600}
+                height={400}
                 className="object-contain"
                 priority
               />

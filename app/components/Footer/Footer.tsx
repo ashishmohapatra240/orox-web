@@ -36,7 +36,7 @@ const navigation = {
 export const Footer = () => {
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-8 md:py-[36px]">
+      <div className="mx-auto max-w-7xl px-4 py-8 md:py-[88px]">
         <div className="flex flex-col lg:flex-row justify-between">
           {/* Main Content Column */}
           <div className="w-full lg:max-w-md">
@@ -160,15 +160,15 @@ export const Footer = () => {
                     <Image
                       src={item.icon}
                       alt={item.name}
-                      width={36}
-                      height={36}
+                      width={40}
+                      height={40}
                     />
                   </Link>
                 ))}
               </div>
               <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end mr-[24px] md:mr-0">
                 <p>© 2025 — Copyright. All Rights reserved</p>
-                <div className="flex flex-col md:flex-row gap-[16px] md:gap-[4px] justify-end mt-[24px] md:mt-[8px]">
+                <div className="flex flex-col md:flex-row gap-[16px] md:gap-[4px] justify-end mt-[20px] md:mt-[8px]">
                   <Link href="/privacy-policy" className="underline">
                     Privacy Policy
                   </Link>
@@ -182,16 +182,16 @@ export const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div className="mt-12 lg:mt-0">
+          <div className="mt-4 lg:mt-0">
             {/* Download App Section */}
-            <div className="hidden lg:flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-60">
+            <div className="hidden lg:flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-[96px]">
               <h3 className="text-[28px] font-bold">Download app</h3>
               <div className="flex gap-2 flex-wrap">
                 <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU " />
                 <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
               </div>
             </div>
-            <hr className="my-8 border-t-2 border-[#999999] hidden lg:block" />
+            <hr className="my-8 border-b-1 border-[#ffffff] hidden lg:block" />
 
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex gap-8 mb-8">
@@ -228,7 +228,7 @@ export const Footer = () => {
             </div>
 
             {/* Contact and Location Section Desktop*/}
-            <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-72">
+            <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-[200px]">
               <div>
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
                 <div className="space-y-2 text-black/50 text-[14px]">
