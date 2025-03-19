@@ -7,7 +7,7 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 export const Hero = () => {
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 pt-[70px]">
-      <div className="absolute w-[180%] h-[180%] top-[10%] right-[-40%] md:top-[-50%] md:right-[0]  md:bottom-[35%] md:left-[20%]">
+      <div className="absolute w-[180%] h-[180%] top-[11%] right-[-40%] md:top-[-50%] md:right-[0]  md:bottom-[35%] md:left-[20%]">
         <Image
           src="/Pattern.png"
           alt="Hero Background"
@@ -20,7 +20,7 @@ export const Hero = () => {
         <div className="grid items-center gap-8 lg:gap-0 md:grid-cols-2">
           {/* Left Content */}
           <div className="relative z-10 pt-8 md:pt-12 lg:pt-16">
-            <div className="space-y-4 md:space-y-6 lg:space-y-8">
+            <div className="">
               <div className="space-y-2 md:space-y-4">
                 <h1 className="relative text-[40px] font-bold leading-[48px] md:leading-[80px] text-[#19191B] md:text-[76px]">
                   Invest smarter.
@@ -33,7 +33,7 @@ export const Hero = () => {
                     Build wealth.
                   </span>
                 </h1>
-                <p className="max-w-[570px] text-sm sm:text-base md:text-lg text-[#19191B] sm:leading-[32px]">
+                <p className="max-w-[300px] md:max-w-[570px] text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px]">
                   Forget stock-picking, market timing and waiting for the next
                   bull run—OROX puts your money on autopilot for high-growth
                   returns.
@@ -41,7 +41,7 @@ export const Hero = () => {
               </div>
 
               <div className="lg:block">
-                <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-indigo-900 rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-sm sm:text-base hover:bg-indigo-800 transition-colors mb-[20px]">
+                <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#293483] rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-[16px] md:text-[20px] hover:bg-indigo-800 transition-colors mb-[64px] md:mb-[20px] mt-[40px]">
                   Join for free
                 </button>
               </div>

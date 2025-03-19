@@ -34,21 +34,21 @@ export const Features = ({
   cta?: string;
 }) => {
   return (
-    <section className="w-full bg-white px-4 py-24">
+    <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
-        <div className="space-y-20">
+        <div>
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
             <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
               {title}
             </h2>
-            <p className="text-[16px] text-gray-600 text-[20px] leading-[24px] md:leading-[32px]">
+            <p className="text-[16px] text-[#19191B] md:text-[20px] leading-[24px] md:leading-[32px]">
               {description}
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-[40px]">
             {features.map((feature) => (
               <div key={feature.title} className="group space-y-4 text-center">
                 <div className="mx-auto relative h-24 w-24">
@@ -73,8 +73,10 @@ export const Features = ({
 
           {/* CTA Button */}
           {cta && (
-            <div className="text-center">
-              <Button className="py-4 text-[20px] font-bold">{cta}</Button>
+            <div className="text-center mt-[40px]">
+              <Button className="py-4 text-[16px] md:text-[20px] font-bold w-full md:w-auto">
+                {cta}
+              </Button>
             </div>
           )}
         </div>

@@ -515,7 +515,7 @@ export const Navbar = () => {
             <Button className="px-4 lg:px-6">Join for free</Button>
           </Link>
 
-          <hr className="h-[24px] w-[2px] bg-[#C9CCE0]" />
+          <hr className="h-[36px] w-[2px] bg-[#C9CCE0]" />
 
           {/* QR Code Button */}
           <button

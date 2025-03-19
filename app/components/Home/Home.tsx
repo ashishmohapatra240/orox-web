@@ -1,20 +1,20 @@
 import { Hero } from "../Hero/Hero";
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
-import { Partners } from "../Partners/Partners";
 import { Features } from "../Features/Features";
 import { Steps } from "../Steps/Steps";
 import { HomeProducts } from "../Products/HomeProducts";
 import { FAQ } from "../FAQ/FAQ";
 import Service from "../Service/Service";
 import { HomeBlog } from "../Blog/HomeBlog";
-
+import { PartnersMarquee } from "../Partners/PartnersMarquee";
 export default function LandingPage() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Partners />
+      <PartnersMarquee />
+      {/* <Partners /> */}
       <Features
         title={"With OROX there’s no guesswork, just gains"}
         description={
