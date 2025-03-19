@@ -48,7 +48,7 @@ export const Features = ({
           </div>
 
           {/* Features Grid */}
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-[40px]">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-[40px] md:mt-[48px]">
             {features.map((feature) => (
               <div key={feature.title} className="group space-y-4 text-center">
                 <div className="mx-auto relative h-24 w-24">
