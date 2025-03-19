@@ -90,8 +90,8 @@ export const Footer = () => {
             {/* Divider */}
             <hr className="lg:hidden border-t-2 border-[#999999] mb-8" />
 
-            <div className="lg:hidden mb-4">
-              <div className="flex flex-col space-y-2">
+            <div className="lg:hidden mb-[48px]">
+              <div className="flex flex-col space-y-[16px]">
                 <Link
                   href="/products"
                   className="text-[18px] font-semibold text-[#293483]"
@@ -168,11 +168,11 @@ export const Footer = () => {
               </div>
               <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end">
                 <p>© 2025 — Copyright. All Rights reserved</p>
-                <div className="flex gap-2 justify-end">
+                <div className="flex flex-col md:flex-row gap-[16px] md:gap-[4px] justify-end mt-[24px] md:mt-[8px]">
                   <Link href="/privacy-policy" className="underline">
                     Privacy Policy
                   </Link>
-                  <span>|</span>
+                  <span className="hidden lg:block">|</span>
                   <Link href="/terms-of-service" className="underline">
                     Terms of Service
                   </Link>
