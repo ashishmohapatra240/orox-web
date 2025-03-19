@@ -262,7 +262,10 @@ export const Navbar = () => {
   // };
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]" ref={navbarRef}>
+    <header
+      className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
+      ref={navbarRef}
+    >
       <nav className="mx-auto max-w-7xl flex items-center justify-between py-5  px-4 md:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -408,7 +411,7 @@ export const Navbar = () => {
             style={{ top: `${navbarHeight}px` }}
           >
             <div className="flex flex-col">
-              <div className="px-6 pt-8 space-y-6">
+              <div className="px-6 pt-8">
                 {/* Navigation Links */}
                 <div className="space-y-6">
                   <div className="flex items-center justify-between text-[16px] text-[#19191B]">
@@ -429,6 +432,7 @@ export const Navbar = () => {
                       />
                     </svg>
                   </div>
+                  <hr className="border-t border-[#F4F4F4]" />
 
                   <Link
                     href="/blog"
@@ -436,6 +440,7 @@ export const Navbar = () => {
                   >
                     Blog
                   </Link>
+                  <hr className="border-t border-[#F4F4F4]" />
 
                   <Link
                     href="/about"
@@ -443,8 +448,8 @@ export const Navbar = () => {
                   >
                     About
                   </Link>
-
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B]">
+                  <hr className="border-t border-[#F4F4F4]" />
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px]">
                     <Link href="/support">Support</Link>
                     <svg
                       width="20"
@@ -463,7 +468,6 @@ export const Navbar = () => {
                     </svg>
                   </div>
                 </div>
-
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[24px] mb-[24px]">
                   <Link href="/login">
