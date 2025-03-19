@@ -25,35 +25,40 @@ const steps = [
         in minutes and access, stress-free high-growth investing.
       </>
     ),
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step1.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step1.png",
   },
   {
     number: 2,
     title: "Create your account and get verified",
     description:
       "Sign up with your details and complete a quick verification process to keep your investments secure and compliant.",
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step2.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step2.png",
   },
   {
     number: 3,
     title: "Choose your investment type",
     description:
       "Want steady, stress-free returns? ODN offers a 90-day cycle with market-neutral strategies for stable, risk-adjusted investment. Looking for crypto exposure with less volatility? DVOX offers the benefits of a professionally managed, auto-balanced portfolio of high-quality, high-growth digital assets.",
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step3.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step3.png",
   },
   {
     number: 4,
     title: "Fund your portfolio",
     description:
       "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step4.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step4.png",
   },
   {
     number: 5,
     title: "Sit back and grow",
     description:
       "No market timing, no day trading—just automated, smart investing on autopilot. Track your progress anytime through the OROX app and let your money work for you. Download OROX today and start investing smarter!",
-    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step5.png",
+    image:
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step5.png",
   },
 ];
 
@@ -138,9 +143,9 @@ export const Steps = () => {
   const step = steps[currentStep];
 
   return (
-    <section className="relative w-full px-4 py-24">
+    <section className="relative w-full px-[16px] py-[16px] md:px-[80px] md:pb-[88px] md:pt-[0px]">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-[#F1F2F8] px-12 pt-12 relative">
+        <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left Content - increased to 3/5 of the grid */}
             <div className="lg:col-span-3">
@@ -196,12 +201,55 @@ export const Steps = () => {
                   ))}
                 </div>
               </div>
-              <Button
-                variant="secondary"
-                className="mt-24 border border-[#78CAB9] hover:border-gray-300 py-3"
-              >
-                Create your account
-              </Button>
+              <div className="flex justify-between mt-24">
+                <Button
+                  variant="secondary"
+                  className="border border-[#78CAB9] hover:border-gray-300 py-3"
+                >
+                  Create your account
+                </Button>
+                <button
+                  onClick={togglePause}
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5] md:hidden"
+                >
+                  {isPaused ? (
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M4 3L12 8L4 13V3Z" fill="#293483" />
+                    </svg>
+                  ) : (
+                    <div className="h-4 w-4">
+                      <svg
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="3"
+                          y="2"
+                          width="4"
+                          height="12"
+                          rx="1"
+                          fill="#293483"
+                        />
+                        <rect
+                          x="9"
+                          y="2"
+                          width="4"
+                          height="12"
+                          rx="1"
+                          fill="#293483"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </button>
+              </div>
             </div>
 
             {/* Right Content - App Screenshot - decreased to 2/5 of the grid */}
@@ -218,7 +266,7 @@ export const Steps = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-6 right-6 flex gap-2">
+          <div className="absolute bottom-6 right-6 hidden md:flex gap-2">
             <button
               onClick={togglePause}
               className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5]"
