@@ -59,7 +59,7 @@ export const Features = ({
                     className="object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-[24px]">
                   <h3 className="text-[20px] font-bold text-[#19191B] leading-[24px] md:leading-[32px]">
                     {feature.title}
                   </h3>
