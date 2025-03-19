@@ -66,7 +66,7 @@ export const HomeBlog = () => {
     });
   };
   return (
-    <section className="w-full px-4 py-24 overflow-hidden">
+    <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="space-y-16">
           {/* Header */}
@@ -114,7 +114,7 @@ export const HomeBlog = () => {
               </div>
             </div>
             {/* Navigation Buttons */}
-            <div className="mt-8 flex justify-center space-x-4">
+            <div className="mt-[40px] md:mt-[80px] flex justify-center space-x-4">
               <button
                 onClick={prevSlide}
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-[#19191B] transition-colors hover:bg-gray-200"

@@ -31,7 +31,7 @@ export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full px-4 py-24">
+    <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left Content */}
