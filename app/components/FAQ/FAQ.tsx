@@ -49,7 +49,7 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-b border-[#999999] pb-4 relative"
+                className="border-b border-[#999999] relative"
               >
                 <button
                   onClick={() =>
@@ -106,7 +106,7 @@ export const FAQ = () => {
                     {faq.action && (
                       <a
                         href="#"
-                        className="text-[#2F5DFD] hover:text-blue-700 text-[14px] font-bold flex items-center space-x-2"
+                        className="text-[#2F5DFD] hover:text-blue-700 text-[14px] font-bold flex items-center space-x-2 mb-[20px]"
                       >
                         <span>{faq.action}</span>
                         <Image
