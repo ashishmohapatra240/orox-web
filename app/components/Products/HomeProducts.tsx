@@ -51,8 +51,8 @@ const products = [
 
 export const HomeProducts = () => {
   return (
-    <section className="w-full px-[16px] py-[16px] md:px-[80px] md:py-[88px]">
-      <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-24">
+    <section className="w-full px-[16px] py-[48px] md:px-[80px] md:py-[88px]">
+      <div className="mx-auto max-w-7xl space-y-[96px] md:space-y-[176px]">
         {products.map((product, index) => (
           <div
             key={index}
