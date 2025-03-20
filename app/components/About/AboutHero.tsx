@@ -34,7 +34,7 @@ const AboutHero = () => {
               src="/images/about/about-hero.png"
               alt="Gold coins on a curved surface"
               fill
-              className="object-cover lg:rounded-l-[32px]"
+              className="object-cover lg:rounded-l-[32px] rounded-t-[16px]"
               priority
               quality={100}
             />
