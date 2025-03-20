@@ -38,7 +38,7 @@ export const StatsSection = () => {
           <div className="w-full md:w-[1000px] ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
               {stats.map((stat) => (
-                <div key={stat.number} className="flex flex-col w-[160px] md:w-[200px]">
+                <div key={stat.number} className="flex flex-col w-[160px] md:w-[180px] md:px-[16px]">
                   <div className="text-[32px] md:text-[48px] font-bold text-[#19191B] leading-[40px] md:leading-[60px]">
                     {stat.number}
                   </div>
