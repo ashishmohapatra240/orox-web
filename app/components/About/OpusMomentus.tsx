@@ -13,7 +13,7 @@ export const OpusMomentus = () => {
             <br />
             Opus Momentus
           </h2>
-          <p className="text-[20px] text-[#19191B] leading-[32px] mt-[24px]">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px]">
             <Link
               href={"https://www.opusmomentus.com/"}
               className="text-[#2F5DFD] underline"
