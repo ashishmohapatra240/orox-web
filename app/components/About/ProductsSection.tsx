@@ -32,15 +32,13 @@ export const ProductsSection = () => {
   return (
     <section className="w-full px-4 py-24">
       <div className="mx-auto max-w-7xl space-y-12">
-        <h2 className="text-center text-[40px] font-bold text-[#19191B] md:text-[56px]">
-          Discover OROX and the
-          <br />
-          powerful products driving it
+        <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] md:w-[800px] mx-auto">
+          Discover OROX and the powerful products driving it
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
           {products.map((product) => (
-            <div key={product.title} className="space-y-4">
+            <div key={product.title}>
               <div
                 className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
               >
@@ -51,17 +49,17 @@ export const ProductsSection = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-2">
-                <h3 className="text-[28px] font-bold text-[#19191B]">
+              <div className="mt-[30px]">
+                <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
                   {product.title}
                 </h3>
-                <p className="text-[20px] text-[#19191B]">
+                <p className="text-[20px] text-[#19191B] leading-[32px] mt-[11px]">
                   {product.description}
                 </p>
 
                 <Link
                   href="#"
-                  className="inline-flex items-center text-[#2F5DFD] font-bold hover:underline"
+                  className="inline-flex items-center text-[#2F5DFD] font-bold hover:underline mt-[18px]"
                 >
                   Learn more
                   <Image

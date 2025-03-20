@@ -34,7 +34,7 @@ export const TeamSection = () => {
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           <div className="text-center">
-            <h2 className="text-[40px] font-bold text-[#19191B] md:text-[56px]">
+            <h2 className="text-[40px] font-bold text-[#19191B] md:text-[56px] leading-[68px]">
               Meet the{" "}
               <span className="relative z-0">
                 <span className="absolute left-0 top-[35%] z-0 h-[80%] w-full rounded-lg bg-[#BBE5DC]"></span>
@@ -42,7 +42,7 @@ export const TeamSection = () => {
               </span>{" "}
               behind OROX
             </h2>
-            <p className="mt-4 text-[16px] md:text-[20px] text-[#19191B]">
+            <p className="mt-[24px] text-[16px] md:text-[20px] text-[#19191B] leading-[32px]">
               OROX is built by a team of finance, AI and blockchain experts who
               believe that smart investing should be effortless. Backed by Opus
               Momentus, our team is focused on building the future of wealth
@@ -50,7 +50,7 @@ export const TeamSection = () => {
             </p>
           </div>
 
-          <div className="grid gap-8">
+          <div className="grid gap-[48px]">
             {/* Top row - 2 members */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center max-w-3xl mx-auto">
               {team.slice(0, 2).map((member) => (
@@ -63,10 +63,12 @@ export const TeamSection = () => {
                       className="object-cover rounded-full filter grayscale"
                     />
                   </div>
-                  <h3 className="mt-4 text-2xl font-bold text-[#19191B]">
+                  <h3 className="mt-[24px] text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[40px]">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600">{member.role}</p>
+                  <p className="text-[#19191B] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] mt-[8px]">
+                    {member.role}
+                  </p>
                 </div>
               ))}
             </div>
@@ -83,10 +85,10 @@ export const TeamSection = () => {
                       className="object-cover rounded-full filter grayscale"
                     />
                   </div>
-                  <h3 className="mt-4 text-[20px] md:text-[28px] font-bold text-[#19191B]">
+                  <h3 className="mt-[24px] text-[20px] md:text-[28px] font-bold text-[#19191B]">
                     {member.name}
                   </h3>
-                  <p className="text-[#19191B] text-[16px] md:text-[20px]">
+                  <p className="text-[#19191B] text-[16px] md:text-[20px] leading-[32px] mt-[8px]">
                     {member.role}
                   </p>
                 </div>

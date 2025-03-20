@@ -7,16 +7,18 @@ const AboutHero = () => {
       <div className="h-full">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left Content */}
-          <div className="flex flex-col justify-center space-y-4 sm:space-y-6 text-white p-4 sm:p-6 lg:p-12 xl:p-20 lg:w-1/2">
-            <h1 className="text-[40px] md:text-[64px] font-bold">About OROX</h1>
-            <p className="text-[16px] md:text-[20px] text-white/80 max-w-[600px]">
+          <div className="text-white py-[48px] px-[16px] md:px-[80px] md:py-[147px] lg:w-1/2">
+            <h1 className="text-[40px] md:text-[64px] font-bold leading-[68px]">
+              About OROX
+            </h1>
+            <p className="text-[16px] md:text-[20px] text-white/80 max-w-[600px] leading-[24px] md:leading-[32px] mt-[24px] md:mt-[32px]">
               OROX is revolutionising investing by making risk-adjusted
               strategies accessible to everyone. Whether you&apos;re looking for
               steady, low-risk investing with ODN subscription or high growth
               crypto exposure with the DVOX token, OROX puts your money on
               autopilot—so you can grow without the guesswork.
             </p>
-            <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[40px]">
               <Button variant="white" className="w-full xs:w-auto">
                 Join for free
               </Button>

@@ -27,14 +27,14 @@ export const ValuesSection = () => {
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
-            <h2 className="text-4xl font-bold text-[#19191B] md:text-5xl">
+            <h2 className="text-4xl font-bold text-[#19191B] md:text-5xl z-0">
               The values that drive{" "}
-              <span className="relative">
-                <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full rounded-lg bg-blue-100"></span>
-                OROX
-              </span>
+              <span className="relative z-0">
+                <span className="absolute left-0 top-[35%] z-0 h-[80%] w-full rounded-lg bg-[#7878FA]/30"></span>
+                <span className="relative z-10">OROX</span>
+              </span>{" "}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-[20px] text-[#19191B] leading-[32px]">
               Built on trust, driven by responsibility.
             </p>
           </div>
@@ -50,10 +50,10 @@ export const ValuesSection = () => {
                     className="object-contain transition-transform duration-300 hover:scale-110"
                   />
                 </div>
-                <h3 className="mb-2 text-[20px] md:text-[28px] font-bold text-[#19191B] mt-4">
+                <h3 className="mb-2 text-[20px] md:text-[28px] font-bold text-[#19191B] mt-[24px] leading-[40px]">
                   {value.title}
                 </h3>
-                <p className="text-[#19191B] text-[16px] md:text-[20px]">
+                <p className="text-[#19191B] text-[16px] md:text-[20px] leading-[32px] mt-[8px]">
                   {value.description}
                 </p>
               </div>
