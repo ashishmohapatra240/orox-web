@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const InvestingSection = () => {
   return (
-    <section className="w-full bg-[#070926] px-4 md:px-20 py-12 md:py-22">
+    <section className="w-full bg-[#070926] px-4 md:px-20 py-[48px] md:py-[128px]">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-start items-center gap-12 md:gap-20">
           {/* Image Section */}
