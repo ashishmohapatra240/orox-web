@@ -11,7 +11,8 @@ export const InvestingSection = () => {
             <Image
               src="/images/about/investing.png"
               alt="OROX Investing"
-              fill
+              width={1000}
+              height={1000}
               className="object-cover rounded-2xl"
               priority
               quality={100}
