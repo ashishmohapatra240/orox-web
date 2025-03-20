@@ -3,9 +3,9 @@ import { Button } from "../ui/Button";
 
 const AboutHero = () => {
   return (
-    <section className="relative w-full min-h-[100dvh] bg-[linear-gradient(168deg,#276EDE_0%,#11032F_100%)]">
-      <div className="h-full">
-        <div className="flex flex-col lg:flex-row h-full">
+    <section className="relative w-full bg-[linear-gradient(168deg,#276EDE_0%,#11032F_100%)]">
+      <div className="">
+        <div className="flex flex-col lg:flex-row">
           {/* Left Content */}
           <div className="text-white py-[48px] px-[16px] md:px-[80px] md:py-[147px] lg:w-1/2">
             <h1 className="text-[40px] md:text-[64px] font-bold leading-[68px]">
@@ -29,7 +29,7 @@ const AboutHero = () => {
           </div>
 
           {/* Right Content - Image */}
-          <div className="relative lg:w-1/2 h-[280px] xs:h-[320px] sm:h-[400px] lg:h-[100dvh]">
+          <div className="relative lg:w-1/2 h-[280px] md:h-[700px]">
             <Image
               src="/images/about/about-hero.png"
               alt="Gold coins on a curved surface"
