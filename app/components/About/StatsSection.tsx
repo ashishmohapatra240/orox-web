@@ -28,7 +28,7 @@ export const StatsSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-[48px] md:gap-[98px]">
           {/* Title Section */}
           <div className="w-full md:w-[500px]">
-            <h2 className="text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[40px] w-[380px] md:w-[500px]">
+            <h2 className="text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[40px] w-[350px] md:w-[500px]">
               Numbers that power OROX. Proven strategies, trusted partners and
               real growth.
             </h2>
@@ -36,9 +36,12 @@ export const StatsSection = () => {
 
           {/* Stats Grid */}
           <div className="w-full md:w-[1000px] ">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px] md:gap-[16px]">
               {stats.map((stat) => (
-                <div key={stat.number} className="flex flex-col w-[160px] md:w-[180px] md:px-[16px]">
+                <div
+                  key={stat.number}
+                  className="flex flex-col w-[160px] md:w-[180px] md:px-[16px]"
+                >
                   <div className="text-[32px] md:text-[48px] font-bold text-[#19191B] leading-[40px] md:leading-[60px]">
                     {stat.number}
                   </div>

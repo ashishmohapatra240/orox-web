@@ -30,19 +30,19 @@ const team = [
 
 export const TeamSection = () => {
   return (
-    <section className="w-full bg-white px-4 py-24">
+    <section className="w-full bg-white px-[16px] py-[48px] md:px-[280px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           <div className="text-center">
-            <h2 className="text-[40px] font-bold text-[#19191B] md:text-[56px] leading-[68px]">
+            <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
               Meet the{" "}
-              <span className="relative z-0">
-                <span className="absolute left-0 top-[35%] z-0 h-[80%] w-full rounded-lg bg-[#BBE5DC]"></span>
-                <span className="relative z-10">minds</span>
+              <span className="relative">
+                <span className="absolute left-0 top-[35%] -z-1 h-[80%] w-full rounded-lg bg-[#BBE5DC] leading-[40px] md:leading-[68px]"></span>
+                <span className="relative z-1">minds</span>
               </span>{" "}
               behind OROX
             </h2>
-            <p className="mt-[24px] text-[16px] md:text-[20px] text-[#19191B] leading-[32px]">
+            <p className="mt-[32px] text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
               OROX is built by a team of finance, AI and blockchain experts who
               believe that smart investing should be effortless. Backed by Opus
               Momentus, our team is focused on building the future of wealth
@@ -52,7 +52,7 @@ export const TeamSection = () => {
 
           <div className="grid gap-[48px]">
             {/* Top row - 2 members */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] justify-items-center max-w-3xl mx-auto">
               {team.slice(0, 2).map((member) => (
                 <div key={member.name} className="text-center">
                   <div className="relative h-48 w-48 mx-auto">
