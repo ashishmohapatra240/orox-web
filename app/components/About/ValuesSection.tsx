@@ -34,7 +34,7 @@ export const ValuesSection = () => {
                 <span className="relative z-10">OROX</span>
               </span>{" "}
             </h2>
-            <p className="text-[20px] text-[#19191B] leading-[32px]">
+            <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
               Built on trust, driven by responsibility.
             </p>
           </div>
