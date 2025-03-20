@@ -137,9 +137,23 @@ export const Footer = () => {
 
               <div>
                 <h3 className="text-[20px] font-bold mb-[24px]">Location</h3>
-                <div className="space-y-2 text-black/50 text-[14px]">
-                  <p>2 Locomotive Street, South Eveleigh NSW 2015 Australia</p>
-                  <p>201 Kent Street, Sydney NSW 2000 Australia</p>
+                <div className="space-y-[16px] text-[#19191B]/50 text-[14px]">
+                  <a
+                    href="https://maps.app.goo.gl/k7RVNir6k7PXLXEr6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                  >
+                    2 Locomotive Street, South Eveleigh NSW 2015 Australia
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/9rPeYPSnm7Vb5bPq5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                  >
+                    201 Kent Street, Sydney NSW 2000 Australia
+                  </a>
                 </div>
               </div>
             </div>
@@ -191,7 +205,7 @@ export const Footer = () => {
                 <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
               </div>
             </div>
-            <hr className="my-8 border-b-1 border-[#ffffff] hidden lg:block" />
+            <hr className="my-8 border-b-1 border-[#999999] hidden lg:block" />
 
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex gap-8 mb-8">
@@ -228,19 +242,35 @@ export const Footer = () => {
             </div>
 
             {/* Contact and Location Section Desktop*/}
-            <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-[200px]">
+            <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-[200px] justify-between">
               <div>
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
-                <div className="space-y-2 text-black/50 text-[14px]">
+                <div className="text-black/50 text-[14px] space-y-[8px]">
                   <p>+61 295 336 214</p>
                   <p>hello@oroxglobal.com</p>
                 </div>
               </div>
               <div>
-                <h3 className="text-[20px] font-bold mb-6">Location</h3>
-                <div className="space-y-4 text-black/50 text-[14px]">
-                  <p>2 Locomotive Street South Eveleigh, NSW 2015 Australia</p>
-                  <p>201 Kent Street Sydney, NSW 2000 Australia</p>
+                <h3 className="text-[20px] font-bold mb-[24px] pl-[8px]">
+                  Location
+                </h3>
+                <div className="text-black/50 text-[14px] space-y-4">
+                  <a
+                    href="https://maps.app.goo.gl/k7RVNir6k7PXLXEr6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                  >
+                    2 Locomotive Street, South Eveleigh NSW 2015 Australia
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/9rPeYPSnm7Vb5bPq5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                  >
+                    201 Kent Street, Sydney NSW 2000 Australia
+                  </a>
                 </div>
               </div>
             </div>
