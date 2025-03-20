@@ -62,9 +62,9 @@ export const ProductsSection = () => {
   };
 
   return (
-    <section className="w-full px-[16px] md:px-[0] py-[48px] md:py-[88px]">
-      <div className="mx-auto max-w-7xl space-y-12">
-        <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] md:w-[800px] mx-auto">
+    <section className="w-full px-[16px] md:px-[0] py-[48px] md:py-[88px] overflow-x-hidden">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] md:w-[800px] mx-auto mb-[40px] md:mb-[48px]">
           Discover OROX and the powerful products driving it
         </h2>
 
@@ -118,7 +118,7 @@ export const ProductsSection = () => {
             {products.map((product) => (
               <div
                 key={product.title}
-                className="w-full flex-shrink-0 px-[16px]"
+                className="w-full flex-shrink-0 pr-[24px]"
               >
                 <div
                   className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
