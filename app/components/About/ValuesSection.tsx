@@ -23,7 +23,7 @@ const values = [
 
 export const ValuesSection = () => {
   return (
-    <section className="w-full bg-white px-4 py-24">
+    <section className="w-full bg-white px-[16px] md:px-[0] py-[48px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
