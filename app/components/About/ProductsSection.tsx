@@ -32,7 +32,7 @@ const products = [
 
 export const ProductsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Set initial value
