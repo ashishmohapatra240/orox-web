@@ -6,7 +6,7 @@ export const MissionSection = () => {
           <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#276EDE] to-[#11032F] text-center mb-[8px]">
             OROX&apos;S MISSION
           </span>
-          <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] md:w-[900px] mx-auto mt-[8px]">
+          <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] w-[100%] md:max-w-[900px] mx-auto mt-[8px] text-center">
             Making pro-level investing accessible to everyone
           </h2>
           <div className="mt-[24px]">
