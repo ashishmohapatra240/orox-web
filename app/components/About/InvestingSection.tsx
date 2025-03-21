@@ -7,7 +7,7 @@ export const InvestingSection = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-start items-center gap-12 md:gap-20">
           {/* Image Section */}
-          <div className="relative w-full md:w-[648px] h-[450px] md:h-[898px]">
+          <div className="relative w-full md:w-[648px] h-auto">
             <Image
               src="/images/about/investing.png"
               alt="OROX Investing"
