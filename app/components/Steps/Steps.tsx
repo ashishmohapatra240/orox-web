@@ -177,9 +177,9 @@ export const Steps = () => {
                 <h2 className="text-4xl font-bold text-[#19191B] md:text-[48px] leading-[1.1]">
                   {currentStep === 0 ? (
                     <>
-                      <span className="relative inline-block">
+                      <span className="relative inline-block z-10">
                         {/* Blue highlight only behind "5 easy steps" */}
-                        <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA] rounded-[8px]"></span>
+                        <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
                         5 easy steps
                       </span>{" "}
                       with OROX.
