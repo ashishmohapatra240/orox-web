@@ -31,6 +31,36 @@ const ODNChart = () => (
   </div>
 );
 
+const DVOXChart = () => (
+  <div className="relative">
+    <Image
+      src="/images/products/img_dvox_token_banner.png"
+      alt="DVOX Token Banner"
+      width={600}
+      height={400}
+      className="object-contain rounded-[16px] mt-2"
+      priority
+    />
+    <Image
+      src="/images/products/Bull.png"
+      alt="Bull Icon"
+      width={180}
+      height={180}
+      className="absolute top-1/2 left-1/2 w-[30%] h-auto -translate-x-1/2 -translate-y-1/2 transition-all duration-400 ease-in-out"
+      onMouseEnter={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1.2)";
+        img.style.transform = "translate(-50%, -50%) scale(1.1)";
+      }}
+      onMouseLeave={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1)";
+        img.style.transform = "translate(-50%, -50%) scale(1)";
+      }}
+    />
+  </div>
+);
+
 const products: {
   tag: string;
   title: JSX.Element;
@@ -78,8 +108,7 @@ const products: {
     ),
     description:
       "Love crypto but hate the rollercoaster? DVOX gives you high-growth potential without the crazy ups and downs³. Powered by the OROX app and using the DVOX token, it's designed to help you grow your portfolio with more confidence. Forget diamond hands—DVOX offers exposure to a professionally managed, auto-balanced portfolio of high-grade digital assets, designed for high-growth without the hassle.",
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
+    image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",
   },
