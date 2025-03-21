@@ -202,12 +202,14 @@ export const Steps = () => {
                 </div>
               </div>
               <div className="flex justify-between mt-24">
-                <Button
-                  variant="secondary"
-                  className="border border-[#78CAB9] hover:border-gray-300 py-3"
-                >
-                  Create your account
-                </Button>
+                <Link href="/login">
+                  <Button
+                    variant="secondary"
+                    className="border border-[#78CAB9] hover:border-gray-300 py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto"
+                  >
+                    Create your account
+                  </Button>
+                </Link>
                 <button
                   onClick={togglePause}
                   className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5] md:hidden"
