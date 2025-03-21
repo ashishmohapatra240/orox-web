@@ -69,7 +69,7 @@ export const Hero = () => {
               alt="OROX Path"
               width={375}
               height={667}
-              className="w-full h-full object-contain mb-[32px]"
+              className="w-[332px] h-full object-contain mb-[32px]"
             />
             <div className="flex flex-wrap items-center gap-[8px] justify-center">
               <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
@@ -78,7 +78,13 @@ export const Hero = () => {
           </div>
 
           <div className="hidden lg:block" style={{ zIndex: 100 }}>
-            <hr className="w-[50%] bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 my-8" />
+            <Image
+              src="/icons/path.svg"
+              alt="OROX Path"
+              width={375}
+              height={667}
+              className="w-[200px] md:w-[332px] h-full object-contain mb-[32px]"
+            />
             <div className="flex flex-wrap items-center gap-2">
               <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
               <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
