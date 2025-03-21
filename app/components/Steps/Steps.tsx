@@ -229,7 +229,7 @@ export const Steps = () => {
                 <Link href="/login">
                   <Button
                     variant="secondary"
-                    className="border border-[#78CAB9] hover:border-gray-300 py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto"
+                    className="border border-[#78CAB9] hover:border-gray-300 py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483]"
                   >
                     Create your account
                   </Button>
