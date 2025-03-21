@@ -125,17 +125,17 @@ const SupportDropdown = () => (
         <h3 className="font-semibold text-lg text-[#293483]">Help Center</h3>
         <ul className="space-y-2">
           <li>
-            <Link href="/support/faq" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               FAQ
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               Contact Us
             </Link>
           </li>
           <li>
-            <Link href="/support/tickets" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               Submit a Ticket
             </Link>
           </li>
@@ -148,17 +148,17 @@ const SupportDropdown = () => (
         <h3 className="font-semibold text-lg text-[#293483]">Resources</h3>
         <ul className="space-y-2">
           <li>
-            <Link href="/resources/guides" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               User Guides
             </Link>
           </li>
           <li>
-            <Link href="/resources/tutorials" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               Video Tutorials
             </Link>
           </li>
           <li>
-            <Link href="/resources/glossary" className="hover:text-[#2F5DFD]">
+            <Link href="/" className="hover:text-[#2F5DFD]">
               Crypto Glossary
             </Link>
           </li>
@@ -339,7 +339,7 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1 gap-5">
-          <Link href="/products">
+          <Link href="/">
             <Dropdown
               label="Products"
               trigger={
@@ -366,7 +366,7 @@ export const Navbar = () => {
           </Link>
 
           <Link
-            href="/blog"
+            href="/"
             className="px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors"
           >
             Blog
@@ -415,7 +415,7 @@ export const Navbar = () => {
                 {/* Navigation Links */}
                 <div className="space-y-6">
                   <div className="flex items-center justify-between text-[16px] text-[#19191B]">
-                    <Link href="/products">Products</Link>
+                    <Link href="/">Products</Link>
                     <svg
                       width="20"
                       height="20"
@@ -435,7 +435,7 @@ export const Navbar = () => {
                   <hr className="border-t border-[#F4F4F4]" />
 
                   <Link
-                    href="/blog"
+                    href="/"
                     className="block text-[16px] text-[#19191B]"
                   >
                     Blog
@@ -450,7 +450,7 @@ export const Navbar = () => {
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
                   <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px]">
-                    <Link href="/support">Support</Link>
+                    <Link href="/">Support</Link>
                     <svg
                       width="20"
                       height="20"
@@ -470,12 +470,12 @@ export const Navbar = () => {
                 </div>
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[24px] mb-[24px]">
-                  <Link href="/login">
+                  <Link href="/">
                     <Button variant="secondary" className="w-full block border border-[#78CAB9] hover:border-gray-300">
                       Log in
                     </Button>
                   </Link>
-                  <Link href="/signup" className="w-full block">
+                  <Link href="/" className="w-full block">
                     <Button className="w-full bg-[#293483] rounded-full">
                       Join for free
                     </Button>
@@ -510,12 +510,12 @@ export const Navbar = () => {
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          <Link href="/login">
+          <Link href="/">
             <Button variant="secondary" className="px-4 lg:px-6">
               Log in
             </Button>
           </Link>
-          <Link href="/signup">
+          <Link href="/">
             <Button className="px-4 lg:px-6">Join for free</Button>
           </Link>
 
