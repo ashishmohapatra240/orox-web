@@ -1,7 +1,44 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { JSX } from "react";
 
-const products = [
+const ODNChart = () => (
+  <div className="relative">
+    <Image
+      src="/images/products/img_odn_graph_banner.png"
+      alt="ODN Investment Chart"
+      width={600}
+      height={400}
+      className="object-contain"
+      priority
+    />
+    <Image
+      src="/images/products/CoinFlip.png"
+      alt="Coin Flip"
+      width={60}
+      height={60}
+      className="absolute top-[35%] right-[7%] w-[10%] h-auto transition-transform duration-900 ease-in-out hover:scale-110 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)_scale(1.1)]"
+      onMouseEnter={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.transform = "rotateY(180deg) scale(1.1)";
+      }}
+      onMouseLeave={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.transform = "rotateY(0deg) scale(1)";
+      }}
+    />
+  </div>
+);
+
+const products: {
+  tag: string;
+  title: JSX.Element;
+  description: string | JSX.Element;
+  image: string | JSX.Element;
+  imageAlt: string;
+  bgColor: string;
+}[] = [
   {
     tag: "ODN: SET AND LET GROW",
     title: (
@@ -24,8 +61,7 @@ const products = [
         you go about your life.
       </>
     ),
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
+    image: <ODNChart />,
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
   },
@@ -51,7 +87,7 @@ const products = [
 
 export const HomeProducts = () => {
   return (
-      <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
+    <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-44">
         {products.map((product, index) => (
           <div
@@ -104,15 +140,20 @@ export const HomeProducts = () => {
                 index % 2 === 0 ? "lg:order-1" : "lg:order-2"
               }`}
             >
-              <Image
-                src={product.image}
-                alt={product.imageAlt}
-                // fill
-                  width={600}
-                height={400}
-                className="object-contain"
-                priority
-              />
+              <div className="relative">
+                {typeof product.image === "string" ? (
+                  <Image
+                    src={product.image}
+                    alt={product.imageAlt}
+                    width={600}
+                    height={400}
+                    className="object-contain"
+                    priority
+                  />
+                ) : (
+                  product.image
+                )}
+              </div>
             </div>
           </div>
         ))}
