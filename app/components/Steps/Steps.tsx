@@ -39,8 +39,18 @@ const steps = [
   {
     number: 3,
     title: "Choose your investment type",
-    description:
-      "Want steady, stress-free returns? ODN offers a 90-day cycle with market-neutral strategies for stable, risk-adjusted investment. Looking for crypto exposure with less volatility? DVOX offers the benefits of a professionally managed, auto-balanced portfolio of high-quality, high-growth digital assets.",
+    description: (
+      <>
+        Want steady, stress-free returns? ODN offers a 90-day cycle with
+        market-neutral strategies for stable, risk-adjusted investment.
+        high-growth digital assets.
+        <br />
+        <br />
+        Looking for crypto exposure with less volatility? DVOX offers the
+        benefits of a professionally managed, auto-balanced portfolio of
+        high-quality, high-growth digital assets.
+      </>
+    ),
     image:
       "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step3.png",
   },
@@ -55,8 +65,22 @@ const steps = [
   {
     number: 5,
     title: "Sit back and grow",
-    description:
-      "No market timing, no day trading—just automated, smart investing on autopilot. Track your progress anytime through the OROX app and let your money work for you. Download OROX today and start investing smarter!",
+    description: (
+      <>
+        No market timing, no day trading—just automated, smart investing on
+        autopilot. Track your progress anytime through the OROX app and let your
+        money work for you.
+        <br />
+        <br />
+        <Link
+          href="https://onelink.to/65gpe9"
+          className="text-[#2F5DFD] underline"
+        >
+          Download OROX
+        </Link>{" "}
+        today and start investing smarter!
+      </>
+    ),
     image:
       "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step5.png",
   },
