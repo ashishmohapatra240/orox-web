@@ -225,7 +225,7 @@ export const Steps = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex justify-between mt-auto pb-[24px] md:pb-[72px] items-center">
+              <div className="flex justify-between mt-auto pb-[0] md:pb-[72px] items-center">
                 <Link href="/">
                   <Button
                     variant="secondary"
@@ -281,7 +281,7 @@ export const Steps = () => {
 
             {/* Right Content - App Screenshot */}
             <div className="flex items-end justify-center md:justify-start lg:col-span-2">
-              <div className="relative h-[500px] w-[320px] md:w-[380px] md:h-[600px] overflow-hidden">
+              <div className="relative h-[500px] w-[290px] md:w-[380px] md:h-[600px] overflow-hidden">
                 <Image
                   src={step.image}
                   alt={`OROX App - ${step.title}`}
