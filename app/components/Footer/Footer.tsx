@@ -159,7 +159,7 @@ export const Footer = () => {
             </div>
 
             {/* Social Icons and Copyright */}
-            <div className="flex justify-between items-center md:mt-36 mt-24">
+            <div className="flex justify-between items-end md:mt-36 mt-24">
               <div className="grid grid-flow-col grid-rows-2 gap-x-2 gap-y-2 w-fit">
                 {navigation.social.map((item, index) => (
                   <Link
