@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ export const Login = () => {
   const [focusedField, setFocusedField] = useState<"email" | "password" | null>(
     null
   );
-
+  const router = useRouter();
   return (
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
@@ -29,7 +30,10 @@ export const Login = () => {
       {/* Right Content */}
       <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen">
         <div className="flex justify-end items-center pt-4">
-          <button className="p-2 hover:bg-gray-100 rounded-full">
+          <button
+            onClick={() => router.push("/")}
+            className="p-2 hover:bg-gray-100 rounded-full"
+          >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path
                 d="M18 6L6 18M6 6L18 18"

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const Signup = () => {
   const [email, setEmail] = useState("");
@@ -12,25 +13,27 @@ export const Signup = () => {
   const [focusedField, setFocusedField] = useState<
     "email" | "password" | "invitation" | null
   >(null);
-
+  const router = useRouter();
   return (
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
       <div className="hidden lg:flex lg:w-1/2 relative h-[120vh]">
-        <Image
-          src="/images/auth/coins.png"
-          alt="OROX Piggy Bank"
-          height={1000}
-          width={1000}
+        <video
+          src="/videos/Signup.mp4"
+          autoPlay
+          muted
+          loop
           className="object-cover rounded-r-[24px]"
-          priority
         />
       </div>
 
       {/* Right Content */}
       <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen">
         <div className="flex justify-end items-center pt-4">
-          <button className="p-2 hover:bg-gray-100 rounded-full">
+          <button
+            onClick={() => router.push("/")}
+            className="p-2 hover:bg-gray-100 rounded-full"
+          >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path
                 d="M18 6L6 18M6 6L18 18"
@@ -210,7 +213,10 @@ export const Signup = () => {
                       Privacy Policy
                     </Link>{" "}
                     and{" "}
-                    <Link href="/terms-of-service" className="text-[#2F5DFD] underline">
+                    <Link
+                      href="/terms-of-service"
+                      className="text-[#2F5DFD] underline"
+                    >
                       Terms of Service
                     </Link>{" "}
                     for more information on how we may benefit your financial
