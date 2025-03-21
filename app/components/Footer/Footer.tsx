@@ -250,7 +250,7 @@ export const Footer = () => {
                   <p>hello@oroxglobal.com</p>
                 </div>
               </div>
-              <div>
+              <div className="w-[300px]">
                 <h3 className="text-[20px] font-bold mb-[24px] pl-[8px]">
                   Location
                 </h3>
@@ -261,7 +261,9 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
                   >
-                    2 Locomotive Street, South Eveleigh NSW 2015 Australia
+                    2 Locomotive Street,
+                    <br />
+                    South Eveleigh NSW 2015 Australia
                   </a>
                   <a
                     href="https://maps.app.goo.gl/9rPeYPSnm7Vb5bPq5"
@@ -269,7 +271,9 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
                   >
-                    201 Kent Street, Sydney NSW 2000 Australia
+                    201 Kent Street,
+                    <br />
+                    Sydney NSW 2000 Australia
                   </a>
                 </div>
               </div>
