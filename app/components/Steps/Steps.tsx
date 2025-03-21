@@ -226,17 +226,18 @@ export const Steps = () => {
                 </div>
               </div>
               <div className="flex justify-between mt-auto pb-[24px] md:pb-[72px] items-center">
-                <Link href="/login">
+                <Link href="/">
                   <Button
                     variant="secondary"
-                    className="border border-[#78CAB9] hover:border-gray-300 py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap"
+                    className="border border-[#78CAB9] hover:border-gray-300 py-[12px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap"
+                    style={{fontWeight: '600 !important'}}
                   >
                     Create your account
                   </Button>
                 </Link>
                 <button
                   onClick={togglePause}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5] md:hidden mx-[24px]"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5] md:hidden mx-0 md:mx-[24px]"
                 >
                   {isPaused ? (
                     <svg
