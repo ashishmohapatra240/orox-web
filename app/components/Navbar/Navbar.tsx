@@ -471,7 +471,7 @@ export const Navbar = () => {
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[24px] mb-[24px]">
                   <Link href="/login">
-                    <Button variant="secondary" className="w-full block">
+                    <Button variant="secondary" className="w-full block border border-[#78CAB9] hover:border-gray-300">
                       Log in
                     </Button>
                   </Link>

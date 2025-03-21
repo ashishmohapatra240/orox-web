@@ -86,7 +86,7 @@ export const HomeBlog = () => {
               }}
             >
               {" "}
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-[24px] md:gap-[48px]">
                 <BlogCard
                   image={articles[0].image}
                   title={articles[0].title}

@@ -7,7 +7,7 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 export const Hero = () => {
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 pt-[70px]">
-      <div className="absolute w-[180%] h-[180%] top-[11%] right-[-40%] sm:w-[200%] sm:h-[200%] sm:top-[-75%] sm:right-[-40%] md:top-[-85%] md:right-[0] md:bottom-[35%] md:left-[2.5%]">
+      <div className="absolute w-[180%] h-[180%] top-[11%] right-[-40%] sm:w-[200%] sm:h-[200%] sm:top-[-75%] sm:right-[-40%] md:w-[180%] md:h-[180%]  md:top-[-73%] md:right-[0] md:bottom-[35%] md:left-[12.5%]">
         <Image
           src="/Pattern.png"
           alt="Hero Background"
@@ -60,7 +60,7 @@ export const Hero = () => {
             />
           </div>
 
-          <div className="lg:hidden items-center justify-center w-full">
+          <div className="lg:hidden items-center justify-center w-full" style={{zIndex: 100}}>
             <hr className="w-full bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 mb-[32px]" />
             <div className="flex flex-wrap items-center gap-[8px] justify-center">
               <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
@@ -68,7 +68,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:block" style={{zIndex: 100}}>
             <hr className="w-[50%] bg-gradient-to-r from-white via-[#C9CCE0] to-white h-0.5 my-8" />
             <div className="flex flex-wrap items-center gap-2">
               <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
