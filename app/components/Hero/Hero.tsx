@@ -62,7 +62,7 @@ export const Hero = () => {
 
           <div
             className="lg:hidden items-center justify-center w-full"
-            style={{ zIndex: 100 }}
+            style={{ zIndex: 10 }}
           >
             <Image
               src="/icons/path.svg"
