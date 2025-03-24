@@ -21,37 +21,23 @@ export const PausePlayButton = ({
           width="24"
           height="24"
           viewBox="0 0 16 16"
-          fill="none"
+          fill="#293483"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M4 3L12 8L4 13V3Z" fill="currentColor" />
+          <path d="M4 3L12 8L4 13V3Z" />
         </svg>
       ) : (
         <div className="h-4 w-4">
           <svg
             viewBox="0 0 16 16"
-            fill="none"
+            fill="#293483"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect
-              x="3"
-              y="2"
-              width="4"
-              height="12"
-              rx="1"
-              fill="currentColor"
-            />
-            <rect
-              x="9"
-              y="2"
-              width="4"
-              height="12"
-              rx="1"
-              fill="currentColor"
-            />
+            <rect x="3" y="2" width="4" height="12" rx="1" />
+            <rect x="9" y="2" width="4" height="12" rx="1" />
           </svg>
         </div>
       )}
     </button>
   );
-}; 
+};
