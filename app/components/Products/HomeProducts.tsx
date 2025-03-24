@@ -73,7 +73,7 @@ const products: {
     tag: "ODN: SET AND LET GROW",
     title: (
       <>
-        <span className="relative inline-block">
+        <span className="relative inline-block z-10">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[8px]"></span>
           ODN
         </span>{" "}
@@ -99,7 +99,7 @@ const products: {
     tag: "DVOX: SUPERCHARGE YOUR INVESTMENT",
     title: (
       <>
-        <span className="relative inline-block">
+        <span className="relative inline-block z-10">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[8px]"></span>
           DVOX
         </span>{" "}
