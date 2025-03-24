@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const faqs = [
@@ -28,7 +28,20 @@ const faqs = [
 ];
 
 export const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOpenIndex((prevIndex) => {
+        if (prevIndex === null || prevIndex >= faqs.length - 1) {
+          return 0;
+        }
+        return prevIndex + 1;
+      });
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
@@ -47,14 +60,9 @@ export const FAQ = () => {
           {/* Right Content - FAQ List */}
           <div>
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-b border-[#999999] relative"
-              >
+              <div key={index} className="border-b border-[#999999] relative">
                 <button
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="flex w-full items-center justify-between py-[24px] text-left"
                 >
                   <span className="text-[20px] font-bold text-[#293483] leading-[24px] md:leading-[32px]">
@@ -90,10 +98,22 @@ export const FAQ = () => {
                   </span>
                 </button>
                 <div
-                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left transition-transform duration-300 ease-in-out ${
-                    openIndex === index ? "scale-x-50" : "scale-x-0"
-                  }`}
+                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left`}
+                  style={{
+                    animation: openIndex === index ? 'progress 7s linear' : 'none',
+                    transform: openIndex === index ? 'none' : 'scaleX(0)',
+                  }}
                 />
+                <style jsx>{`
+                  @keyframes progress {
+                    0% {
+                      transform: scaleX(0);
+                    }
+                    100% {
+                      transform: scaleX(1);
+                    }
+                  }
+                `}</style>
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
                     openIndex === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
