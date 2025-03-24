@@ -339,7 +339,7 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1 gap-5">
-          <Link href="/products">
+          <Link href="/">
             <Dropdown
               label="Products"
               trigger={
