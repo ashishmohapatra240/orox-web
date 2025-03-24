@@ -50,7 +50,7 @@ export const ProductsHero = () => {
       <div className="w-full bg-[#070926] h-32 sm:h-[40vh] md:h-[80vh]" />
 
       <div className="absolute left-1/2 -translate-x-1/2 bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-32 w-[90%] max-w-[365px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] rounded-[32px]">
-        <div className="relative w-full aspect-[1.  75/1]">
+        <div className="relative w-full aspect-[1.75/1]">
           <video
             ref={videoRef}
             src="/videos/Products.mp4"

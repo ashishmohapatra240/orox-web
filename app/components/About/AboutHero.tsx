@@ -52,6 +52,7 @@ const AboutHero = () => {
               autoPlay
               muted
               loop
+              controls={false}
               className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
             />
             <PausePlayButton
