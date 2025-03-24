@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
+import { PausePlayButton } from "../ui/PausePlayButton";
 
 const steps = [
   {
@@ -235,47 +236,11 @@ export const Steps = () => {
                     Create your account
                   </Button>
                 </Link>
-                <button
-                  onClick={togglePause}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5] md:hidden mx-0 md:mx-[24px]"
-                >
-                  {isPaused ? (
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M4 3L12 8L4 13V3Z" fill="#293483" />
-                    </svg>
-                  ) : (
-                    <div className="h-4 w-4">
-                      <svg
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="3"
-                          y="2"
-                          width="4"
-                          height="12"
-                          rx="1"
-                          fill="#293483"
-                        />
-                        <rect
-                          x="9"
-                          y="2"
-                          width="4"
-                          height="12"
-                          rx="1"
-                          fill="#293483"
-                        />
-                      </svg>
-                    </div>
-                  )}
-                </button>
+                <PausePlayButton
+                  isPlaying={!isPaused}
+                  onToggle={togglePause}
+                  className="md:hidden mx-0 md:mx-[24px] text-[#293483]"
+                />
               </div>
             </div>
 
@@ -294,47 +259,11 @@ export const Steps = () => {
           </div>
 
           <div className="absolute bottom-6 right-6 hidden md:flex gap-2">
-            <button
-              onClick={togglePause}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-[#E5E5E5]"
-            >
-              {isPaused ? (
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M4 3L12 8L4 13V3Z" fill="#293483" />
-                </svg>
-              ) : (
-                <div className="h-4 w-4">
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="3"
-                      y="2"
-                      width="4"
-                      height="12"
-                      rx="1"
-                      fill="#293483"
-                    />
-                    <rect
-                      x="9"
-                      y="2"
-                      width="4"
-                      height="12"
-                      rx="1"
-                      fill="#293483"
-                    />
-                  </svg>
-                </div>
-              )}
-            </button>
+            <PausePlayButton
+              isPlaying={!isPaused}
+              onToggle={togglePause}
+              className="text-[#293483]"
+            />
           </div>
         </div>
       </div>

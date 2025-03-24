@@ -3,33 +3,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
 
-const ODNChart = () => (
-  <div className="relative">
-    <Image
-      src="/images/products/img_odn_graph_banner.png"
-      alt="ODN Investment Chart"
-      width={600}
-      height={400}
-      className="object-contain"
-      priority
-    />
-    <Image
-      src="/images/products/CoinFlip.png"
-      alt="Coin Flip"
-      width={60}
-      height={60}
-      className="absolute top-[35%] right-[7%] w-[10%] h-auto transition-transform duration-900 ease-in-out hover:scale-110 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)_scale(1.1)]"
-      onMouseEnter={(e) => {
-        const img = e.currentTarget as HTMLImageElement;
-        img.style.transform = "rotateY(180deg) scale(1.1)";
-      }}
-      onMouseLeave={(e) => {
-        const img = e.currentTarget as HTMLImageElement;
-        img.style.transform = "rotateY(0deg) scale(1)";
-      }}
-    />
-  </div>
-);
+// const ODNChart = () => (
+//   <div className="relative">
+//     <Image
+//       src="/images/products/img_odn_graph_banner.png"
+//       alt="ODN Investment Chart"
+//       width={600}
+//       height={400}
+//       className="object-contain"
+//       priority
+//     />
+//     <Image
+//       src="/images/products/CoinFlip.png"
+//       alt="Coin Flip"
+//       width={60}
+//       height={60}
+//       className="absolute top-[35%] right-[7%] w-[10%] h-auto transition-transform duration-900 ease-in-out hover:scale-110 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)_scale(1.1)]"
+//       onMouseEnter={(e) => {
+//         const img = e.currentTarget as HTMLImageElement;
+//         img.style.transform = "rotateY(180deg) scale(1.1)";
+//       }}
+//       onMouseLeave={(e) => {
+//         const img = e.currentTarget as HTMLImageElement;
+//         img.style.transform = "rotateY(0deg) scale(1)";
+//       }}
+//     />
+//   </div>
+// );
 
 const DVOXChart = () => (
   <div className="relative">
@@ -91,7 +91,7 @@ const products: {
         you go about your life.
       </>
     ),
-    image: <ODNChart />,
+    image: "/images/products/img_odn_invest_banner.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
   },
@@ -174,10 +174,11 @@ export const HomeProducts = () => {
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
-                    width={600}
-                    height={400}
+                    width={800}
+                    height={600}
                     className="object-contain"
                     priority
+                    quality={100}
                   />
                 ) : (
                   product.image
