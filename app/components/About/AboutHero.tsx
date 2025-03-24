@@ -19,7 +19,7 @@ const AboutHero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen bg-[linear-gradient(168deg,#276EDE_0%,#11032F_100%)]">
+    <section className="relative w-full bg-[linear-gradient(168deg,#276EDE_0%,#11032F_100%)]">
       <div className="h-full">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left Content */}
@@ -45,7 +45,7 @@ const AboutHero = () => {
           </div>
 
           {/* Right Content - Video */}
-          <div className="relative lg:w-1/2 min-h-[280px] lg:h-full">
+          <div className="relative lg:w-1/2 min-h-[400px]">
             <video
               ref={videoRef}
               src="/videos/About.mp4"
