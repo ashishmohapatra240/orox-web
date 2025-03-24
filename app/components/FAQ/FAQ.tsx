@@ -48,7 +48,7 @@ export const FAQ = () => {
       });
       setKey(prev => prev + 1);
       startTimer(); // Restart timer for next question
-    }, 7000);
+    }, 10000);
   }, []);
 
   useEffect(() => {
@@ -121,9 +121,9 @@ export const FAQ = () => {
                   </span>
                 </button>
                 <div
-                  className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left`}
+                  className={`absolute bottom-0 left-0 w-full h-[4px] bg-[#293483] transform origin-left rounded-r-[4px]`}
                   style={{
-                    animation: openIndex === index ? `progress-${key} 7s linear forwards` : 'none',
+                    animation: openIndex === index ? `progress-${key} 10s linear forwards` : 'none',
                     transform: openIndex === index ? 'none' : 'scaleX(0)',
                   }}
                 />
