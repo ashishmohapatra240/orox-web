@@ -56,7 +56,8 @@ export const Features = ({
                     src={feature.icon}
                     alt={feature.title}
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="object-contain transition-transform duration-300"
+                    quality={100}
                   />
                 </div>
                 <div className="space-y-[8px]">
