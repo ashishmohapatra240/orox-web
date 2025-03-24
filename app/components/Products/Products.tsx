@@ -76,18 +76,14 @@ export const Products = () => {
             className="grid items-center gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2"
           >
             {/* Content */}
-            <div
-              className={`space-y-3 sm:space-y-4 lg:space-y-6 ${
-                index % 2 === 1 ? "lg:order-2" : ""
-              }`}
-            >
-              <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
+            <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
+              <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
-              <h2 className="text-2xl sm:text-[56px] font-bold text-[#19191B] leading-[1]">
+              <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[68px] mt-[8px]">
                 {product.title}
               </h2>
-              <p className="text-base sm:text-[20px] text-[#19191B] leading-[1.5]">
+              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px] mb-[40px]">
                 {product.description}
               </p>
               <div>
@@ -116,12 +112,12 @@ export const Products = () => {
             </div>
 
             {/* Image */}
-            <div className="relative aspect-square w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[600px] mx-auto">
+            <div className="relative aspect-square w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[600px]">
               <Image
                 src={product.image}
                 alt={product.imageAlt}
                 fill
-                className="object-contain p-3 sm:p-4 lg:p-12"
+                className="object-contain"
                 priority
               />
             </div>
