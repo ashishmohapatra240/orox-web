@@ -29,6 +29,7 @@ const faqs = [
 
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,10 +39,16 @@ export const FAQ = () => {
         }
         return prevIndex + 1;
       });
+      setKey(prev => prev + 1);
     }, 7000);
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleQuestionClick = (index: number) => {
+    setOpenIndex(index);
+    setKey(prev => prev + 1);
+  };
 
   return (
     <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
@@ -62,7 +69,7 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div key={index} className="border-b border-[#999999] relative">
                 <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() => handleQuestionClick(index)}
                   className="flex w-full items-center justify-between py-[24px] text-left"
                 >
                   <span className="text-[20px] font-bold text-[#293483] leading-[24px] md:leading-[32px]">
@@ -100,12 +107,12 @@ export const FAQ = () => {
                 <div
                   className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left`}
                   style={{
-                    animation: openIndex === index ? 'progress 7s linear' : 'none',
+                    animation: openIndex === index ? `progress-${key} 7s linear` : 'none',
                     transform: openIndex === index ? 'none' : 'scaleX(0)',
                   }}
                 />
                 <style jsx>{`
-                  @keyframes progress {
+                  @keyframes progress-${key} {
                     0% {
                       transform: scaleX(0);
                     }
