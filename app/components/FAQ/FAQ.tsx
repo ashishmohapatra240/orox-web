@@ -143,7 +143,7 @@ export const FAQ = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-4 text-[20px] leading-[24px] md:leading-[32px]">
+                    <div className="pb-4 text-[20px] leading-[32px]">
                       {faq.answer}
                     </div>
                     {faq.action && (

@@ -15,7 +15,7 @@ const products = [
   {
     title: "Opus Diversified Nexus",
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/img_odn_invest_banner.png",
     bgColor: "bg-[#4A90E2]",
     description:
       "ODN offers risk-adjusted, hands-off investing with a 90-day cycle and market-neutral strategies for long-term stability—no wild swings, no constant monitoring.",
