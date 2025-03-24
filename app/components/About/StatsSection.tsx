@@ -25,9 +25,9 @@ export const StatsSection = () => {
   return (
     <section className="w-full bg-[#DDF2ED] px-4 md:px-20 py-12 md:py-22">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-[48px] md:gap-[98px]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-[48px] md:gap-[98px]">
           {/* Title Section */}
-          <div className="w-full md:w-[500px]">
+          <div className="w-full md:w-[500px] flex items-center">
             <h2 className="text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[40px] w-[350px] md:w-[500px]">
               Numbers that power OROX. Proven strategies, trusted partners and
               real growth.
