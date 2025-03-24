@@ -212,7 +212,7 @@ export const Footer = () => {
             <hr className="my-8 border-b-1 border-[#999999] hidden lg:block" />
 
             {/* Navigation Links - Desktop */}
-            <div className="hidden lg:flex gap-8 mb-8">
+            <div className="hidden lg:flex gap-[41px] mb-8">
               <Link
                 href="/"
                 className="text-[16px] font-semibold text-[#293483]"
