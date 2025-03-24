@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 const faqs = [
@@ -30,9 +30,16 @@ const faqs = [
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [key, setKey] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout>(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startTimer = useCallback(() => {
+    // Clear existing timer
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    // Start new timer
+    timerRef.current = setTimeout(() => {
       setOpenIndex((prevIndex) => {
         if (prevIndex === null || prevIndex >= faqs.length - 1) {
           return 0;
@@ -40,14 +47,23 @@ export const FAQ = () => {
         return prevIndex + 1;
       });
       setKey(prev => prev + 1);
+      startTimer(); // Restart timer for next question
     }, 7000);
-
-    return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, [startTimer]);
 
   const handleQuestionClick = (index: number) => {
     setOpenIndex(index);
     setKey(prev => prev + 1);
+    startTimer(); // Restart timer when manually selecting a question
   };
 
   return (
@@ -107,7 +123,7 @@ export const FAQ = () => {
                 <div
                   className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#293483] transform origin-left`}
                   style={{
-                    animation: openIndex === index ? `progress-${key} 7s linear` : 'none',
+                    animation: openIndex === index ? `progress-${key} 7s linear forwards` : 'none',
                     transform: openIndex === index ? 'none' : 'scaleX(0)',
                   }}
                 />
