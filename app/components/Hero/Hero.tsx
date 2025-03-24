@@ -49,12 +49,12 @@ export const Hero = () => {
           </div>
 
           {/* Right Content - Interactive Hero Image */}
-          <div className="relative w-full max-w-[240px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] mx-auto h-auto flex justify-center items-center cursor-pointer">
+          <div className="relative w-full max-w-[280px] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[420px] mx-auto h-auto flex justify-center items-center cursor-pointer">
             <Image
               src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/hero.png"
               alt="OROX Trading Platform Interface"
-              width={800}
-              height={1200}
+              width={900}
+              height={1350}
               className="w-full object-contain hover:scale-90 transition-transform duration-500 ease-in-out"
               priority
             />
