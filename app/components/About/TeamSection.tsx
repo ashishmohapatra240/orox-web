@@ -12,20 +12,20 @@ const team = [
     image: "/images/team/daniel-ord.png",
   },
   {
-    name: "Andrew Mo",
-    role: "Head of Product & Operations",
-    image: "/images/team/andrew-mo.png",
+    name: "Kim Dao",
+    role: "Partner",
+    image: "/images/team/kim-dao.png",
   },
   {
     name: "Barabasi Zoltan",
     role: "Lead Engineer",
     image: "/images/team/barabasi-zoltan.png",
   },
-  {
-    name: "Agam Lamba",
-    role: "Head of Digital & CX",
-    image: "/images/team/agam-lamba.png",
-  },
+  // {
+  //   name: "Agam Lamba",
+  //   role: "Head of Digital & CX",
+  //   image: "/images/team/agam-lamba.png",
+  // },
 ];
 
 export const TeamSection = () => {
@@ -51,9 +51,8 @@ export const TeamSection = () => {
           </div>
 
           <div className="grid gap-[48px]">
-            {/* Top row - 2 members */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] justify-items-center max-w-3xl mx-auto">
-              {team.slice(0, 2).map((member) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] justify-items-center max-w-4xl mx-auto">
+              {team.map((member) => (
                 <div key={member.name} className="text-center">
                   <div className="relative h-48 w-48 mx-auto">
                     <Image
@@ -66,29 +65,7 @@ export const TeamSection = () => {
                   <h3 className="mt-[24px] text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[40px]">
                     {member.name}
                   </h3>
-                  <p className="text-[#19191B] text-[20px] leading-[24px] md:leading-[32px] mt-[8px]">
-                    {member.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Bottom row - 3 members */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-              {team.slice(2).map((member) => (
-                <div key={member.name} className="text-center">
-                  <div className="relative h-48 w-48 mx-auto">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover rounded-full filter grayscale"
-                    />
-                  </div>
-                  <h3 className="mt-[24px] text-[20px] md:text-[28px] font-bold text-[#19191B]">
-                    {member.name}
-                  </h3>
-                  <p className="text-[#19191B] text-[16px] md:text-[20px] leading-[32px] mt-[8px]">
+                  <p className="text-[#19191B] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] mt-[8px]">
                     {member.role}
                   </p>
                 </div>
