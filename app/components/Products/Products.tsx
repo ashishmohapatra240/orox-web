@@ -42,7 +42,7 @@ const products = [
       </>
     ),
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/odn-chart.png",
+      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/img_odn_invest_banner.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
   },
@@ -68,7 +68,7 @@ const products = [
 
 export const Products = () => {
   return (
-    <section className="w-full bg-white py-[44px] md:py-[88px]">
+    <section className="w-full bg-white">
       <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[88px]">
         {products.map((product, index) => (
           <div

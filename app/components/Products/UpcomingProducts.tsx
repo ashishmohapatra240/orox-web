@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const upcomingProducts = [
   {
-    title: "Fast, secure and frictionless asset swap",
+    title: "Get great value with quick conversion through our swap function",
     description:
       "Easily swap between assets within the OROX app. No extra steps, no hidden fees—just effortless conversions at your fingertips.",
     image: "/images/products/asset-swap.png",
   },
   {
-    title: "Spend your gains with the OROX card",
+    title: "Cards for every type of credit builder and investor in your digital wallet",
     description:
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
     image: "/images/products/spend-gains.png",
@@ -19,9 +19,9 @@ export const UpcomingProducts = () => {
   return (
     <section className="w-full bg-[#070926] px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-[40px] md:mb-[80px]">
           <h2 className="text-[34px] md:text-[56px] font-bold text-white leading-[48px] md:leading-[68px]">
-            New products coming soon to OROX
+            Features coming soon
           </h2>
           <p className="mt-4 text-[16px] md:text-[20px] text-white leading-[24px] md:leading-[32px]">
             We&apos;re making investing even simpler with new features and
@@ -32,7 +32,7 @@ export const UpcomingProducts = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {upcomingProducts.map((product, index) => (
             <div key={index} className="bg-[#ffffff] rounded-2xl">
-              <div className="relative aspect-[2/1] w-full">
+              <div className="relative aspect-[1] md:aspect-[2/1] w-full">
                 <Image
                   src={product.image}
                   alt={product.title}

@@ -4,7 +4,7 @@ import { PausePlayButton } from "../ui/PausePlayButton";
 import { Button } from "../ui/Button";
 
 export const ProductsHero = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const togglePlay = () => {
