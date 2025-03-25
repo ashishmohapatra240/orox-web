@@ -30,7 +30,7 @@ export const BlogCard = ({
 
       {/* Content */}
       <div>
-        <h3 className="text-[28px] font-bold text-[#19191B] group-hover:text-blue-600 leading-[40px] mt-[30px]">
+        <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px] mt-[30px]">
           {title}
         </h3>
         <p className="text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-2">
