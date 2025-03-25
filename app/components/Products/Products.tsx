@@ -14,7 +14,7 @@ const products = [
       </>
     ),
     description:
-      "OROX is your all-in-one investment app and platform, blending AI-powered quantitative strategies, blockchain security and seamless automation. Whether you’re after steady, low-risk growth or crypto exposure with less volatility, OROX makes investing effortless. Easily connect with ODN, and the new OROX token—all in one place.",
+      "OROX is your all-in-one investment app and platform, blending AI-powered quantitative strategies, blockchain security and seamless automation. Whether you're after steady, low-risk growth or crypto exposure with less volatility, OROX makes investing effortless. Easily connect with ODN, and the new OROX token—all in one place.",
     image: "/images/products/orox-app.png",
     imageAlt: "ODN",
     bgColor: "#ADE0EE",
@@ -68,16 +68,16 @@ const products = [
 
 export const Products = () => {
   return (
-    <section className="w-full py-[44px] md:py-[88px]">
+    <section className="w-full bg-white py-[44px] md:py-[88px]">
       <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[88px]">
         {products.map((product, index) => (
           <div
             key={index}
-            className="grid items-center gap-[40px] lg:grid-cols-2"
+            className="grid items-center gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2"
           >
             {/* Content */}
-            <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
-              <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
+            <div className={`${index % 2 === 1 ? "lg:order-2 order-1" : "lg:order-1 order-2"}`}>
+              <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
               <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[68px] mt-[8px]">
@@ -112,16 +112,22 @@ export const Products = () => {
             </div>
 
             {/* Image */}
-            <div className="relative aspect-square w-full max-w-[320px] md:max-w-[400px] lg:max-w-[600px]">
-              <Image
-                src={product.image}
-                alt={product.imageAlt}
-                width={800}
-                height={600}
-                className="object-contain"
-                priority
-                quality={100}
-              />
+            <div
+              className={`relative w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] mx-auto ${
+                index % 2 === 1 ? "lg:order-1" : "lg:order-2"
+              }`}
+            >
+              <div className="relative">
+                <Image
+                  src={product.image}
+                  alt={product.imageAlt}
+                  width={800}
+                  height={600}
+                  className="object-contain"
+                  priority
+                  quality={100}
+                />
+              </div>
             </div>
           </div>
         ))}
