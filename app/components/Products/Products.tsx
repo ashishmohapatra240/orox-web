@@ -68,12 +68,12 @@ const products = [
 
 export const Products = () => {
   return (
-    <section className="w-full px-4 sm:px-6 py-6 sm:py-8 md:py-12 lg:py-24">
-      <div className="mx-auto max-w-7xl space-y-8 sm:space-y-12 lg:space-y-24">
+    <section className="w-full py-[44px] md:py-[88px]">
+      <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[88px]">
         {products.map((product, index) => (
           <div
             key={index}
-            className="grid items-center gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2"
+            className="grid items-center gap-[40px] lg:grid-cols-2"
           >
             {/* Content */}
             <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
@@ -112,13 +112,15 @@ export const Products = () => {
             </div>
 
             {/* Image */}
-            <div className="relative aspect-square w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[600px]">
+            <div className="relative aspect-square w-full max-w-[320px] md:max-w-[400px] lg:max-w-[600px]">
               <Image
                 src={product.image}
                 alt={product.imageAlt}
-                fill
+                width={800}
+                height={600}
                 className="object-contain"
                 priority
+                quality={100}
               />
             </div>
           </div>

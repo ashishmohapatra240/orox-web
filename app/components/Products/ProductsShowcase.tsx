@@ -2,9 +2,9 @@ import { Products } from "./Products";
 
 export const ProductsShowcase = () => {
   return (
-    <section className="w-full bg-white pt-20 pb-24">
+    <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] leading-[40px] md:leading-[68px]">
             Discover OROX and the
             <br />

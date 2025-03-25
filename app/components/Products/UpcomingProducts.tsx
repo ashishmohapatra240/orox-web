@@ -17,7 +17,7 @@ const upcomingProducts = [
 
 export const UpcomingProducts = () => {
   return (
-    <section className="w-full bg-[#070926] px-4 py-24">
+    <section className="w-full bg-[#070926] px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-[34px] md:text-[56px] font-bold text-white leading-[48px] md:leading-[68px]">
