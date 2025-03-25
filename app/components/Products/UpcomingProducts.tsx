@@ -31,13 +31,13 @@ export const UpcomingProducts = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {upcomingProducts.map((product, index) => (
-            <div key={index} className="bg-[#ffffff] rounded-2xl">
+            <div key={index} className="bg-[#ffffff] rounded-[24px]">
               <div className="relative aspect-[1] md:aspect-[2/1] w-full">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover rounded-t-xl"
+                  className="object-cover rounded-t-[24px]"
                   quality={100}
                 />
                 <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFDE82] rounded-[4px]">
