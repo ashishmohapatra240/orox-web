@@ -55,7 +55,7 @@ export const ProductsHero = () => {
       </section>
 
       <div className="relative">
-        <div className="absolute top-0 left-0 right-0 h-[120px] sm:h-[250px] md:h-[300px] bg-white" />
+        <div className="absolute -top-10 left-0 right-0 h-[120px] md:h-[300px] bg-white" />
 
         <div className="bg-[#070926]">
           <div className="relative h-[240px] sm:h-[500px] md:h-[600px]">
