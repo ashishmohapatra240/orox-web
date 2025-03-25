@@ -52,9 +52,16 @@ const AboutHero = () => {
               autoPlay
               muted
               loop
-              controls={false}
+              playsInline
               className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
             />
+            {/* <style>
+              {`
+                .peer::-webkit-media-controls {
+                  display: none !important;
+                }
+              `}
+            </style> */}
             <PausePlayButton
               isPlaying={isPlaying}
               onToggle={togglePlay}
