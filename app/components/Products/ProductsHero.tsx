@@ -54,37 +54,36 @@ export const ProductsHero = () => {
         </div>
       </section>
 
-      {/* Middle section with split background and video */}
-      <section className="relative h-[240px] sm:h-[500px] md:h-[600px]">
-        <div className="absolute inset-0">
-          <div className="h-1/2 bg-white" />
-          <div className="h-1/2 bg-[#070926]" />
-        </div>
+      <div className="relative">
+        <div className="absolute top-0 left-0 right-0 h-[120px] sm:h-[250px] md:h-[300px] bg-white" />
 
-        {/* Video container */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[94%] max-w-[365px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] z-10">
-          <div className="relative w-full aspect-[1.75/1]">
-            <video
-              ref={videoRef}
-              src="/videos/Products.mp4"
-              autoPlay
-              muted
-              playsInline
-              loop
-              className="object-cover rounded-[12px] md:rounded-[32px] w-full h-full shadow-lg"
-            />
+        <div className="bg-[#070926]">
+          <div className="relative h-[240px] sm:h-[500px] md:h-[600px]">
+            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[94%] max-w-[365px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] z-10">
+              <div className="relative w-full aspect-[1.75/1]">
+                <video
+                  ref={videoRef}
+                  src="/videos/Products.mp4"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  className="object-cover rounded-[12px] md:rounded-[32px] w-full h-full"
+                />
 
-            <PausePlayButton
-              isPlaying={isPlaying}
-              onToggle={togglePlay}
-              className="absolute bottom-[8px] right-[8px] md:bottom-[24px] md:right-[24px] w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
-            />
+                <PausePlayButton
+                  isPlaying={isPlaying}
+                  onToggle={togglePlay}
+                  className="absolute bottom-[8px] right-[8px] md:bottom-[24px] md:right-[24px] w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Bottom dark section */}
-      <div className="bg-[#070926] w-full h-[80px] md:h-[200px]" />
+          {/* Bottom spacing */}
+          <div className="h-[10px] md:h-[200px]" />
+        </div>
+      </div>
     </div>
   );
 };
