@@ -69,6 +69,7 @@ export const ProductsHero = () => {
               src="/videos/Products.mp4"
               autoPlay
               muted
+              playsInline
               loop
               className="object-cover rounded-[12px] md:rounded-[32px] w-full h-full shadow-lg"
             />
