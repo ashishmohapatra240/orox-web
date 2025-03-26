@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { PausePlayButton } from "../ui/PausePlayButton";
 import { Button } from "../ui/Button";
 
@@ -17,12 +17,6 @@ export const ProductsHero = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
-  useEffect(() => {
-    if (videoRef.current) {
-      setIsPlaying(!videoRef.current.paused);
-    }
-  }, []);
 
   return (
     <div className="relative">
