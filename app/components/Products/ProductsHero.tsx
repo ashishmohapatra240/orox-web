@@ -74,7 +74,7 @@ export const ProductsHero = () => {
                 <PausePlayButton
                   isPlaying={isPlaying}
                   onToggle={togglePlay}
-                  className="absolute bottom-[8px] right-[8px] md:bottom-[24px] md:right-[24px] w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
+                  className="absolute bottom-[8px] right-[8px] md:bottom-[24px] md:right-[24px] w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors z-20"
                 />
               </div>
             </div>
