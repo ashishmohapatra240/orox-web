@@ -131,7 +131,7 @@ export const Footer = () => {
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
                 <div className="space-y-2 text-black/50 text-[14px]">
                   <p>+61 295 336 214</p>
-                  <p>hello@oroxglobal.com</p>
+                  <p>info@oroxglobal.com</p>
                 </div>
               </div>
 
@@ -251,7 +251,7 @@ export const Footer = () => {
                 <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
                 <div className="text-black/50 text-[14px] space-y-[8px]">
                   <p>+61 295 336 214</p>
-                  <p>hello@oroxglobal.com</p>
+                  <p>info@oroxglobal.com</p>
                 </div>
               </div>
               <div className="w-[300px]">

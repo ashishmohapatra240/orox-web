@@ -27,7 +27,7 @@ export const ProductsHero = () => {
   return (
     <div className="relative">
       {/* Top white section with text */}
-      <section className="bg-white w-full pt-[32px] pb-[40px] md:pt-[88px] md:pb-[160px]">
+      <section className="bg-white w-full pt-[32px] md:pt-[88spx]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="flex flex-col items-center text-center mx-auto max-w-4xl">
             {/* Tag */}
@@ -55,11 +55,11 @@ export const ProductsHero = () => {
       </section>
 
       <div className="relative">
-        <div className="absolute -top-10 left-0 right-0 h-[120px] md:h-[300px] bg-white" />
-
-        <div className="bg-[#070926]">
-          <div className="relative h-[240px] sm:h-[500px] md:h-[600px]">
-            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[94%] max-w-[365px] sm:max-w-[600px] md:max-w-[800px] lg:max-w-[1200px] z-10">
+        <div className="bg-gradient-to-b">
+          <div className="absolute top-0 left-0 w-full h-[45%] bg-white"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#070926]"></div>
+          <div className="relative px-[16px] pt-[40px] pb-[44px] md:px-[80px] md:pt-[80px] md:pb-[88px] flex items-center justify-center">
+            <div className="w-[94%] z-10">
               <div className="relative w-full aspect-[1.75/1]">
                 <video
                   ref={videoRef}
@@ -68,7 +68,7 @@ export const ProductsHero = () => {
                   muted
                   playsInline
                   loop
-                  className="object-cover rounded-[12px] md:rounded-[32px] w-full h-full"
+                  className="object-cover rounded-[12px] md:rounded-[32px] w-full h-full z-10"
                 />
 
                 <PausePlayButton
@@ -79,9 +79,6 @@ export const ProductsHero = () => {
               </div>
             </div>
           </div>
-
-          {/* Bottom spacing */}
-          <div className="h-[10px] md:h-[200px]" />
         </div>
       </div>
     </div>

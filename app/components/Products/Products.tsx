@@ -69,21 +69,21 @@ const products = [
 export const Products = () => {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[88px]">
+      <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[64px] lg:space-y-[88px]">
         {products.map((product, index) => (
           <div
             key={index}
-            className="grid items-center gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2"
+            className="grid items-center gap-6 md:gap-10 lg:gap-12 lg:grid-cols-2"
           >
             {/* Content */}
             <div className={`${index % 2 === 1 ? "lg:order-2 order-1" : "lg:order-1 order-2"}`}>
               <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
-              <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[68px] mt-[8px]">
+              <h2 className="text-[34px] md:text-[46px] lg:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[56px] lg:leading-[68px] mt-[8px]">
                 {product.title}
               </h2>
-              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px] mb-[40px]">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#19191B] leading-[24px] md:leading-[28px] lg:leading-[32px] mt-[24px] mb-[32px] md:mb-[36px] lg:mb-[40px]">
                 {product.description}
               </p>
               <div>
@@ -113,7 +113,7 @@ export const Products = () => {
 
             {/* Image */}
             <div
-              className={`relative w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] mx-auto ${
+              className={`relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] mx-auto ${
                 index % 2 === 1 ? "lg:order-1" : "lg:order-2"
               }`}
             >

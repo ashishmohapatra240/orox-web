@@ -266,7 +266,7 @@ export const Navbar = () => {
       className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
       ref={navbarRef}
     >
-      <nav className="mx-auto max-w-7xl flex items-center justify-between py-5  px-4 md:px-0">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between py-5 px-4 md:px-6 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -338,7 +338,7 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1 gap-5">
+        <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-5">
           <Link href="/products">
             <Dropdown
               label="Products"
@@ -471,12 +471,12 @@ export const Navbar = () => {
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[24px] mb-[24px]">
                   <Link href="/">
-                    <Button variant="secondary" className="w-full block border border-[#78CAB9] hover:border-gray-300">
+                    <Button variant="secondary" className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap">
                       Log in
                     </Button>
                   </Link>
                   <Link href="/" className="w-full block">
-                    <Button className="w-full bg-[#293483] rounded-full">
+                    <Button className="w-full bg-[#293483] rounded-full whitespace-nowrap">
                       Join for free
                     </Button>
                   </Link>
@@ -509,14 +509,14 @@ export const Navbar = () => {
         )}
 
         {/* Right Section */}
-        <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+        <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
           <Link href="/">
-            <Button variant="secondary" className="px-4 lg:px-6">
+            <Button variant="secondary" className="px-3 md:px-4 lg:px-6 whitespace-nowrap">
               Log in
             </Button>
           </Link>
           <Link href="/">
-            <Button className="px-4 lg:px-6">Join for free</Button>
+            <Button className="px-3 md:px-4 lg:px-6 whitespace-nowrap">Join for free</Button>
           </Link>
 
           <hr className="h-[36px] w-[2px] bg-[#C9CCE0]" />
@@ -524,7 +524,7 @@ export const Navbar = () => {
           {/* QR Code Button */}
           <button
             onClick={() => setIsQROpen(!isQROpen)}
-            className="relative flex h-10 w-10 lg:h-10 lg:w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2"
+            className="relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] md:p-1.5 lg:p-2"
             aria-label="QR code"
           >
             <Image
@@ -579,16 +579,16 @@ export const Navbar = () => {
                       </div>
 
                       {/* Bottom section with OR and Install APK - pushed to bottom on mobile */}
-                      <div className="mt-auto sm:mt-0 space-y-6 sm:space-y-4">
-                        <div className="flex items-center justify-center space-x-2 w-full">
-                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
-                          <span className="text-xs text-[#293483] whitespace-nowrap px-2">
+                      <div className="mt-auto sm:mt-0">
+                        <div className="flex items-center justify-center w-full">
+                          {/* <hr className="w-full h-[1px] bg-[#C9CCE0]" /> */}
+                          {/* <span className="text-xs text-[#293483] whitespace-nowrap px-2">
                             OR
-                          </span>
-                          <hr className="w-full h-[1px] bg-[#C9CCE0]" />
+                          </span> */}
+                          {/* <hr className="w-full h-[1px] bg-[#C9CCE0]" /> */}
                         </div>
 
-                        <a
+                        {/* <a
                           href="https://onelink.to/65gpe9"
                           className="flex w-full items-center justify-center space-x-2 rounded-full border border-[#78CAB9] px-6 py-2 text-gray-600 hover:bg-gray-50 text-[14px]"
                         >
@@ -602,7 +602,7 @@ export const Navbar = () => {
                           <span className="font-semibold text-[#293483] text-[14px]">
                             Install APK
                           </span>
-                        </a>
+                        </a> */}
 
                         <button
                           onClick={() => setIsQROpen(false)}

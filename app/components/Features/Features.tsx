@@ -3,22 +3,22 @@ import { Button } from "../ui/Button";
 
 const features = [
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/smart-investing.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/smart-investing.svg",
     title: "Easy, smart investing",
     description: "Smarter investing made easy with AI and our sleek OROX app.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.svg",
     title: "Stress-free growth",
     description: "Stress-free gains with our proven market-neutral strategies.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.svg",
     title: "Secure and transparent",
     description: "Secure and transparent with blockchain-backed tech.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/trust.png",
+    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/trust.svg",
     title: "Built with trust",
     description: "Aussie-built, trusted and accessible to investors worldwide.",
   },
