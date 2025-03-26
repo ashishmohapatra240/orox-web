@@ -59,7 +59,7 @@ export const ProductsHero = () => {
           <div className="absolute top-0 left-0 w-full h-[45%] bg-white"></div>
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-[#070926]"></div>
           <div className="relative px-[16px] pt-[40px] pb-[44px] md:px-[80px] md:pt-[80px] md:pb-[88px] flex items-center justify-center">
-            <div className="w-[94%] z-10">
+            <div className="z-10">
               <div className="relative w-full aspect-[1.75/1] flex justify-center">
                 <video
                   ref={videoRef}
