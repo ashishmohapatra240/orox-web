@@ -415,7 +415,7 @@ export const Navbar = () => {
                 {/* Navigation Links */}
                 <div className="space-y-6">
                   <div className="flex items-center justify-between text-[16px] text-[#19191B]">
-                    <Link href="/">Products</Link>
+                    <Link href="/products">Products</Link>
                     <svg
                       width="20"
                       height="20"
