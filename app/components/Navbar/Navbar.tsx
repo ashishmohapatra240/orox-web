@@ -408,7 +408,7 @@ export const Navbar = () => {
         {isMobileMenuOpen && (
           <div
             className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto"
-            style={{ top: '0px' }}
+            style={{ top: "0px" }}
           >
             {/* Close button header */}
             <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-4 z-[61]">
@@ -435,7 +435,7 @@ export const Navbar = () => {
 
             {/* Menu content */}
             <div className="pt-[70px]" />
-            
+
             <div className="flex flex-col flex-1">
               <div className="px-6 pt-8">
                 {/* Navigation Links */}
@@ -530,7 +530,7 @@ export const Navbar = () => {
         {isMobileMenuOpen && (
           <div
             className="fixed inset-0 bg-black/30 z-[55]"
-            style={{ top: '0px' }}
+            style={{ top: "0px" }}
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
