@@ -33,7 +33,7 @@ export const BlogCard = ({
         <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px] mt-[30px]">
           {title}
         </h3>
-        <p className="text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-2">
+        <p className="text-[20px] text-[#19191B] leading-[32px] mt-2">
           {description}
         </p>
         <div className="flex items-center space-x-2 text-[#2F5DFD] mt-[24px]">
