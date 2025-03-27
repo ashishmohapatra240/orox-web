@@ -59,7 +59,7 @@ export const TeamSection = () => {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover rounded-full filter grayscale"
+                      className="object-cover rounded-full filter grayscale hover:scale-105 transition-all duration-300"
                     />
                   </div>
                   <h3 className="mt-[24px] text-[20px] md:text-[24px] lg:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[36px] lg:leading-[40px]">

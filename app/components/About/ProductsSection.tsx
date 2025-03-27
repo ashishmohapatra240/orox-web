@@ -3,6 +3,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+const DVOXChart = () => (
+  <div className="relative">
+    <Image
+      src="/images/products/img_dvox_token_banner.png"
+      alt="DVOX Token Banner"
+      width={600}
+      height={400}
+      className="object-contain rounded-[16px] mt-2"
+      priority
+    />
+    <Image
+      src="/images/products/Bull.png"
+      alt="Bull Icon"
+      width={180}
+      height={180}
+      className="absolute top-1/2 left-1/2 w-[30%] h-auto -translate-x-1/2 -translate-y-1/2 transition-all duration-400 ease-in-out"
+      onMouseEnter={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1.2)";
+        img.style.transform = "translate(-50%, -50%) scale(1.1)";
+      }}
+      onMouseLeave={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1)";
+        img.style.transform = "translate(-50%, -50%) scale(1)";
+      }}
+    />
+  </div>
+);
+
 const products = [
   {
     title: "OROX app",
@@ -22,8 +52,7 @@ const products = [
   },
   {
     title: "DVOX utility token",
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
+    image: <DVOXChart />,
     bgColor: "bg-[#FFD700]",
     description:
       "DVOX offers high-growth potential with less volatility. It gives you auto-balanced exposure to premium digital assets—no stress, just smarter investing.",
@@ -75,12 +104,16 @@ export const ProductsSection = () => {
               <div
                 className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
               >
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover"
-                />
+                {typeof product.image === "string" ? (
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover hover:scale-105 transition-all duration-300"
+                  />
+                ) : (
+                  product.image
+                )}
               </div>
               <div className="mt-[30px]">
                 <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
@@ -124,12 +157,16 @@ export const ProductsSection = () => {
                 <div
                   className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
                 >
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover"
-                  />
+                  {typeof product.image === "string" ? (
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    product.image
+                  )}
                 </div>
                 <div className="mt-[30px]">
                   <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px]">

@@ -10,7 +10,7 @@ const Service = () => {
     }
   };
   return (
-    <div className="container mx-auto px-[16px] sm:[0px]  py-[44px] md:py-[88px] overflow-hidden max-w-[1280px]">
+    <div className="container mx-auto px-[16px] sm:[0px] py-[44px] md:py-[88px] overflow-hidden max-w-[1280px]">
       {/*<section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">*/}
       {/* Hero Section */}
       <div className="relative h-[600px] md:h-[500px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 md:mb-12 overflow-visible">
@@ -64,8 +64,39 @@ const Service = () => {
           </div>
         </div>
 
-        {/* Desktop/Tablet Layout - Side by Side */}
-        <div className="relative hidden sm:flex flex-row items-center p-6 sm:px-12 sm:py-30">
+        {/* Tablet/Laptop Layout */}
+        <div className="relative hidden sm:flex lg:hidden flex-row items-center p-6">
+          {/* Text Content */}
+          <div className="text-white w-[45%] text-left pl-6">
+            <h3 className="text-[24px] font-regular mb-6 leading-[1.3]">
+              Ready to invest smarter? OROX takes the guesswork out of investing
+              with AI-powered quantitative, risk-adjusted strategies designed
+              for growth.
+            </h3>
+            <button
+              onClick={handleStoreRedirect}
+              className="mt-6 bg-white text-[#293483] font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-all text-[18px]"
+            >
+              Get started with OROX
+            </button>
+          </div>
+
+          {/* Phone Image - Tablet/Laptop */}
+          <div className="absolute right-[-30px] -top-20">
+            <div className="relative w-[700px] h-[540px]">
+              <Image
+                src="/images/service/MobileCallToActionWeb.png"
+                alt="OROX App Interface"
+                width={800}
+                height={618}
+                className="drop-shadow-2xl object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Side by Side */}
+        <div className="relative hidden lg:flex flex-row items-center p-6 sm:px-12 sm:py-30">
           {/* Text Content */}
           <div className="text-white max-w-xl text-left mt-[32px] md:[64px]">
             <h3 className="text-[28px] font-regular mb-6 leading-[1.2]">

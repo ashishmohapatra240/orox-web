@@ -1,7 +1,46 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { JSX } from "react";
 
-const products = [
+const DVOXChart = () => (
+  <div className="relative">
+    <Image
+      src="/images/products/img_dvox_token_banner.png"
+      alt="DVOX Token Banner"
+      width={600}
+      height={400}
+      className="object-contain rounded-[16px] mt-2"
+      priority
+    />
+    <Image
+      src="/images/products/Bull.png"
+      alt="Bull Icon"
+      width={180}
+      height={180}
+      className="absolute top-1/2 left-1/2 w-[30%] h-auto -translate-x-1/2 -translate-y-1/2 transition-all duration-400 ease-in-out"
+      onMouseEnter={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1.2)";
+        img.style.transform = "translate(-50%, -50%) scale(1.1)";
+      }}
+      onMouseLeave={(e) => {
+        const img = e.currentTarget as HTMLImageElement;
+        img.style.filter = "brightness(1)";
+        img.style.transform = "translate(-50%, -50%) scale(1)";
+      }}
+    />
+  </div>
+);
+
+const products: {
+  tag: string;
+  title: JSX.Element;
+  description: string | JSX.Element;
+  image: string | JSX.Element;
+  imageAlt: string;
+  bgColor: string;
+}[] = [
   {
     tag: "OROX: THE APP TO DO IT ALL",
     title: (
@@ -59,8 +98,7 @@ const products = [
     ),
     description:
       "Love crypto but hate the rollercoaster? DVOX gives you high-growth potential without the crazy ups and downs³. Powered by the OROX app and using the DVOX token, it's designed to help you grow your portfolio with more confidence. Forget diamond hands—DVOX offers exposure to a professionally managed, auto-balanced portfolio of high-grade digital assets, designed for high-growth without the hassle.",
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/dvox-token.png",
+    image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",
   },
@@ -69,21 +107,25 @@ const products = [
 export const Products = () => {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[64px] lg:space-y-[88px]">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 space-y-[40px] md:space-y-[64px] lg:space-y-[88px]">
         {products.map((product, index) => (
           <div
             key={index}
-            className="grid items-center gap-6 md:gap-10 lg:gap-12 lg:grid-cols-2"
+            className="grid items-center gap-6 md:gap-16 lg:gap-12 lg:grid-cols-2"
           >
             {/* Content */}
-            <div className={`${index % 2 === 1 ? "lg:order-2 order-1" : "lg:order-1 order-2"}`}>
+            <div
+              className={`${
+                index % 2 === 1 ? "lg:order-2 order-1" : "lg:order-1 order-2"
+              }`}
+            >
               <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
-              <h2 className="text-[34px] md:text-[46px] lg:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[56px] lg:leading-[68px] mt-[8px]">
+              <h2 className="text-[34px] md:text-[42px] lg:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[52px] lg:leading-[68px] mt-[8px]">
                 {product.title}
               </h2>
-              <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#19191B] leading-[24px] md:leading-[28px] lg:leading-[32px] mt-[24px] mb-[32px] md:mb-[36px] lg:mb-[40px]">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] text-[#19191B] leading-[24px] md:leading-[28px] lg:leading-[32px] mt-[24px] mb-[32px] md:mb-[36px] lg:mb-[40px] md:max-w-[600px]">
                 {product.description}
               </p>
               <div>
@@ -113,20 +155,24 @@ export const Products = () => {
 
             {/* Image */}
             <div
-              className={`relative w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] mx-auto ${
+              className={`relative w-full max-w-[400px] md:max-w-[550px] lg:max-w-[600px] mx-auto ${
                 index % 2 === 1 ? "lg:order-1" : "lg:order-2"
               }`}
             >
-              <div className="relative">
-                <Image
-                  src={product.image}
-                  alt={product.imageAlt}
-                  width={800}
-                  height={600}
-                  className="object-contain"
-                  priority
-                  quality={100}
-                />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[32px]">
+                {typeof product.image === "string" ? (
+                  <Image
+                    src={product.image}
+                    alt={product.imageAlt}
+                    width={800}
+                    height={600}
+                    className="object-contain md:scale-110 lg:scale-100 hover:scale-105 transition-all duration-300 "
+                    priority
+                    quality={100}
+                  />
+                ) : (
+                  product.image
+                )}
               </div>
             </div>
           </div>
