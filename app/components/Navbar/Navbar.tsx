@@ -492,7 +492,7 @@ export const Navbar = () => {
                   </div>
                 </div>
                 {/* Auth Buttons */}
-                <div className="space-y-3 mt-[24px] mb-[24px]">
+                <div className="space-y-3 mt-[64px] mb-[24px]">
                   <Link href="/">
                     <Button
                       variant="secondary"
