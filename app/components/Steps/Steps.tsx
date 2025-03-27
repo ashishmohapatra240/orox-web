@@ -173,7 +173,7 @@ export const Steps = () => {
         <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left Content */}
-            <div className="lg:col-span-3 flex flex-col min-h-[600px]">
+            <div className="lg:col-span-3 flex flex-col">
               <div className="space-y-6 flex-grow">
                 <h2 className="text-[28px] md:text-[48px] font-bold text-[#19191B] leading-[34px] md:leading-[56px]">
                   {currentStep === 0 ? (
@@ -226,12 +226,12 @@ export const Steps = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex justify-between mt-auto pb-[0] md:pb-[72px] items-center">
+              <div className="flex justify-between mt-[36px] pb-[0] md:pb-[72px] items-center">
                 <Link href="/">
                   <Button
                     variant="secondary"
-                    className="border border-[#78CAB9] hover:border-gray-300 py-[12px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap"
-                    style={{fontWeight: '600 !important'}}
+                    className="border border-[#78CAB9] hover:border-gray-300 py-[12px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap "
+                    style={{ fontWeight: "600 !important" }}
                   >
                     Create your account
                   </Button>
