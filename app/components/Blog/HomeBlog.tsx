@@ -1,6 +1,8 @@
 "use client";
 import { BlogCard } from "./BlogCard";
 import { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
+
 const articles = [
   {
     image:
@@ -35,6 +37,7 @@ const articles = [
     link: "#",
   },
 ];
+
 export const HomeBlog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -65,6 +68,15 @@ export const HomeBlog = () => {
       return prev === 0 ? maxSlides : prev - 1;
     });
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    trackMouse: true
+  });
+
   return (
     <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">
       <div className="mx-auto max-w-7xl">
@@ -75,7 +87,7 @@ export const HomeBlog = () => {
           </h2>
 
           {/* Articles Slider */}
-          <div className="relative">
+          <div className="relative" {...handlers}>
             <div
               className="flex gap-6 md:gap-8"
               style={{
