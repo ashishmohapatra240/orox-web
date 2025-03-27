@@ -10,7 +10,7 @@ const DVOXChart = () => (
       alt="DVOX Token Banner"
       width={600}
       height={400}
-      className="object-contain rounded-[16px] mt-2"
+      className="object-cover rounded-[32px] w-full h-full"
       priority
     />
     <Image
@@ -102,7 +102,7 @@ export const ProductsSection = () => {
           {products.map((product) => (
             <div key={product.title}>
               <div
-                className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
+                className={`relative aspect-[4/3] w-full overflow-hidden rounded-[32px] ${product.bgColor}`}
               >
                 {typeof product.image === "string" ? (
                   <Image
@@ -155,7 +155,7 @@ export const ProductsSection = () => {
                 className="w-full flex-shrink-0 pr-[24px]"
               >
                 <div
-                  className={`relative aspect-[4/3] w-full overflow-hidden rounded-2xl ${product.bgColor}`}
+                  className={`relative aspect-[4/3] w-full overflow-hidden rounded-[32px] ${product.bgColor}`}
                 >
                   {typeof product.image === "string" ? (
                     <Image
