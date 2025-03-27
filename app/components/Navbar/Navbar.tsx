@@ -205,7 +205,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const qrModalRef = useRef<HTMLDivElement>(null);
-  const [navbarHeight, setNavbarHeight] = useState(70);
+  const [, setNavbarHeight] = useState(70);
   const navbarRef = useRef<HTMLDivElement>(null);
 
   // Measure navbar height for dropdown positioning
@@ -319,9 +319,9 @@ export const Navbar = () => {
               </svg>
             )}
           </button>
-          <hr className="md:hidden h-[24px] w-[2px] bg-[#C9CCE0]" />
+          {/* <hr className="md:hidden h-[24px] w-[2px] bg-[#C9CCE0]" /> */}
 
-          {/* Mobile QR Button - only visible on mobile */}
+          {/* Mobile QR Button - only visible on mobile
           <button
             onClick={() => setIsQROpen(!isQROpen)}
             className="md:hidden relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2"
@@ -334,7 +334,7 @@ export const Navbar = () => {
               height={20}
               className="h-6 w-6"
             />
-          </button>
+          </button> */}
         </div>
 
         {/* Desktop Navigation */}
@@ -407,10 +407,36 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-y-0 right-0 z-40 bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen"
-            style={{ top: `${navbarHeight}px` }}
+            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto"
+            style={{ top: '0px' }}
           >
-            <div className="flex flex-col">
+            {/* Close button header */}
+            <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-4 z-[61]">
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2"
+                aria-label="Close menu"
+              >
+                <svg
+                  className="h-6 w-6 text-[#19191B]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Menu content */}
+            <div className="pt-[70px]" />
+            
+            <div className="flex flex-col flex-1">
               <div className="px-6 pt-8">
                 {/* Navigation Links */}
                 <div className="space-y-6">
@@ -483,18 +509,19 @@ export const Navbar = () => {
                 </div>
               </div>
             </div>
-            {/* Divider */}
-            <hr className="border-t border-[#F4F4F4] mt-[24px] mb-[24px]" />
 
-            {/* QR Code Section */}
-            <div className="mb-[16px]">
-              <Image
-                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
-                alt="QR Code"
-                width={160}
-                height={160}
-                className="mx-auto rounded-2xl bg-white shadow-sm "
-              />
+            {/* QR Code section */}
+            <div className="px-6 pb-8 mt-auto">
+              <hr className="border-t border-[#F4F4F4] mb-[24px]" />
+              <div className="mb-[16px]">
+                <Image
+                  src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                  alt="QR Code"
+                  width={160}
+                  height={160}
+                  className="mx-auto rounded-2xl bg-white shadow-sm"
+                />
+              </div>
             </div>
           </div>
         )}
@@ -502,8 +529,8 @@ export const Navbar = () => {
         {/* Mobile menu backdrop */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/30 z-30 md:hidden"
-            style={{ top: `${navbarHeight}px` }}
+            className="fixed inset-0 bg-black/30 z-[55]"
+            style={{ top: '0px' }}
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
