@@ -91,7 +91,7 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="absolute inset-x-0 top-[70px] p-4 bg-white shadow-lg overflow-y-auto max-h-[calc(100vh-70px)]"
+              className="absolute inset-x-0 p-4 bg-white shadow-lg overflow-y-auto]"
               onClick={(e) => e.stopPropagation()}
               variants={dropdownVariants}
               initial="hidden"
@@ -139,8 +139,7 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed left-0 right-0 z-50 hidden md:block"
-            style={{ top: "70px" }}
+            className="fixed md:top-[12%] lg:top-[9%] xl:top-[11%] left-0 right-0 z-50 hidden md:block"
             variants={dropdownVariants}
             initial="hidden"
             animate="visible"
