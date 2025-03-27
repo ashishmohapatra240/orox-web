@@ -62,13 +62,14 @@ export const ProductsSection = () => {
   };
 
   return (
-    <section className="w-full px-[16px] md:px-[0] py-[48px] md:py-[88px] overflow-x-hidden">
+    <section className="w-full px-[16px] md:px-[32px] lg:px-[0] py-[48px] md:py-[88px] overflow-x-hidden">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] w-[340px] md:w-[800px] mx-auto mb-[40px] md:mb-[48px]">
+        <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[48px] lg:text-[56px] leading-[40px] md:leading-[56px] lg:leading-[68px] w-[340px] md:w-[600px] lg:w-[800px] mx-auto mb-[40px] md:mb-[48px]">
           Discover OROX and the powerful products driving it
         </h2>
 
-        <div className="hidden md:grid gap-8 md:grid-cols-3">
+        {/* Desktop and Tablet Grid */}
+        <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <div key={product.title}>
               <div

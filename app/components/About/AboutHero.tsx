@@ -23,18 +23,18 @@ const AboutHero = () => {
       <div className="h-full">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left Content */}
-          <div className="text-white py-[48px] px-[16px] md:px-[80px] md:py-[147px] lg:w-1/2">
-            <h1 className="text-[40px] md:text-[64px] font-bold leading-[68px]">
+          <div className="text-white py-[48px] px-[16px] md:px-[60px] md:py-[80px] lg:px-[60px] xl:px-[80px] lg:py-[100px] xl:py-[147px] lg:w-1/2">
+            <h1 className="text-[40px] md:text-[56px] lg:text-[60px] xl:text-[64px] font-bold leading-[48px] md:leading-[64px] lg:leading-[68px]">
               About OROX
             </h1>
-            <p className="text-[16px] md:text-[20px] text-white max-w-[600px] leading-[24px] md:leading-[32px] mt-[24px] md:mt-[32px]">
+            <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-white max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
               OROX is revolutionising investing by making risk-adjusted
               strategies accessible to everyone. Whether you&apos;re looking for
               steady, low-risk investing with ODN subscription or high growth
               crypto exposure with the DVOX token, OROX puts your money on
               autopilot—so you can grow without the guesswork.
             </p>
-            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[40px]">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button variant="white" className="whitespace-nowrap">
                 Join for free
               </Button>
@@ -45,7 +45,7 @@ const AboutHero = () => {
           </div>
 
           {/* Right Content - Video */}
-          <div className="relative lg:w-1/2 min-h-[400px]">
+          <div className="relative lg:w-1/2 min-h-[400px] md:min-h-[500px] lg:min-h-[550px]">
             <video
               ref={videoRef}
               src="/videos/About.mp4"
@@ -65,7 +65,7 @@ const AboutHero = () => {
             <PausePlayButton
               isPlaying={isPlaying}
               onToggle={togglePlay}
-              className="absolute bottom-[24px] right-[24px] h-9 w-9 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-[#293483] shadow-lg"
+              className="absolute bottom-[24px] right-[24px] h-9 w-9 md:h-11 md:w-11 lg:h-11 xl:h-12 lg:w-11 xl:w-12 text-[#293483] shadow-lg"
             />
           </div>
         </div>
