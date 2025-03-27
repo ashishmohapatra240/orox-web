@@ -5,7 +5,7 @@ export const OpusMomentus = () => {
     <section className="w-full bg-[#F1F2F8] px-[16px] py-[48px] md:px-[64px] lg:px-[288px] md:py-[72px] lg:py-[88px]">
       <div>
         <div className="text-center">
-          <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center">
+          <span className="text-[14px] md:text-[16px]  font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center">
             OROX IS PART OF SOMETHING BIG
           </span>
           <h2 className="text-[34px] font-bold text-[#19191B] md:text-[48px] lg:text-[56px] leading-[40px] md:leading-[56px] lg:leading-[68px] mt-[8px]">

@@ -129,7 +129,7 @@ export const HomeProducts = () => {
                 index % 2 === 0 ? "lg:order-2 order-1" : "lg:order-1 order-2"
               }`}
             >
-              <span className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
+              <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
                 {product.tag}
               </span>
               <h2 className="text-[34px] md:text-[56px] font-bold text-[#19191B] leading-[48px] md:leading-[68px] mt-[8px]">
