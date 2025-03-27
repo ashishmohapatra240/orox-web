@@ -21,9 +21,9 @@ export const ProductsHero = () => {
   return (
     <div className="relative">
       {/* Top white section with text */}
-      <section className="bg-white w-full">
+      <section className="bg-white w-full mt-[48px] md:mt-[88px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="flex flex-col items-center text-center mx-auto max-w-4xl mt-[48px] md:mt-[88px]">
+          <div className="flex flex-col items-center text-center mx-auto max-w-4xl ">
             {/* Tag */}
             <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
               OROX AND A RANGE OF POWERFUL PRODUCTS
