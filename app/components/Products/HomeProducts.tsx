@@ -169,14 +169,14 @@ export const HomeProducts = () => {
                 index % 2 === 0 ? "lg:order-1" : "lg:order-2"
               }`}
             >
-              <div className="relative">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[32px]">
                 {typeof product.image === "string" ? (
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
                     width={800}
                     height={600}
-                    className="object-contain"
+                    className="object-contain hover:scale-105 transition-all duration-300"
                     priority
                     quality={100}
                   />
