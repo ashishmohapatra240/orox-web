@@ -21,15 +21,15 @@ export const ProductsHero = () => {
   return (
     <div className="relative">
       {/* Top white section with text */}
-      <section className="bg-white w-full pt-[32px] md:pt-[88spx]">
+      <section className="bg-white w-full">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="flex flex-col items-center text-center mx-auto max-w-4xl">
+          <div className="flex flex-col items-center text-center mx-auto max-w-4xl mt-[48px] md:mt-[88px]">
             {/* Tag */}
             <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699]">
               OROX AND A RANGE OF POWERFUL PRODUCTS
             </span>
 
-            <div className="mt-3 md:mt-8 space-y-3 md:space-y-[24px]">
+            <div className="space-y-[24px]">
               <h1 className="text-[28px] md:text-[64px] font-bold text-[#19191B] leading-[34px] md:leading-[80px]">
                 Our products
               </h1>
