@@ -613,7 +613,7 @@ export const Navbar = () => {
               ref={qrModalRef}
               className="hidden md:block absolute right-[120px] top-[60px] bg-white
                         mt-5 w-64 md:w-80 rounded-b-xl border border-[#F4F4F4] p-8
-                        shadow-[0px_8px_32px_0px_rgba(0,0,0,0.15)] z-50"
+                        shadow-xl z-50"
             >
               <div className="w-full">
                 <div className="bg-white h-full">
