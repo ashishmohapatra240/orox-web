@@ -245,7 +245,7 @@ export const Steps = () => {
             </div>
 
             {/* Right Content - App Screenshot */}
-            <div className="flex items-end justify-center md:justify-start lg:col-span-2">
+            <div className="flex items-end justify-center lg:col-span-2">
               <div className="relative h-[500px] w-[290px] md:w-[380px] md:h-[600px] overflow-hidden">
                 <Image
                   src={step.image}
