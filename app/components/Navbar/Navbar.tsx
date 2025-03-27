@@ -321,10 +321,10 @@ export const Navbar = () => {
           </button>
           <hr className="md:hidden h-[24px] w-[2px] bg-[#C9CCE0]" />
 
-          {/* QR Code Button - visible on all screens */}
+          {/* Mobile QR Button - only visible on mobile */}
           <button
             onClick={() => setIsQROpen(!isQROpen)}
-            className="relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2 md:hidden"
+            className="md:hidden relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] p-2"
             aria-label="QR code"
           >
             <Image
@@ -434,10 +434,7 @@ export const Navbar = () => {
                   </div>
                   <hr className="border-t border-[#F4F4F4]" />
 
-                  <Link
-                    href="/"
-                    className="block text-[16px] text-[#19191B]"
-                  >
+                  <Link href="/" className="block text-[16px] text-[#19191B]">
                     Blog
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
@@ -471,7 +468,10 @@ export const Navbar = () => {
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[24px] mb-[24px]">
                   <Link href="/">
-                    <Button variant="secondary" className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap">
+                    <Button
+                      variant="secondary"
+                      className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap"
+                    >
                       Log in
                     </Button>
                   </Link>
@@ -511,12 +511,17 @@ export const Navbar = () => {
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
           <Link href="/">
-            <Button variant="secondary" className="px-3 md:px-4 lg:px-6 whitespace-nowrap">
+            <Button
+              variant="secondary"
+              className="px-3 md:px-4 lg:px-6 whitespace-nowrap"
+            >
               Log in
             </Button>
           </Link>
           <Link href="/">
-            <Button className="px-3 md:px-4 lg:px-6 whitespace-nowrap">Join for free</Button>
+            <Button className="px-3 md:px-4 lg:px-6 whitespace-nowrap">
+              Join for free
+            </Button>
           </Link>
 
           <hr className="h-[36px] w-[2px] bg-[#C9CCE0]" />
@@ -534,103 +539,100 @@ export const Navbar = () => {
               height={20}
               className="h-6 w-6 lg:h-[24px] lg:w-[24px]"
             />
+          </button>
+        </div>
 
-            {/* QR Code Modal */}
-            {isQROpen && (
-              <div
-                ref={qrModalRef}
-                className="fixed sm:absolute inset-0 sm:inset-auto sm:right-0 sm:top-full bg-white
-                          sm:mt-5 sm:w-64 md:w-80 sm:rounded-b-xl sm:border sm:border-[#F4F4F4] sm:p-8
-                          flex flex-col sm:block shadow-[0px_8px_32px_0px_rgba(0,0,0,0.15)] z-50"
-              >
-                <div className="w-full h-full flex flex-col sm:block max-w-[90%] sm:w-auto mx-auto">
-                  {/* Close button for mobile - top right */}
-                  <button
-                    onClick={() => setIsQROpen(false)}
-                    className="absolute right-4 top-4 p-2 text-[#293483] sm:hidden"
-                    aria-label="Close QR code"
+        {isQROpen && (
+          <>
+            {/* Mobile QR dropdown - positioned below the navbar */}
+            <div className="md:hidden fixed top-[70px] right-0 bg-white z-[9999] rounded-bl-xl shadow-lg w-[280px] p-6">
+              <div className="flex flex-col">
+                {/* QR Code */}
+                <div className="block mb-8">
+                  <Image
+                    src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                    alt="OROX App QR Code"
+                    width={300}
+                    height={300}
+                    className="w-full h-auto"
+                  />
+                </div>
+
+                {/* Close button */}
+                <button
+                  onClick={() => setIsQROpen(false)}
+                  className="flex w-full items-center justify-end space-x-1 text-sm text-[#2F5DFD]"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <span className="font-semibold">Close</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Desktop QR dropdown - unchanged */}
+            <div
+              ref={qrModalRef}
+              className="hidden md:block absolute right-[120px] top-[60px] bg-white
+                        mt-5 w-64 md:w-80 rounded-b-xl border border-[#F4F4F4] p-8
+                        shadow-[0px_8px_32px_0px_rgba(0,0,0,0.15)] z-50"
+            >
+              <div className="w-full">
+                <div className="bg-white h-full">
+                  <div className="flex flex-col">
+                    {/* QR Code */}
+                    <div className="block mb-8">
+                      <Image
+                        src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                        alt="OROX App QR Code"
+                        width={300}
+                        height={300}
+                        className="w-full h-auto"
                       />
-                    </svg>
-                  </button>
-
-                  <div className="bg-white rounded-2xl p-6 sm:p-0 h-full flex flex-col">
-                    <div className="flex flex-col h-full sm:h-auto">
-                      {/* QR Code - at the top */}
-                      <div className="flex-1 flex items-center justify-center sm:block pt-8 sm:pt-0 mb-8">
-                        <Image
-                          src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
-                          alt="OROX App QR Code"
-                          width={300}
-                          height={300}
-                          className="w-[240px] max-w-[300px] h-auto"
-                        />
-                      </div>
-
-                      {/* Bottom section with OR and Install APK - pushed to bottom on mobile */}
-                      <div className="mt-auto sm:mt-0">
-                        <div className="flex items-center justify-center w-full">
-                          {/* <hr className="w-full h-[1px] bg-[#C9CCE0]" /> */}
-                          {/* <span className="text-xs text-[#293483] whitespace-nowrap px-2">
-                            OR
-                          </span> */}
-                          {/* <hr className="w-full h-[1px] bg-[#C9CCE0]" /> */}
-                        </div>
-
-                        {/* <a
-                          href="https://onelink.to/65gpe9"
-                          className="flex w-full items-center justify-center space-x-2 rounded-full border border-[#78CAB9] px-6 py-2 text-gray-600 hover:bg-gray-50 text-[14px]"
-                        >
-                          <Image
-                            src="/icons/download.svg"
-                            alt="Download Icon"
-                            width={20}
-                            height={20}
-                            className="h-5 w-5"
-                          />
-                          <span className="font-semibold text-[#293483] text-[14px]">
-                            Install APK
-                          </span>
-                        </a> */}
-
-                        <button
-                          onClick={() => setIsQROpen(false)}
-                          className="hidden sm:flex w-full items-center justify-end space-x-1 text-sm text-[#2F5DFD]"
-                        >
-                          <svg
-                            className="h-4 w-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                          <span className="font-semibold">Close</span>
-                        </button>
-                      </div>
                     </div>
+
+                    {/* Close button */}
+                    <button
+                      onClick={() => setIsQROpen(false)}
+                      className="flex w-full items-center justify-end space-x-1 text-sm text-[#2F5DFD]"
+                    >
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                      <span className="font-semibold">Close</span>
+                    </button>
                   </div>
                 </div>
               </div>
-            )}
-          </button>
-        </div>
+            </div>
+
+            <div
+              className="fixed inset-0 bg-transparent z-[9998]"
+              onClick={() => setIsQROpen(false)}
+            />
+          </>
+        )}
       </nav>
     </header>
   );
