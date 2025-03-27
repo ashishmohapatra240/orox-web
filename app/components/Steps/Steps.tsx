@@ -175,7 +175,7 @@ export const Steps = () => {
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col min-h-[600px]">
               <div className="space-y-6 flex-grow">
-                <h2 className="text-4xl font-bold text-[#19191B] md:text-[48px] leading-[1.1]">
+                <h2 className="text-[28px] md:text-[48px] font-bold text-[#19191B] leading-[34px] md:leading-[56px]">
                   {currentStep === 0 ? (
                     <>
                       <span className="relative inline-block z-10">
