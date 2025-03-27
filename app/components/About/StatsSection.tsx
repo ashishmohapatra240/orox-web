@@ -1,25 +1,82 @@
+"use client";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 const stats = [
   {
     number: "159+",
+    rawNumber: 159,
     description:
       "Curated quantitative strategies working together for smarter investing.",
   },
   {
     number: "125+",
+    rawNumber: 125,
     description:
       "Top hedge funds, quant developers and traders in our global and local consortium.",
   },
   {
     number: "$12B+",
+    rawNumber: 12,
+    prefix: "$",
+    suffix: "B+",
     description:
       "Combined AUM of our operational partners across diverse asset classes.",
   },
   {
     number: "25%+",
+    rawNumber: 25,
+    suffix: "%+",
     description:
       "Average annual return with OROX's advanced market-neutral strategies designed to grow*",
   },
 ];
+
+const Counter = ({
+  value,
+  prefix = "",
+  suffix = "",
+}: {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+}) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      const duration = 2000; // 2 seconds
+      const steps = 60;
+      const stepDuration = duration / steps;
+      let currentStep = 0;
+
+      const timer = setInterval(() => {
+        currentStep += 1;
+        const progress = currentStep / steps;
+        const currentCount = Math.floor(value * progress);
+
+        if (currentStep === steps) {
+          setCount(value);
+          clearInterval(timer);
+        } else {
+          setCount(currentCount);
+        }
+      }, stepDuration);
+
+      return () => clearInterval(timer);
+    }
+  }, [isInView, value]);
+
+  return (
+    <motion.div ref={ref} className="tabular-nums text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] font-bold text-[#19191B] leading-[40px] md:leading-[44px] lg:leading-[48px] xl:leading-[60px] tracking-tighter">
+      {prefix}
+      {count}
+      {suffix}
+    </motion.div>
+  );
+};
 
 export const StatsSection = () => {
   return (
@@ -43,7 +100,11 @@ export const StatsSection = () => {
                   className="flex flex-col w-[160px] md:w-[170px] lg:w-[120px] xl:w-[180px]"
                 >
                   <div className="text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] font-bold text-[#19191B] leading-[40px] md:leading-[44px] lg:leading-[48px] xl:leading-[60px]">
-                    {stat.number}
+                    <Counter
+                      value={stat.rawNumber}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                    />
                   </div>
                   <p className="text-[16px] md:text-[14px] lg:text-[13px] xl:text-[14px] text-[#19191B] leading-[24px] md:leading-[20px] lg:leading-[18px] xl:leading-[20px] mt-[8px]">
                     {stat.description}

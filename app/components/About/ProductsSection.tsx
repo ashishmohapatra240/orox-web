@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 const DVOXChart = () => (
   <div className="relative">
@@ -60,38 +59,8 @@ const products = [
 ];
 
 export const ProductsSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Set initial value
-    setIsMobile(window.innerWidth < 768);
-
-    // Add resize listener
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => {
-      const maxSlides = products.length - 1;
-      return prev >= maxSlides ? 0 : prev + 1;
-    });
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => {
-      const maxSlides = products.length - 1;
-      return prev === 0 ? maxSlides : prev - 1;
-    });
-  };
-
   return (
-    <section className="w-full px-[16px] md:px-[32px] lg:px-[0] py-[48px] md:py-[88px] overflow-x-hidden">
+    <section className="w-full px-[16px] md:px-[24px] lg:px-[32px] py-[48px] md:py-[88px] overflow-x-hidden">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-[34px] font-bold text-[#19191B] md:text-[48px] lg:text-[56px] leading-[40px] md:leading-[56px] lg:leading-[68px] w-[340px] md:w-[600px] lg:w-[800px] mx-auto mb-[40px] md:mb-[48px]">
           Discover OROX and the powerful products driving it
@@ -141,103 +110,51 @@ export const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Mobile Slider */}
-        <div className="md:hidden relative">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
-            }}
-          >
-            {products.map((product) => (
+        {/* Mobile Layout - Updated to show cards in a column */}
+        <div className="md:hidden flex flex-col space-y-8">
+          {products.map((product) => (
+            <div
+              key={product.title}
+              className="w-full"
+            >
               <div
-                key={product.title}
-                className="w-full flex-shrink-0 pr-[24px]"
+                className={`relative aspect-[4/3] w-full overflow-hidden rounded-[32px] ${product.bgColor}`}
               >
-                <div
-                  className={`relative aspect-[4/3] w-full overflow-hidden rounded-[32px] ${product.bgColor}`}
-                >
-                  {typeof product.image === "string" ? (
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      className="object-cover"
-                    />
-                  ) : (
-                    product.image
-                  )}
-                </div>
-                <div className="mt-[30px]">
-                  <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
-                    {product.title}
-                  </h3>
-                  <p className="text-[20px] text-[#19191B] leading-[32px] mt-[11px]">
-                    {product.description}
-                  </p>
-
-                  <Link
-                    href="#"
-                    className="inline-flex items-center text-[#2F5DFD] font-bold hover:underline mt-[18px]"
-                  >
-                    Learn more
-                    <Image
-                      className="ml-2 h-4 w-4"
-                      src={"/icons/arrow.svg"}
-                      alt={"Arrow"}
-                      width={20}
-                      height={20}
-                    />
-                  </Link>
-                </div>
+                {typeof product.image === "string" ? (
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  product.image
+                )}
               </div>
-            ))}
-          </div>
+              <div className="mt-[30px]">
+                <h3 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
+                  {product.title}
+                </h3>
+                <p className="text-[20px] text-[#19191B] leading-[32px] mt-[11px]">
+                  {product.description}
+                </p>
 
-          {/* Mobile Navigation Buttons */}
-          <div className="mt-[40px] flex justify-center space-x-4 md:hidden">
-            <button
-              onClick={prevSlide}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-[#19191B] transition-colors hover:bg-gray-200"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="rotate-180"
-              >
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={nextSlide}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-colors hover:bg-[#293483]/90"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 12H19M19 12L12 5M19 12L12 19"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+                <Link
+                  href="#"
+                  className="inline-flex items-center text-[#2F5DFD] font-bold hover:underline mt-[18px]"
+                >
+                  Learn more
+                  <Image
+                    className="ml-2 h-4 w-4"
+                    src={"/icons/arrow.svg"}
+                    alt={"Arrow"}
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
