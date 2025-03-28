@@ -16,8 +16,8 @@ const upcomingProducts = [
     description:
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
     image: {
-      default: "/images/products/spend-gains.png",
-      mobile: "/images/products/spend-gains-mobile.png",
+      default: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains.png",
+      mobile: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains-mobile.png",
     },
   },
 ];

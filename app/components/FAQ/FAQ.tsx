@@ -91,7 +91,7 @@ export const FAQ = () => {
                   <span className="text-[20px] font-bold text-[#293483] leading-[24px] md:leading-[32px]">
                     {faq.question}
                   </span>
-                  <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center">
+                   <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -107,15 +107,8 @@ export const FAQ = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className={`transform origin-center transition-all duration-300 ease-in-out ${
-                          openIndex === index ? "scale-y-0" : ""
+                          openIndex === index ? "scale-0" : ""
                         }`}
-                      />
-                      <path
-                        d="M4 12H20"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
                       />
                     </svg>
                   </span>
@@ -143,13 +136,13 @@ export const FAQ = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-4 text-[20px] leading-[32px]">
+                    <div className="pb-[24px] text-[20px] leading-[32px] ">
                       {faq.answer}
                     </div>
                     {faq.action && (
                       <a
                         href="#"
-                        className="text-[#2F5DFD] hover:text-blue-700 text-[14px] font-bold flex items-center space-x-2 mb-[20px]"
+                        className="text-[#2F5DFD] hover:text-blue-700 text-[14px] font-bold flex items-center space-x-2 mb-[32px]"
                       >
                         <span>{faq.action}</span>
                         <Image
