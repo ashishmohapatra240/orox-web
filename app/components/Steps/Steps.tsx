@@ -42,14 +42,7 @@ const steps = [
     title: "Choose your investment type",
     description: (
       <>
-        Want steady, stress-free returns? ODN offers a 90-day cycle with
-        market-neutral strategies for stable, risk-adjusted investment.
-        high-growth digital assets.
-        <br />
-        <br />
-        Looking for crypto exposure with less volatility? DVOX offers the
-        benefits of a professionally managed, auto-balanced portfolio of
-        high-quality, high-growth digital assets.
+        Want steady returns or low-volatility crypto exposure? ODN ensures stability with market-neutral strategies, while DVOX offers the benefits of a professionally managed, high-quality portfolio.
       </>
     ),
     image:
