@@ -36,7 +36,7 @@ const navigation = {
 export const Footer = () => {
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-8 md:py-[88px]">
+      <div className="mx-auto max-w-7xl px-4 xl:px-0 py-8 md:py-[88px]">
         <div className="flex flex-col lg:flex-row justify-between">
           {/* Main Content Column */}
           <div className="w-full lg:max-w-md">
@@ -214,7 +214,7 @@ export const Footer = () => {
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex gap-[41px] mb-8">
               <Link
-                href="/"
+                href="/products"
                 className="text-[16px] font-semibold text-[#293483]"
               >
                 Products
