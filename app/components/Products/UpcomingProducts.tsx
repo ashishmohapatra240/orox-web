@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const upcomingProducts = [
   {
@@ -15,25 +15,29 @@ const upcomingProducts = [
       "Cards for every type of credit builder and investor in your digital wallet",
     description:
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
-    image: {
-      default: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains.png",
-      mobile: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains-mobile.png",
-    },
+    // image: {
+    //   default:
+    //     "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains.png",
+    //   mobile:
+    //     "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains-mobile.png",
+    // },
+
+    image: "/images/products/spend-gains.png",
   },
 ];
 
 export const UpcomingProducts = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const checkScreen = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  // useEffect(() => {
+  //   const checkScreen = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
 
-    checkScreen(); // initial check
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
+  //   checkScreen(); // initial check
+  //   window.addEventListener("resize", checkScreen);
+  //   return () => window.removeEventListener("resize", checkScreen);
+  // }, []);
 
   return (
     <section className="w-full bg-[#070926] px-[16px] py-[44px] md:px-[60px] md:py-[64px] lg:px-[80px] lg:py-[88px]">
@@ -50,12 +54,12 @@ export const UpcomingProducts = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 lg:gap-8">
           {upcomingProducts.map((product, index) => {
-            const imageSrc =
-              typeof product.image === "string"
-                ? product.image
-                : isMobile
-                ? product.image.mobile
-                : product.image.default;
+            const imageSrc = product.image;
+            // typeof product.image === "string"
+            //   ? product.image
+            //   : isMobile
+            //   ? product.image.mobile
+            //   : product.image.default;
 
             return (
               <div key={index} className="bg-[#ffffff] rounded-[24px]">

@@ -46,7 +46,7 @@ export const FAQ = () => {
         }
         return prevIndex + 1;
       });
-      setKey(prev => prev + 1);
+      setKey((prev) => prev + 1);
       startTimer(); // Restart timer for next question
     }, 10000);
   }, []);
@@ -62,7 +62,7 @@ export const FAQ = () => {
 
   const handleQuestionClick = (index: number) => {
     setOpenIndex(index);
-    setKey(prev => prev + 1);
+    setKey((prev) => prev + 1);
     startTimer(); // Restart timer when manually selecting a question
   };
 
@@ -91,7 +91,7 @@ export const FAQ = () => {
                   <span className="text-[20px] font-bold text-[#293483] leading-[24px] md:leading-[32px]">
                     {faq.question}
                   </span>
-                   <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center">
+                  <span className="ml-6 flex h-6 w-6 shrink-0 items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -116,8 +116,11 @@ export const FAQ = () => {
                 <div
                   className={`absolute bottom-0 left-0 w-full h-[4px] bg-[#293483] transform origin-left rounded-r-[4px]`}
                   style={{
-                    animation: openIndex === index ? `progress-${key} 10s linear forwards` : 'none',
-                    transform: openIndex === index ? 'none' : 'scaleX(0)',
+                    animation:
+                      openIndex === index
+                        ? `progress-${key} 10s linear forwards`
+                        : "none",
+                    transform: openIndex === index ? "none" : "scaleX(0)",
                   }}
                 />
                 <style jsx>{`
