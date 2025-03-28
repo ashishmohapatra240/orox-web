@@ -22,7 +22,7 @@ const upcomingProducts = [
     //     "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains-mobile.png",
     // },
 
-    image: "/images/products/spend-gains.png",
+    image: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains.pn",
   },
 ];
 
