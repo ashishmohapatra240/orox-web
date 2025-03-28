@@ -15,11 +15,12 @@ export const AppStoreButton = ({ href, target, rel }: StoreButtonProps) => {
       className="inline-block transition-opacity hover:opacity-80"
     >
       <Image
-        src="/app-store-badge.png"
+        src="/AppStore.svg"
         alt="Download on the App Store"
-        width={270}
-        height={80}
+        width={540}
+        height={160}
         className="h-[48px] w-auto"
+        quality={100}
       />
     </a>
   );

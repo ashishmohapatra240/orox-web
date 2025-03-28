@@ -13,11 +13,12 @@ export const PlayStoreButton = ({ href, target, rel }: PlayStoreProps) => {
       className="inline-block transition-opacity hover:opacity-80"
     >
       <Image
-        src="/google-play-badge.png"
+        src="/PlayStore.svg"
         alt="Get it on Google Play"
-        width={270}
-        height={80}
+        width={540}
+        height={160}
         className="h-[48px] w-auto"
+        quality={100}
       />
     </a>
   );
