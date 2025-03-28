@@ -30,7 +30,7 @@ export const ProductsHero = () => {
             </span>
 
             <div className="space-y-[24px]">
-              <h1 className="text-[28px] md:text-[64px] font-bold text-[#19191B] leading-[34px] md:leading-[80px]">
+              <h1 className="mt-[8px] text-[40px] md:text-[64px] font-bold text-[#19191B] leading-[34px] md:leading-[80px]">
                 Our products
               </h1>
               <p className="text-[14px] md:text-[20px] text-[#19191B] leading-[20px] md:leading-[32px] mt-[12px] md:mt-[24px]">

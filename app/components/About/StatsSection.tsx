@@ -84,7 +84,7 @@ export const StatsSection = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-start gap-[48px] md:gap-[30px] lg:gap-[60px] xl:gap-[98px]">
           {/* Title Section */}
-          <div className="w-full md:w-[280px] lg:w-[320px] xl:w-[500px] flex items-center">
+          <div className="w-full md:w-[280px] lg:w-[320px] xl:w-[450px] flex items-center">
             <h2 className="text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-bold text-[#19191B] leading-[32px] md:leading-[36px] lg:leading-[38px] xl:leading-[40px] w-[350px] md:w-[280px] lg:w-[320px] xl:w-[500px]">
               Numbers that power OROX. Proven strategies, trusted partners and
               real growth.
@@ -97,7 +97,7 @@ export const StatsSection = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.number}
-                  className="flex flex-col w-[160px] md:w-[170px] lg:w-[120px] xl:w-[180px]"
+                  className="flex flex-col w-[160px] md:w-[170px] lg:w-[120px] xl:w-[175px]"
                 >
                   <div className="text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] font-bold text-[#19191B] leading-[40px] md:leading-[44px] lg:leading-[48px] xl:leading-[60px]">
                     <Counter

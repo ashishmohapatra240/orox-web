@@ -107,7 +107,7 @@ const products: {
 export const Products = () => {
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 space-y-[40px] md:space-y-[64px] lg:space-y-[88px]">
+      <div className="mx-auto max-w-7xl space-y-[40px] md:space-y-[64px] lg:space-y-[88px]">
         {products.map((product, index) => (
           <div
             key={index}
