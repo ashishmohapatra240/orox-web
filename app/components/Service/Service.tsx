@@ -10,7 +10,7 @@ const Service = () => {
     }
   };
   return (
-    <div className="container mx-auto px-[16px] sm:[0px] py-[44px] md:py-[88px] overflow-hidden max-w-[1280px]">
+    <div className="container mx-auto sm:[0px] pt-[44px] md:pt-[88px] overflow-hidden max-w-[1280px]">
       {/*<section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">*/}
       {/* Hero Section */}
       <div className="relative h-[600px] md:h-[500px] lg:h-[550px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 md:mb-12 overflow-visible">
