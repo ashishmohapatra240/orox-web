@@ -77,7 +77,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block" style={{ zIndex: 100 }}>
+          <div className="hidden lg:block" style={{ zIndex: 0 }}>
             <Image
               src="/icons/path.svg"
               alt="OROX Path"
