@@ -27,7 +27,7 @@ const steps = [
       </>
     ),
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step1.png",
+      "/images/steps/step1.png",
   },
   {
     number: 2,
@@ -35,7 +35,7 @@ const steps = [
     description:
       "Sign up with your details and complete a quick verification process to keep your investments secure and compliant.",
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step2.png",
+      "/images/steps/step2.png",
   },
   {
     number: 3,
@@ -46,7 +46,7 @@ const steps = [
       </>
     ),
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step3.png",
+      "/images/steps/step3.png",
   },
   {
     number: 4,
@@ -54,7 +54,7 @@ const steps = [
     description:
       "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step4.png",
+      "/images/steps/step4.png",
   },
   {
     number: 5,
@@ -76,7 +76,7 @@ const steps = [
       </>
     ),
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/steps/step5.png",
+      "/images/steps/step5.png",
   },
 ];
 
