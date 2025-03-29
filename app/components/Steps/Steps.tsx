@@ -27,7 +27,7 @@ const steps = [
       </>
     ),
     image:
-      "/images/steps/step1.png",
+      "/images/steps/steps-1-iPhone.png",
   },
   {
     number: 2,
@@ -35,7 +35,7 @@ const steps = [
     description:
       "Sign up with your details and complete a quick verification process to keep your investments secure and compliant.",
     image:
-      "/images/steps/step2.png",
+      "/images/steps/steps-2-iPhone.png",
   },
   {
     number: 3,
@@ -46,7 +46,7 @@ const steps = [
       </>
     ),
     image:
-      "/images/steps/step3.png",
+      "/images/steps/steps-3-iPhone.png",
   },
   {
     number: 4,
@@ -54,7 +54,7 @@ const steps = [
     description:
       "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
     image:
-      "/images/steps/step4.png",
+      "/images/steps/steps-4-iPhone.png",
   },
   {
     number: 5,
@@ -76,7 +76,7 @@ const steps = [
       </>
     ),
     image:
-      "/images/steps/step5.png",
+      "/images/steps/steps-5-iPhone.png",
   },
 ];
 

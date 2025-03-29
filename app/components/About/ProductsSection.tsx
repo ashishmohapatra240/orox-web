@@ -36,7 +36,7 @@ const products = [
   {
     title: "OROX app",
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-app.png",
+      "/images/products/orox-app.png",
     bgColor: "bg-[#293483]",
     description:
       "OROX is your AI-powered investment platform, offering secure, automated investing. Get steady growth with ODN or crypto exposure with DVOX—all in one place.",
@@ -44,7 +44,7 @@ const products = [
   {
     title: "Opus Diversified Nexus",
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/img_odn_invest_banner.png",
+      "/images/products/img_odn_invest_banner.png",
     bgColor: "bg-[#4A90E2]",
     description:
       "ODN offers risk-adjusted, hands-off investing with a 90-day cycle and market-neutral strategies for long-term stability—no wild swings, no constant monitoring.",
@@ -125,7 +125,7 @@ export const ProductsSection = () => {
                     src={product.image}
                     alt={product.title}
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-105 transition-all duration-300"
                   />
                 ) : (
                   product.image
