@@ -407,7 +407,7 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-[100dvh] overflow-y-auto"
+            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-[100vh] overflow-y-auto"
             style={{ top: "0px", WebkitOverflowScrolling: "touch" }}
           >
             {/* Close button header */}
