@@ -407,7 +407,7 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto"
+            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-[100dvh] overflow-y-auto"
             style={{ top: "0px", WebkitOverflowScrolling: "touch" }}
           >
             {/* Close button header */}
@@ -513,7 +513,7 @@ export const Navbar = () => {
             {/* QR Code section */}
             <div className="px-6 pb-8 mt-auto">
               <hr className="border-t border-[#F4F4F4] mb-[24px]" />
-              <div className="mb-[16px]">
+              <div className="mb-[32px]">
                 <Image
                   src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
                   alt="QR Code"
