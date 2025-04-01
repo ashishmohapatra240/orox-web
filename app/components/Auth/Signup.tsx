@@ -18,6 +18,14 @@ export const Signup = () => {
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
       <div className="hidden lg:flex lg:w-1/2 relative h-[120vh]">
+        <div className="absolute top-[32px] left-[32px]">
+          <Image
+            src="/images/logo-white.png"
+            alt="Logo"
+            width={131}
+            height={40}
+          />
+        </div>
         <video
           src="/videos/Signup.mp4"
           autoPlay
@@ -48,7 +56,7 @@ export const Signup = () => {
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full py-4">
-          <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px] space-y-4">
+          <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px]">
             {/* Header */}
             <div className="space-y-[16px]">
               <h1 className="text-[36px] font-bold text-[#19191B] leading-[48px]">
@@ -63,11 +71,11 @@ export const Signup = () => {
               </p>
             </div>
 
-            <div className="space-y-[16px] pt-[16px]">
+            <div className="space-y-[16px] pt-[24px]">
               {/* Email Input */}
               <div className="relative">
                 <div
-                  className={`relative h-[48px] rounded-xl border ${
+                  className={`relative h-[56px] rounded-[12px] border ${
                     focusedField === "email"
                       ? "border-[#19191B]"
                       : "border-[#E5E5E5]"
@@ -86,7 +94,7 @@ export const Signup = () => {
                     className={`absolute left-4 transition-all duration-200 pointer-events-none ${
                       email || focusedField === "email"
                         ? "text-[12px] -top-2.5 bg-white px-1"
-                        : "text-[16px] top-2.5"
+                        : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
                     Email<span className="text-[#C91F3B]">*</span>
@@ -97,7 +105,7 @@ export const Signup = () => {
               {/* Password Input */}
               <div className="relative">
                 <div
-                  className={`relative h-[48px] rounded-xl border ${
+                  className={`relative h-[56px] rounded-[12px] border ${
                     focusedField === "password"
                       ? "border-[#19191B]"
                       : "border-[#E5E5E5]"
@@ -116,7 +124,7 @@ export const Signup = () => {
                     className={`absolute left-4 transition-all duration-200 pointer-events-none ${
                       password || focusedField === "password"
                         ? "text-[12px] -top-2.5 bg-white px-1"
-                        : "text-[16px] top-2.5"
+                        : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
                     Password<span className="text-[#C91F3B]">*</span>
@@ -157,7 +165,7 @@ export const Signup = () => {
               {/* Invitation Code Input */}
               <div className="relative">
                 <div
-                  className={`relative h-[48px] rounded-xl border ${
+                  className={`relative h-[56px] rounded-[12px] border ${
                     focusedField === "invitation"
                       ? "border-[#19191B]"
                       : "border-[#E5E5E5]"
@@ -176,7 +184,7 @@ export const Signup = () => {
                     className={`absolute left-4 transition-all duration-200 pointer-events-none ${
                       invitationCode || focusedField === "invitation"
                         ? "text-[12px] -top-2.5 bg-white px-1"
-                        : "text-[16px] top-2.5"
+                        : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
                     Invitation code<span className="text-[#C91F3B]">*</span>
@@ -196,7 +204,7 @@ export const Signup = () => {
               </div>
 
               {/* Terms and Conditions */}
-              <div className="pt-[16px]">
+              <div>
                 <label className="flex items-start gap-2">
                   <input
                     type="checkbox"
@@ -232,13 +240,13 @@ export const Signup = () => {
                 Continue
               </button>
             </div>
-
+            <hr className="border-[1px] border-[#E5E5E5] mt-[40px]" />
             {/* Social Login */}
-            <div className="space-y-2 border-t border-[#E5E5E5] pt-3">
+            <div className="space-y-2">
               <p className="text-[12px] text-[#3C3C3C] pt-[16px]">
                 or continue with:
               </p>
-              <div className="flex gap-3 py-[4px]">
+              <div className="flex gap-[16px] py-[8px]">
                 <button className="w-[48px] h-[48px] flex items-center justify-center border border-[#E5E5E5] rounded-full hover:bg-gray-50">
                   <Image
                     src="/icons/google.svg"
