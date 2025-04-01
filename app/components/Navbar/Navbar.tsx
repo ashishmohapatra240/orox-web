@@ -504,7 +504,7 @@ export const Navbar = () => {
                       Log in
                     </Button>
                   </Link>
-                  <Link href="/" className="w-full block">
+                  <Link href="/signup" className="w-full block">
                     <Button className="w-full bg-[#293483] rounded-full whitespace-nowrap">
                       Join for free
                     </Button>
