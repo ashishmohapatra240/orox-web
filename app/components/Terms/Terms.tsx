@@ -688,13 +688,6 @@ const termsData = [
         </p>
         <br />
         <p>
-          You acknowledge and agree that OROX is not a licensed or registered
-          broker-dealer, investment adviser, or other financial services
-          provider, and does not provide investment, financial, estate-planning,
-          accounting or other advice.
-        </p>
-        <br />
-        <p>
           The Content and the views expressed in the Content do not necessarily
           reflect the views of OROX as a whole, its directors, officers,
           employees, shareholders or any part or member thereof or of any third
