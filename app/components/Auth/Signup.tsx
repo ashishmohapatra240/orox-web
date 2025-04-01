@@ -17,7 +17,7 @@ export const Signup = () => {
   return (
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
-      <div className="hidden lg:flex lg:w-1/2 relative h-[120vh]">
+      <div className="hidden lg:flex lg:w-1/2 relative h-[100vh]">
         <div className="absolute top-[32px] left-[32px]">
           <Image
             src="/images/logo-white.png"
@@ -36,8 +36,15 @@ export const Signup = () => {
       </div>
 
       {/* Right Content */}
-      <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen">
-        <div className="flex justify-end items-center pt-4">
+      <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen overflow-y-auto">
+        <div className="flex justify-between md:justify-end items-center pt-4">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={80}
+            height={24}
+            className="md:hidden"
+          />
           <button
             onClick={() => router.push("/")}
             className="p-2 hover:bg-gray-100 rounded-full"
@@ -55,7 +62,7 @@ export const Signup = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full py-4">
+        <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full py-[4px]">
           <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px]">
             {/* Header */}
             <div className="space-y-[16px]">
@@ -299,7 +306,7 @@ export const Signup = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-[24px] text-center text-[12px] text-[#19191B]">
+        <div className="pt-[24px] text-center text-[12px] text-[#19191B] mb-[24px]">
           © 2025 — Copyright. All Rights reserved
         </div>
       </div>
