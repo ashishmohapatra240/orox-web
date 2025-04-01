@@ -22,7 +22,7 @@ const privacyData = [
       {
         type: "Identification data",
         examples:
-          "First, last, middle, maiden names, date of birth, personal identity code, any other unique sequence of symbols granted to you, intended for personal identification, gender, nationality, citizenship, copy of government-issued identity document (e.g., passport, national identity card, residence permit, driver’s license) and its details (e.g., type, number, place and date of issuance, expiry date, MRZ code, signature), country of birth, residential address, copy of proof of address document (e.g., utility bill, identification document bearing your address), photographed image or video recording of your face that you provide through a mobile or desktop camera while going through our identity verification process.",
+          "First, last, middle, maiden names, date of birth, personal identity code, any other unique sequence of symbols granted to you, intended for personal identification, gender, nationality, citizenship, copy of government-issued identity document (e.g., passport, national identity card, residence permit, driver's license) and its details (e.g., type, number, place and date of issuance, expiry date, MRZ code, signature), country of birth, residential address, copy of proof of address document (e.g., utility bill, identification document bearing your address), photographed image or video recording of your face that you provide through a mobile or desktop camera while going through our identity verification process.",
       },
       {
         type: "Transaction data",
@@ -47,7 +47,7 @@ const privacyData = [
       {
         type: "Data related to AML/CFT/sanctions requirements",
         examples:
-          "Information that enables us to perform anti-money laundering (AML) and combating the financing of terrorism (CFT) requirements and ensure the compliance with international sanctions, including the purpose of the business relationship and whether you are a politically exposed person and other data that are required to be processed by us in order to comply with the legal obligation to “know your client” (KYC) (information collected will differ depending on each client’s risk score).",
+          "Information that enables us to perform anti-money laundering (AML) and combating the financing of terrorism (CFT) requirements and ensure the compliance with international sanctions, including the purpose of the business relationship and whether you are a politically exposed person and other data that are required to be processed by us in order to comply with the legal obligation to &quot;know your client&quot; (KYC) (information collected will differ depending on each client's risk score).",
       },
       {
         type: "Data obtained and/or created in order to fulfill the requirements of applicable legislations",
@@ -160,9 +160,9 @@ const privacyData = [
       <>
         If you have any questions, comments, complaints, or requests regarding
         this Privacy Policy or our privacy practices, or if you wish to exercise
-        your rights regarding your personal data, please contact us by email at
+        your rights regarding your personal data, please contact us by email at{" "}
         <Link
-          className="text-[2F5DFD] underline"
+          className="text-[#2F5DFD] underline"
           href={"mailto:info@oroxglobal.com"}
         >
           info@oroxglobal.com
@@ -189,35 +189,37 @@ export const Privacy = () => {
   const [lastUpdated] = useState("August 2024");
 
   return (
-    <section className="w-full px-4 py-12 md:py-24">
+    <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="mb-[32px]">
-          <div className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center mb-4">
+        <div className="mb-[8px]">
+          <div className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center mb-[8px]">
             LEGAL DETAILS
           </div>
-          <h1 className="text-4xl md:text-[64px] font-bold text-[#19191B] mb-[40px] text-center">
+          <h1 className="text-[40px] md:text-[64px] font-bold text-[#19191B] mb-[40px] text-center leading-[48px] md:leading-[80px]">
             Privacy Policy
           </h1>
-          <div className="text-[14px] font-bold text-[#19191B]">
+          <div className="text-[14px] font-bold text-[#19191B] leading-[20px]">
             Last updated on {lastUpdated}
           </div>
         </div>
 
         {/* Introduction */}
-        <div className="prose max-w-none mb-16">
-          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+        <div className="prose max-w-none mb-[40px]">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
             OROX Management Limited, a company registered in the British Virgin
             Islands, and its subsidiaries, affiliates, and transferees,
             successors, and their officers, directors, employees, and agents,
-            including oroxglobal.com (“Company”, “OROX”, or “we”) respect your
-            privacy and are committed to protecting your personal data. To that
-            end, we have prepared this Privacy Policy to explain what
-            information we collect about you, how we use it, when we share it,
-            and what rights you have with respect to your personal data. We
-            encourage you to read this Privacy Policy carefully, as it can help
-            you make informed decisions when you visit the OROX Platform and/or
-            use our Products or Services.
+            including oroxglobal.com (&quot;Company&quot;, &quot;OROX&quot;, or
+            &quot;we&quot;) respect your privacy and are committed to protecting
+            your personal data. To that end, we have prepared this Privacy
+            Policy to explain what information we collect about you, how we use
+            it, when we share it, and what rights you have with respect to your
+            personal data. We encourage you to read this Privacy Policy
+            carefully, as it can help you make informed decisions when you visit
+            the OROX Platform and/or use our Products or Services. you make
+            informed decisions when you visit the OROX Platform and/or use our
+            Products or Services.
             <br />
             <br />
             We review our Privacy Policy regularly to ensure that it reflects
@@ -225,10 +227,10 @@ export const Privacy = () => {
             or the OROX Platform as well as that we remain compliant with the
             changing regulatory landscape. And we may amend this Privacy Policy
             at any time and without prior notice by posting the updated version,
-            along with the “Last revised” date, on this page. Please revisit
-            this page regularly to stay informed of any changes. If we make a
-            revision that materially changes our privacy practices, we will make
-            reasonable efforts to notify you in a timely manner and, if required
+            along with the &quot;Last revised&quot; date, on this page. Please
+            revisit this page regularly to stay informed of any changes. If we
+            make a revision that materially changes our privacy practices, we
+            will make reasonable efforts to notify you in a timely manner and,
             under applicable laws, obtain your consent before implementing such
             revision. You hereby acknowledge and agree that your continued use
             of the OROX Platform, our Products, and/or our Services shall
@@ -249,13 +251,13 @@ export const Privacy = () => {
         </div>
 
         {/* Main Content */}
-        <div className="space-y-16">
+        <div className="space-y-[32px] md:space-y-[40px]">
           {privacyData.map((section, index) => (
-            <div key={index} className="space-y-6">
+            <div key={index} className="space-y-[24px] mt-[40px]">
               <h2 className="text-[28px] md:text-[28px] font-bold text-[#19191B]">
                 {section.title}
               </h2>
-              <div className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+              <div className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
                 {section.content}
               </div>
 
@@ -263,11 +265,11 @@ export const Privacy = () => {
               {section.table && (
                 <div className="mt-8 border rounded-lg overflow-hidden">
                   <div className="bg-[#F4F4F4] px-6 py-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="font-bold text-[16px] md:text-[20px]">
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="font-bold text-[16px] md:text-[20px] leading-[24px] md:leading-[32px]">
                         Types of personal data
                       </div>
-                      <div className="font-bold text-[16px] md:text-[20px]">
+                      <div className="font-bold text-[16px] md:text-[20px] leading-[24px] md:leading-[32px]">
                         Examples of personal data
                       </div>
                     </div>
@@ -275,11 +277,11 @@ export const Privacy = () => {
                   <div className="divide-y">
                     {section.table.map((row, idx) => (
                       <div key={idx} className="px-6 py-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div className="text-[#19191B] text-[16px] md:text-[20px]">
+                        <div className="grid grid-cols-2 gap-6">
+                          <div className="text-[#19191B] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px]">
                             {row.type}
                           </div>
-                          <div className="text-[#19191B] text-[16px] md:text-[20px]">
+                          <div className="text-[#19191B] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px]">
                             {row.examples}
                           </div>
                         </div>
@@ -288,7 +290,7 @@ export const Privacy = () => {
                   </div>
                 </div>
               )}
-              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading[32px]">
                 We do not process special category data related to your health,
                 ethnicity, or religious or political beliefs unless required by
                 law or in specific circumstances where, for example, you reveal

@@ -795,24 +795,24 @@ export const Terms = () => {
   const [lastUpdated] = useState("August 2024");
 
   return (
-    <section className="w-full px-4 py-12 md:py-24">
+    <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-[32px]">
-          <div className="text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center mb-4">
+          <div className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center mb-[8px]">
             LEGAL DETAILS
           </div>
-          <h1 className="text-4xl md:text-[64px] font-bold text-[#19191B] mb-[40px] text-center">
+          <h1 className="text-[40px] md:text-[64px] font-bold text-[#19191B] mb-[40px] text-center leading-[48px] md:leading-[80px]">
             Terms of Service
           </h1>
-          <div className="text-[14px] font-bold text-[#19191B]">
+          <div className="text-[14px] font-bold text-[#19191B] leading-[20px]">
             Last updated on {lastUpdated}
           </div>
         </div>
 
         {/* Introduction */}
-        <div className="prose max-w-none mb-16">
-          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+        <div className="prose max-w-none mb-[32px] md:mb-[40px]">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
             Users of this Platform and holders of OROX Accounts, including
             owners, employees, agents and affiliates of any business,
             corporation, partnership or other entity that is a user, borrower or
@@ -825,7 +825,7 @@ export const Terms = () => {
             &quot;Parties&quot;.
           </p>
           <br />
-          <p className="text-[16p] md:text-[20px] text-[#19191B] leading-relaxed">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
             The following Terms of Service (the &quot;Terms&quot;, as amended,
             supplemented or modified from time to time) govern access to and use
             of oroxglobal.com and the OROX mobile apps in the version of Android
@@ -835,7 +835,7 @@ export const Terms = () => {
             Platform (your &quot;OROX Account&quot;) is subject to the Terms.
           </p>
           <br />
-          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
             By applying for your OROX Account or accessing and using the OROX
             Platform, you acknowledge and accept that you have read, understood
             and agree to be bound by, and comply with, the Terms, and the
@@ -857,7 +857,7 @@ export const Terms = () => {
             from, or otherwise utilise your OROX Account or the Platform.
           </p>
           <br />
-          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+          <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
             All rights in the OROX Platform not otherwise expressly granted to
             you herein are reserved to OROX. The failure of OROX to exercise or
             enforce any right or provision of the Terms shall not constitute a
@@ -879,13 +879,13 @@ export const Terms = () => {
         </div>
 
         {/* Main Content */}
-        <div className="space-y-16">
+        <div className="space-y-[32px] md:space-y-[40px]">
           {termsData.map((section, index) => (
             <div key={index} className="space-y-6">
-              <h2 className="text-[28px] md:text-[28px] font-bold text-[#19191B]">
+              <h2 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
                 {section.title}
               </h2>
-              <div className="text-[16px] md:text-[20px] text-[#19191B] leading-relaxed">
+              <div className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
                 {section.content}
               </div>
             </div>
