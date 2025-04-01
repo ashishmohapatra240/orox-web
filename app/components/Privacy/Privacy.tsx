@@ -13,7 +13,6 @@ const privacyData = [
         of information from which you can be directly or indirectly identified
         are typically considered personal data.
         <br />
-        <br />
         The personal data we collect can be grouped into the following
         categories:
       </>
@@ -85,9 +84,7 @@ const privacyData = [
           use our Products or Services; and 3) receive from third parties.
         </p>
         <br />
-        <br />
         <p className="font-bold">Information received directly from you</p>
-        <br />
         <br />
         <p>
           To create an account such as a OROX Account with us and use our
@@ -101,7 +98,6 @@ const privacyData = [
           detail below.
         </p>
         <br />
-        <br />
         <p>
           You have a choice regarding whether to provide us with your personal
           data. Please note that if you choose not to provide us with certain
@@ -112,11 +108,11 @@ const privacyData = [
           Products or Services may not be best tailored to your interests or
           preferences.
         </p>
+        <br />
         <p className="font-bold">
           Information we generate or collect while you visit the OROX Platform
           or use our Products or Services
         </p>
-        <br />
         <br />
         <p>
           When you create a OROX Account, we assign you a unique ID number. This
@@ -136,7 +132,6 @@ const privacyData = [
           be eligible for rewards if you meet certain criteria under our
           Referral Program Terms, available prior to program launch.
         </p>
-        <br />
         <br />
         <p>
           In addition, we also collect information about your devices, and your
@@ -192,7 +187,7 @@ export const Privacy = () => {
     <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="mb-[8px]">
+        <div className="mb-[32px]">
           <div className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center mb-[8px]">
             LEGAL DETAILS
           </div>
@@ -220,7 +215,6 @@ export const Privacy = () => {
             the OROX Platform and/or use our Products or Services. you make
             informed decisions when you visit the OROX Platform and/or use our
             Products or Services.
-            <br />
             <br />
             We review our Privacy Policy regularly to ensure that it reflects
             any changes to our operation, privacy practices, Products, Services,
@@ -274,7 +268,7 @@ export const Privacy = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="divide-y">
+                  <div className="">
                     {section.table.map((row, idx) => (
                       <div key={idx} className="px-6 py-4">
                         <div className="grid grid-cols-2 gap-6">
@@ -290,19 +284,6 @@ export const Privacy = () => {
                   </div>
                 </div>
               )}
-              <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading[32px]">
-                We do not process special category data related to your health,
-                ethnicity, or religious or political beliefs unless required by
-                law or in specific circumstances where, for example, you reveal
-                such data while you visit the OROX Platform or use our Products
-                or Services (e.g., in payments details).
-                <br />
-                <br />
-                If you provide us personal data about other people (such as your
-                spouse or family) or you ask us to share their personal data
-                with third parties, you confirm that you have brought this
-                Privacy Policy to their attention beforehand.
-              </p>
             </div>
           ))}
         </div>
