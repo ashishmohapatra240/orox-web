@@ -244,18 +244,18 @@ export const Navbar = () => {
     }
   }, [activeDropdown]);
 
-  // Handle body scroll lock when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen || activeDropdown || isQROpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+  // // Handle body scroll lock when mobile menu is open
+  // useEffect(() => {
+  //   if (isMobileMenuOpen || activeDropdown || isQROpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "";
+  //   }
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMobileMenuOpen, activeDropdown, isQROpen]);
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [isMobileMenuOpen, activeDropdown, isQROpen]);
 
   // const toggleMobileDropdown = (dropdown: string) => {
   //   setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -407,9 +407,9 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-[100vh] overflow-y-auto"
-            style={{ top: "0px", WebkitOverflowScrolling: "touch" }}
-          >
+          className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto overscroll-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
             {/* Close button header */}
             <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-4 z-[61]">
               <button
