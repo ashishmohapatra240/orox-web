@@ -548,7 +548,7 @@ export const Navbar = () => {
               Log in
             </Button>
           </Link>
-          <Link href="/">
+          <Link href="/signup">
             <Button className="px-3 md:px-4 lg:px-6 whitespace-nowrap">
               Join for free
             </Button>
