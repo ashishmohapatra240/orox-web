@@ -209,13 +209,21 @@ const termsData = [
     content: (
       <>
         <p>
-          We may freeze, suspend or terminate your OROX Account at any time in
-          our sole discretion, in addition to taking any action and seeking any
-          remedy we may be entitled to in law or in equity, including if we
-          suspect your involvement in any fraudulent activity of any kind or
-          other misuse of the Services, provision by you of inaccurate or
-          misleading information, or your involvement in any money laundering or
-          other financial crime related to you or your OROX Account.
+          You agree to indemnify and hold OROX and its affiliates, agents,
+          officers and employees from and against any suit, action, claim,
+          demand, penalty or loss, including reasonable attorneys’ fees and
+          expenses and any amount paid in settlement to a third party, made by
+          or resulting from any third party (including any government agency or
+          body) due to, in connection with, or arising out of, the following
+          without limitation (i) your use of the OROX Platform, the Content, the
+          Intellectual Property or your OROX Account, (ii) any breach or alleged
+          or claimed breach of the Terms or the materials it incorporates by
+          reference, including the Privacy Policy and the Community Guidelines,
+          (iii) your violation of any law, regulation, order or other legal
+          mandate, or the rights of a third party, (iv) Your Content, or (v) any
+          act or omission by your agent, representative or third-party service
+          provider while using your OROX Account, regardless of whether the
+          specific use was expressly authorised by you.
         </p>
       </>
     ),
@@ -225,37 +233,29 @@ const termsData = [
     content: (
       <>
         <p>
-          We may freeze, suspend or terminate your OROX Account at any time in
-          our sole discretion, in addition to taking any action and seeking any
-          remedy we may be entitled to in law or in equity, including if we
-          suspect your involvement in any fraudulent activity of any kind or
-          other misuse of the Services, provision by you of inaccurate or
-          misleading information, or your involvement in any money laundering or
-          other financial crime related to you or your OROX Account.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Limitation of liability",
-    content: (
-      <>
-        <p>
-          We disclaim all liability for any loss or damage arising from your or
-          a third party’s use of your OROX Account, whether or not it has been
-          approved by you. We reserve the right to suspend, freeze or cancel the
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Limitation of liability",
-    content: (
-      <>
-        <p>
-          We disclaim all liability for any loss or damage arising from your or
-          a third party’s use of your OROX Account, whether or not it has been
-          approved by you. We reserve the right to suspend, freeze or cancel the
+          OROX is not liable for any loss arising from any malfunction, defect
+          or error in any terminal used to process any instructions from you, or
+          other machines or systems of authorisation whether belonging to or
+          operated by other persons or us, any inaccuracy, defect or omission of
+          any pricing information relating to Virtual Assets, or any
+          interruption in any such information or any error or delay in the
+          transmission of such information, any delay or inability on our part
+          to perform any of our obligations under the Terms because of any Force
+          Majeure, any underperformance, negligence or default of any third
+          party that OROX may engage in providing the Services and the Products,
+          directly or indirectly, fraud or forgery of any third party, business
+          interruption, loss of revenue or profits, loss of business
+          opportunity, customers or contracts, goodwill, opportunity or
+          anticipated savings whether direct or indirect, any direct or
+          consequential loss, for any loss due to inability to retrieve any data
+          or information. “Force majeure” means any unforeseeable circumstance
+          which is beyond the control of OROX, or any unavoidable event, even if
+          foreseeable, as a result of which OROX is unable to perform its
+          obligations, in whole or in part, under the Terms. Such circumstances
+          include, but are not limited to, any strike, factory closure,
+          explosion, maritime peril, natural disaster, act by a public enemy,
+          fire, flood, accident, war, riot, insurgence or any other similar
+          event.
         </p>
         <br />
         <p>
@@ -296,16 +296,7 @@ const termsData = [
         </p>
         <br />
         <p>
-          The total liability of OROX for any claim arising out of or in
-          connection with the Terms, regardless of the form of action, is
-          limited to the total amount of Virtual Asset, if any, deposited by you
-          to access, use or otherwise utilise the OROX Platform and shall not in
-          any case be greater than the actual damages incurred due to OROX’s
-          wilful misconduct.
-        </p>
-        <br />
-        <p>
-          Not withstanding anything in these Terms to the contrary, the
+          Notwithstanding anything in these Terms to the contrary, the
           obligations and liabilities of OROX will be without recourse to any
           other subsidiary or affiliate of OROX, or their respective officers,
           employees, directors, contractors, agents or representatives, and you
@@ -321,9 +312,8 @@ const termsData = [
           against any objections, claims for damages or legal actions by third
           parties based on a claim arising from or relating to acts performed by
           you while using the Service illegally or in violation of these Terms.
-          You are responsible for reimbursing any damage to OROX caused thereby.
+          You are responsible for reimbursing any damage to OROX caused thereby.
         </p>
-        <br />
       </>
     ),
   },
