@@ -51,10 +51,10 @@ export const Signup = () => {
           <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px] space-y-4">
             {/* Header */}
             <div className="space-y-[16px]">
-              <h1 className="text-[28px] font-bold text-[#19191B] leading-[36px]">
+              <h1 className="text-[36px] font-bold text-[#19191B] leading-[48px]">
                 Sign up to OROX
               </h1>
-              <p className="text-[16px] text-[#19191B] leading-[1.4]">
+              <p className="text-[16px] text-[#19191B] leading-[20px] md:leading-[28px]">
                 Share a few details and we’ll get you set up in no time. Already
                 have an account?{" "}
                 <Link href="/login" className="text-[#19191B] underline">
@@ -63,7 +63,7 @@ export const Signup = () => {
               </p>
             </div>
 
-            <div className="space-y-3 pt-[16px]">
+            <div className="space-y-[16px] pt-[16px]">
               {/* Email Input */}
               <div className="relative">
                 <div
@@ -179,7 +179,7 @@ export const Signup = () => {
                         : "text-[16px] top-2.5"
                     } text-[#19191B]`}
                   >
-                    Invitation code
+                    Invitation code<span className="text-[#C91F3B]">*</span>
                   </div>
                   <button
                     type="button"
@@ -204,7 +204,7 @@ export const Signup = () => {
                     onChange={(e) => setAgreeToTerms(e.target.checked)}
                     className="mt-1 w-4 h-4 border-gray-300 text-[#293483] focus:ring-[#293483]"
                   />
-                  <span className="text-[12px] text-[#19191B]">
+                  <span className="text-[12px] text-[#3C3C3C]">
                     Read our{" "}
                     <Link
                       href="/privacy-policy"
@@ -227,7 +227,7 @@ export const Signup = () => {
             </div>
 
             {/* Continue Button */}
-            <div className="pt-[16px]">
+            <div className="pt-[32px] md:pt-[40px]">
               <button className="w-full h-[48px] bg-[#293483] text-white text-[16px] font-bold rounded-[72px] hover:bg-[#293483]/90">
                 Continue
               </button>
@@ -266,7 +266,7 @@ export const Signup = () => {
               </div>
 
               {/* Login Link */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-[8px]">
                 <span className="text-[14px] text-[#19191B]">
                   Already have an OROX account?
                 </span>
