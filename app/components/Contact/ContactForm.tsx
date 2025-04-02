@@ -69,17 +69,17 @@ export default function ContactForm() {
 
   return (
     <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
-      <div className="mx-auto max-w-[880px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[880px]">
         <div className="flex flex-col items-center text-center gap-[32px]">
           {/* Header */}
-          <div>
-            <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] leading-[18px] md:leading-[28px] mb-[8px]">
+          <div className="flex flex-col items-center text-center">
+            <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] leading-[18px] md:leading-[28px]">
               GET IN TOUCH WITH US
             </span>
-            <h1 className="text-[40px] md:text-[64px] font-bold text-[#19191B] leading-[40px] md:leading-[68px] mb-[40px]">
+            <h1 className="text-[40px] md:text-[64px] font-bold text-[#19191B] leading-[40px] md:leading-[68px] mt-[8px] mb-[40px]">
               Contact OROX
             </h1>
-            <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px]">
+            <p className="text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] max-w-[280px] md:max-w-[700px]">
               Have questions? Need support? We&apos;re here to help.
             </p>
           </div>
