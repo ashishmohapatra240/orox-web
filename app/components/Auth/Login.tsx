@@ -30,21 +30,34 @@ export const Login = () => {
 
   return (
     <div className="flex min-h-screen">
-      {/* Left Image - Hidden on mobile */}
-      <div className="hidden lg:flex lg:w-1/2 relative h-screen">
-        <Image
-          src="/images/auth/piggy-bank.png"
-          alt="OROX Piggy Bank"
-          height={1000}
-          width={1000}
-          className="object-cover rounded-r-[24px]"
-          priority
+      <div className="hidden lg:flex lg:w-1/2 relative h-[100vh]">
+        <div className="absolute top-[32px] left-[32px]">
+          <Image
+            src="/images/logo-white.png"
+            alt="Logo"
+            width={131}
+            height={40}
+          />
+        </div>
+        <video
+          src="/videos/Login.mp4"
+          autoPlay
+          muted
+          loop
+          className="object-cover object-left lg:object-[20%] rounded-r-[24px]"
         />
       </div>
 
       {/* Right Content */}
-      <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen">
-        <div className="flex justify-end items-center pt-4">
+      <div className="w-full lg:w-1/2 flex flex-col px-[16px] md:px-[32px] h-screen overflow-y-auto">
+        <div className="flex justify-between md:justify-end items-center mt-[16px] md:mt-[32px] mb-[48px]">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={80}
+            height={24}
+            className="md:hidden"
+          />
           <button
             onClick={() => router.push("/")}
             className="p-2 hover:bg-gray-100 rounded-full"
@@ -63,27 +76,27 @@ export const Login = () => {
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full py-4">
-          <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px] space-y-4">
+          <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px]">
             {/* Header */}
             <div className="space-y-[16px]">
               <h1 className="text-[28px] font-bold text-[#19191B] leading-[36px]">
                 Log in to OROX
               </h1>
-              <p className="text-[16px] text-[#19191B] leading-5">
+              <p className="text-[16px] text-[#19191B] leading-[28px]">
                 Welcome back! Enter your details to get started.
               </p>
             </div>
 
-            <div className="space-y-3 pt-[24px]">
+            <div className="space-y-[16px] pt-[24px]">
               {/* Email Input */}
               <div className="relative">
                 <div
-                  className={`relative h-[48px] rounded-xl border ${
-                    focusedField === "email" 
-                      ? "border-[#19191B]" 
-                      : errors.email 
-                        ? "border-[#C91F3B]" 
-                        : "border-[#E5E5E5]"
+                  className={`relative h-[56px] rounded-xl border ${
+                    focusedField === "email"
+                      ? "border-[#19191B]"
+                      : errors.email
+                      ? "border-[#C91F3B]"
+                      : "border-[#E5E5E5]"
                   }`}
                 >
                   <input
@@ -91,11 +104,11 @@ export const Login = () => {
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
-                      validateField('email', e.target.value);
+                      validateField("email", e.target.value);
                     }}
                     onBlur={() => {
                       setFocusedField(null);
-                      validateField('email', email);
+                      validateField("email", email);
                     }}
                     onFocus={() => setFocusedField("email")}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] focus:outline-none bg-transparent"
@@ -105,26 +118,28 @@ export const Login = () => {
                     className={`absolute left-4 transition-all duration-200 pointer-events-none ${
                       email || focusedField === "email"
                         ? "text-[12px] -top-2.5 bg-white px-1"
-                        : "text-[16px] top-2.5"
+                        : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
                     Email<span className="text-[#C91F3B]">*</span>
                   </div>
                 </div>
                 {errors.email && (
-                  <p className="text-[#C91F3B] text-[12px] mt-1">{errors.email}</p>
+                  <p className="text-[#C91F3B] text-[12px] mt-1">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
               {/* Password Input */}
               <div className="relative">
                 <div
-                  className={`relative h-[48px] rounded-xl border ${
-                    focusedField === "password" 
-                      ? "border-[#19191B]" 
-                      : errors.password 
-                        ? "border-[#C91F3B]" 
-                        : "border-[#E5E5E5]"
+                  className={`relative h-[56px] rounded-xl border ${
+                    focusedField === "password"
+                      ? "border-[#19191B]"
+                      : errors.password
+                      ? "border-[#C91F3B]"
+                      : "border-[#E5E5E5]"
                   }`}
                 >
                   <input
@@ -132,11 +147,11 @@ export const Login = () => {
                     value={password}
                     onChange={(e) => {
                       setPassword(e.target.value);
-                      validateField('password', e.target.value);
+                      validateField("password", e.target.value);
                     }}
                     onBlur={() => {
                       setFocusedField(null);
-                      validateField('password', password);
+                      validateField("password", password);
                     }}
                     onFocus={() => setFocusedField("password")}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] leading-7 focus:outline-none bg-transparent"
@@ -146,7 +161,7 @@ export const Login = () => {
                     className={`absolute left-4 transition-all duration-200 pointer-events-none ${
                       password || focusedField === "password"
                         ? "text-[12px] -top-2.5 bg-white px-1"
-                        : "text-[16px] top-2.5"
+                        : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
                     Password<span className="text-[#C91F3B]">*</span>
@@ -182,23 +197,30 @@ export const Login = () => {
                   </button>
                 </div>
                 {errors.password && (
-                  <p className="text-[#C91F3B] text-[12px] mt-1">{errors.password}</p>
+                  <p className="text-[#C91F3B] text-[12px] mt-1">
+                    {errors.password}
+                  </p>
                 )}
               </div>
 
               {/* Remember Me and Forgot Password */}
-              <div className="flex items-center justify-between px-2 pt-[16px]">
-                <label className="flex items-center gap-1 cursor-pointer text-[14px] font-bold text-[#19191B]">
-                  <input
-                    type="checkbox"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-[18px] h-[18px] border-gray-300 text-[#293483] focus:ring-[#293483] checked:bg-[#293483]"
-                  />
-                  <span className="text-[14px] font-bold text-[#19191B]">
+              <div className="flex items-center justify-between px-2 pt-[8px]">
+                <div className="flex items-center gap-2">
+                  <label className="relative w-[20px] h-[20px]">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="peer appearance-none w-full h-full border border-gray-300 rounded-full bg-white checked:bg-[#293483] checked:border-[#293483] transition-colors duration-200"
+                    />
+                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                      <div className="w-[6px] h-[10px] border-white border-r-[2.5px] border-b-[2.5px] rotate-45 translate-y-[-1px]" />
+                    </div>
+                  </label>
+                  <span className="text-[14px] font-bold text-[#19191B] leading-[20px]">
                     Remember me
                   </span>
-                </label>
+                </div>
                 <div className="flex items-center gap-1">
                   <Image
                     src="/icons/ic_help_outline.svg"
@@ -217,18 +239,18 @@ export const Login = () => {
             </div>
 
             {/* Continue Button */}
-            <div className="pt-[16px] pb-[16px]">
+            <div className="pt-[32px] pb-[40px]">
               <button className="w-full h-[48px] bg-[#293483] text-white text-[16px] font-bold rounded-[72px] hover:bg-[#293483]/90">
                 Continue
               </button>
             </div>
 
             {/* Social Login */}
-            <div className="space-y-2 border-t border-[#E5E5E5] pt-3">
+            <div className="border-t border-[#E5E5E5] pt-[8px]">
               <p className="text-[12px] text-[#3C3C3C] pt-[16px]">
                 or continue with:
               </p>
-              <div className="flex gap-3 py-[4px] ">
+              <div className="flex gap-[16px] pt-[8px] pb-[18px]">
                 <button className="w-[48px] h-[48px] flex items-center justify-center border border-[#E5E5E5] rounded-full hover:bg-gray-50">
                   <Image
                     src="/icons/google.svg"
@@ -256,8 +278,8 @@ export const Login = () => {
               </div>
 
               {/* Sign Up Link */}
-              <div className="flex items-center gap-2">
-                <span className="text-[14px] text-[#19191B]">
+              <div className="flex flex-col md:flex-row gap-[4px]">
+                <span className="text-[14px] text-[#19191B] leading-[20px] whitespace-nowrap">
                   Haven&apos;t joined OROX yet?
                 </span>
                 <Link
@@ -281,7 +303,7 @@ export const Login = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pb-[24px] text-center text-[12px] text-[#19191B]">
+        <div className="pt-[24px] text-center text-[12px] text-[#19191B] mb-[24px]">
           © 2025 — Copyright. All Rights reserved
         </div>
       </div>
