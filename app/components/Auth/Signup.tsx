@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signupSchema, type SignupInput } from "@/app/lib/validations/auth";
+import * as z from "zod";
 
 export const Signup = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +15,20 @@ export const Signup = () => {
   const [focusedField, setFocusedField] = useState<
     "email" | "password" | "invitation" | null
   >(null);
+  const [errors, setErrors] = useState<Partial<SignupInput>>({});
   const router = useRouter();
+
+  const validateField = (field: keyof SignupInput, value: string) => {
+    try {
+      signupSchema.shape[field].parse(value);
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setErrors((prev) => ({ ...prev, [field]: error.errors[0].message }));
+      }
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
@@ -37,8 +52,8 @@ export const Signup = () => {
       </div>
 
       {/* Right Content */}
-      <div className="w-full lg:w-1/2 flex flex-col px-4 lg:px-12 h-screen overflow-y-auto">
-        <div className="flex justify-between md:justify-end items-center pt-4">
+      <div className="w-full lg:w-1/2 flex flex-col px-[16px] md:px-[32px] h-screen overflow-y-auto">
+        <div className="flex justify-between md:justify-end items-center mt-[16px] md:mt-[32px] mb-[48px]">
           <Image
             src="/images/logo.png"
             alt="Logo"
@@ -63,7 +78,7 @@ export const Signup = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full py-[4px]">
+        <div className="flex-1 flex flex-col justify-center max-w-[440px] mx-auto w-full">
           <div className="bg-white rounded-[24px] border border-[#E5E5E5] p-[24px]">
             {/* Header */}
             <div className="space-y-[16px]">
@@ -71,8 +86,8 @@ export const Signup = () => {
                 Sign up to OROX
               </h1>
               <p className="text-[16px] text-[#19191B] leading-[20px] md:leading-[28px]">
-                Share a few details and we’ll get you set up in no time. Already
-                have an account?{" "}
+                Share a few details and we&apos;ll get you set up in no time.
+                Already have an account?{" "}
                 <Link href="/login" className="text-[#19191B] underline">
                   Log in to OROX.
                 </Link>
@@ -86,15 +101,23 @@ export const Signup = () => {
                   className={`relative h-[56px] rounded-[12px] border ${
                     focusedField === "email"
                       ? "border-[#19191B]"
+                      : errors.email
+                      ? "border-[#C91F3B]"
                       : "border-[#E5E5E5]"
                   }`}
                 >
                   <input
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      validateField("email", e.target.value);
+                    }}
+                    onBlur={() => {
+                      setFocusedField(null);
+                      validateField("email", email);
+                    }}
                     onFocus={() => setFocusedField("email")}
-                    onBlur={() => setFocusedField(null)}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] focus:outline-none bg-transparent"
                     placeholder=" "
                   />
@@ -108,6 +131,11 @@ export const Signup = () => {
                     Email<span className="text-[#C91F3B]">*</span>
                   </div>
                 </div>
+                {errors.email && (
+                  <p className="text-[#C91F3B] text-[12px] mt-1">
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               {/* Password Input */}
@@ -122,9 +150,15 @@ export const Signup = () => {
                   <input
                     type={showPassword ? "text" : "password"}
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      validateField("password", e.target.value);
+                    }}
                     onFocus={() => setFocusedField("password")}
-                    onBlur={() => setFocusedField(null)}
+                    onBlur={() => {
+                      setFocusedField(null);
+                      validateField("password", password);
+                    }}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] focus:outline-none bg-transparent"
                     placeholder=" "
                   />
@@ -168,6 +202,11 @@ export const Signup = () => {
                     )}
                   </button>
                 </div>
+                {errors.password && (
+                  <p className="text-[#C91F3B] text-[12px] mt-1">
+                    {errors.password}
+                  </p>
+                )}
               </div>
 
               {/* Invitation Code Input */}

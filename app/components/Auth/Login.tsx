@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { loginSchema, type LoginInput } from "@/app/lib/validations/auth";
+import * as z from "zod";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,6 +15,19 @@ export const Login = () => {
     null
   );
   const router = useRouter();
+  const [errors, setErrors] = useState<Partial<LoginInput>>({});
+
+  const validateField = (field: keyof LoginInput, value: string) => {
+    try {
+      loginSchema.shape[field].parse(value);
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setErrors((prev) => ({ ...prev, [field]: error.errors[0].message }));
+      }
+    }
+  };
+
   return (
     <div className="flex min-h-screen">
       {/* Left Image - Hidden on mobile */}
@@ -64,17 +79,25 @@ export const Login = () => {
               <div className="relative">
                 <div
                   className={`relative h-[48px] rounded-xl border ${
-                    focusedField === "email"
-                      ? "border-[#19191B]"
-                      : "border-[#E5E5E5]"
+                    focusedField === "email" 
+                      ? "border-[#19191B]" 
+                      : errors.email 
+                        ? "border-[#C91F3B]" 
+                        : "border-[#E5E5E5]"
                   }`}
                 >
                   <input
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      validateField('email', e.target.value);
+                    }}
+                    onBlur={() => {
+                      setFocusedField(null);
+                      validateField('email', email);
+                    }}
                     onFocus={() => setFocusedField("email")}
-                    onBlur={() => setFocusedField(null)}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] focus:outline-none bg-transparent"
                     placeholder=" "
                   />
@@ -88,23 +111,34 @@ export const Login = () => {
                     Email<span className="text-[#C91F3B]">*</span>
                   </div>
                 </div>
+                {errors.email && (
+                  <p className="text-[#C91F3B] text-[12px] mt-1">{errors.email}</p>
+                )}
               </div>
 
               {/* Password Input */}
               <div className="relative">
                 <div
                   className={`relative h-[48px] rounded-xl border ${
-                    focusedField === "password"
-                      ? "border-[#19191B]"
-                      : "border-[#E5E5E5]"
+                    focusedField === "password" 
+                      ? "border-[#19191B]" 
+                      : errors.password 
+                        ? "border-[#C91F3B]" 
+                        : "border-[#E5E5E5]"
                   }`}
                 >
                   <input
                     type={showPassword ? "text" : "password"}
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      validateField('password', e.target.value);
+                    }}
+                    onBlur={() => {
+                      setFocusedField(null);
+                      validateField('password', password);
+                    }}
                     onFocus={() => setFocusedField("password")}
-                    onBlur={() => setFocusedField(null)}
                     className="w-full h-full px-4 text-[16px] text-[#19191B] leading-7 focus:outline-none bg-transparent"
                     placeholder=" "
                   />
@@ -147,6 +181,9 @@ export const Login = () => {
                     )}
                   </button>
                 </div>
+                {errors.password && (
+                  <p className="text-[#C91F3B] text-[12px] mt-1">{errors.password}</p>
+                )}
               </div>
 
               {/* Remember Me and Forgot Password */}
