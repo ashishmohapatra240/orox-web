@@ -20,13 +20,13 @@ const locations = [
 
 export default function ContactLocations() {
   return (
-    <section className="w-full bg-[#F1F2F8] py-12 md:py-24 lg:py-[88px]">
+    <section className="w-full bg-[#F1F2F8] px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
           {locations.map((location, index) => (
-            <div key={index} className="flex flex-col gap-8">
+            <div key={index} className="flex flex-col gap-[32px]">
               {/* Map Container */}
-              <div className="relative w-full aspect-[16/9] rounded-3xl border border-[#E5E5E5] overflow-hidden">
+              <div className="relative w-full aspect-[16/9] rounded-[32px] border border-[#E5E5E5] overflow-hidden">
                 <LoadScript
                   googleMapsApiKey={
                     process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!
@@ -43,12 +43,12 @@ export default function ContactLocations() {
               </div>
 
               {/* Location Details */}
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-[20px] md:text-[28px] font-bold text-[#19191B]">
+              <div className="space-y-[24px]">
+                <div className="space-y-[8px]">
+                  <h2 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
                     {location.title}
                   </h2>
-                  <p className="text-[16px] md:text-[20px] text-[#19191B]">
+                  <p className="text-[20px] text-[#19191B] leading-[32px]">
                     {location.address}
                   </p>
                 </div>
@@ -56,7 +56,7 @@ export default function ContactLocations() {
                   href={location.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#2F5DFD] font-bold text-sm"
+                  className="inline-flex items-center gap-[8px] text-[#2F5DFD] font-bold text-[14px] leading-[20px]"
                 >
                   Get directions
                   <Image
