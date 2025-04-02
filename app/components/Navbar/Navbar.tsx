@@ -496,7 +496,7 @@ export const Navbar = () => {
                 </div>
                 {/* Auth Buttons */}
                 <div className="space-y-3 mt-[64px] mb-[24px]">
-                  <Link href="/">
+                  <Link href="/login">
                     <Button
                       variant="secondary"
                       className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap"
@@ -540,7 +540,7 @@ export const Navbar = () => {
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
-          <Link href="/">
+          <Link href="/login">
             <Button
               variant="secondary"
               className="px-3 md:px-4 lg:px-6 whitespace-nowrap"
