@@ -29,6 +29,7 @@ export const Signup = () => {
         <video
           src="/videos/Signup.mp4"
           autoPlay
+          playsInline
           muted
           loop
           className="object-cover rounded-r-[24px]"
