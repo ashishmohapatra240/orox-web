@@ -72,9 +72,12 @@ export const HomeBlog = () => {
   const handlers = useSwipeable({
     onSwipedLeft: () => nextSlide(),
     onSwipedRight: () => prevSlide(),
-    swipeDuration: 500,
+    swipeDuration: 250,
     preventScrollOnSwipe: true,
-    trackMouse: true
+    trackMouse: true,
+    trackTouch: true,
+    delta: 10,
+    rotationAngle: 0,
   });
 
   return (
@@ -87,14 +90,16 @@ export const HomeBlog = () => {
           </h2>
 
           {/* Articles Slider */}
-          <div className="relative" {...handlers}>
+          <div className="relative touch-pan-y" {...handlers}>
             <div
-              className="flex gap-6 md:gap-8"
+              className="flex gap-6 md:gap-8 will-change-transform"
               style={{
-                transform: `translateX(-${
+                transform: `translate3d(-${
                   currentSlide * (isMobile ? 315 : 392)
-                }px)`,
-                transition: "transform 0.5s ease-in-out",
+                }px, 0, 0)`,
+                transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                WebkitBackfaceVisibility: "hidden",
+                backfaceVisibility: "hidden"
               }}
             >
               {" "}
