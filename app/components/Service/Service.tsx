@@ -13,14 +13,14 @@ const Service = () => {
     <div className="container mx-auto sm:[0px] px-[16px] xl:px-[0px] pt-[44px] md:pt-[88px] overflow-hidden max-w-[1280px]">
       {/*<section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px] overflow-hidden">*/}
       {/* Hero Section */}
-      <div className="relative h-[600px] md:h-[500px] lg:h-[550px] bg-gradient-to-r from-blue-800 to-purple-800 rounded-2xl mb-8 md:mb-12 overflow-visible">
+      <div className="relative h-[600px] md:h-[500px] lg:h-[550px] bg-gradient-to-r from-[#4296E4] to-[#383699] rounded-2xl mb-8 md:mb-12 overflow-visible">
         {/* Mobile Background */}
         <div className="absolute inset-0 h-auto w-full overflow-hidden rounded-2xl sm:hidden">
           <Image
             src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/bg-tile-phone.png"
             alt="Background pattern"
             fill
-            className="opacity-100 object-fit"
+            className="opacity-100 object-cover"
           />
         </div>
 
@@ -35,7 +35,7 @@ const Service = () => {
         </div>
 
         {/* Mobile Layout - Vertical Stacking */}
-        <div className="relative h-full flex flex-col items-center p-[24px] sm:hidden">
+        <div className="relative h-full flex flex-col items-center px-[24px] py-[32px] sm:hidden">
           {/* Text Content */}
           <div className="text-white w-full max-w-xs text-left mt-[10px] md:mt:12">
             <h3 className="text-[16px] md:text-[28px] font-regular mb-[32px] leading-[24px] md:leading-[40px]">
@@ -52,7 +52,7 @@ const Service = () => {
           </div>
 
           {/* Phone Image - Mobile (Bottom Position) */}
-          <div className="mt-[32px] flex justify-center items-center">
+          <div className="mt-[24px] flex justify-center items-center">
             <div className="relative w-[427px] h-[330px]">
               <Image
                 src="/images/service/MobileCallToAction.png"
