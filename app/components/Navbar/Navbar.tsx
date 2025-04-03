@@ -266,7 +266,7 @@ export const Navbar = () => {
       className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
       ref={navbarRef}
     >
-      <nav className="mx-auto max-w-7xl flex items-center justify-between py-5 px-4 md:px-6 lg:px-0">
+      <nav className="relative mx-auto max-w-7xl flex items-center justify-between py-5 px-4 md:px-6 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image

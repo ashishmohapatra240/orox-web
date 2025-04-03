@@ -139,7 +139,7 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed md:top-[12%] lg:top-[9%] xl:top-[11%] left-0 right-0 z-50 hidden md:block"
+            className="fixed md:top-[12%] lg:top-[80px] left-0 right-0 z-50 hidden md:block"
             variants={dropdownVariants}
             initial="hidden"
             animate="visible"
