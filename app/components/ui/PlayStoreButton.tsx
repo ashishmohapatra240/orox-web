@@ -1,14 +1,13 @@
 import Image from "next/image";
 interface PlayStoreProps {
   href: string;
-  target?: string;
   rel?: string;
 }
-export const PlayStoreButton = ({ href, target, rel }: PlayStoreProps) => {
+export const PlayStoreButton = ({ href, rel }: PlayStoreProps) => {
   return (
     <a
       href={href}
-      target={target}
+      target="_blank"
       rel={rel}
       className="inline-block transition-opacity hover:opacity-80"
     >

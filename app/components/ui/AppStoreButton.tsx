@@ -2,15 +2,14 @@ import Image from "next/image";
 
 interface StoreButtonProps {
   href: string;
-  target?: string;
   rel?: string;
 }
 
-export const AppStoreButton = ({ href, target, rel }: StoreButtonProps) => {
+export const AppStoreButton = ({ href, rel }: StoreButtonProps) => {
   return (
     <a
       href={href}
-      target={target}
+      target="_blank"
       rel={rel}
       className="inline-block transition-opacity hover:opacity-80"
     >
