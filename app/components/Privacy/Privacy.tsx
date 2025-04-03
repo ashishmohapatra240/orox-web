@@ -1,6 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "OROX Global Privacy Policy - Protecting Your Data and Privacy",
+  description:
+    "Read and review the OROX Global Privacy Policy to learn how we handle your personal information. We detail our practices in data collection, usage, disclosure, and security measures. Trust OROX Global to safeguard your privacy and ensure the security of your data.",
+};
 
 const privacyData = [
   {

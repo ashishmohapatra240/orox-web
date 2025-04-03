@@ -5,9 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OROX: The Future of Smart Investing",
+  title:
+    "OROX Global – Expanding Investment Access with Innovation and Expertise",
   description:
-    "OROX is a platform that allows you to invest in a variety of assets, including stocks, bonds, and cryptocurrencies.",
+    "OROX Global delivers quant-driven investment solutions that bridge traditional and emerging markets. Backed by expert teams and cutting-edge tech, we empower investors worldwide with smarter, risk-aware strategies.",
 };
 
 export default function RootLayout({
@@ -17,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
