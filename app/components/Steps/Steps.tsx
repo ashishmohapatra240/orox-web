@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 import { PausePlayButton } from "../ui/PausePlayButton";
+import { motion, AnimatePresence } from "framer-motion";
 
 const steps = [
   {
@@ -160,6 +161,13 @@ export const Steps = () => {
 
   const step = steps[currentStep];
 
+  const fadeAnimation = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.5 }
+  };
+
   return (
     <section className="relative w-full px-[16px] py-[16px] md:px-[80px] md:pb-[88px] md:pt-[0px]">
       <div className="mx-auto max-w-7xl">
@@ -168,32 +176,44 @@ export const Steps = () => {
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col">
               <div className="space-y-6 flex-grow">
-                <h2 className="text-[28px] md:text-[48px] font-bold text-[#19191B] leading-[34px] md:leading-[56px]">
-                  {currentStep === 0 ? (
-                    <>
-                      <span className="relative inline-block z-10">
-                        {/* Blue highlight only behind "5 easy steps" */}
-                        <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
-                        5 easy steps
-                      </span>{" "}
-                      with OROX.
-                      <br />
-                      Step {step.number}: {step.title}
-                    </>
-                  ) : (
-                    <>
-                      <p className="max-w-[580px]">
+                <AnimatePresence mode="wait">
+                  <motion.h2
+                    key={currentStep}
+                    {...fadeAnimation}
+                    className="text-[28px] md:text-[48px] font-bold text-[#19191B] leading-[34px] md:leading-[56px]"
+                  >
+                    {currentStep === 0 ? (
+                      <>
+                        <span className="relative inline-block z-10">
+                          {/* Blue highlight only behind "5 easy steps" */}
+                          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
+                          5 easy steps
+                        </span>{" "}
+                        with OROX.
+                        <br />
                         Step {step.number}: {step.title}
-                      </p>
-                    </>
-                  )}
-                </h2>
+                      </>
+                    ) : (
+                      <>
+                        <p className="max-w-[580px]">
+                          Step {step.number}: {step.title}
+                        </p>
+                      </>
+                    )}
+                  </motion.h2>
+                </AnimatePresence>
 
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <p className="text-lg text-[#19191B] max-w-[580px]">
-                      {step.description}
-                    </p>
+                    <AnimatePresence mode="wait">
+                      <motion.p
+                        key={currentStep}
+                        {...fadeAnimation}
+                        className="text-lg text-[#19191B] max-w-[580px]"
+                      >
+                        {step.description}
+                      </motion.p>
+                    </AnimatePresence>
                   </div>
                 </div>
 
@@ -240,13 +260,21 @@ export const Steps = () => {
             {/* Right Content - App Screenshot */}
             <div className="flex items-end justify-center lg:col-span-2">
               <div className="relative h-[500px] w-[290px] md:w-[380px] md:h-[600px] overflow-hidden">
-                <Image
-                  src={step.image}
-                  alt={`OROX App - ${step.title}`}
-                  fill
-                  className="object-cover object-top"
-                  priority
-                />
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentStep}
+                    {...fadeAnimation}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={step.image}
+                      alt={`OROX App - ${step.title}`}
+                      fill
+                      className="object-cover object-top"
+                      priority
+                    />
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </div>

@@ -445,7 +445,14 @@ export const Navbar = () => {
                 <div className="space-y-6">
                   <div className="flex items-center justify-between text-[16px] text-[#19191B]">
                     <Link href="/products">Products</Link>
-                    <svg
+                    <Image
+                      src="/icons/down_icon.svg"
+                      alt="down-icon"
+                      width={12}
+                      height={12}
+                      className="rotate-[270deg]"
+                    />
+                    {/* <svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
@@ -459,7 +466,7 @@ export const Navbar = () => {
                         strokeWidth={2}
                         d="M9 5l7 7-7 7"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                   <hr className="border-t border-[#F4F4F4]" />
 
@@ -477,7 +484,14 @@ export const Navbar = () => {
                   <hr className="border-t border-[#F4F4F4]" />
                   <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px]">
                     <Link href="/">Support</Link>
-                    <svg
+                    <Image
+                      src="/icons/down_icon.svg"
+                      alt="down-icon"
+                      width={12}
+                      height={12}
+                      className="rotate-[270deg]"
+                    />
+                    {/* <svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
@@ -491,7 +505,7 @@ export const Navbar = () => {
                         strokeWidth={2}
                         d="M9 5l7 7-7 7"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                 </div>
                 {/* Auth Buttons */}
