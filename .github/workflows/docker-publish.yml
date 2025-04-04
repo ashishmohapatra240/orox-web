@@ -46,15 +46,15 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  # deploy:
-  #   needs: build_and_publish
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # SSH into the server
-  #     - name: SSH into server
-  #       uses: appleboy/ssh-action@master
-  #       with:
-  #         host: ${{ secrets.HOST }} # Pass server IP
-  #         username: ${{ secrets.USERNAME }} # Pass server username
-  #         key: ${{ secrets.KEY }} # Pass server ssh private key
-  #         script: /home/ubuntu/deployWeb.sh
+  deploy:
+    needs: build_and_publish
+    runs-on: ubuntu-latest
+    steps:
+      # SSH into the server
+      - name: SSH into server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }} # Pass server IP
+          username: ${{ secrets.USERNAME }} # Pass server username
+          key: ${{ secrets.KEY }} # Pass server ssh private key
+          script: /home/ubuntu/deployWeb.sh
