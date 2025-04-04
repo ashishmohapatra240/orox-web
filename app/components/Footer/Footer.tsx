@@ -59,11 +59,11 @@ export const Footer = () => {
             {/* More About Us Button */}
             <Link
               href="https://www.opusmomentus.com/"
-              className="inline-flex items-center font-bold text-[#2F5DFD] hover:text-[#2F5DFD] mb-12 text-[14px]"
+              className="group inline-flex items-center font-bold text-[#2F5DFD] hover:text-[#6082ff] mb-12 text-[14px] gap-1 "
             >
               <span>More about us</span>
               <svg
-                className="ml-2 h-4 w-4"
+                className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
