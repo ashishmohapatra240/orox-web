@@ -19,7 +19,7 @@ export const BlogCard = ({
       className="group space-y-4 w-[295px] md:w-[356px] flex-shrink-0 hover:shadow-[0px_24px_16px_-10px_#0000001A] p-[16px] transition-all duration-300 rounded-[32px]"
     >
       {/* Image Container */}
-      <div className="relative overflow-hidden rounded-[32px] w-[295px] h-[372px] md:w-[356px] md:h-[448px] ">
+      <div className="relative overflow-hidden rounded-[32px] w-[295px] h-[372px] md:w-auto md:h-[448px] ">
         <Image
           src={image}
           alt={title}
