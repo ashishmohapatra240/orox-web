@@ -532,7 +532,7 @@ export const Navbar = () => {
             </div>
 
             {/* QR Code section */}
-            <div className="px-6 pb-8 mt-auto">
+            <div className="px-6 pb-8 mt-[24px]">
               <hr className="border-t border-[#F4F4F4] mb-[24px]" />
               <div className="mb-[32px]">
                 <Image
