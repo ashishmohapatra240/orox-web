@@ -65,15 +65,6 @@ const steps = [
         No market timing, no day trading—just automated, smart investing on
         autopilot. Track your progress anytime through the OROX app and let your
         money work for you.
-        <br />
-        <br />
-        <Link
-          href="https://onelink.to/65gpe9"
-          className="text-[#2F5DFD] underline"
-        >
-          Download OROX
-        </Link>{" "}
-        today and start investing smarter!
       </>
     ),
     image:
@@ -175,7 +166,7 @@ export const Steps = () => {
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col">
-              <div className="space-y-6 flex-grow min-h-[236px]">
+              <div className="space-y-6 flex-grow">
                 <AnimatePresence mode="wait">
                   <motion.h2
                     key={currentStep}
@@ -203,7 +194,7 @@ export const Steps = () => {
                   </motion.h2>
                 </AnimatePresence>
 
-                <div className="space-y-6">
+                <div className="space-y-6 min-h-[180px]">
                   <div className="space-y-2">
                     <AnimatePresence mode="wait">
                       <motion.p

@@ -31,14 +31,17 @@ export const Login = () => {
   return (
     <div className="flex min-h-screen">
       <div className="hidden lg:flex lg:w-1/2 relative h-[100vh]">
-        <div className="absolute top-[32px] left-[32px]">
-          <Image
-            src="/images/logo-white.png"
-            alt="Logo"
-            width={131}
-            height={40}
-          />
-        </div>
+        <Link href={"/"} className="z-[999]">
+          <div className="absolute top-[32px] left-[32px]">
+            <Image
+              src="/images/logo-white.png"
+              alt="Logo"
+              width={131}
+              height={40}
+            />
+          </div>
+        </Link>
+
         <video
           src="/videos/Login.mp4"
           autoPlay
