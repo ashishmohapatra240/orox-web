@@ -194,7 +194,7 @@ export const Steps = () => {
                   </motion.h2>
                 </AnimatePresence>
 
-                <div className="space-y-6 min-h-[180px] md:min-h-[0px]">
+                <div className="space-y-6 min-h-[180px] md:min-h-[0px] flex-shrink-0 w-full relative">
                   <div className="space-y-2">
                     <AnimatePresence mode="wait">
                       <motion.p
