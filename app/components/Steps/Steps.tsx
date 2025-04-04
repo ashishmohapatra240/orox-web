@@ -162,7 +162,7 @@ export const Steps = () => {
   return (
     <section className="relative w-full px-[16px] py-[16px] md:px-[80px] md:pb-[88px] md:pt-[0px]">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative">
+        <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative min-h-[1000px] md:min-h-0">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col">
@@ -250,7 +250,7 @@ export const Steps = () => {
 
             {/* Right Content - App Screenshot */}
             <div className="flex items-end justify-center lg:col-span-2">
-              <div className="relative h-[500px] w-[290px] md:w-[380px] md:h-[600px] overflow-hidden">
+              <div className="relative h-[550px] w-[300px] md:w-[380px] md:h-[600px] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentStep}
