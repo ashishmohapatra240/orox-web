@@ -378,30 +378,31 @@ export const Navbar = () => {
           >
             About
           </Link>
-
-          <Dropdown
-            label="Support"
-            trigger={
-              <div className="flex items-center space-x-1">
-                <span>Support</span>
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-            }
-          >
-            <SupportDropdown />
-          </Dropdown>
+          <Link href="/contact" className="">
+            <Dropdown
+              label="Support"
+              trigger={
+                <div className="flex items-center space-x-1">
+                  <span>Support</span>
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              }
+            >
+              <SupportDropdown />
+            </Dropdown>
+          </Link>
         </div>
 
         {/* Mobile Navigation Menu */}
@@ -442,8 +443,8 @@ export const Navbar = () => {
             >
               <div className="px-6 pt-8">
                 {/* Navigation Links */}
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B]">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg ">
                     <Link href="/products">Products</Link>
                     <Image
                       src="/icons/down_icon.svg"
@@ -470,20 +471,23 @@ export const Navbar = () => {
                   </div>
                   <hr className="border-t border-[#F4F4F4]" />
 
-                  <Link href="/" className="block text-[16px] text-[#19191B]">
+                  <Link
+                    href="/"
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg"
+                  >
                     Blog
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
 
                   <Link
                     href="/about"
-                    className="block text-[16px] text-[#19191B]"
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg "
                   >
                     About
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px]">
-                    <Link href="/">Support</Link>
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg ">
+                    <Link href="/contact">Support</Link>
                     <Image
                       src="/icons/down_icon.svg"
                       alt="down-icon"

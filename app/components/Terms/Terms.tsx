@@ -775,7 +775,7 @@ const termsData = [
 ];
 
 export const Terms = () => {
-  const [lastUpdated] = useState("August 2024");
+  const [lastUpdated] = useState("April 2025");
 
   return (
     <section className="w-full px-[16px] py-[44px] md:px-[80px] md:py-[88px]">

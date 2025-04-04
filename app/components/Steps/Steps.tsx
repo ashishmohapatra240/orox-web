@@ -175,7 +175,7 @@ export const Steps = () => {
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col">
-              <div className="space-y-6 flex-grow">
+              <div className="space-y-6 flex-grow min-h-[236px]">
                 <AnimatePresence mode="wait">
                   <motion.h2
                     key={currentStep}

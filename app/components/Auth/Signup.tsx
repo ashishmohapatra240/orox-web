@@ -234,7 +234,7 @@ export const Signup = () => {
                         : "text-[16px] top-4"
                     } text-[#19191B]`}
                   >
-                    Invitation code<span className="text-[#C91F3B]">*</span>
+                    Referral code
                   </div>
                   <button
                     type="button"
