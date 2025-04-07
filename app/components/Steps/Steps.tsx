@@ -27,35 +27,33 @@ const steps = [
         in minutes and access, stress-free high-growth investing.
       </>
     ),
-    image:
-      "/images/steps/steps-1-iPhone.png",
+    image: "/images/steps/steps-1-iPhone.png",
   },
   {
     number: 2,
     title: "Create your account and get verified",
     description:
       "Sign up with your details and complete a quick verification process to keep your investments secure and compliant.",
-    image:
-      "/images/steps/steps-2-iPhone.png",
+    image: "/images/steps/steps-2-iPhone.png",
   },
   {
     number: 3,
     title: "Choose your investment type",
     description: (
       <>
-        Want steady returns or low-volatility crypto exposure? ODN ensures stability with market-neutral strategies, while DVOX offers the benefits of a professionally managed, high-quality portfolio.
+        Want steady returns or low-volatility crypto exposure? ODN ensures
+        stability with market-neutral strategies, while DVOX offers the benefits
+        of a professionally managed, high-quality portfolio.
       </>
     ),
-    image:
-      "/images/steps/steps-3-iPhone.png",
+    image: "/images/steps/steps-3-iPhone.png",
   },
   {
     number: 4,
     title: "Fund your portfolio",
     description:
       "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
-    image:
-      "/images/steps/steps-4-iPhone.png",
+    image: "/images/steps/steps-4-iPhone.png",
   },
   {
     number: 5,
@@ -67,8 +65,7 @@ const steps = [
         money work for you.
       </>
     ),
-    image:
-      "/images/steps/steps-5-iPhone.png",
+    image: "/images/steps/steps-5-iPhone.png",
   },
 ];
 
@@ -156,17 +153,17 @@ export const Steps = () => {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0 },
-    transition: { duration: 0.5 }
+    transition: { duration: 0.5 },
   };
 
   return (
     <section className="relative w-full px-[16px] py-[16px] md:px-[80px] md:pb-[88px] md:pt-[0px]">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative min-h-[1000px] md:min-h-0">
-          <div className="grid gap-12 lg:grid-cols-5">
+        <div className="rounded-3xl bg-[#F1F2F8] px-[24px] pt-[24px] md:px-[40px] md:pt-[72px] relative md:h-auto h-[1000px] overflow-hidden">
+          <div className="grid gap-12 lg:grid-cols-5 h-full">
             {/* Left Content */}
             <div className="lg:col-span-3 flex flex-col">
-              <div className="space-y-6 flex-grow">
+            <div className="space-y-6 flex-grow">
                 <AnimatePresence mode="wait">
                   <motion.h2
                     key={currentStep}
@@ -250,7 +247,7 @@ export const Steps = () => {
 
             {/* Right Content - App Screenshot */}
             <div className="flex items-end justify-center lg:col-span-2">
-              <div className="relative h-[550px] w-[300px] md:w-[380px] md:h-[600px] overflow-hidden">
+              <div className="relative h-[500px] w-[300px] md:w-[380px] md:h-[600px] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentStep}
