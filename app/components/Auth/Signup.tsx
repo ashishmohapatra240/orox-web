@@ -238,17 +238,30 @@ export const Signup = () => {
                   >
                     Referral code
                   </div>
-                  <button
-                    type="button"
-                    className="absolute right-4 top-1/2 -translate-y-1/2"
-                  >
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 group">
                     <Image
                       src="/icons/ic_help_outline.svg"
-                      alt="Show Password"
+                      alt="Help"
                       width={24}
                       height={24}
                     />
-                  </button>
+                    <div className="absolute bottom-full -right-6 mb-0 hidden group-hover:block w-[280px] z-10">
+                      <div className="relative">
+                        <Image
+                          src="/icons/tooltip.png"
+                          alt="Tooltip background"
+                          width={280}
+                          height={76}
+                        />
+                        <div className="absolute inset-0 px-[8px] py-[12px]">
+                          <p className="text-white text-[16px] leading-[20px] text-center mt-1">
+                            Enter your friend&apos;s referral code<br/> below to earn
+                            $25 in crypto.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
