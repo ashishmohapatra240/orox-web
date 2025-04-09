@@ -10,7 +10,7 @@ export const ProductODNCalculator = () => {
 
   return (
     <section className="w-full px-[16px] md:px-[24px] lg:px-[32px] py-[48px] md:py-[88px] overflow-x-hidden bg-[#F1F2F8]">
-      <div>
+      <div className="mx-auto max-w-7xl">
         <div className="mb-[32px] md:mb-[40px] flex flex-col items-center text-center">
           <p className="mb-2 block text-[14px] font-semibold text-transparent bg-clip-text md:text-[16px] bg-gradient-to-b from-[#4296E4] to-[#383699]">
             ESTIMATE YOUR POTENTIAL RETURNS
@@ -26,7 +26,7 @@ export const ProductODNCalculator = () => {
         </div>
 
         {/* Calculator */}
-        <div className="mx-auto max-w-[1024px]">
+        <div className="mx-auto">
           {/* Input */}
           <div className="mb-[24px] md:mb-[48px]">
             <hr className="w-full h-[1px] bg-[#E5E5E5] mb-[24px] md:mb-[48px]" />
@@ -50,9 +50,7 @@ export const ProductODNCalculator = () => {
           </div>
 
           {/* Results */}
-          <div
-            className="w-full mb-[24px] md:mb-[48px] flex items-center justify-between"
-          >
+          <div className="w-full mb-[24px] md:mb-[48px] flex items-stretch justify-between">
             <div className="text-center flex-1">
               <p className="text-[56px] font-bold leading-[72px] text-indigo-950 md:text-[176px] md:leading-[176px] mb-[4px] md:mb-[16px]">
                 $375k
@@ -61,10 +59,7 @@ export const ProductODNCalculator = () => {
                 Invested returns (USD)
               </p>
             </div>
-
-            {/* Divider */}
             <div className="w-[2px] bg-[#E5E5E5] mx-4" />
-
             <div className="text-center flex-1">
               <p className="text-[56px] font-bold leading-[72px] text-indigo-950 md:text-[176px] md:leading-[176px] mb-[4px] md:mb-[16px]">
                 2.5%
