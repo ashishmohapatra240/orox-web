@@ -207,6 +207,7 @@ export const Navbar = () => {
   const qrModalRef = useRef<HTMLDivElement>(null);
   const [, setNavbarHeight] = useState(70);
   const navbarRef = useRef<HTMLDivElement>(null);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   // Measure navbar height for dropdown positioning
   useEffect(() => {
@@ -260,6 +261,80 @@ export const Navbar = () => {
   // const toggleMobileDropdown = (dropdown: string) => {
   //   setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   // };
+
+  const renderProductsSubmenu = () => (
+    <div className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen">
+      {/* Header with back button and close icon */}
+      <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-between px-4 z-[61]">
+        <button
+          onClick={() => setActiveSubmenu(null)}
+          className="flex items-center space-x-2 p-2"
+          aria-label="Back to menu"
+        >
+          <Image
+            src="/icons/ic_arrow_back.svg"
+            alt="Back"
+            width={24}
+            height={24}
+          />
+        </button>
+
+        <button
+          onClick={() => {
+            setActiveSubmenu(null);
+            setIsMobileMenuOpen(false);
+          }}
+          className="p-2"
+          aria-label="Close menu"
+        >
+          <svg
+            className="h-6 w-6 text-[#293483]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div className="pt-[70px] px-6">
+        <div className="space-y-6">
+          <Link
+            href="/products"
+            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+          >
+            Our Products
+          </Link>
+          <Link
+            href="/products/orox-app"
+            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+          >
+            OROX App
+          </Link>
+
+          <Link
+            href="/products/opus"
+            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+          >
+            Opus Diversified Nexus
+          </Link>
+
+          <Link
+            href="/products/dvox"
+            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+          >
+            DVOX Token
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <header
@@ -444,30 +519,21 @@ export const Navbar = () => {
               <div className="px-6 pt-8">
                 {/* Navigation Links */}
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg ">
-                    <Link href="/products">Products</Link>
+                  <div
+                    className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setActiveSubmenu("products");
+                    }}
+                  >
+                    <span>Products</span>
                     <Image
-                      src="/icons/down_icon.svg"
-                      alt="down-icon"
-                      width={12}
-                      height={12}
-                      className="rotate-[270deg]"
+                      src="/icons/ic_chevron_right.svg"
+                      alt="right-icon"
+                      width={24}
+                      height={24}
                     />
-                    {/* <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      className="text-[#999999]"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg> */}
                   </div>
                   <hr className="border-t border-[#F4F4F4]" />
 
@@ -487,29 +553,13 @@ export const Navbar = () => {
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
                   <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg ">
-                    <Link href="/contact">Support</Link>
+                    <Link href="/contact">Contact</Link>
                     <Image
-                      src="/icons/down_icon.svg"
+                      src="/icons/ic_chevron_right.svg"
                       alt="down-icon"
-                      width={12}
-                      height={12}
-                      className="rotate-[270deg]"
+                      width={24}
+                      height={24}
                     />
-                    {/* <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      className="text-[#999999]"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg> */}
                   </div>
                 </div>
                 {/* Auth Buttons */}
@@ -681,6 +731,8 @@ export const Navbar = () => {
             />
           </>
         )}
+
+        {activeSubmenu === "products" && renderProductsSubmenu()}
       </nav>
     </header>
   );
