@@ -1,9 +1,24 @@
-import Image from "next/image";
+"use client";
+import { useState, useRef } from "react";
 import { Button } from "../ui/Button";
+import { PausePlayButton } from "../ui/PausePlayButton";
 
 export const ProductOdnHero = () => {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
   return (
-    <section className="relative w-full min-h-[100dvh] bg-[#EAF5FF]">
+    <section className="relative w-full bg-[#EAF5FF]">
       <div className="h-full">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left Content */}
@@ -11,7 +26,7 @@ export const ProductOdnHero = () => {
             <h1 className="text-[40px] md:text-[64px] font-bold leading-[1.2]">
               Opus Diversified Nexus (ODN)
             </h1>
-            <p className="text-[16px] md:text-[20px] text-black/80 max-w-[600px]">
+            <p className="text-[16px] md:text-[20px] text-[#19191B] max-w-[600px]">
               OROX is revolutionising investing by making risk-adjusted
               strategies accessible to everyone. Whether you&apos;re looking for
               steady, low-risk investing with ODN subscription or high growth
@@ -29,45 +44,21 @@ export const ProductOdnHero = () => {
           </div>
 
           {/* Right Content - Image */}
-          <div className="relative lg:w-1/2 h-[280px] xs:h-[320px] sm:h-[400px] lg:h-[100dvh]">
-            <Image
-              src="/images/products/product-odn-hero.png"
-              alt="OROX Blog Hero Image"
-              fill
-              className="object-cover lg:rounded-l-[32px]"
-              priority
-              quality={100}
+          <div className="relative lg:w-1/2 min-h-[400px] md:min-h-[500px] lg:min-h-[550px]">
+            <video
+              src="/videos/ODN.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
             />
             {/* Pause Button */}
-            <button
-              className="absolute bottom-4 right-4 flex h-9 w-9 sm:h-10 sm:w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-white text-[#293483] shadow-lg"
-              aria-label="Pause video"
-            >
-              <div className="h-3 w-3 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4">
-                <svg
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="3"
-                    y="2"
-                    width="4"
-                    height="12"
-                    rx="1"
-                    fill="currentColor"
-                  />
-                  <rect
-                    x="9"
-                    y="2"
-                    width="4"
-                    height="12"
-                    rx="1"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
+            <PausePlayButton
+              isPlaying={isPlaying}
+              onToggle={togglePlay}
+              className="absolute bottom-[24px] right-[24px] h-9 w-9 md:h-11 md:w-11 lg:h-11 xl:h-12 lg:w-11 xl:w-12 text-[#293483] shadow-lg"
+            />
           </div>
         </div>
       </div>
