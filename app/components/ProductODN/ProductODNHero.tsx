@@ -22,18 +22,18 @@ export const ProductOdnHero = () => {
       <div className="h-full">
         <div className="flex flex-col lg:flex-row h-full">
           {/* Left Content */}
-          <div className="flex flex-col justify-center space-y-4 sm:space-y-6 p-4 sm:p-6 lg:p-12 xl:p-20 lg:w-1/2">
-            <h1 className="text-[40px] md:text-[64px] font-bold leading-[1.2]">
+          <div className="py-[48px] px-[16px] md:px-[60px] md:py-[80px] lg:px-[60px] xl:px-[80px] lg:py-[100px] xl:py-[147px] lg:w-1/2">
+            <h1 className="text-[#19191B] text-[40px] md:text-[56px] lg:text-[60px] xl:text-[64px] font-bold leading-[48px] md:leading-[64px] lg:leading-[68px]">
               Opus Diversified Nexus (ODN)
             </h1>
-            <p className="text-[16px] md:text-[20px] text-[#19191B] max-w-[600px]">
+            <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-[#19191B] max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
               OROX is revolutionising investing by making risk-adjusted
               strategies accessible to everyone. Whether you&apos;re looking for
               steady, low-risk investing with ODN subscription or high growth
               crypto exposure with the DVOX token, OROX puts your money on
               autopilot—so you can grow without the guesswork.
             </p>
-            <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button
                 variant="primary"
                 className="text-nowrap py-4 text-[20px]"
@@ -46,6 +46,7 @@ export const ProductOdnHero = () => {
           {/* Right Content - Image */}
           <div className="relative lg:w-1/2 min-h-[400px] md:min-h-[500px] lg:min-h-[550px]">
             <video
+              ref={videoRef}
               src="/videos/ODN.mp4"
               autoPlay
               muted
