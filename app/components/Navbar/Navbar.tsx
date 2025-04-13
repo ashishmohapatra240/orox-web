@@ -562,34 +562,33 @@ export const Navbar = () => {
                     />
                   </div>
                 </div>
-                {/* Auth Buttons */}
-                <div className="space-y-3 mt-[64px] mb-[24px]">
-                  <Link href="/login">
-                    <Button
-                      variant="secondary"
-                      className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap"
-                    >
-                      Log in
-                    </Button>
-                  </Link>
-                  <Link href="/signup" className="w-full block">
-                    <Button className="w-full bg-[#293483] rounded-full whitespace-nowrap">
-                      Join for free
-                    </Button>
-                  </Link>
-                </div>
               </div>
             </div>
 
             {/* QR Code section */}
             <div className="px-6 pb-8 mt-[24px]">
+              <div className="space-y-3 mt-[64px] mb-[24px]">
+                <Link href="/login">
+                  <Button
+                    variant="secondary"
+                    className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap"
+                  >
+                    Log in
+                  </Button>
+                </Link>
+                <Link href="/signup" className="w-full block">
+                  <Button className="w-full bg-[#293483] rounded-full whitespace-nowrap">
+                    Join for free
+                  </Button>
+                </Link>
+              </div>
               <hr className="border-t border-[#F4F4F4] mb-[24px]" />
               <div className="mb-[32px]">
                 <Image
                   src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
                   alt="QR Code"
-                  width={160}
-                  height={160}
+                  width={220}
+                  height={220}
                   className="mx-auto rounded-2xl bg-white shadow-sm"
                 />
               </div>
