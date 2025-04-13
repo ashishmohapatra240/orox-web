@@ -304,30 +304,34 @@ export const Navbar = () => {
       </div>
 
       <div className="pt-[100px] px-6">
-        <div className="space-y-6">
+        <div>
           <Link
             href="/products"
             className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
           >
             Our Products
           </Link>
+          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
+
           <Link
             href="/products/orox-app"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
           >
             OROX App
           </Link>
+          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
 
           <Link
             href="/products/opus"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
           >
             Opus Diversified Nexus
           </Link>
+          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
 
           <Link
             href="/products/dvox"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
           >
             DVOX Token
           </Link>
