@@ -47,6 +47,7 @@ export const Login = () => {
           autoPlay
           muted
           loop
+          playsInline
           className="object-cover object-left lg:object-[20%] rounded-r-[24px]"
         />
       </div>
