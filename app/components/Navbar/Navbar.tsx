@@ -303,31 +303,31 @@ export const Navbar = () => {
         </button>
       </div>
 
-      <div className="pt-[70px] px-6">
+      <div className="pt-[100px] px-6">
         <div className="space-y-6">
           <Link
             href="/products"
-            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
           >
             Our Products
           </Link>
           <Link
             href="/products/orox-app"
-            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
           >
             OROX App
           </Link>
 
           <Link
             href="/products/opus"
-            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
           >
             Opus Diversified Nexus
           </Link>
 
           <Link
             href="/products/dvox"
-            className="block text-[18px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-sm"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
           >
             DVOX Token
           </Link>
@@ -539,7 +539,7 @@ export const Navbar = () => {
 
                   <Link
                     href="/"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg"
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
                   >
                     Blog
                   </Link>
@@ -547,12 +547,12 @@ export const Navbar = () => {
 
                   <Link
                     href="/about"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg "
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
                   >
                     About
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg ">
+                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md">
                     <Link href="/contact">Contact</Link>
                     <Image
                       src="/icons/ic_chevron_right.svg"
