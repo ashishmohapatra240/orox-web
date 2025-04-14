@@ -17,6 +17,7 @@ const ProductsDropdown = () => (
       </DropdownItem>
       <div className="space-y-4">
         <DropdownItem index={1}>
+          <Link href="/products-orox-app">
           <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
             <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
               OROX App
@@ -25,8 +26,10 @@ const ProductsDropdown = () => (
               Download from App and Play Store
             </p>
           </div>
+          </Link>
         </DropdownItem>
         <DropdownItem index={2}>
+          <Link href="/products-odn">
           <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
             <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
               Opus Diversified Nexus
@@ -35,6 +38,7 @@ const ProductsDropdown = () => (
               Subscription
             </p>
           </div>
+          </Link>
         </DropdownItem>
         <DropdownItem index={3}>
           <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
@@ -118,87 +122,87 @@ const ProductsDropdown = () => (
 );
 
 // Support dropdown content component
-const SupportDropdown = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <DropdownItem index={0}>
-      <div className="space-y-4">
-        <h3 className="font-semibold text-lg text-[#293483]">Help Center</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link href="/" className="hover:text-[#2F5DFD]">
-              FAQ
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-[#2F5DFD]">
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-[#2F5DFD]">
-              Submit a Ticket
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </DropdownItem>
+// const SupportDropdown = () => (
+//   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//     <DropdownItem index={0}>
+//       <div className="space-y-4">
+//         <h3 className="font-semibold text-lg text-[#293483]">Help Center</h3>
+//         <ul className="space-y-2">
+//           <li>
+//             <Link href="/" className="hover:text-[#2F5DFD]">
+//               FAQ
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/contact" className="hover:text-[#2F5DFD]">
+//               Contact Us
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/" className="hover:text-[#2F5DFD]">
+//               Submit a Ticket
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </DropdownItem>
 
-    <DropdownItem index={1}>
-      <div className="space-y-4">
-        <h3 className="font-semibold text-lg text-[#293483]">Resources</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link href="/" className="hover:text-[#2F5DFD]">
-              User Guides
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-[#2F5DFD]">
-              Video Tutorials
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-[#2F5DFD]">
-              Crypto Glossary
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </DropdownItem>
+//     <DropdownItem index={1}>
+//       <div className="space-y-4">
+//         <h3 className="font-semibold text-lg text-[#293483]">Resources</h3>
+//         <ul className="space-y-2">
+//           <li>
+//             <Link href="/" className="hover:text-[#2F5DFD]">
+//               User Guides
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/" className="hover:text-[#2F5DFD]">
+//               Video Tutorials
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/" className="hover:text-[#2F5DFD]">
+//               Crypto Glossary
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </DropdownItem>
 
-    <DropdownItem index={2}>
-      <div className="space-y-4">
-        <h3 className="font-semibold text-lg text-[#293483]">Community</h3>
-        <ul className="space-y-2">
-          <li>
-            <Link
-              href="https://discord.gg/orox"
-              className="hover:text-[#2F5DFD]"
-            >
-              Discord
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://t.me/oroxofficial"
-              className="hover:text-[#2F5DFD]"
-            >
-              Telegram
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://twitter.com/orox"
-              className="hover:text-[#2F5DFD]"
-            >
-              Twitter
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </DropdownItem>
-  </div>
-);
+//     <DropdownItem index={2}>
+//       <div className="space-y-4">
+//         <h3 className="font-semibold text-lg text-[#293483]">Community</h3>
+//         <ul className="space-y-2">
+//           <li>
+//             <Link
+//               href="https://discord.gg/orox"
+//               className="hover:text-[#2F5DFD]"
+//             >
+//               Discord
+//             </Link>
+//           </li>
+//           <li>
+//             <Link
+//               href="https://t.me/oroxofficial"
+//               className="hover:text-[#2F5DFD]"
+//             >
+//               Telegram
+//             </Link>
+//           </li>
+//           <li>
+//             <Link
+//               href="https://twitter.com/orox"
+//               className="hover:text-[#2F5DFD]"
+//             >
+//               Twitter
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </DropdownItem>
+//   </div>
+// );
 
 export const Navbar = () => {
   const [isQROpen, setIsQROpen] = useState(false);
@@ -303,35 +307,35 @@ export const Navbar = () => {
         </button>
       </div>
 
-      <div className="pt-[100px] px-6">
+      <div className="pt-[100px]">
         <div>
           <Link
             href="/products"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
           >
             Our Products
           </Link>
           <hr className="border-t border-[#F4F4F4] mt-[16px]" />
 
           <Link
-            href="/products/orox-app"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
+            href="/products-orox-app"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
           >
             OROX App
           </Link>
           <hr className="border-t border-[#F4F4F4] mt-[16px]" />
 
           <Link
-            href="/products/opus"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
+            href="/products-odn"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
           >
             Opus Diversified Nexus
           </Link>
           <hr className="border-t border-[#F4F4F4] mt-[16px]" />
 
           <Link
-            href="/products/dvox"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-3 py-2 rounded-md"
+            href="/products-dvox"
+            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
           >
             DVOX Token
           </Link>
@@ -457,12 +461,13 @@ export const Navbar = () => {
           >
             About
           </Link>
-          <Link href="/contact" className="">
-            <Dropdown
-              label="Support"
+          <Link href="/contact" className="px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors">
+          Contact
+            {/* <Dropdown
+              label="Contact"
               trigger={
                 <div className="flex items-center space-x-1">
-                  <span>Support</span>
+                  <span>Contact</span>
                   <svg
                     className="h-4 w-4"
                     fill="none"
@@ -480,7 +485,7 @@ export const Navbar = () => {
               }
             >
               <SupportDropdown />
-            </Dropdown>
+            </Dropdown> */}
           </Link>
         </div>
 
@@ -520,11 +525,11 @@ export const Navbar = () => {
               className="flex flex-col flex-1"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <div className="px-6 pt-8">
+              <div className="pt-8">
                 {/* Navigation Links */}
                 <div className="space-y-3">
                   <div
-                    className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors p-2 rounded-lg"
+                    className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
@@ -543,7 +548,7 @@ export const Navbar = () => {
 
                   <Link
                     href="/"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
                   >
                     Blog
                   </Link>
@@ -551,19 +556,19 @@ export const Navbar = () => {
 
                   <Link
                     href="/about"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md"
+                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
                   >
                     About
                   </Link>
                   <hr className="border-t border-[#F4F4F4]" />
-                  <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors px-3 py-2 rounded-md">
+                    <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]">
                     <Link href="/contact">Contact</Link>
-                    <Image
+                    {/* <Image
                       src="/icons/ic_chevron_right.svg"
                       alt="down-icon"
                       width={24}
                       height={24}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
