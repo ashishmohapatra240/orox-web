@@ -3,7 +3,12 @@
 import * as React from "react";
 import Image from "next/image";
 
-const Service = () => {
+interface ServiceProps {
+  tag: string;
+  description: string;
+}
+
+const Service = ({ tag, description }: ServiceProps) => {
   const handleStoreRedirect = () => {
     if (typeof window !== "undefined") {
       window.open("https://onelink.to/65gpe9", "_blank");
@@ -38,10 +43,11 @@ const Service = () => {
         <div className="relative h-full flex flex-col items-center px-[24px] py-[32px] sm:hidden">
           {/* Text Content */}
           <div className="text-white w-full max-w-xs text-left mt-[10px] md:mt:12">
+            <span className="text-white text-[14px] md:text-[16px] font-semibold text-transparent mb-[10px] block leading-[18px] md:leading-[24px]">
+              {tag}
+            </span>
             <h3 className="text-[16px] md:text-[28px] font-regular mb-[32px] leading-[24px] md:leading-[40px]">
-              Ready to invest smarter? OROX takes the guesswork out of investing
-              with AI-powered quantitative, risk-adjusted strategies designed
-              for growth.
+              {description}
             </h3>
             <button
               onClick={handleStoreRedirect}
@@ -67,10 +73,11 @@ const Service = () => {
         <div className="relative hidden sm:flex lg:hidden h-full">
           {/* Text Content */}
           <div className="text-white w-1/2 text-left p-8 flex flex-col justify-center">
+            <span className="text-white text-[14px] md:text-[16px] font-semibold text-transparent mb-[10px] block leading-[18px] md:leading-[28px]">
+              {tag}
+            </span>
             <h3 className="text-[20px] md:text-[20px] lg:text-[24px] font-regular mb-6 leading-[1.3]">
-              Ready to invest smarter? OROX takes the guesswork out of investing
-              with AI-powered quantitative, risk-adjusted strategies designed
-              for growth.
+              {description}
             </h3>
             <button
               onClick={handleStoreRedirect}
@@ -98,10 +105,11 @@ const Service = () => {
         <div className="relative hidden lg:flex flex-row items-center p-6 sm:px-12 sm:py-30">
           {/* Text Content */}
           <div className="text-white max-w-xl text-left mt-[32px] md:[64px]">
+            <span className="text-white text-[14px] md:text-[16px] font-semibold text-transparent mb-[10px] block leading-[18px] md:leading-[24px]">
+              {tag}
+            </span>
             <h3 className="text-[28px] font-regular mb-6 leading-[1.2]">
-              Ready to invest smarter? OROX takes the guesswork out of investing
-              with AI-powered quantitative, risk-adjusted strategies designed
-              for growth.
+              {description}
             </h3>
             <button
               onClick={handleStoreRedirect}
