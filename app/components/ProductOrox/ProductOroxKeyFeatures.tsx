@@ -193,7 +193,7 @@ export const ProductOroxKeyFeatures = () => {
         <div className="flex flex-col lg:flex-row lg:gap-[88px]">
           <div className="w-full lg:w-[200px] mb-8 lg:mb-0">
             <div
-              className="flex gap-4 lg:gap-6 justify-start overflow-x-auto lg:overflow-visible -mx-4 px-4"
+              className="flex lg:flex-col gap-4 lg:gap-6 justify-start overflow-x-auto lg:overflow-visible -mx-4 px-4"
               style={{
                 WebkitOverflowScrolling: "touch",
                 scrollbarWidth: "none",
@@ -242,8 +242,8 @@ export const ProductOroxKeyFeatures = () => {
             </div>
           </div>
 
-          {/* Updated content layout for tablet */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-[88px]">
+          {/* Content section */}
+          <div className="flex flex-col md:flex-row lg:flex-row gap-8 md:gap-12 lg:gap-[88px] flex-1">
             <AnimatePresence mode="wait">
               {activeFeature && (
                 <motion.div
