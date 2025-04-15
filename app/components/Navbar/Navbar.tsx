@@ -306,7 +306,6 @@ export const Navbar = () => {
           </svg>
         </button>
       </div>
-
       <div className="pt-[100px]">
         <div>
           <Link
