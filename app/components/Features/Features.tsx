@@ -75,7 +75,7 @@ export const Features = ({
           {/* CTA Button */}
           {cta && (
             <div className="text-center mt-[40px]">
-              <Button className="py-4 text-[16px] md:text-[20px] font-bold w-full md:w-auto">
+              <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px]">
                 {cta}
               </Button>
             </div>

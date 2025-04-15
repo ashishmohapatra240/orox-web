@@ -109,7 +109,7 @@ export const TestimonialSection = () => {
             <span className="text-[14px] md:text-[16px] font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#276EDE] to-[#11032F] text-center">
               OROX IS PART OF SOMETHING BIG
             </span>
-            <h2 className="text-[28px] md:text-[34px] lg:text-[56px] font-bold text-[#19191B] leading-[34px] md:leading-[40px] lg:leading-[68px] w-[100%] md:max-w-[700px] lg:max-w-[900px] mx-auto text-center">
+            <h2 className="text-[28px] md:text-[34px] lg:text-[56px] font-bold text-[#19191B] leading-[34px] md:leading-[40px] lg:leading-[68px] w-[100%] max-w-[320px] md:max-w-[640px] lg:max-w-[1040px] mx-auto text-center">
               What our customers have to say
             </h2>
           </div>
@@ -118,7 +118,7 @@ export const TestimonialSection = () => {
         <div className="flex flex-col items-center gap-[40px] md:gap-[48px]">
           {/* Testimonial Slides */}
           <div className="w-full transition-all duration-500 ease-in-out px-4 text-center">
-            <p className="text-[#1F2461] text-[16px] md:text-[20px] lg:text-[28px] font-bold leading-[24px] md:leading-[32px] lg:leading-[40px]">
+            <p className="text-[#1F2461] text-[20px] lg:text-[28px] font-bold leading-[32px] lg:leading-[40px] max-w-[320px] md:max-w-[640px] lg:max-w-[1040px] mx-auto">
               &quot;{testimonials[currentSlide].quote}&quot;
             </p>
           </div>

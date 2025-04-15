@@ -175,7 +175,7 @@ export const ProductOroxKeyFeatures = () => {
   };
 
   return (
-    <section className="w-full px-[16px] md:px-[24px] lg:px-[32px] py-[48px] md:py-[88px] overflow-x-hidden">
+    <section className="w-full px-[16px] md:px-[24px] lg:px-[32px] py-[48px] md:pt-[88px] md:pb-[176px] overflow-x-hidden">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-20">
@@ -192,12 +192,23 @@ export const ProductOroxKeyFeatures = () => {
 
         <div className="flex flex-col lg:flex-row lg:gap-[88px]">
           <div className="w-full lg:w-[200px] mb-8 lg:mb-0">
-            <div className="flex flex-wrap md:flex-nowrap lg:flex-col gap-4 lg:gap-6 justify-center md:justify-start">
+            <div
+              className="flex lg:flex-col gap-4 lg:gap-6 justify-start overflow-x-auto lg:overflow-visible -mx-4 px-4"
+              style={{
+                WebkitOverflowScrolling: "touch",
+                scrollbarWidth: "none",
+              }}
+            >
+              <style jsx>{`
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>{" "}
               {features.map((feature) => (
                 <button
                   key={feature.id}
                   onClick={() => handleTabClick(feature.id)}
-                  className={`min-w-[140px] md:min-w-0 md:flex-1 lg:w-full px-[8px] py-[12px] lg:py-[16px] flex items-center gap-3 transition-all relative
+                  className={`md:flex-1 lg:w-full px-[8px] py-[12px] lg:py-[16px] flex items-center gap-3 transition-all relative
                     ${
                       activeTab === feature.id
                         ? "text-[#293483]"
@@ -222,7 +233,7 @@ export const ProductOroxKeyFeatures = () => {
                   </span>
                   {activeTab === feature.id && !isPaused && (
                     <span
-                      className="absolute bottom-0 left-0 h-1 bg-emerald-300"
+                      className="absolute bottom-0 left-0 h-[2px] bg-emerald-300"
                       style={{ width: `${progress}%` }}
                     />
                   )}
@@ -231,8 +242,8 @@ export const ProductOroxKeyFeatures = () => {
             </div>
           </div>
 
-          {/* Updated content layout for tablet */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-[88px]">
+          {/* Content section */}
+          <div className="flex flex-col md:flex-row lg:flex-row gap-8 md:gap-12 lg:gap-[88px] flex-1">
             <AnimatePresence mode="wait">
               {activeFeature && (
                 <motion.div
@@ -293,7 +304,7 @@ export const ProductOroxKeyFeatures = () => {
 
                   <Button
                     variant="primary"
-                    className="w-full md:w-auto px-[24px] md:px-[28px] lg:px-[32px] py-[14px] md:py-[15px] lg:py-[16px] text-[16px] md:text-[18px] lg:text-[20px] leading-[24px] md:leading-[28px] lg:leading-[32px]"
+                    className="w-full md:w-auto px-[24px] md:px-[28px] lg:px-[32px] text-[16px] md:text-[18px] lg:text-[20px] leading-[24px] md:leading-[28px] lg:leading-[32px] h-[48px] md:h-[56px] lg:h-[64px]"
                   >
                     Download the app
                   </Button>

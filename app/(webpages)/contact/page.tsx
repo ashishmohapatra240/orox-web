@@ -9,7 +9,10 @@ export default function ContactPage() {
       <ContactForm />
       <ContactLocations />
       <FAQ />
-      <Service />
+      <Service
+        tag="READY TO INVEST SMARTER?"
+        description="Join OROX and access AI-powered, risk-aware strategies—built to cut through the noise and focus on long-term performance."
+      />
     </main>
   );
 }

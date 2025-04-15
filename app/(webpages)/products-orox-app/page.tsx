@@ -13,7 +13,10 @@ export default function ProductsOroxApp() {
       <ProductOroxKeyFeatures />
       <Steps />
       <TestimonialSection />
-      <Service />
+      <Service
+        tag="READY TO INVEST SMARTER?"
+        description="Join OROX and access AI-powered, risk-aware strategies—built to cut through the noise and focus on long-term performance."
+      />
     </div>
   );
 }

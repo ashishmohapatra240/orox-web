@@ -25,24 +25,25 @@ export const ProductOroxHero = () => {
           {/* Left Content */}
           <div className="py-[48px] px-[16px] md:px-[60px] md:py-[80px] lg:px-[60px] xl:px-[80px] lg:py-[100px] xl:py-[147px] lg:w-1/2">
             <h1 className="text-[#19191B] text-[40px] md:text-[56px] lg:text-[60px] xl:text-[64px] font-bold leading-[48px] md:leading-[64px] lg:leading-[68px]">
-              The OROX app
+              The OROX app offers effortless investing
             </h1>
             <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-[#19191B] max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
-              Stay informed with the latest insights, market analysis, and
-              updates from OROX. Discover how we&apos;re revolutionizing
-              investment strategies and making financial growth accessible to
-              everyone.
+              The OROX app is revolutionising investing by making risk-adjusted
+              strategies accessible to everyone. Whether you&apos;re looking for
+              steady, low-risk investing with ODN subscription or high growth
+              crypto exposure with the DVOX token, OROX puts your money on
+              autopilot—so you can grow without the guesswork.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button
                 variant="primary"
-                className="text-nowrap py-4 text-[20px]"
+                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
               >
                 Join for free
               </Button>
               <Button
                 variant="secondary"
-                className="text-nowrap py-4 text-[20px]"
+                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
               >
                 Download the app
               </Button>
