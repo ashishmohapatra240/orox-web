@@ -269,10 +269,10 @@ export const Navbar = () => {
   const renderProductsSubmenu = () => (
     <div className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen">
       {/* Header with back button and close icon */}
-      <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-between px-4 z-[61]">
+      <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-between px-2 z-[61]">
         <button
           onClick={() => setActiveSubmenu(null)}
-          className="flex items-center space-x-2 p-2"
+          className="flex items-center space-x-2 p-2 hover:bg-[#E9E9EF] rounded-full"
           aria-label="Back to menu"
         >
           <Image
@@ -288,7 +288,7 @@ export const Navbar = () => {
             setActiveSubmenu(null);
             setIsMobileMenuOpen(false);
           }}
-          className="p-2"
+          className="p-2 hover:bg-[#E9E9EF] rounded-full"
           aria-label="Close menu"
         >
           <svg
@@ -343,6 +343,11 @@ export const Navbar = () => {
     </div>
   );
 
+  const closeAllMenus = () => {
+    setIsMobileMenuOpen(false);
+    setActiveSubmenu(null);
+  };
+
   return (
     <header
       className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
@@ -364,7 +369,7 @@ export const Navbar = () => {
         <div className="flex items-center space-x-4">
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-[#E9E9EF] rounded-full"
             onClick={() => {
               setIsMobileMenuOpen(!isMobileMenuOpen);
               setActiveDropdown(null);
@@ -495,14 +500,14 @@ export const Navbar = () => {
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             {/* Close button header */}
-            <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-4 z-[61]">
+            <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-2 z-[61]">
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2"
+                className="p-2 hover:bg-[#E9E9EF] rounded-full"
                 aria-label="Close menu"
               >
                 <svg
-                  className="h-6 w-6 text-[#19191B]"
+                  className="h-6 w-6 text-[#293483]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -605,11 +610,11 @@ export const Navbar = () => {
         )}
 
         {/* Mobile menu backdrop */}
-        {isMobileMenuOpen && (
+        {(isMobileMenuOpen || activeSubmenu) && (
           <div
             className="fixed inset-0 bg-black/30 z-[55]"
             style={{ top: "0px" }}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={closeAllMenus}
           />
         )}
 
