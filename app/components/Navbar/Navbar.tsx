@@ -353,7 +353,7 @@ export const Navbar = () => {
       className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
       ref={navbarRef}
     >
-      <nav className="relative mx-auto max-w-7xl flex items-center justify-between py-5 px-4 md:px-6 lg:px-0">
+      <nav className="relative mx-auto max-w-7xl flex items-center justify-between my-[16px] md:my-[32px] px-4 md:px-6 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -369,7 +369,7 @@ export const Navbar = () => {
         <div className="flex items-center space-x-4">
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 hover:bg-[#E9E9EF] rounded-full"
+            className="md:hidden p-2 hover:bg-[#E9E9EF] rounded-full transition-colors"
             onClick={() => {
               setIsMobileMenuOpen(!isMobileMenuOpen);
               setActiveDropdown(null);
@@ -503,7 +503,7 @@ export const Navbar = () => {
             <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-2 z-[61]">
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 hover:bg-[#E9E9EF] rounded-full"
+                className="p-2 hover:bg-[#E9E9EF] rounded-full transition-colors"
                 aria-label="Close menu"
               >
                 <svg
