@@ -55,18 +55,18 @@ export const Login = () => {
       {/* Right Content */}
       <div className="w-full lg:w-1/2 flex flex-col px-[16px] md:px-[32px] h-screen overflow-y-auto">
         <div className="flex justify-between md:justify-end items-center mt-[16px] md:mt-[32px] mb-[48px]">
-          <Image
+        <Image
             src="/images/logo.png"
             alt="Logo"
-            width={80}
-            height={24}
-            className="md:hidden"
+            width={116}
+            height={40}
+            className="md:hidden h-8 sm:h-10 w-auto"
           />
           <button
             onClick={() => router.push("/")}
-            className="p-2 hover:bg-gray-100 rounded-full"
+            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
                 d="M18 6L6 18M6 6L18 18"
                 stroke="#293483"
