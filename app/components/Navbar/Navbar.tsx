@@ -5,11 +5,12 @@ import Link from "next/link";
 import { Dropdown, DropdownItem } from "../ui/Dropdown";
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 // Product dropdown content component
 const ProductsDropdown = () => (
   <div className="flex flex-col lg:flex-row gap-6">
-    <div className="space-y-2 w-full lg:w-1/3">
+    <div className="space-y-2 lg:w-1/3">
       <DropdownItem index={0}>
         <h3 className="font-semibold text-lg text-[#19191B] mb-6 pl-1 md:pl-4">
           Our product suite
@@ -18,26 +19,26 @@ const ProductsDropdown = () => (
       <div className="space-y-4">
         <DropdownItem index={1}>
           <Link href="/products-orox-app">
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
-            <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
-              OROX App
-            </h4>
-            <p className="text-sm text-[#999999] font-regular text-[14px]">
-              Download from App and Play Store
-            </p>
-          </div>
+            <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
+              <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
+                OROX App
+              </h4>
+              <p className="text-sm text-[#999999] font-regular text-[14px]">
+                Download from App and Play Store
+              </p>
+            </div>
           </Link>
         </DropdownItem>
         <DropdownItem index={2}>
           <Link href="/products-odn">
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
-            <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
-              Opus Diversified Nexus
-            </h4>
-            <p className="text-sm text-[#999999] font-regular text-[14px]">
-              Subscription
-            </p>
-          </div>
+            <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
+              <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
+                Opus Diversified Nexus
+              </h4>
+              <p className="text-sm text-[#999999] font-regular text-[14px]">
+                Subscription
+              </p>
+            </div>
           </Link>
         </DropdownItem>
         <DropdownItem index={3}>
@@ -205,6 +206,8 @@ const ProductsDropdown = () => (
 // );
 
 export const Navbar = () => {
+  const pathname = usePathname();
+  const isDarkTheme = pathname === "/products-dvox";
   const [isQROpen, setIsQROpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -267,16 +270,32 @@ export const Navbar = () => {
   // };
 
   const renderProductsSubmenu = () => (
-    <div className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen">
+    <div
+      className={`fixed inset-y-0 right-0 z-[60] ${
+        isDarkTheme ? "bg-[#000000]" : "bg-white"
+      } md:hidden w-[280px] shadow-lg flex flex-col h-screen`}
+    >
       {/* Header with back button and close icon */}
-      <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-between px-2 z-[61]">
+      <div
+        className={`fixed top-0 right-0 w-[280px] h-[70px] ${
+          isDarkTheme
+            ? "bg-[#000000] border-[#3C3C3C]"
+            : "bg-white border-[#F4F4F4]"
+        } border-b flex items-center justify-between px-2 z-[61]`}
+      >
         <button
           onClick={() => setActiveSubmenu(null)}
-          className="flex items-center space-x-2 p-2 hover:bg-[#E9E9EF] rounded-full"
+          className={`flex items-center space-x-2 p-2 ${
+            isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+          } rounded-full`}
           aria-label="Back to menu"
         >
           <Image
-            src="/icons/ic_arrow_back.svg"
+            src={
+              isDarkTheme
+                ? "/icons/ic_arrow_back_white.svg"
+                : "/icons/ic_arrow_back.svg"
+            }
             alt="Back"
             width={24}
             height={24}
@@ -288,11 +307,15 @@ export const Navbar = () => {
             setActiveSubmenu(null);
             setIsMobileMenuOpen(false);
           }}
-          className="p-2 hover:bg-[#E9E9EF] rounded-full"
+          className={`p-2 ${
+            isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+          } rounded-full`}
           aria-label="Close menu"
         >
           <svg
-            className="h-6 w-6 text-[#293483]"
+            className={`h-6 w-6 ${
+              isDarkTheme ? "text-white" : "text-[#293483]"
+            }`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -310,31 +333,59 @@ export const Navbar = () => {
         <div>
           <Link
             href="/products"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
+            className={`block text-[16px] ${
+              isDarkTheme
+                ? "text-white hover:bg-white/10"
+                : "text-[#19191B] hover:bg-[#E9E9EF]"
+            } transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
           >
             Our Products
           </Link>
-          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
+          <hr
+            className={`border-t ${
+              isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+            } mt-[16px]`}
+          />
 
           <Link
             href="/products-orox-app"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
+            className={`block text-[16px] ${
+              isDarkTheme
+                ? "text-white hover:bg-white/10"
+                : "text-[#19191B] hover:bg-[#E9E9EF]"
+            } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
           >
             OROX App
           </Link>
-          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
+          <hr
+            className={`border-t ${
+              isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+            } mt-[16px]`}
+          />
 
           <Link
             href="/products-odn"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
+            className={`block text-[16px] ${
+              isDarkTheme
+                ? "text-white hover:bg-white/10"
+                : "text-[#19191B] hover:bg-[#E9E9EF]"
+            } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
           >
             Opus Diversified Nexus
           </Link>
-          <hr className="border-t border-[#F4F4F4] mt-[16px]" />
+          <hr
+            className={`border-t ${
+              isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+            } mt-[16px]`}
+          />
 
           <Link
             href="/products-dvox"
-            className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]"
+            className={`block text-[16px] ${
+              isDarkTheme
+                ? "text-white hover:bg-white/10"
+                : "text-[#19191B] hover:bg-[#E9E9EF]"
+            } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
           >
             DVOX Token
           </Link>
@@ -350,14 +401,22 @@ export const Navbar = () => {
 
   return (
     <header
-      className="fixed top-0 z-50 w-full bg-white border-b border-[#F4F4F4]"
+      className={`fixed top-0 z-50 w-full border-b ${
+        isDarkTheme
+          ? "bg-[#000000] text-white border-[#3C3C3C]"
+          : "bg-white border-[#F4F4F4]"
+      }`}
       ref={navbarRef}
     >
       <nav className="relative mx-auto max-w-7xl flex items-center justify-between my-[16px] md:my-[32px] px-4 md:px-6 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo.png"
+            src={
+              isDarkTheme
+                ? "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-white.png"
+                : "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo.png"
+            }
             alt="OROX"
             width={116}
             height={40}
@@ -430,7 +489,11 @@ export const Navbar = () => {
             <Dropdown
               label="Products"
               trigger={
-                <div className="flex items-center space-x-1">
+                <div
+                  className={`flex items-center space-x-1 ${
+                    isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+                  } rounded-md px-3 py-2 transition-colors`}
+                >
                   <span>Products</span>
                   <svg
                     className="h-4 w-4"
@@ -454,19 +517,28 @@ export const Navbar = () => {
 
           <Link
             href="/"
-            className="px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors"
+            className={`px-3 py-2 rounded-md ${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+            } transition-colors`}
           >
             Blog
           </Link>
 
           <Link
             href="/about"
-            className="px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors"
+            className={`px-3 py-2 rounded-md ${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+            } transition-colors`}
           >
             About
           </Link>
-          <Link href="/contact" className="px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors">
-          Contact
+          <Link
+            href="/contact"
+            className={`px-3 py-2 rounded-md ${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+            } transition-colors`}
+          >
+            Contact
             {/* <Dropdown
               label="Contact"
               trigger={
@@ -496,18 +568,30 @@ export const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div
-            className="fixed inset-y-0 right-0 z-[60] bg-white md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto overscroll-contain"
+            className={`fixed inset-y-0 right-0 z-[60] ${
+              isDarkTheme ? "bg-[#000000]" : "bg-white"
+            } md:hidden w-[280px] shadow-lg flex flex-col h-screen overflow-y-auto overscroll-contain`}
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             {/* Close button header */}
-            <div className="fixed top-0 right-0 w-[280px] h-[70px] bg-white border-b border-[#F4F4F4] flex items-center justify-end px-2 z-[61]">
+            <div
+              className={`fixed top-0 right-0 w-[280px] h-[70px] ${
+                isDarkTheme
+                  ? "bg-[#000000] border-[#3C3C3C]"
+                  : "bg-white border-[#F4F4F4]"
+              } border-b flex items-center justify-end px-2 z-[61]`}
+            >
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 hover:bg-[#E9E9EF] rounded-full transition-colors"
+                className={`p-2 ${
+                  isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+                } rounded-full transition-colors`}
                 aria-label="Close menu"
               >
                 <svg
-                  className="h-6 w-6 text-[#293483]"
+                  className={`h-6 w-6 ${
+                    isDarkTheme ? "text-white" : "text-[#293483]"
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -533,7 +617,11 @@ export const Navbar = () => {
                 {/* Navigation Links */}
                 <div className="space-y-3">
                   <div
-                    className="flex items-center justify-between text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
+                    className={`flex items-center justify-between text-[16px] ${
+                      isDarkTheme
+                        ? "text-white hover:bg-white/10"
+                        : "text-[#19191B] hover:bg-[#E9E9EF]"
+                    } transition-colors px-[8px] py-2 rounded-lg mx-[8px]`}
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
@@ -542,37 +630,61 @@ export const Navbar = () => {
                   >
                     <span>Products</span>
                     <Image
-                      src="/icons/ic_chevron_right.svg"
+                      src={
+                        isDarkTheme
+                          ? "/icons/ic_chevron_right_white.svg"
+                          : "/icons/ic_chevron_right.svg"
+                      }
                       alt="right-icon"
                       width={24}
                       height={24}
                     />
                   </div>
-                  <hr className="border-t border-[#F4F4F4]" />
+                  <hr
+                    className={`border-t ${
+                      isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+                    }`}
+                  />
 
                   <Link
                     href="/"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
+                    className={`block text-[16px] ${
+                      isDarkTheme
+                        ? "text-white hover:bg-white/10"
+                        : "text-[#19191B] hover:bg-[#E9E9EF]"
+                    } transition-colors px-[8px] py-2 rounded-lg mx-[8px]`}
                   >
                     Blog
                   </Link>
-                  <hr className="border-t border-[#F4F4F4]" />
+                  <hr
+                    className={`border-t ${
+                      isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+                    }`}
+                  />
 
                   <Link
                     href="/about"
-                    className="block text-[16px] text-[#19191B] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]"
+                    className={`block text-[16px] ${
+                      isDarkTheme
+                        ? "text-white hover:bg-white/10"
+                        : "text-[#19191B] hover:bg-[#E9E9EF]"
+                    } transition-colors px-[8px] py-2 rounded-lg mx-[8px]`}
                   >
                     About
                   </Link>
-                  <hr className="border-t border-[#F4F4F4]" />
-                    <div className="flex items-center justify-between text-[16px] text-[#19191B] mb-[16px] hover:bg-[#E9E9EF] transition-colors px-[8px] py-2 rounded-lg mx-[8px]">
+                  <hr
+                    className={`border-t ${
+                      isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+                    }`}
+                  />
+                  <div
+                    className={`flex items-center justify-between text-[16px] ${
+                      isDarkTheme
+                        ? "text-white hover:bg-white/10"
+                        : "text-[#19191B] hover:bg-[#E9E9EF]"
+                    } mb-[16px] transition-colors px-[8px] py-2 rounded-lg mx-[8px]`}
+                  >
                     <Link href="/contact">Contact</Link>
-                    {/* <Image
-                      src="/icons/ic_chevron_right.svg"
-                      alt="down-icon"
-                      width={24}
-                      height={24}
-                    /> */}
                   </div>
                 </div>
               </div>
@@ -583,26 +695,40 @@ export const Navbar = () => {
               <div className="space-y-3 mt-[64px] mb-[24px]">
                 <Link href="/login">
                   <Button
-                    variant="secondary"
-                    className="w-full block border border-[#78CAB9] hover:border-gray-300 whitespace-nowrap"
+                    variant={isDarkTheme ? "dvox" : "secondary"}
+                    className={`w-full block ${
+                      isDarkTheme
+                        ? "border-[#78CAB9] hover:border-gray-500"
+                        : "border-[#78CAB9] hover:border-gray-300"
+                    } whitespace-nowrap`}
                   >
                     Log in
                   </Button>
                 </Link>
                 <Link href="/signup" className="w-full block">
-                  <Button className="w-full bg-[#293483] rounded-full whitespace-nowrap">
+                  <Button
+                    className={`w-full rounded-full whitespace-nowrap ${
+                      isDarkTheme ? "bg-white text-black" : "bg-[#293483]"
+                    }`}
+                  >
                     Join for free
                   </Button>
                 </Link>
               </div>
-              <hr className="border-t border-[#F4F4F4] mb-[24px]" />
+              <hr
+                className={`border-t ${
+                  isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+                } mb-[24px]`}
+              />
               <div className="mb-[32px]">
                 <Image
                   src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
                   alt="QR Code"
                   width={220}
                   height={220}
-                  className="mx-auto rounded-2xl bg-white shadow-sm"
+                  className={`mx-auto rounded-2xl ${
+                    isDarkTheme ? "bg-white/10" : "bg-white"
+                  } shadow-sm`}
                 />
               </div>
             </div>
@@ -622,14 +748,17 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
           <Link href="/login">
             <Button
-              variant="secondary"
-              className="px-3 md:px-4 lg:px-6 whitespace-nowrap"
+              variant={isDarkTheme ? "dvox" : "secondary"}
+              className="whitespace-nowrap"
             >
               Log in
             </Button>
           </Link>
           <Link href="/signup">
-            <Button className="px-3 md:px-4 lg:px-6 whitespace-nowrap">
+            <Button
+              variant={isDarkTheme ? "secondary" : "primary"}
+              className="px-3 md:px-4 lg:px-6 whitespace-nowrap"
+            >
               Join for free
             </Button>
           </Link>
@@ -643,7 +772,7 @@ export const Navbar = () => {
             aria-label="QR code"
           >
             <Image
-              src="/icons/QR.svg"
+              src={isDarkTheme ? "/icons/QR-light.svg" : "/icons/QR.svg"}
               alt="QR Icon"
               width={20}
               height={20}

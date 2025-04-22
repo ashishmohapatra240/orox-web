@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { PlayStoreButton } from "../ui/PlayStoreButton";
 import { AppStoreButton } from "../ui/AppStoreButton";
+import { usePathname } from "next/navigation";
 
 const navigation = {
   social: [
@@ -34,15 +37,26 @@ const navigation = {
 };
 
 export const Footer = () => {
+  const pathname = usePathname();
+  const isDarkTheme = pathname === "/products-dvox";
+
   return (
-    <footer className="bg-white">
+    <footer
+      className={
+        isDarkTheme ? "bg-[#000000] text-white border-[#3C3C3C]" : "bg-white"
+      }
+    >
       <div className="mx-auto max-w-7xl px-4 xl:px-0 py-8 md:py-[88px]">
         <div className="flex flex-col lg:flex-row justify-between">
           {/* Main Content Column */}
           <div className="w-full lg:max-w-md">
             {/* Logo */}
             <Image
-              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-footer.png"
+              src={
+                isDarkTheme
+                  ? "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-white.png"
+                  : "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-footer.png"
+              }
               alt="OROX Logo"
               width={116}
               height={40}
@@ -50,7 +64,11 @@ export const Footer = () => {
             />
 
             {/* Description */}
-            <p className="text-[#19191B] max-w-[400px] mb-6 text-[16px] leading-[2]">
+            <p
+              className={`${
+                isDarkTheme ? "text-white" : "text-[#19191B]"
+              } max-w-[400px] mb-6 text-[16px] leading-[2]`}
+            >
               OROX puts your money on autopilot with AI-powered quantitative
               investing, risk-adjusted strategies and secure blockchain-backed
               growth.
@@ -59,7 +77,9 @@ export const Footer = () => {
             {/* More About Us Button */}
             <Link
               href="https://www.opusmomentus.com/"
-              className="group inline-flex items-center font-bold text-[#2F5DFD] hover:text-[#6082ff] mb-12 text-[14px] gap-1 "
+              className={`group inline-flex items-center font-bold ${
+                isDarkTheme ? "text-[#9499C1]" : "text-[#2F5DFD]"
+              } hover:text-[#6082ff] mb-12 text-[14px] gap-1 `}
             >
               <span>More about us</span>
               <svg
@@ -94,31 +114,31 @@ export const Footer = () => {
               <div className="flex flex-col space-y-[16px]">
                 <Link
                   href="/products"
-                  className="text-[18px] font-semibold text-[#293483]"
+                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
                 >
                   Products
                 </Link>
                 <Link
                   href="/our-approach"
-                  className="text-[18px] font-semibold text-[#293483]"
+                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
                 >
                   Our approach
                 </Link>
                 <Link
                   href="/blog"
-                  className="text-[18px] font-semibold text-[#293483]"
+                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
                 >
                   Blog
                 </Link>
                 <Link
                   href="/about"
-                  className="text-[18px] font-semibold text-[#293483]"
+                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
                 >
                   About
                 </Link>
                 <Link
                   href="/careers"
-                  className="text-[18px] font-semibold text-[#293483]"
+                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
                 >
                   Careers
                 </Link>
@@ -184,7 +204,11 @@ export const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <div className="text-[12px] text-[#19191B] text-right flex flex-col justify-end mr-[24px] md:mr-0">
+              <div
+                className={`text-[12px] text-${
+                  isDarkTheme ? "white" : "#19191B"
+                } text-right flex flex-col justify-end mr-[24px] md:mr-0`}
+              >
                 <p>© 2025 — Copyright. All Rights reserved</p>
                 <div className="flex flex-col md:flex-row gap-[16px] md:gap-[4px] justify-end mt-[20px] md:mt-[8px]">
                   <Link href="/privacy-policy" className="underline">
@@ -215,31 +239,31 @@ export const Footer = () => {
             <div className="hidden lg:flex gap-[41px] mb-8">
               <Link
                 href="/products"
-                className="text-[16px] font-semibold text-[#293483]"
+                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
               >
                 Products
               </Link>
               <Link
                 href="/"
-                className="text-[16px] font-semibold text-[#293483]"
+                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
               >
                 Our approach
               </Link>
               <Link
                 href="/"
-                className="text-[16px] font-semibold text-[#293483]"
+                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
               >
                 Blog
               </Link>
               <Link
                 href="/about"
-                className="text-[16px] font-semibold text-[#293483]"
+                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
               >
                 About
               </Link>
               <Link
                 href="/"
-                className="text-[16px] font-semibold text-[#293483]"
+                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
               >
                 Careers
               </Link>
@@ -248,8 +272,18 @@ export const Footer = () => {
             {/* Contact and Location Section Desktop*/}
             <div className="hidden lg:flex flex-col sm:flex-row gap-8 sm:gap-20 flex-grow mt-[200px] justify-between">
               <div>
-                <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
-                <div className="text-black/50 text-[14px] space-y-[8px]">
+                <h3
+                  className={`text-[20px] font-bold mb-[24px] ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  }`}
+                >
+                  Contact us
+                </h3>
+                <div
+                  className={`text-${
+                    isDarkTheme ? "white" : "black"
+                  } text-[14px] space-y-[8px]`}
+                >
                   <p>+61 295 336 214</p>
                   <p>info@oroxglobal.com</p>
                 </div>
@@ -258,7 +292,11 @@ export const Footer = () => {
                 <h3 className="text-[20px] font-bold mb-[16px] pl-[8px]">
                   Location
                 </h3>
-                <div className="text-black/50 text-[14px]">
+                <div
+                  className={`text-${
+                    isDarkTheme ? "white" : "black"
+                  } text-[14px]`}
+                >
                   <a
                     href="https://maps.app.goo.gl/k7RVNir6k7PXLXEr6"
                     target="_blank"
@@ -286,17 +324,65 @@ export const Footer = () => {
         </div>
       </div>
       {/* Disclaimer Section */}
-      <div className="bg-[#EAF5FF] text-[#19191B]/60 text-[12px]">
+      <div
+        className={
+          isDarkTheme
+            ? "bg-[#19191B] text-white/60 text-[12px]"
+            : "bg-[#EAF5FF] text-[#19191B]/60 text-[12px]"
+        }
+      >
         <div className="max-w-7xl mx-4 md:mx-auto py-8 md:py-8">
-          <p>© 2025 Opus Momentus Proprietary Ltd. All Rights Reserved.</p>
+          {isDarkTheme ? (
+            <p>© 2025 OROX Management Ltd. All Rights Reserved.</p>
+          ) : (
+            <p>© 2025 Opus Momentus Proprietary Ltd. All Rights Reserved.</p>
+          )}
           <br />
-          <p>
-            The materials on this website are for illustration and discussion
-            purposes only and do not constitute an offering. An offering may be
-            made only by delivery of a confidential offering memorandum to
-            appropriate investors. PAST PERFORMANCE IS NO GUARANTEE OF FUTURE
-            RESULTS.
-          </p>
+          {isDarkTheme ? (
+            <p>
+              <span className="font-bold">Disclaimer:</span> The materials on
+              this website are for informational and discussion purposes only
+              and do not constitute an offer or solicitation. Any offering may
+              be made solely through a confidential offering memorandum
+              delivered to eligible investors.
+              <br />
+              <br />
+              OROX is a technology platform providing access to algorithmic
+              trading strategies and digital asset tools. The ODN product is a
+              subscription-based service offering exposure to market-neutral
+              strategies. The DVOX token is a utility token that may be staked
+              within the platform to unlock access to benefits linked to a
+              professionally managed digital asset portfolio. DVOX does not
+              confer ownership rights, income entitlement, or equity interest in
+              OROX or any underlying assets, and is not intended to function as
+              a financial product, security, or regulated investment instrument
+              in any jurisdiction.
+              <br />
+              <br />
+              Participation in OROX services involves significant risks,
+              including market volatility and potential loss of capital. Returns
+              are not guaranteed. Past performance is not indicative of future
+              results. Access to the OROX platform and its products is not
+              available to U.S. persons or residents of any jurisdiction where
+              such access would be unlawful or require regulatory licensing. It
+              is the sole responsibility of users to comply with their local
+              laws and regulations.
+              <br />
+              <br />
+              Use of the platform is subject to acceptance of all applicable
+              terms, risk disclosures, and legal documentation. Please review
+              all materials carefully before engaging with any OROX product or
+              token.
+            </p>
+          ) : (
+            <p>
+              The materials on this website are for illustration and discussion
+              purposes only and do not constitute an offering. An offering may
+              be made only by delivery of a confidential offering memorandum to
+              appropriate investors. PAST PERFORMANCE IS NO GUARANTEE OF FUTURE
+              RESULTS.
+            </p>
+          )}
         </div>
       </div>
     </footer>
