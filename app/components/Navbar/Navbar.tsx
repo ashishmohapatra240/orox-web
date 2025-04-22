@@ -288,7 +288,6 @@ export const Navbar = () => {
           className={`flex items-center space-x-2 p-2 ${
             isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
           } rounded-full`}
-
           aria-label="Back to menu"
         >
           <Image
@@ -311,7 +310,6 @@ export const Navbar = () => {
           className={`p-2 ${
             isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
           } rounded-full`}
-
           aria-label="Close menu"
         >
           <svg
@@ -594,7 +592,6 @@ export const Navbar = () => {
                   className={`h-6 w-6 ${
                     isDarkTheme ? "text-white" : "text-[#293483]"
                   }`}
-
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -635,7 +632,7 @@ export const Navbar = () => {
                     <Image
                       src={
                         isDarkTheme
-                          ? "/icons/ic_chevron_right_white.svg"
+                          ? "/icons/ic_chevron_right_dvox.svg"
                           : "/icons/ic_chevron_right.svg"
                       }
                       alt="right-icon"
@@ -709,11 +706,7 @@ export const Navbar = () => {
                   </Button>
                 </Link>
                 <Link href="/signup" className="w-full block">
-                  <Button
-                    className={`w-full rounded-full whitespace-nowrap ${
-                      isDarkTheme ? "bg-white text-black" : "bg-[#293483]"
-                    }`}
-                  >
+                  <Button variant={isDarkTheme ? "secondary" : "primary"} className={`w-full rounded-full whitespace-nowrap`}>
                     Join for free
                   </Button>
                 </Link>
@@ -771,7 +764,9 @@ export const Navbar = () => {
           {/* QR Code Button */}
           <button
             onClick={() => setIsQROpen(!isQROpen)}
-            className="relative flex h-10 w-10 items-center justify-center hover:bg-[#E9E9EF] rounded-[8px] md:p-1.5 lg:p-2"
+            className={`relative flex h-10 w-10 items-center justify-center rounded-[8px] md:p-1.5 lg:p-2 ${
+              isDarkTheme ? "hover:bg-[#3C3C3C]" : "hover:bg-[#E9E9EF]"
+            }`}
             aria-label="QR code"
           >
             <Image
