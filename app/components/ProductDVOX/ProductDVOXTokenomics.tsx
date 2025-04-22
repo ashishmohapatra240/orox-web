@@ -1,6 +1,7 @@
 "use client";
 import { PieChart, Pie, Cell } from "recharts";
 import { Button } from "../ui/Button";
+import React from "react";
 
 const tokenDistributionData = [
   { name: "Token sale investors", value: 50, color: "#6366F1" },
@@ -11,6 +12,28 @@ const tokenDistributionData = [
 ];
 
 export const ProductDVOXTokenomics = () => {
+  const useWidth = () => {
+    const [width, setWidth] = React.useState(320);
+
+    React.useEffect(() => {
+      const handleResize = () => {
+        const chartContainer = document.getElementById('pie-chart-container');
+        if (chartContainer) {
+          const containerWidth = chartContainer.offsetWidth;
+          setWidth(Math.min(containerWidth, 400)); // Max width of 400px
+        }
+      };
+
+      handleResize(); // Initial size
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return width;
+  };
+
+  const chartWidth = useWidth();
+
   return (
     <section className="w-full bg-black text-white px-4 py-11 md:px-[80px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
@@ -26,10 +49,10 @@ export const ProductDVOXTokenomics = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex p-[1px] rounded-full bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B] mb-[32px]">
             <div className="flex bg-black rounded-full">
-              <button className="px-[24px] py-[16px] rounded-full bg-[#ffffff1a] text-white font-semibold">
+              <button className="text-[14px] md:text-[16px] px-[24px] py-[16px] rounded-full bg-[#ffffff1a] text-white font-semibold whitespace-nowrap leading-[20px] md:leading-[28px]">
                 Token distribution
               </button>
-              <button className="px-[24px] py-[16px] rounded-full text-white/60 font-semibold">
+              <button className="text-[14px] md:text-[16px] px-[24px] py-[16px] rounded-full text-white/60 font-semibold whitespace-nowrap leading-[20px] md:leading-[28px]">
                 Use of proceeds
               </button>
             </div>
@@ -43,7 +66,7 @@ export const ProductDVOXTokenomics = () => {
             liquidity and targeting best risk-adjusted returns.
           </p>
 
-          <div className="relative w-full max-w-[320px] md:max-w-[400px] aspect-square mb-10">
+          <div className="relative w-full max-w-[400px] aspect-square mb-10 mx-auto" id="pie-chart-container">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-[14px] text-white/60">Maximum supply</div>
@@ -51,13 +74,13 @@ export const ProductDVOXTokenomics = () => {
               </div>
             </div>
             <div className="w-full h-full">
-              <PieChart width={320} height={320}>
+              <PieChart width={chartWidth} height={chartWidth}>
                 <Pie
                   data={tokenDistributionData}
                   cx="50%"
                   cy="50%"
-                  innerRadius="35%"
-                  outerRadius="40%"
+                  innerRadius={chartWidth * 0.35}
+                  outerRadius={chartWidth * 0.4}
                   paddingAngle={2}
                   dataKey="value"
                   startAngle={90}
@@ -87,16 +110,18 @@ export const ProductDVOXTokenomics = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[16px] w-full max-w-[800px] mb-[48px] px-4 lg:hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[16px] w-full max-w-[800px] mb-[48px] px-4 lg:hidden">
             {tokenDistributionData.map((item, index) => (
               <div key={index} className="flex items-start gap-[8px]">
                 <div
-                  className="w-[8px] h-[8px] rounded-full mt-[6px]"
+                  className="w-[16px] h-[8px] rounded-[2px] mt-[6px]"
                   style={{ backgroundColor: item.color }}
                 />
                 <div className="flex flex-col">
-                  <span className="font-bold">{item.value}%</span>
-                  <span className="text-white/60 text-sm">
+                  <span className="font-bold text-[16px] leading-[28px]">
+                    {item.value}%
+                  </span>
+                  <span className="text-white/60 text-[12px] leading-[16px]">
                     {item.name}
                   </span>
                 </div>
@@ -105,13 +130,13 @@ export const ProductDVOXTokenomics = () => {
           </div>
 
           <div className="text-center px-4">
-            <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] mb-[40px] max-w-[640px]">
+            <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] mb-[40px] w-[320px] md:w-[640px]">
               Want to learn more? Read the DVOX whitepaper for full details on
               tokenomics, strategy and future growth.
             </p>
             <Button
               variant="secondary"
-              className="h-[48px] md:h-[64px] px-[32px] text-[16px] md:text-[20px]"
+              className="h-[48px] md:h-[64px] px-[32px] text-[16px] md:text-[20px] w-full md:w-auto"
             >
               Download white paper
             </Button>

@@ -9,7 +9,7 @@ export const ProductDVOXHero = () => {
           {/* Left Content - Presale Card */}
           <div className="py-[48px] px-[16px] md:px-[32px] md:py-[80px] lg:w-1/2 flex items-center justify-center">
             <div className="max-w-[520px] p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
-              <div className="w-full h-full rounded-[20px] bg-black p-8">
+              <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px]">
                 {/* Logo and Title */}
                 <div className="">
                   <Image
@@ -115,8 +115,8 @@ export const ProductDVOXHero = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex justify-between gap-[16px] w-full">
-                  <Button variant="dvox" className="h-[48px] text-center w-1/2">
+                <div className="flex flex-col md:flex-row justify-between gap-[8px] w-full whitespace-nowrap">
+                  <Button variant="dvox" className="h-[48px] text-center w-full">
                     <Image
                       src="/icons/ic_credit_card.svg"
                       alt="DVOX"
@@ -127,7 +127,7 @@ export const ProductDVOXHero = () => {
                   </Button>
                   <Button
                     variant="secondary"
-                    className="h-[48px] hover:bg-gray-100 text-center w-1/2"
+                    className="h-[48px] hover:bg-gray-100 text-center w-full"
                   >
                     <Image
                       src="/icons/ic_paid.svg"

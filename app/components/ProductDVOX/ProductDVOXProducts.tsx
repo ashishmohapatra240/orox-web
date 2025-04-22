@@ -31,7 +31,7 @@ export const ProductDVOXProducts = () => {
             <h2 className="text-[34px] md:text-[56px] font-bold leading-[40px] md:leading-[68px]">
               Our products
             </h2>
-            <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-white w-[1040px]">
+            <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-white w-[320px] md:w-[1040px]">
               OROX is a seamless investment platform aiming to deliver low-risk
               growth and crypto exposure with reduced volatility. Connect
               effortlessly to ODN and the DVOX token—all in one app.

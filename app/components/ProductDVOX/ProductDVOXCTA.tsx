@@ -19,14 +19,17 @@ export const ProductDVOXCTA = () => {
         {/* Mobile Layout */}
         <div className="relative h-full flex flex-col items-center px-[24px] py-[32px] sm:hidden">
           <div className="text-white w-full max-w-xs text-left mt-[10px]">
-            <span className="text-[14px] font-medium text-white/80 mb-[16px] block">
+            <span className="text-[14px] md:text-[16px] font-semibold text-white mb-[16px] block leading-[18px] md:leading-[28px]">
               READY TO INVEST IN CRYPTO WITHOUT VOLATILITY?
             </span>
-            <h3 className="text-[28px] font-bold mb-[24px] leading-[34px]">
+            <h3 className="text-[16px] md:text-[28px] font-regular mb-[32px] leading-[24px] md:leading-[40px]">
               DVOX gives you high-growth potential with less risk, offering a
               professionally managed, auto-balanced portfolio of digital assets.
             </h3>
-            <Button variant="secondary" className="w-full text-[#293483] hover:bg-gray-100">
+            <Button
+              variant="secondary"
+              className="w-full text-[#293483] hover:bg-gray-100"
+            >
               Get started with DVOX
             </Button>
           </div>
@@ -36,7 +39,8 @@ export const ProductDVOXCTA = () => {
               <Image
                 src="/images/service/dvox/phone-dvox.png"
                 alt="DVOX App Interface"
-                fill
+                height={600}
+                width={375}
                 className="object-contain"
               />
             </div>
@@ -49,11 +53,14 @@ export const ProductDVOXCTA = () => {
             <span className="text-[14px] font-medium text-white/80 mb-[16px] block">
               READY TO INVEST IN CRYPTO WITHOUT VOLATILITY?
             </span>
-            <h3 className="text-[32px] font-bold mb-[32px] leading-[40px]">
+            <h3 className="text-[16px] md:text-[32px] font-bold mb-[32px] leading-[24px] md:leading-[40px]">
               DVOX gives you high-growth potential with less risk, offering a
               professionally managed, auto-balanced portfolio of digital assets.
             </h3>
-            <Button variant="secondary" className="max-w-[280px] text-[#293483] hover:bg-gray-100">
+            <Button
+              variant="secondary"
+              className="max-w-[280px] text-[#293483] hover:bg-gray-100"
+            >
               Get started with DVOX
             </Button>
           </div>
