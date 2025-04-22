@@ -288,6 +288,7 @@ export const Navbar = () => {
           className={`flex items-center space-x-2 p-2 ${
             isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
           } rounded-full`}
+
           aria-label="Back to menu"
         >
           <Image
@@ -310,6 +311,7 @@ export const Navbar = () => {
           className={`p-2 ${
             isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
           } rounded-full`}
+
           aria-label="Close menu"
         >
           <svg
@@ -592,6 +594,7 @@ export const Navbar = () => {
                   className={`h-6 w-6 ${
                     isDarkTheme ? "text-white" : "text-[#293483]"
                   }`}
+
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
