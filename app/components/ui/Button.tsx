@@ -1,8 +1,9 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import Image from "next/image";
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "white" | "outline" | "link";
+  variant?: "primary" | "secondary" | "white" | "outline" | "link" | "dvox";
 }
 
 export const Button = ({
@@ -14,7 +15,7 @@ export const Button = ({
   return (
     <button
       className={`
-        rounded-full px-8 py-2 transition-all
+        rounded-full transition-all
         ${
           variant === "primary"
             ? "self-stretch px-4 py-2 bg-indigo-900 rounded-[32px] inline-flex justify-center items-center gap-2 hover:bg-[#293492]/90 text-white font-bold text-[14px]"
@@ -26,13 +27,23 @@ export const Button = ({
             ? "self-stretch px-4 py-4 bg-transparent rounded-[32px] border-2 border-[#78CAB9] inline-flex justify-center items-center gap-2 text-white font-bold text-[16px] md:text-[20px]"
             : variant === "link"
             ? "inline-flex items-center gap-2 text-[#2F5DFD] hover:text-blue-500 font-bold"
+            : variant === "dvox"
+            ? `relative p-px rounded-[32px] inline-flex items-center justify-center
+               bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]`
             : ""
         }
         ${className}
       `}
       {...props}
     >
-      {children}
+      {variant === "dvox" ? (
+        <span className="bg-black w-full h-full rounded-[31px] px-4 py-2 inline-flex items-center justify-center gap-2 text-white font-bold text-[14px]">
+          {children}
+        </span>
+      ) : (
+        children
+      )}
+
       {variant === "link" && (
         <Image
           src="/icons/ic_north_east.svg"

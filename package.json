@@ -17,6 +17,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-swipeable": "^7.0.2",
+    "recharts": "^2.15.3",
     "zod": "^3.24.2"
   },
   "devDependencies": {
