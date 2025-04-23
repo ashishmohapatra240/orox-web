@@ -339,7 +339,9 @@ export const Navbar = () => {
     >
       {/* Header with back button and close icon */}
       <div
-        className={`fixed top-0 right-0 w-[280px] h-[70px] ${
+        className={`fixed top-0 right-0 w-[280px] ${
+          isDarkTheme ? "h-[83px]" : "h-[73px]"
+        } ${
           isDarkTheme
             ? "bg-[#000000] border-[#3C3C3C]"
             : "bg-white border-[#F4F4F4]"
@@ -486,7 +488,9 @@ export const Navbar = () => {
         <div className="flex items-center space-x-4">
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 hover:bg-[#E9E9EF] rounded-full transition-colors"
+            className={`md:hidden p-2 rounded-full transition-colors ${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+            }`}
             onClick={() => {
               setIsMobileMenuOpen(!isMobileMenuOpen);
               setActiveDropdown(null);
@@ -634,7 +638,9 @@ export const Navbar = () => {
           >
             {/* Close button header */}
             <div
-              className={`fixed top-0 right-0 w-[280px] h-[70px] ${
+              className={`fixed top-0 right-0 w-[280px] ${
+                isDarkTheme ? "h-[83px]" : "h-[73px]"
+              } ${
                 isDarkTheme
                   ? "bg-[#000000] border-[#3C3C3C]"
                   : "bg-white border-[#F4F4F4]"
