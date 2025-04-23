@@ -58,9 +58,9 @@ export const Login = () => {
         <Image
             src="/images/logo.png"
             alt="Logo"
-            width={116}
-            height={40}
-            className="md:hidden h-8 sm:h-10 w-auto"
+            width={100}
+            height={100}
+            className="md:hidden w-[79px] md:w-[132px] h-auto"
           />
           <button
             onClick={() => router.push("/")}
