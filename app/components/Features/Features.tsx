@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
 
-const features = [
+type Feature = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+const defaultFeatures: Feature[] = [
   {
     icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/smart-investing.svg",
     title: "Easy, smart investing",
@@ -28,10 +34,12 @@ export const Features = ({
   title,
   description,
   cta,
+  features = defaultFeatures,
 }: {
   title: string;
   description: string;
   cta?: string;
+  features?: Feature[];
 }) => {
   return (
     <section className="w-full bg-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
