@@ -6,8 +6,11 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 import { AppStoreButton } from "../ui/AppStoreButton";
 import { usePathname } from "next/navigation";
 
-const navigation = {
-  social: [
+export const Footer = () => {
+  const pathname = usePathname();
+  const isDarkTheme = pathname === "/products-dvox";
+
+  const social = [
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/company/oroxapp/",
@@ -31,14 +34,11 @@ const navigation = {
     {
       name: "Twitter",
       href: "https://x.com/oroxapp?s=11",
-      icon: "/icons/socials/Item-4.svg",
+      icon: isDarkTheme
+        ? "/icons/socials/Item-4-white.svg"
+        : "/icons/socials/Item-4.svg",
     },
-  ],
-};
-
-export const Footer = () => {
-  const pathname = usePathname();
-  const isDarkTheme = pathname === "/products-dvox";
+  ];
 
   return (
     <footer
@@ -54,8 +54,8 @@ export const Footer = () => {
             <Image
               src={
                 isDarkTheme
-                  ? "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-white.png"
-                  : "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-footer.png"
+                  ? "/images/logo-footer-white.png"
+                  : "/images/logo-footer.png"
               }
               alt="OROX Logo"
               width={116}
@@ -114,31 +114,41 @@ export const Footer = () => {
               <div className="flex flex-col space-y-[16px]">
                 <Link
                   href="/products"
-                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                  className={`text-[18px] font-semibold ${
+                    isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                  }`}
                 >
                   Products
                 </Link>
                 <Link
                   href="/our-approach"
-                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                  className={`text-[18px] font-semibold ${
+                    isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                  }`}
                 >
                   Our approach
                 </Link>
                 <Link
                   href="/blog"
-                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                  className={`text-[18px] font-semibold ${
+                    isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                  }`}
                 >
                   Blog
                 </Link>
                 <Link
                   href="/about"
-                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                  className={`text-[18px] font-semibold ${
+                    isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                  }`}
                 >
                   About
                 </Link>
                 <Link
                   href="/careers"
-                  className={`text-[18px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                  className={`text-[18px] font-semibold ${
+                    isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                  }`}
                 >
                   Careers
                 </Link>
@@ -185,7 +195,7 @@ export const Footer = () => {
             {/* Social Icons and Copyright */}
             <div className="flex justify-between items-end md:mt-36 mt-24">
               <div className="grid grid-flow-col grid-rows-2 gap-x-2 gap-y-2 w-fit">
-                {navigation.social.map((item, index) => (
+                {social.map((item, index) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -239,31 +249,41 @@ export const Footer = () => {
             <div className="hidden lg:flex gap-[41px] mb-8">
               <Link
                 href="/products"
-                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                className={`text-[16px] font-semibold ${
+                  isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                }`}
               >
                 Products
               </Link>
               <Link
                 href="/"
-                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                className={`text-[16px] font-semibold ${
+                  isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                }`}
               >
                 Our approach
               </Link>
               <Link
                 href="/"
-                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                className={`text-[16px] font-semibold ${
+                  isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                }`}
               >
                 Blog
               </Link>
               <Link
                 href="/about"
-                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                className={`text-[16px] font-semibold ${
+                  isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                }`}
               >
                 About
               </Link>
               <Link
                 href="/"
-                className={`text-[16px] font-semibold ${isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"}`}
+                className={`text-[16px] font-semibold ${
+                  isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
+                }`}
               >
                 Careers
               </Link>
