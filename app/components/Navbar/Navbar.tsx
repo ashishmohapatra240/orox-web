@@ -6,6 +6,8 @@ import { Dropdown, DropdownItem } from "../ui/Dropdown";
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { PlayStoreButton } from "../ui/PlayStoreButton";
+import { AppStoreButton } from "../ui/AppStoreButton";
 
 // Product dropdown content component
 const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
@@ -743,6 +745,11 @@ export const Navbar = () => {
                   >
                     <Link href="/contact">Contact</Link>
                   </div>
+                  <hr
+                    className={`border-t ${
+                      isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+                    }`}
+                  />
                 </div>
               </div>
             </div>
@@ -777,7 +784,12 @@ export const Navbar = () => {
                 } mb-[24px]`}
               />
               <div className="mb-[32px]">
-                <Image
+                <div className="flex flex-col items-center gap-[8px]">
+                  <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
+                  <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
+                </div>
+
+                {/* <Image
                   src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
                   alt="QR Code"
                   width={220}
@@ -785,7 +797,7 @@ export const Navbar = () => {
                   className={`mx-auto rounded-2xl ${
                     isDarkTheme ? "bg-white/10" : "bg-white"
                   } shadow-sm`}
-                />
+                /> */}
               </div>
             </div>
           </div>
