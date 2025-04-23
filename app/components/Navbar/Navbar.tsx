@@ -64,22 +64,24 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
           </Link>
         </DropdownItem>
         <DropdownItem index={3}>
-          <div
-            className={`${
-              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-            } rounded-lg p-1 md:p-4`}
-          >
-            <h4
-              className={`font-medium ${
-                isDarkTheme ? "text-white" : "text-[#19191B]"
-              } text-[16px] font-regular`}
+          <Link href="/products-dvox">
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
             >
-              DVOX — Digital Coin
-            </h4>
-            <p className="text-sm text-[#999999] font-regular text-[14px]">
-              Utility Token
-            </p>
-          </div>
+              <h4
+                className={`font-medium ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
+                DVOX — Digital Coin
+              </h4>
+              <p className="text-sm text-[#999999] font-regular text-[14px]">
+                Utility Token
+              </p>
+            </div>
+          </Link>
         </DropdownItem>
       </div>
     </div>
@@ -472,7 +474,7 @@ export const Navbar = () => {
       }`}
       ref={navbarRef}
     >
-      <nav className="relative mx-auto max-w-7xl flex items-center justify-between my-[16px] md:my-[32px] px-4 md:px-6 lg:px-0">
+      <nav className="relative mx-auto max-w-7xl flex items-center justify-between my-[16px] md:my-[24px] px-4 md:px-6 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -780,7 +782,6 @@ export const Navbar = () => {
                     variant={isDarkTheme ? "secondary" : "primary"}
                     className={`w-full rounded-full whitespace-nowrap`}
                   >
-
                     Join for free
                   </Button>
                 </Link>
@@ -914,7 +915,7 @@ export const Navbar = () => {
                 isDarkTheme ? "top-[74px]" : "top-[64px]"
               } ${
                 isDarkTheme ? "bg-[#000000]" : "bg-white"
-              } mt-2 w-64 md:w-80 rounded-xl border ${
+              } w-64 md:w-80 rounded-xl border ${
                 isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
               } p-8 shadow-xl z-50`}
             >
