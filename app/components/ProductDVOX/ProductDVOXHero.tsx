@@ -4,14 +4,14 @@ import Image from "next/image";
 export const ProductDVOXHero = () => {
   return (
     <section className="relative w-full bg-[#000000] text-white">
-      <div className="h-full">
-        <div className="flex flex-col lg:flex-row h-full">
+      <div className="h-full max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row h-full ">
           {/* Left Content - Presale Card */}
-          <div className="py-[48px] px-[16px] md:px-[32px] md:py-[80px] lg:w-1/2 flex items-center justify-center">
-            <div className="max-w-[520px] p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
-              <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px]">
+          <div className="px-[16px] lg:w-[540px] flex items-center justify-center py-[48px] md:py-[80px]">
+            <div className="max-w-[520px] w-full p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
+              <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px] flex flex-col">
                 {/* Logo and Title */}
-                <div className="">
+                <div className="flex-shrink-0">
                   <Image
                     src="/images/products/Bull.png"
                     alt="DVOX Logo"
@@ -27,7 +27,7 @@ export const ProductDVOXHero = () => {
                   </h2>
                 </div>
                 {/* Timer */}
-                <div className="my-[16px] px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2">
+                <div className="my-[24px] px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
                   <div className="inline-flex justify-start items-center gap-8">
                     {[
                       { label: "DAYS", value: "30" },
@@ -64,7 +64,7 @@ export const ProductDVOXHero = () => {
                 </div>
 
                 {/* Progress Bar */}
-                <div className="">
+                <div className="flex-shrink-0">
                   <div className="text-[20px] text-center mb-[8px] leading-[32px]">
                     USDT Raised: $17,250,440.43 / $17,594,367
                   </div>
@@ -74,7 +74,7 @@ export const ProductDVOXHero = () => {
                 </div>
 
                 {/* DVOX Info */}
-                <div className="space-y-[8px] mb-[24px] text-center">
+                <div className="space-y-[8px] mb-[24px] text-center flex-grow flex flex-col justify-center">
                   <div className="flex items-center justify-center">
                     <span className="text-[16px] md:text-[20px] text-[#ffffff] leading-[24px] md:leading-[32px]">
                       Your purchased DVOX =
@@ -115,30 +115,35 @@ export const ProductDVOXHero = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col md:flex-row justify-between gap-[8px] w-full whitespace-nowrap">
-                  <Button variant="dvox" className="h-[48px] text-center w-full">
-                    <Image
-                      src="/icons/ic_credit_card.svg"
-                      alt="DVOX"
-                      width={24}
-                      height={24}
-                    />
-                    Buy with card
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    className="h-[48px] hover:bg-gray-100 text-center w-full"
-                  >
-                    <Image
-                      src="/icons/ic_paid.svg"
-                      alt="DVOX"
-                      width={24}
-                      height={24}
-                    />
-                    Buy with crypto
-                  </Button>
+                <div className="flex-shrink-0">
+                  <div className="flex flex-col md:flex-row justify-between gap-[8px] w-full whitespace-nowrap">
+                    <Button
+                      variant="dvox"
+                      className="h-[48px] text-center w-full"
+                    >
+                      <Image
+                        src="/icons/ic_credit_card.svg"
+                        alt="DVOX"
+                        width={24}
+                        height={24}
+                      />
+                      Buy with card
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      className="h-[48px] hover:bg-gray-100 text-center w-full"
+                    >
+                      <Image
+                        src="/icons/ic_paid.svg"
+                        alt="DVOX"
+                        width={24}
+                        height={24}
+                      />
+                      Buy with crypto
+                    </Button>
+                  </div>
                 </div>
-                <div className="text-center mt-[24px]">
+                <div className="text-center mt-[24px] flex-shrink-0">
                   <a
                     href="#"
                     className="text-[12px] text-[#FFDE82] font-semibold flex items-center   justify-center gap-[4px]"
@@ -157,7 +162,7 @@ export const ProductDVOXHero = () => {
           </div>
 
           {/* Right Content */}
-          <div className="lg:w-1/2 py-[48px] px-[16px] md:px-[32px] md:py-[80px]">
+          <div className="lg:w-[740px] py-[48px] px-[16px] md:px-[32px] md:py-[80px]">
             <h1 className="text-[40px] md:text-[56px] font-bold relative leading-[48px] md:leading-[68px]">
               DVOX unlocks{" "}
               <span className="relative inline-block">
@@ -167,7 +172,7 @@ export const ProductDVOXHero = () => {
               </span>{" "}
               potential by capitalising on market volatility
             </h1>
-            <p className="text-[16px] md:text-[20px] text-[#ffffff] mt-8 max-w-[600px] leading-[24px] md:leading-[32px]">
+            <p className="text-[16px] md:text-[20px] text-[#ffffff] mt-8 max-w-[740px] leading-[24px] md:leading-[32px]">
               Built for crypto bulls seeking high-growth potential beyond
               traditional buy and hold strategies. Instead of riding market
               swings, DVOX capitalises on volatility with a professionally
