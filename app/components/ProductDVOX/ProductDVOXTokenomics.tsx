@@ -1,7 +1,8 @@
 "use client";
-import { PieChart, Pie, Cell } from "recharts";
+// import { PieChart, Pie, Cell } from "recharts";
 import { Button } from "../ui/Button";
 import React from "react";
+import Image from "next/image";
 
 const tokenDistributionData = [
   { name: "Strategies funding reserve", value: 25, color: "#6366F1" },
@@ -23,28 +24,28 @@ export const ProductDVOXTokenomics = () => {
     "distribution"
   );
 
-  const useWidth = () => {
-    const [width, setWidth] = React.useState(320);
+  // const useWidth = () => {
+  //   const [width, setWidth] = React.useState(320);
 
-    React.useEffect(() => {
-      const handleResize = () => {
-        const chartContainer = document.getElementById("pie-chart-container");
+  //   React.useEffect(() => {
+  //     const handleResize = () => {
+  //       const chartContainer = document.getElementById("pie-chart-container");
 
-        if (chartContainer) {
-          const containerWidth = chartContainer.offsetWidth;
-          setWidth(Math.min(containerWidth, 400)); // Max width of 400px
-        }
-      };
+  //       if (chartContainer) {
+  //         const containerWidth = chartContainer.offsetWidth;
+  //         setWidth(Math.min(containerWidth, 400)); // Max width of 400px
+  //       }
+  //     };
 
-      handleResize(); // Initial size
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  //     handleResize(); // Initial size
+  //     window.addEventListener("resize", handleResize);
+  //     return () => window.removeEventListener("resize", handleResize);
+  //   }, []);
 
-    return width;
-  };
+  //   return width;
+  // };
 
-  const chartWidth = useWidth();
+  // const chartWidth = useWidth();
 
   const chartData =
     activeTab === "distribution" ? tokenDistributionData : useOfProceedsData;
@@ -87,62 +88,47 @@ export const ProductDVOXTokenomics = () => {
             </div>
           </div>
 
-          <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-center max-w-[1040px] mb-[48px]">
+          <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-center max-w-[1040px] mb-[40px]">
             {activeTab === "distribution"
-              ? "The DVOX token puts you in control of crypto without the chaos. Engineered for long-term potential and built to ride smarter, not wilder, DVOX gives you access to a professionally managed, auto-balanced ecosystem that thrives on volatility—not fear. It’s designed for sustainability, backed by blockchain and focused on delivering powerful outcomes with real transparency and liquidity."
+              ? "The DVOX token puts you in control of crypto without the chaos. Engineered for long-term potential and built to ride smarter, not wilder, DVOX gives you access to a professionally managed, auto-balanced ecosystem that thrives on volatility—not fear. It's designed for sustainability, backed by blockchain and focused on delivering powerful outcomes with real transparency and liquidity."
               : "From the Community to the Community."}
           </p>
 
           <div
-            className="relative w-full max-w-[400px] aspect-square mb-10 mx-auto"
+            className="relative w-full max-w-[800px] mb-10 mx-auto"
             id="pie-chart-container"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-[14px] text-white/60">
-                  {activeTab === "distribution"
-                    ? "Maximum supply"
-                    : "Token sale funds"}
-                </div>
-                <div className="text-[40px] font-bold">
-                  {activeTab === "distribution" ? "10B" : ""}
-                </div>
-              </div>
-            </div>
-            <div className="w-full h-full">
-              <PieChart width={chartWidth} height={chartWidth}>
-                <Pie
-                  data={chartData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={chartWidth * 0.35}
-                  outerRadius={chartWidth * 0.4}
-                  paddingAngle={2}
-                  dataKey="value"
-                  startAngle={90}
-                  endAngle={450}
-                >
-                  {chartData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-              </PieChart>
-              <div className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+20px)] hidden lg:flex flex-col gap-[16px]">
-                {chartData.map((item, index) => (
-                  <div key={index} className="flex items-center gap-[12px]">
-                    <div
-                      className="w-[8px] h-[8px] rounded-full"
-                      style={{ backgroundColor: item.color }}
-                    />
-                    <div className="flex flex-col">
-                      <span className="font-bold">{item.value}%</span>
-                      <span className="text-white/60 text-[12px] w-[176px]">
-                        {item.name}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="w-full flex items-center justify-center">
+              <Image
+                src={
+                  activeTab === "distribution"
+                    ? "/images/dvox/token-distribution.png"
+                    : "/images/dvox/use-of-proceeds.png"
+                }
+                alt={
+                  activeTab === "distribution"
+                    ? "Token Distribution"
+                    : "Use of Proceeds"
+                }
+                className="hidden md:block w-full object-contain"
+                width={1000}
+                height={1000}
+              />
+              <Image
+                src={
+                  activeTab === "distribution"
+                    ? "/images/dvox/token-distribution-mobile.png"
+                    : "/images/dvox/use-of-proceeds-mobile.png"
+                }
+                alt={
+                  activeTab === "distribution"
+                    ? "Token Distribution"
+                    : "Use of Proceeds"
+                }
+                className="block md:hidden w-[288px] object-cover"
+                width={1000}
+                height={1000}
+              />
             </div>
           </div>
 
