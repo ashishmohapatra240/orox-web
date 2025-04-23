@@ -10,7 +10,7 @@ export default function ProductsDVOX() {
       <ProductDVOXHero />
       <ProductDVOXFeatures
         title="DVOX lets you HODL with confidence"
-        description="DVOX delivers expertly curated strategies, built for resilience and growth, through a strategically managed portfolio of premium digital assets, all in one token."
+        description="DVOX gives you expertly curated strategies that’s engineered for resilience, built to chase long-term potential, and backed by a professionally managed digital asset portfolio. All powered by one smart utility token."
       />
       <ProductDVOXTokenomics />
       <ProductDVOXProducts />
