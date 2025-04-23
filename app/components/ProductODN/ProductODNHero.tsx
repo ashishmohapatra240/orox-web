@@ -24,14 +24,14 @@ export const ProductOdnHero = () => {
           {/* Left Content */}
           <div className="py-[48px] px-[16px] md:px-[60px] md:py-[80px] lg:px-[60px] xl:px-[80px] lg:py-[100px] xl:py-[147px] lg:w-1/2">
             <h1 className="text-[#19191B] text-[40px] md:text-[56px] lg:text-[60px] xl:text-[64px] font-bold leading-[48px] md:leading-[64px] lg:leading-[68px]">
-              Opus Diversified Nexus (ODN)
+              ODN offers stable yields with zero hassle
             </h1>
             <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-[#19191B] max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
-              OROX is revolutionising investing by making risk-adjusted
-              strategies accessible to everyone. Whether you&apos;re looking for
-              steady, low-risk investing with ODN subscription or high growth
-              crypto exposure with the DVOX token, OROX puts your money on
-              autopilot—so you can grow without the guesswork.
+              Want steady yields without the stress? Opus Diversified Nexus
+              (ODN) focuses on risk-adjusted, hands-off investing with a 90-day
+              cycle and market-neutral strategies designed for long-term
+              stability. No wild swings, no constant monitoring—just smart,
+              market-neutral strategies designed for optimal stability.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button

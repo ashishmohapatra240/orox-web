@@ -29,7 +29,6 @@ export const ProductODNCalculator = () => {
         <div className="mx-auto">
           {/* Input */}
           <div className="mb-[24px] md:mb-[48px]">
-            <hr className="w-full h-[1px] bg-[#E5E5E5] mb-[24px] md:mb-[48px]" />
             <div className="relative mx-auto max-w-[384px]">
               <input
                 type="text"
@@ -47,6 +46,8 @@ export const ProductODNCalculator = () => {
                 <span className="text-red-600">*</span>
               </span>
             </div>
+            <hr className="w-full h-[1px] bg-[#E5E5E5] my-[24px] md:my-[48px]" />
+
           </div>
 
           {/* Results */}
@@ -134,12 +135,14 @@ export const ProductODNCalculator = () => {
             >
               Get started with ODN
             </Button>
-            <Button
-              variant="link"
-              className="w-full px-6 py-3 text-[16px] leading-6 md:w-auto md:px-7 md:py-[15px] md:text-[18px] md:leading-7 lg:px-8 lg:py-4 lg:text-[20px] lg:leading-8 bg-transparent"
-            >
-              Get the app
-            </Button>
+            <div className="flex justify-center sm:justify-start">
+              <Button
+                variant="link"
+                className="px-6 py-3 text-[16px] leading-6 md:w-auto md:px-7 md:py-[15px] md:text-[18px] md:leading-7 lg:px-8 lg:py-4 lg:text-[20px] lg:leading-8 bg-transparent"
+              >
+                Get the app
+              </Button>
+            </div>
           </div>
         </div>
       </div>
