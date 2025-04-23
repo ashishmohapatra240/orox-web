@@ -10,7 +10,6 @@ export const ProductDVOXHero = () => {
           <div className="px-[16px] lg:w-[540px] flex items-center justify-center py-[48px] md:py-[80px]">
             <div className="max-w-[520px] w-full p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
               <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px] flex flex-col">
-
                 {/* Logo and Title */}
                 <div className="flex-shrink-0">
                   <Image
@@ -165,29 +164,32 @@ export const ProductDVOXHero = () => {
           {/* Right Content */}
           <div className="lg:w-[740px] py-[48px] px-[16px] md:px-[32px] md:py-[80px]">
             <h1 className="text-[40px] md:text-[56px] font-bold relative leading-[48px] md:leading-[68px]">
-              DVOX unlocks{" "}
+              DVOX turns{" "}
               <span className="relative inline-block">
                 {/* Yellow background decoration */}
                 <span className="absolute left-0 top-[35%] z-[1] h-[80%] w-full bg-[#FFD600]/40 rounded-[8px]"></span>
-                <span className="relative z-[2]">high-growth</span>
+                <span className="relative z-[2]">volatility</span>
               </span>{" "}
-              potential by capitalising on market volatility
+              into opportunity.
             </h1>
             <p className="text-[16px] md:text-[20px] text-[#ffffff] mt-8 max-w-[740px] leading-[24px] md:leading-[32px]">
-              Built for crypto bulls seeking high-growth potential beyond
-              traditional buy and hold strategies. Instead of riding market
-              swings, DVOX capitalises on volatility with a professionally
-              managed, auto-balanced portfolio designed to capture
-              &apos;alpha&apos; differently and stay resilient in any market.
+              Built for crypto bulls seeking more than just buy-and-hold, DVOX
+              provides access to professionally managed, auto-balanced
+              strategies built to capture opportunity in market volatility
+              without getting wrecked by the swings.
+              <br />
+              <br />
+              Stake your DVOX and plug into a data-driven, AI-powered approach
+              to performance—structured, adaptive and always on.
             </p>
 
             {/* Features List */}
             <ul className="mt-8">
               {[
-                "AI-powered strategies that are designed for high-growth.",
-                "Market-neutral, auto-balanced portfolios to minimise risk.",
-                "Blockchain-backed technology ensures safe, efficient investing.",
-                "A regulated, secure and accessible investment solution.",
+                "AI-powered strategies designed to pursue growth beyond market direction",
+                "Market-neutral, auto-balanced, designed to reduce exposure to extreme volatility",
+                "Blockchain-backed infrastructure for secure, transparent access",
+                "Utility token model within a regulated framework for broader accessibility",
               ].map((feature, index) => (
                 <li key={index} className="flex items-center gap-[16px]">
                   <Image
