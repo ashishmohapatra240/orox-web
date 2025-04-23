@@ -414,13 +414,13 @@ export const Navbar = () => {
           <Image
             src={
               isDarkTheme
-                ? "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo-white.png"
-                : "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/logo.png"
+                ? "/images/logo-white.png"
+                : "/images/logo.png"
             }
             alt="OROX"
-            width={116}
-            height={40}
-            className="h-8 sm:h-10 w-auto"
+            width={100}
+            height={100}
+            className="w-[132px] h-auto"
           />
         </Link>
 
@@ -706,7 +706,10 @@ export const Navbar = () => {
                   </Button>
                 </Link>
                 <Link href="/signup" className="w-full block">
-                  <Button variant={isDarkTheme ? "secondary" : "primary"} className={`w-full rounded-full whitespace-nowrap`}>
+                  <Button
+                    variant={isDarkTheme ? "secondary" : "primary"}
+                    className={`w-full rounded-full whitespace-nowrap`}
+                  >
                     Join for free
                   </Button>
                 </Link>
