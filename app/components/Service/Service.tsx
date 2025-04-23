@@ -120,8 +120,8 @@ const Service = ({ tag, description }: ServiceProps) => {
           </div>
 
           {/* Phone Image - Desktop */}
-          <div className="absolute right-[-60px] -top-40 z-10">
-            <div className="relative w-[900px] h-700px]">
+          <div className="absolute right-[-60px] -top-[120px] z-10">
+            <div className="relative w-[950px] h-700px]">
               <Image
                 src="/images/service/MobileCallToActionWeb.png"
                 alt="OROX App Interface"

@@ -1,8 +1,8 @@
-import { InvestingSection } from "@/app/components/About/InvestingSection";
 import { ProductODNCalculator } from "@/app/components/ProductODN/ProductODNCalculator";
 import { ProductODNFeatures } from "@/app/components/ProductODN/ProductODNFeatures";
 import ProductOdnHero from "@/app/components/ProductODN/ProductODNHero";
 import { ProductOroxProducts } from "@/app/components/ProductODN/ProductOroxProducts";
+import Service from "@/app/components/Service/Service";
 export default function ProductsOdn() {
   return (
     <div>
@@ -10,7 +10,8 @@ export default function ProductsOdn() {
       <ProductODNFeatures />
       <ProductODNCalculator />
       <ProductOroxProducts />
-      <InvestingSection />
+      <Service tag={"LOOKING FOR RELIABLE, RISK-ADJUSTED RETURNS?"} description={"ODN’s market-neutral strategy helps you grow with confidence. No wild swings, no stress."}/>
+
     </div>
   );
 }

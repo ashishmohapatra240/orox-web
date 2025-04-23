@@ -480,7 +480,7 @@ export const Navbar = () => {
             alt="OROX"
             width={100}
             height={100}
-            className="w-[132px] h-auto"
+            className="w-[79px] md:w-[132px] h-auto"
           />
         </Link>
 
