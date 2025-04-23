@@ -774,6 +774,7 @@ export const Navbar = () => {
                     variant={isDarkTheme ? "secondary" : "primary"}
                     className={`w-full rounded-full whitespace-nowrap`}
                   >
+
                     Join for free
                   </Button>
                 </Link>

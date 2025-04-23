@@ -10,6 +10,7 @@ export const ProductDVOXHero = () => {
           <div className="px-[16px] lg:w-[540px] flex items-center justify-center py-[48px] md:py-[80px]">
             <div className="max-w-[520px] w-full p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
               <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px] flex flex-col">
+
                 {/* Logo and Title */}
                 <div className="flex-shrink-0">
                   <Image

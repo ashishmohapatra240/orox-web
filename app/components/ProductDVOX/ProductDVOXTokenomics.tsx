@@ -21,7 +21,6 @@ const useOfProceedsData = [
 export const ProductDVOXTokenomics = () => {
   const [activeTab, setActiveTab] = React.useState<"distribution" | "proceeds">(
     "distribution"
-  );
 
   const useWidth = () => {
     const [width, setWidth] = React.useState(320);
@@ -29,6 +28,7 @@ export const ProductDVOXTokenomics = () => {
     React.useEffect(() => {
       const handleResize = () => {
         const chartContainer = document.getElementById("pie-chart-container");
+
         if (chartContainer) {
           const containerWidth = chartContainer.offsetWidth;
           setWidth(Math.min(containerWidth, 400)); // Max width of 400px
@@ -38,6 +38,7 @@ export const ProductDVOXTokenomics = () => {
       handleResize(); // Initial size
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
+
     }, []);
 
     return width;
@@ -81,6 +82,7 @@ export const ProductDVOXTokenomics = () => {
                     : "text-white/60"
                 } font-semibold whitespace-nowrap leading-[20px] md:leading-[28px]`}
               >
+
                 Use of proceeds
               </button>
             </div>
@@ -96,6 +98,7 @@ export const ProductDVOXTokenomics = () => {
             className="relative w-full max-w-[400px] aspect-square mb-10 mx-auto"
             id="pie-chart-container"
           >
+
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-[14px] text-white/60">
@@ -147,6 +150,7 @@ export const ProductDVOXTokenomics = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[16px] w-full max-w-[800px] mb-[32px] px-4 lg:hidden">
             {chartData.map((item, index) => (
+
               <div key={index} className="flex items-start gap-[8px]">
                 <div
                   className="w-[16px] h-[8px] rounded-[2px] mt-[6px]"
