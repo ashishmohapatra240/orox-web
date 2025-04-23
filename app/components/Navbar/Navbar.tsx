@@ -8,19 +8,31 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 // Product dropdown content component
-const ProductsDropdown = () => (
+const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
   <div className="flex flex-col lg:flex-row gap-6">
     <div className="space-y-2 lg:w-1/3">
       <DropdownItem index={0}>
-        <h3 className="font-semibold text-lg text-[#19191B] mb-6 pl-1 md:pl-4">
+        <h3
+          className={`font-semibold text-lg ${
+            isDarkTheme ? "text-white" : "text-[#19191B]"
+          } mb-6 pl-1 md:pl-4`}
+        >
           Our product suite
         </h3>
       </DropdownItem>
       <div className="space-y-4">
         <DropdownItem index={1}>
           <Link href="/products-orox-app">
-            <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
-              <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
+            >
+              <h4
+                className={`font-medium ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
                 OROX App
               </h4>
               <p className="text-sm text-[#999999] font-regular text-[14px]">
@@ -31,8 +43,16 @@ const ProductsDropdown = () => (
         </DropdownItem>
         <DropdownItem index={2}>
           <Link href="/products-odn">
-            <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
-              <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
+            >
+              <h4
+                className={`font-medium ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
                 Opus Diversified Nexus
               </h4>
               <p className="text-sm text-[#999999] font-regular text-[14px]">
@@ -42,8 +62,16 @@ const ProductsDropdown = () => (
           </Link>
         </DropdownItem>
         <DropdownItem index={3}>
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
-            <h4 className="font-medium text-[#19191B] text-[16px] font-regular">
+          <div
+            className={`${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+            } rounded-lg p-1 md:p-4`}
+          >
+            <h4
+              className={`font-medium ${
+                isDarkTheme ? "text-white" : "text-[#19191B]"
+              } text-[16px] font-regular`}
+            >
               DVOX — Digital Coin
             </h4>
             <p className="text-sm text-[#999999] font-regular text-[14px]">
@@ -56,39 +84,67 @@ const ProductsDropdown = () => (
 
     <div className="space-y-2 w-full lg:w-1/3">
       <DropdownItem index={4}>
-        <h3 className="font-semibold text-lg text-[#19191B] mb-4 pl-1 md:pl-4">
+        <h3
+          className={`font-semibold text-lg ${
+            isDarkTheme ? "text-white" : "text-[#19191B]"
+          } mb-4 pl-1 md:pl-4`}
+        >
           Latest from our Blog
         </h3>
       </DropdownItem>
       <div className="space-y-0">
         <DropdownItem index={5}>
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
+          <div
+            className={`${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+            } rounded-lg p-1 md:p-4`}
+          >
             <span className="text-xs font-semibold text-[#999999]">
               UPDATES
             </span>
-            <h4 className="font-medium mt-1 text-[#19191B] text-[16px] font-regular">
+            <h4
+              className={`font-medium mt-1 ${
+                isDarkTheme ? "text-white" : "text-[#19191B]"
+              } text-[16px] font-regular`}
+            >
               Trump Earned Millions From Meme Coin, 810000 Others Lost.
             </h4>
           </div>
         </DropdownItem>
 
         <DropdownItem index={6}>
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
+          <div
+            className={`${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+            } rounded-lg p-1 md:p-4`}
+          >
             <span className="text-xs font-semibold text-[#999999]">
               ADVICE & TIPS
             </span>
-            <h4 className="font-medium mt-1 text-[#19191B] text-[16px] font-regular">
+            <h4
+              className={`font-medium mt-1 ${
+                isDarkTheme ? "text-white" : "text-[#19191B]"
+              } text-[16px] font-regular`}
+            >
               Never Invest More Than You Can Afford to Lose.
             </h4>
           </div>
         </DropdownItem>
 
         <DropdownItem index={7}>
-          <div className="hover:bg-[#21275B]/10 rounded-lg p-1 md:p-4">
+          <div
+            className={`${
+              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+            } rounded-lg p-1 md:p-4`}
+          >
             <span className="text-xs font-semibold text-[#999999]">
               INSIGHTS
             </span>
-            <h4 className="font-medium mt-1 text-[#19191B] text-[16px] font-regular">
+            <h4
+              className={`font-medium mt-1 ${
+                isDarkTheme ? "text-white" : "text-[#19191B]"
+              } text-[16px] font-regular`}
+            >
               The best crypto research tools for traders and investors.
             </h4>
           </div>
@@ -97,7 +153,11 @@ const ProductsDropdown = () => (
     </div>
 
     {/* Divider - only visible on desktop */}
-    <div className="hidden lg:block w-0.5 self-stretch bg-neutral-200 mx-4" />
+    <div
+      className={`hidden lg:block w-0.5 self-stretch ${
+        isDarkTheme ? "bg-[#3C3C3C]" : "bg-neutral-200"
+      } mx-4`}
+    />
 
     {/* Image section - only visible on larger screens */}
     <DropdownItem index={8}>
@@ -412,11 +472,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src={
-              isDarkTheme
-                ? "/images/logo-white.png"
-                : "/images/logo.png"
-            }
+            src={isDarkTheme ? "/images/logo-white.png" : "/images/logo.png"}
             alt="OROX"
             width={100}
             height={100}
@@ -488,6 +544,7 @@ export const Navbar = () => {
           <Link href="/products">
             <Dropdown
               label="Products"
+              isDarkTheme={isDarkTheme}
               trigger={
                 <div
                   className={`flex items-center space-x-1 ${
@@ -511,7 +568,7 @@ export const Navbar = () => {
                 </div>
               }
             >
-              <ProductsDropdown />
+              <ProductsDropdown isDarkTheme={isDarkTheme} />
             </Dropdown>
           </Link>
 
@@ -784,8 +841,14 @@ export const Navbar = () => {
 
         {isQROpen && (
           <>
-            {/* Mobile QR dropdown - positioned below the navbar */}
-            <div className="md:hidden fixed top-[70px] right-0 bg-white z-[9999] rounded-bl-xl shadow-lg w-[280px] p-6">
+            {/* Mobile QR dropdown - updated for dark theme */}
+            <div
+              className={`md:hidden fixed top-[70px] right-0 ${
+                isDarkTheme ? "bg-[#000000]" : "bg-white"
+              } z-[9999] rounded-bl-xl shadow-lg w-[280px] p-6 ${
+                isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+              } border-l border-b`}
+            >
               <div className="flex flex-col">
                 {/* QR Code */}
                 <div className="block mb-8">
@@ -794,14 +857,18 @@ export const Navbar = () => {
                     alt="OROX App QR Code"
                     width={300}
                     height={300}
-                    className="w-full h-auto"
+                    className={`w-full h-auto ${
+                      isDarkTheme ? "bg-white/10 p-4" : ""
+                    } rounded-xl`}
                   />
                 </div>
 
                 {/* Close button */}
                 <button
                   onClick={() => setIsQROpen(false)}
-                  className="flex w-full items-center justify-end space-x-1 text-sm text-[#2F5DFD]"
+                  className={`flex w-full items-center justify-end space-x-1 text-sm ${
+                    isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                  }`}
                 >
                   <svg
                     className="h-4 w-4"
@@ -821,15 +888,23 @@ export const Navbar = () => {
               </div>
             </div>
 
-            {/* Desktop QR dropdown - unchanged */}
+            {/* Desktop QR dropdown - updated positioning and dark theme support */}
             <div
               ref={qrModalRef}
-              className="hidden md:block absolute right-[120px] top-[60px] bg-white
-                        mt-5 w-64 md:w-80 rounded-b-xl border border-[#F4F4F4] p-8
-                        shadow-xl z-50"
+              className={`hidden md:block absolute right-0 ${
+                isDarkTheme ? "top-[74px]" : "top-[64px]"
+              } ${
+                isDarkTheme ? "bg-[#000000]" : "bg-white"
+              } mt-2 w-64 md:w-80 rounded-xl border ${
+                isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
+              } p-8 shadow-xl z-50`}
             >
               <div className="w-full">
-                <div className="bg-white h-full">
+                <div
+                  className={`${
+                    isDarkTheme ? "bg-[#000000]" : "bg-white"
+                  } h-full`}
+                >
                   <div className="flex flex-col">
                     {/* QR Code */}
                     <div className="block mb-8">
@@ -838,14 +913,18 @@ export const Navbar = () => {
                         alt="OROX App QR Code"
                         width={300}
                         height={300}
-                        className="w-full h-auto"
+                        className={`w-full h-auto ${
+                          isDarkTheme ? "bg-white/10 p-4" : ""
+                        } rounded-xl`}
                       />
                     </div>
 
                     {/* Close button */}
                     <button
                       onClick={() => setIsQROpen(false)}
-                      className="flex w-full items-center justify-end space-x-1 text-sm text-[#2F5DFD]"
+                      className={`flex w-full items-center justify-end space-x-1 text-sm ${
+                        isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                      }`}
                     >
                       <svg
                         className="h-4 w-4"

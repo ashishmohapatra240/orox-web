@@ -6,9 +6,15 @@ interface DropdownProps {
   trigger: ReactNode;
   children: ReactNode;
   label: string;
+  isDarkTheme?: boolean;
 }
 
-export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
+export const Dropdown = ({
+  trigger,
+  children,
+  label,
+  isDarkTheme = false,
+}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -73,7 +79,7 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
     >
       <button
         onClick={handleClick}
-        className="flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-[#E9E9EF] transition-colors"
+        className="flex items-center"
         aria-expanded={isOpen}
         aria-label={`${label} menu`}
       >
@@ -84,14 +90,18 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
       <AnimatePresence>
         {isOpen && window.innerWidth < 768 && (
           <motion.div
-            className="fixed inset-0 z-50 bg-white/80 backdrop-blur-sm md:hidden"
+            className={`fixed inset-0 z-50 ${
+              isDarkTheme ? "bg-black/80" : "bg-white/80"
+            } backdrop-blur-sm md:hidden`}
             onClick={() => setIsOpen(false)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="absolute inset-x-0 p-4 bg-white shadow-lg overflow-y-auto]"
+              className={`absolute inset-x-0 p-4 ${
+                isDarkTheme ? "bg-black" : "bg-white"
+              } shadow-lg overflow-y-auto`}
               onClick={(e) => e.stopPropagation()}
               variants={dropdownVariants}
               initial="hidden"
@@ -100,12 +110,18 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
             >
               <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-lg font-semibold text-[#293483]">
+                  <h2
+                    className={`text-lg font-semibold ${
+                      isDarkTheme ? "text-white" : "text-[#293483]"
+                    }`}
+                  >
                     {label}
                   </h2>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-gray-500"
+                    className={`p-2 ${
+                      isDarkTheme ? "text-white" : "text-gray-500"
+                    }`}
                   >
                     <svg
                       className="h-6 w-6"
@@ -136,16 +152,23 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
         )}
       </AnimatePresence>
 
+      {/* Desktop dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed md:top-[12%] lg:top-[120px] left-0 right-0 z-50 hidden md:block"
+            className={`fixed ${isDarkTheme ? 'top-[115px]' : 'top-[105px]'} left-0 right-0 z-50 hidden md:block`}
             variants={dropdownVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
-            <div className="w-full border-t border-[#F4F4F4] bg-white shadow-lg">
+            <div
+              className={`w-full border-t ${
+                isDarkTheme
+                  ? "border-[#3C3C3C] bg-black"
+                  : "border-[#F4F4F4] bg-white"
+              } shadow-lg`}
+            >
               <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 relative">
                 <motion.div
                   className="staggered-container"
@@ -154,11 +177,17 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
                   custom={0}
                 >
                   {children}
-                  <hr className="my-10 h-[1px] bg-[#E5E5E5]" />
+                  <hr
+                    className={`my-10 h-[1px] ${
+                      isDarkTheme ? "bg-[#3C3C3C]" : "bg-[#E5E5E5]"
+                    }`}
+                  />
                   <div className="absolute right-8 bottom-0 flex flex-col items-center">
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center space-x-2 mb-6 text-[#2F5DFD] hover:opacity-80 transition-opacity"
+                      className={`flex items-center space-x-2 mb-6 ${
+                        isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                      } hover:opacity-80 transition-opacity`}
                     >
                       <svg
                         className="h-4 w-4"
@@ -173,7 +202,11 @@ export const Dropdown = ({ trigger, children, label }: DropdownProps) => {
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>
-                      <span className="text-[#2F5DFD] font-semibold text-[16px]">
+                      <span
+                        className={`font-semibold text-[16px] ${
+                          isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                        }`}
+                      >
                         Close
                       </span>
                     </button>
