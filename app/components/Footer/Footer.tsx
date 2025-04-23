@@ -158,21 +158,43 @@ export const Footer = () => {
             {/* Contact and Location */}
             <div className="lg:hidden mb-12">
               <div className="mb-8">
-                <h3 className="text-[20px] font-bold mb-[24px]">Contact us</h3>
-                <div className="space-y-2 text-black/50 text-[14px]">
+                <h3
+                  className={`text-[20px] font-bold mb-[24px] ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  }`}
+                >
+                  Contact us
+                </h3>
+                <div
+                  className={`space-y-2 ${
+                    isDarkTheme ? "text-[#19191B]/50" : "text-black/50"
+                  } text-[14px]`}
+                >
                   <p>+61 295 336 214</p>
                   <p>info@oroxglobal.com</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-[20px] font-bold mb-[24px]">Location</h3>
-                <div className="text-[#19191B]/50 text-[14px]">
+                <h3
+                  className={`text-[20px] font-bold mb-[24px] ${
+                    isDarkTheme ? "text-white" : "text-black"
+                  }`}
+                >
+                  Location
+                </h3>
+                <div
+                  className={`text-[#19191B]/50 text-[14px] ${
+                    isDarkTheme ? "text-gray-400" : "text-black/50"
+                  }`}
+                >
                   <a
                     href="https://maps.app.goo.gl/k7RVNir6k7PXLXEr6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                    className={`hover:bg-[${
+                      isDarkTheme ? "#19191B" : "#21275B"
+                    }]/40 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block`}
                   >
                     2 Locomotive Street,
                     <br />
@@ -182,7 +204,9 @@ export const Footer = () => {
                     href="https://maps.app.goo.gl/9rPeYPSnm7Vb5bPq5"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:bg-[#21275B]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block"
+                    className={`hover:bg-[${
+                      isDarkTheme ? "#21275B" : "#21275B"
+                    }]/10 p-[8px] rounded-[8px] transition-all duration-300 ease-in-out block`}
                   >
                     201 Kent Street,
                     <br />
@@ -301,7 +325,7 @@ export const Footer = () => {
                 </h3>
                 <div
                   className={`text-${
-                    isDarkTheme ? "white" : "black"
+                    isDarkTheme ? "white" : "[#19191B]/50"
                   } text-[14px] space-y-[8px]`}
                 >
                   <p>+61 295 336 214</p>
@@ -314,7 +338,7 @@ export const Footer = () => {
                 </h3>
                 <div
                   className={`text-${
-                    isDarkTheme ? "white" : "black"
+                    isDarkTheme ? "white" : "[#19191B]/50"
                   } text-[14px]`}
                 >
                   <a
