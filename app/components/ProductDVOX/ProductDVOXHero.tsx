@@ -1,7 +1,41 @@
 "use client";
 import { Button } from "../ui/Button";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const calculateTimeLeft = () => {
+  const targetDate = new Date('2025-06-01T00:00:00');
+  const now = new Date();
+  const difference = targetDate.getTime() - now.getTime();
+
+  if (difference <= 0) {
+    return { days: '00', hours: '00', minutes: '00', seconds: '00' };
+  }
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  return {
+    days: days.toString().padStart(2, '0'),
+    hours: hours.toString().padStart(2, '0'),
+    minutes: minutes.toString().padStart(2, '0'),
+    seconds: seconds.toString().padStart(2, '0')
+  };
+};
+
 export const ProductDVOXHero = () => {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative w-full bg-[#000000] text-white">
       <div className="h-full max-w-7xl mx-auto">
@@ -30,19 +64,19 @@ export const ProductDVOXHero = () => {
                 <div className="my-[24px] px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
                   <div className="inline-flex justify-start items-center gap-8">
                     {[
-                      { label: "DAYS", value: "30" },
-                      { label: "HOURS", value: "22" },
-                      { label: "MINS", value: "16" },
-                      { label: "SECS", value: "59" },
+                      { label: "DAYS", value: timeLeft.days },
+                      { label: "HOURS", value: timeLeft.hours },
+                      { label: "MINS", value: timeLeft.minutes },
+                      { label: "SECS", value: timeLeft.seconds },
                     ].map((item) => (
                       <div
                         key={item.label}
-                        className="inline-flex flex-col justify-start items-center"
+                        className="inline-flex flex-col justify-start items-center w-[60px]"
                       >
                         <div className="text-center text-amber-200 text-sm font-bold font-['Inter'] leading-tight">
                           {item.label}
                         </div>
-                        <div className="text-center text-amber-200 text-4xl font-bold font-['Inter'] leading-[48px]">
+                        <div className="text-center text-amber-200 text-4xl font-bold font-['Inter'] leading-[48px] tabular-nums w-[60px] h-[48px]">
                           {item.value}
                         </div>
                       </div>
