@@ -9,7 +9,7 @@ export default function WebpagesLayout({
   return (
     <>
       <Navbar />
-      <main className="pt-[70px]">{children}</main>
+      <main className="pt-[88px]">{children}</main>
       <Footer />
     </>
   );
