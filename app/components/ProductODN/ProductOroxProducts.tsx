@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
+import { YieldChart } from "./YieldChart";
 
 const products: {
   tag: string;
@@ -29,7 +30,7 @@ const products: {
         the DVOX token—all in one app.
       </>
     ),
-    image: "/images/products/yield-chart.png",
+    image: <YieldChart />,
     imageAlt: "ODN Investment Chart",
     link: "/products-odn",
   },
@@ -46,8 +47,9 @@ export const ProductOroxProducts = () => {
               key={index}
               className="grid items-center gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2"
             >
+              {/* Content section */}
               <div
-                className={`${
+                className={`flex flex-col justify-center ${
                   index % 2 === 0 ? "lg:order-2 order-1" : "lg:order-1 order-2"
                 }`}
               >
@@ -85,12 +87,13 @@ export const ProductOroxProducts = () => {
                 </div>
               </div>
 
+              {/* Chart section */}
               <div
-                className={`relative w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] flex items-center ${
+                className={`flex items-center justify-center w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] ${
                   index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-                } lg:ml-auto lg:mr-0`}
+                } lg:mx-auto`}
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[32px] item">
+                <div className="relative aspect-[4/3] w-full flex items-center justify-center overflow-hidden rounded-[32px]">
                   {typeof product.image === "string" ? (
                     <Image
                       src={product.image}
