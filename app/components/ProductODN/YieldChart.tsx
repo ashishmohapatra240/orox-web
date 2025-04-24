@@ -58,7 +58,7 @@ export const YieldChart = () => {
   if (isLoading) {
     return (
       <div
-        className="w-full h-auto bg-white p-6 rounded-[32px] border border-[#E5E5E5] shadow-[0px_2px_8px_0px_#00000026] flex items-center justify-center"
+        className="w-full h-auto bg-white p-[16px] md:p-[32px] rounded-[32px] border border-[#E5E5E5] shadow-[0px_2px_8px_0px_#00000026] flex items-center justify-center"
         style={{ minHeight: "360px" }}
       >
         <div className="w-8 h-8 border-4 border-[#78CAB9] border-t-transparent rounded-full animate-spin"></div>
@@ -69,11 +69,11 @@ export const YieldChart = () => {
   return (
     <div className="w-full h-auto bg-white p-6 rounded-[32px] border border-[#E5E5E5] shadow-[0px_2px_8px_0px_#00000026]">
       <div>
-        <h2 className="text-[28px] font-bold text-[#19191B] leading-[40px]">
+        <h2 className="text-[16px] md:text-[28px] font-bold text-[#19191B] leading-[20px] md:leading-[40px]">
           Current yield: {currentYield?.toFixed(1)}% p.a.
         </h2>
         {data.length > 0 && (
-          <div className="text-[16px] text-[#19191B] mt-1 leading-[28px]">
+          <div className="text-[12px] md:text-[16px] text-[#19191B] mt-1 leading-[16px] md:leading-[28px]">
             {formatDate(data[0].startDate._seconds)} -{" "}
             {formatDate(data[data.length - 1].startDate._seconds)}
           </div>
@@ -100,7 +100,7 @@ export const YieldChart = () => {
               orientation="right"
               tick={{
                 fill: "#19191B",
-                fontSize: 12,
+                fontSize: window.innerWidth < 768 ? 8 : 12,
                 dx: 10,
               }}
               tickFormatter={(value) => `${value}%`}
