@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/Button";
 
 type Feature = {
@@ -34,11 +35,13 @@ export const Features = ({
   title,
   description,
   cta,
+  path,
   features = defaultFeatures,
 }: {
   title: string;
   description: string;
   cta?: string;
+  path?: string;
   features?: Feature[];
 }) => {
   return (
@@ -81,11 +84,13 @@ export const Features = ({
           </div>
 
           {/* CTA Button */}
-          {cta && (
+          {cta && path && (
             <div className="text-center mt-[40px]">
-              <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px]">
-                {cta}
-              </Button>
+              <Link href={path}>
+                <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px]">
+                  {cta}
+                </Button>
+              </Link>
             </div>
           )}
         </div>

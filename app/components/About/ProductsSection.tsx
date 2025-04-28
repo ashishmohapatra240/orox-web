@@ -35,19 +35,19 @@ const DVOXChart = () => (
 const products = [
   {
     title: "OROX app",
-    image:
-      "/images/products/orox-app.png",
+    image: "/images/products/orox-app.png",
     bgColor: "bg-[#293483]",
     description:
       "OROX is your AI-powered investment platform, offering secure, automated investing. Get steady growth with ODN or crypto exposure with DVOX—all in one place.",
+    path: "/products-orox-app",
   },
   {
     title: "Opus Diversified Nexus",
-    image:
-      "/images/products/img_odn_invest_banner.png",
+    image: "/images/products/img_odn_invest_banner.png",
     bgColor: "bg-[#4A90E2]",
     description:
       "ODN offers risk-adjusted, hands-off investing with a 90-day cycle and market-neutral strategies for long-term stability—no wild swings, no constant monitoring.",
+    path: "products-odn",
   },
   {
     title: "DVOX utility token",
@@ -55,6 +55,7 @@ const products = [
     bgColor: "bg-[#FFD700]",
     description:
       "DVOX offers high-growth potential with less volatility. It gives you auto-balanced exposure to premium digital assets—no stress, just smarter investing.",
+    path: "products-dvox",
   },
 ];
 
@@ -93,7 +94,7 @@ export const ProductsSection = () => {
                 </p>
 
                 <Link
-                  href="#"
+                  href={product.path}
                   className="inline-flex items-center text-[#2F5DFD] font-bold hover:underline mt-[18px]"
                 >
                   Learn more
@@ -113,10 +114,7 @@ export const ProductsSection = () => {
         {/* Mobile Layout - Updated to show cards in a column */}
         <div className="md:hidden flex flex-col space-y-8">
           {products.map((product) => (
-            <div
-              key={product.title}
-              className="w-full"
-            >
+            <div key={product.title} className="w-full">
               <div
                 className={`relative aspect-[4/3] w-full overflow-hidden rounded-[32px] ${product.bgColor}`}
               >

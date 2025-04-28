@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
+import Link from "next/link";
 
 export const ReadyToInvest = () => {
   return (
@@ -8,13 +9,14 @@ export const ReadyToInvest = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 text-white">
             <h2 className="text-3xl font-bold md:text-4xl">
-              Ready to invest smarter? OROX uses AI-powered quantitative, risk-adjusted strategies designed for growth.
+              Ready to invest smarter? OROX uses AI-powered quantitative,
+              risk-adjusted strategies designed for growth.
             </h2>
             <Button className="bg-white text-[#293483] hover:bg-white/90">
-              Get started with OROX
+              <Link href="/signup"> Get started with OROX</Link>
             </Button>
           </div>
-          
+
           <div className="relative h-[300px] md:h-[400px]">
             <Image
               src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/orox-app-screens.png"
@@ -27,4 +29,4 @@ export const ReadyToInvest = () => {
       </div>
     </section>
   );
-}; 
+};

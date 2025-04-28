@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/Button";
 import Image from "next/image";
 
@@ -31,7 +32,7 @@ export const InvestingSection = () => {
                 variant="white"
                 className="w-full xl:w-auto text-[16px] md:text-[20px] px-4 md:px-8 py-3 md:py-4 border border-[#78CAB9]"
               >
-                Get started with OROX
+                <Link href="/products-orox-app">Get started with OROX</Link>
               </Button>
             </div>
           </div>

@@ -21,6 +21,7 @@ export default function LandingPage() {
           "Skip the FOMO and stress—AI-powered quantitative investing with expert strategies from top minds in the industry."
         }
         cta="Create an account"
+        path="/signup"
       />
       <Steps />
       <HomeProducts />

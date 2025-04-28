@@ -480,8 +480,8 @@ export const Navbar = () => {
           <Image
             src={isDarkTheme ? "/images/logo-white.png" : "/images/logo.png"}
             alt="OROX"
-            width={100}
-            height={100}
+            width={400}
+            height={400}
             className="w-[79px] md:w-[132px] h-auto"
           />
         </Link>
@@ -580,14 +580,14 @@ export const Navbar = () => {
             </Dropdown>
           </Link>
 
-          <Link
+          {/* <Link
             href="/"
             className={`px-3 py-2 rounded-md ${
               isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
             } transition-colors`}
           >
             Blog
-          </Link>
+          </Link> */}
 
           <Link
             href="/about"
@@ -712,7 +712,7 @@ export const Navbar = () => {
                       isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
                     }`}
                   />
-
+                  {/* 
                   <Link
                     href="/"
                     className={`block text-[16px] ${
@@ -727,7 +727,7 @@ export const Navbar = () => {
                     className={`border-t ${
                       isDarkTheme ? "border-[#3C3C3C]" : "border-[#F4F4F4]"
                     }`}
-                  />
+                  /> */}
 
                   <Link
                     href="/about"

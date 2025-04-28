@@ -68,6 +68,7 @@ const products: {
   image: string | JSX.Element;
   imageAlt: string;
   bgColor: string;
+  path?: string;
 }[] = [
   {
     tag: "ODN: SET AND LET GROW",
@@ -94,6 +95,7 @@ const products: {
     image: "/images/products/img_odn_invest_banner.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
+    path: "/products-odn",
   },
   {
     tag: "DVOX: SUPERCHARGE YOUR INVESTMENT",
@@ -111,6 +113,7 @@ const products: {
     image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",
+    path: "/products-dvox",
   },
 ];
 
@@ -140,7 +143,7 @@ export const HomeProducts = () => {
               </p>
               <div>
                 <Link
-                  href="#"
+                  href={product.path || "#"}
                   className="inline-flex h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
                 >
                   <svg

@@ -2,7 +2,7 @@
 import { Button } from "../ui/Button";
 import { PausePlayButton } from "../ui/PausePlayButton";
 import { useState, useRef } from "react";
-
+import Link from "next/link";
 export const ProductOroxHero = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -39,13 +39,13 @@ export const ProductOroxHero = () => {
                 variant="primary"
                 className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
               >
-                Join for free
+                <Link href="/signup">Join for free</Link>
               </Button>
               <Button
                 variant="secondary"
                 className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
               >
-                Download the app
+                <Link href="https://onelink.to/65gpe9">Download the app</Link>
               </Button>
             </div>
           </div>
