@@ -113,28 +113,28 @@ export const Footer = () => {
             <div className="lg:hidden mb-[48px]">
               <div className="flex flex-col space-y-[16px]">
                 <Link
-                  href="/products"
+                  href="/products-orox-app"
                   className={`text-[18px] font-semibold ${
                     isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                   }`}
                 >
-                  Products
+                  OROX App
                 </Link>
                 <Link
-                  href="/our-approach"
+                  href="/products-odn"
                   className={`text-[18px] font-semibold ${
                     isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                   }`}
                 >
-                  Our approach
+                  ODN
                 </Link>
                 <Link
-                  href="/blog"
+                  href="/products-dvox"
                   className={`text-[18px] font-semibold ${
                     isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                   }`}
                 >
-                  Blog
+                  DVOX Token
                 </Link>
                 <Link
                   href="/about"
@@ -145,12 +145,12 @@ export const Footer = () => {
                   About
                 </Link>
                 <Link
-                  href="/careers"
+                  href="/contact"
                   className={`text-[18px] font-semibold ${
                     isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                   }`}
                 >
-                  Careers
+                  Contact
                 </Link>
               </div>
             </div>
@@ -272,28 +272,28 @@ export const Footer = () => {
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex gap-[41px] mb-8">
               <Link
-                href="/products"
+                href="/products-orox-app"
                 className={`text-[16px] font-semibold ${
                   isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                 }`}
               >
-                Products
+                Orox App
               </Link>
               <Link
-                href="/"
+                href="/products-odn"
                 className={`text-[16px] font-semibold ${
                   isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                 }`}
               >
-                Our approach
+                ODN
               </Link>
               <Link
-                href="/"
+                href="/products-dvox"
                 className={`text-[16px] font-semibold ${
                   isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                 }`}
               >
-                Blog
+                DVOX Token
               </Link>
               <Link
                 href="/about"
@@ -304,12 +304,12 @@ export const Footer = () => {
                 About
               </Link>
               <Link
-                href="/"
+                href="/contact"
                 className={`text-[16px] font-semibold ${
                   isDarkTheme ? "text-[#9499C1]" : "text-[#293483]"
                 }`}
               >
-                Careers
+                Contact
               </Link>
             </div>
 
