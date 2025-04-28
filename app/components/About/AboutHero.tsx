@@ -36,10 +36,10 @@ const AboutHero = () => {
               autopilot—so you can grow without the guesswork.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
-              <Button variant="white" className="whitespace-nowrap">
+              <Button variant="white" className="whitespace-nowrap px-[32px]">
                 <Link href="/signup">Join for free</Link>
               </Button>
-              <Button variant="outline" className="whitespace-nowrap">
+              <Button variant="outline" className="whitespace-nowrap px-[32px]">
                 <Link href="/contact">Get in touch with us</Link>
               </Button>
             </div>

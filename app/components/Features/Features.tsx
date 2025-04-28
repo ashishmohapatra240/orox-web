@@ -50,7 +50,7 @@ export const Features = ({
         <div>
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
-            <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
+            <h2 className="mx-auto text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] max-w-[1000px]">
               {title}
             </h2>
             <p className="text-[16px] text-[#19191B] md:text-[20px] leading-[24px] md:leading-[32px]">
@@ -87,7 +87,7 @@ export const Features = ({
           {cta && path && (
             <div className="text-center mt-[40px]">
               <Link href={path}>
-                <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px]">
+                <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px] px-[32px]">
                   {cta}
                 </Button>
               </Link>

@@ -36,7 +36,7 @@ export const ProductOdnHero = () => {
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button
                 variant="primary"
-                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
+                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px] px-[32px]"
               >
                 Get Started
               </Button>

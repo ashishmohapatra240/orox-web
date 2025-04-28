@@ -71,7 +71,7 @@ export const UpcomingProducts = () => {
                     className="object-cover rounded-t-[24px]"
                     quality={100}
                   />
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFDE82] rounded-[4px]">
+                  <div className="absolute top-4 right-4 px-[4px] bg-[#FFDE82] rounded-[4px]">
                     <span className="text-[12px] font-semibold text-[#1F2461]">
                       COMING SOON
                     </span>
