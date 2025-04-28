@@ -134,13 +134,13 @@ export const TestimonialSection = () => {
                 );
                 resetAnimation();
               }}
-              className="inline-flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-white text-[#293483] transition-transform hover:scale-110"
+              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#293483] transition-transform hover:scale-110"
             >
               <svg
-                width="16"
-                height="16"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
-                className="w-4 h-4 md:w-6 md:h-6 rotate-180"
+                className="w-[24px] h-[24px] rotate-180"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -182,13 +182,13 @@ export const TestimonialSection = () => {
                 setCurrentSlide((prev) => (prev + 1) % testimonials.length);
                 resetAnimation();
               }}
-              className="inline-flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
             >
               <svg
-                width="16"
-                height="16"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
-                className="w-4 h-4 md:w-6 md:h-6"
+                className="w-[24px] h-[24px]"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >

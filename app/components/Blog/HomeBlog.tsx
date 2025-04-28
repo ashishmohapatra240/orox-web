@@ -99,7 +99,7 @@ export const HomeBlog = () => {
                 }px, 0, 0)`,
                 transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                 WebkitBackfaceVisibility: "hidden",
-                backfaceVisibility: "hidden"
+                backfaceVisibility: "hidden",
               }}
             >
               {" "}
@@ -134,7 +134,7 @@ export const HomeBlog = () => {
             <div className="mt-[40px] md:mt-[80px] flex justify-center space-x-4">
               <button
                 onClick={prevSlide}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-[#19191B] transition-colors hover:bg-gray-200"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-gray-100 text-[#293483] hover:bg-gray-200 transition-transform hover:scale-110"
               >
                 <svg
                   width="24"
@@ -142,7 +142,7 @@ export const HomeBlog = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-180"
+                  className="w-[24px] h-[24px] rotate-180"
                 >
                   <path
                     d="M5 12H19M19 12L12 5M19 12L12 19"
@@ -155,12 +155,13 @@ export const HomeBlog = () => {
               </button>
               <button
                 onClick={nextSlide}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-colors hover:bg-[#293483]/90"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
               >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  className="w-[24px] h-[24px]"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
