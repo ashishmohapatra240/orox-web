@@ -59,7 +59,7 @@ export const ProductOroxHero = () => {
               muted
               loop
               playsInline
-              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
+              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px] lg:rounded-r-[0px]"
             />
             {/* Pause Button */}
             <PausePlayButton
