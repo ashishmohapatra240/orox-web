@@ -174,7 +174,7 @@ export const Steps = () => {
                       <>
                         <span className="relative inline-block z-10">
                           {/* Blue highlight only behind "5 easy steps" */}
-                          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
+                          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[4px]"></span>
                           5 easy steps
                         </span>{" "}
                         with OROX.
@@ -228,7 +228,7 @@ export const Steps = () => {
                 </div>
               </div>
               <div className="flex justify-between mt-[36px] pb-[0] md:pb-[72px] items-center">
-                <Link href="/">
+                <Link href="/signup">
                   <Button
                     variant="secondary"
                     className="border border-[#78CAB9] hover:border-gray-300 py-[12px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap "

@@ -43,41 +43,34 @@ export const HomeBlog = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Set initial value
-    setIsMobile(window.innerWidth < 768);
-
-    // Add resize listener
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const CARD_WIDTH = isMobile ? 315 : 392;
+  const CARD_GAP = isMobile ? 24 : 48;
+  const STEP = CARD_WIDTH + CARD_GAP;
+  const VISIBLE = isMobile ? 1 : 3;
+  const MAX_SLIDE = Math.max(0, articles.length - VISIBLE);
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => {
-      const maxSlides = articles.length - 1;
-      return prev >= maxSlides ? 0 : prev + 1;
-    });
+    setCurrentSlide((prev) => (prev >= MAX_SLIDE ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => {
-      const maxSlides = articles.length - 1;
-      return prev === 0 ? maxSlides : prev - 1;
-    });
+    setCurrentSlide((prev) => (prev === 0 ? MAX_SLIDE : prev - 1));
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => nextSlide(),
-    onSwipedRight: () => prevSlide(),
+    onSwipedLeft: nextSlide,
+    onSwipedRight: prevSlide,
     swipeDuration: 250,
     preventScrollOnSwipe: true,
     trackMouse: true,
     trackTouch: true,
     delta: 10,
-    rotationAngle: 0,
   });
 
   return (
@@ -94,15 +87,13 @@ export const HomeBlog = () => {
             <div
               className="flex gap-6 md:gap-8 will-change-transform"
               style={{
-                transform: `translate3d(-${
-                  currentSlide * (isMobile ? 315 : 392)
-                }px, 0, 0)`,
+                transform: `translate3d(-${currentSlide * STEP}px, 0, 0)`,
                 transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                 WebkitBackfaceVisibility: "hidden",
-                backfaceVisibility: "hidden"
+                backfaceVisibility: "hidden",
               }}
             >
-              {" "}
+              {/* keep your manual list of cards unchanged */}
               <div className="flex flex-row gap-[24px] md:gap-[48px]">
                 <BlogCard
                   image={articles[0].image}
@@ -130,11 +121,12 @@ export const HomeBlog = () => {
                 />
               </div>
             </div>
+
             {/* Navigation Buttons */}
             <div className="mt-[40px] md:mt-[80px] flex justify-center space-x-4">
               <button
                 onClick={prevSlide}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-[#19191B] transition-colors hover:bg-gray-200"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-gray-100 text-[#293483] hover:bg-gray-200 transition-transform hover:scale-110"
               >
                 <svg
                   width="24"
@@ -142,7 +134,7 @@ export const HomeBlog = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="rotate-180"
+                  className="w-[24px] h-[24px] rotate-180"
                 >
                   <path
                     d="M5 12H19M19 12L12 5M19 12L12 19"
@@ -155,12 +147,13 @@ export const HomeBlog = () => {
               </button>
               <button
                 onClick={nextSlide}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-colors hover:bg-[#293483]/90"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
               >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
+                  className="w-[24px] h-[24px]"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >

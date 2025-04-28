@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/Button";
 
 type Feature = {
@@ -34,11 +35,13 @@ export const Features = ({
   title,
   description,
   cta,
+  path,
   features = defaultFeatures,
 }: {
   title: string;
   description: string;
   cta?: string;
+  path?: string;
   features?: Feature[];
 }) => {
   return (
@@ -47,7 +50,7 @@ export const Features = ({
         <div>
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
-            <h2 className="text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
+            <h2 className="mx-auto text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] max-w-[1000px]">
               {title}
             </h2>
             <p className="text-[16px] text-[#19191B] md:text-[20px] leading-[24px] md:leading-[32px]">
@@ -81,11 +84,13 @@ export const Features = ({
           </div>
 
           {/* CTA Button */}
-          {cta && (
+          {cta && path && (
             <div className="text-center mt-[40px]">
-              <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px]">
-                {cta}
-              </Button>
+              <Link href={path}>
+                <Button className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px] px-[32px]">
+                  {cta}
+                </Button>
+              </Link>
             </div>
           )}
         </div>

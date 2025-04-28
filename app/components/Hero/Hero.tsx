@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { AppStoreButton } from "../ui/AppStoreButton";
 import { PlayStoreButton } from "../ui/PlayStoreButton";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -29,7 +30,7 @@ export const Hero = () => {
                   <br />
                   <span className="relative">
                     {/* Yellow background decoration */}
-                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFDE82] rounded-[8px]"></span>
+                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFDE82] rounded-[4px]"></span>
                     Build wealth.
                   </span>
                 </h1>
@@ -41,9 +42,12 @@ export const Hero = () => {
               </div>
 
               <div className="lg:block">
-                <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#293483] rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-[16px] md:text-[20px] hover:bg-indigo-800 transition-colors mb-[64px] md:mb-[50px] mt-[40px]">
+                <Link
+                  href="/signup"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#293483] rounded-[72px] inline-flex justify-center items-center gap-2 text-white font-bold text-[16px] md:text-[20px] hover:bg-indigo-800 transition-colors mb-[64px] md:mb-[50px] mt-[40px]"
+                >
                   Join for free
-                </button>
+                </Link>
               </div>
             </div>
           </div>

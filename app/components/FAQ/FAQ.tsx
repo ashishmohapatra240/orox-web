@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -8,6 +9,7 @@ const faqs = [
     answer:
       "Download the OROX app, sign up and fund your account or buy DVOX tokens—you're in!",
     action: "Get the app",
+    path: "https://onelink.to/65gpe9",
   },
   {
     question: "How much does OROX charge me?",
@@ -143,8 +145,8 @@ export const FAQ = () => {
                       {faq.answer}
                     </div>
                     {faq.action && (
-                      <a
-                        href="#"
+                      <Link
+                        href={faq.path || "#"}
                         className="text-[#2F5DFD] hover:text-blue-700 text-[14px] font-bold flex items-center space-x-2 mb-[32px]"
                       >
                         <span>{faq.action}</span>
@@ -154,7 +156,7 @@ export const FAQ = () => {
                           width={14}
                           height={14}
                         />
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>

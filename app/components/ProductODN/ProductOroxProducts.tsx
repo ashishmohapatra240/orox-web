@@ -17,7 +17,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#BBE5DC] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#BBE5DC] rounded-[4px]"></span>
           OROX
         </span>{" "}
         and a range of powerful products
@@ -65,13 +65,13 @@ export const ProductOroxProducts = () => {
                 <div>
                   <Link
                     href={product.link}
-                    className="inline-flex h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-105"
+                    className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
                   >
                     <svg
-                      width="16"
-                      height="16"
+                      width="24"
+                      height="24"
                       viewBox="0 0 24 24"
-                      className="w-5 h-5 sm:w-6 sm:h-6"
+                      className="w-[24px] h-[24px]"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >

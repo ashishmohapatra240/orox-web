@@ -2,6 +2,7 @@
 import { Button } from "../ui/Button";
 import { useState, useRef } from "react";
 import { PausePlayButton } from "../ui/PausePlayButton";
+import Link from "next/link";
 
 const AboutHero = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -35,11 +36,11 @@ const AboutHero = () => {
               autopilot—so you can grow without the guesswork.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
-              <Button variant="white" className="whitespace-nowrap">
-                Join for free
+              <Button variant="white" className="whitespace-nowrap px-[32px]">
+                <Link href="/signup">Join for free</Link>
               </Button>
-              <Button variant="outline" className="whitespace-nowrap">
-                Get in touch with us
+              <Button variant="outline" className="whitespace-nowrap px-[32px]">
+                <Link href="/contact">Get in touch with us</Link>
               </Button>
             </div>
           </div>
@@ -53,7 +54,7 @@ const AboutHero = () => {
               muted
               loop
               playsInline
-              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
+              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px] lg:rounded-r-[0px]"
             />
             {/* <style>
               {`

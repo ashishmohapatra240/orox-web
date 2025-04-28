@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "../ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Link from "next/link";
 type FeatureTab = {
   id: string;
   title: string;
@@ -306,7 +306,9 @@ export const ProductOroxKeyFeatures = () => {
                     variant="primary"
                     className="w-full md:w-auto px-[24px] md:px-[28px] lg:px-[32px] text-[16px] md:text-[18px] lg:text-[20px] leading-[24px] md:leading-[28px] lg:leading-[32px] h-[48px] md:h-[56px] lg:h-[64px]"
                   >
-                    Download the app
+                    <Link href="https://onelink.to/65gpe9">
+                      Download the app
+                    </Link>
                   </Button>
                 </motion.div>
               )}

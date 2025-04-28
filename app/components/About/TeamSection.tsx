@@ -30,14 +30,14 @@ const team = [
 
 export const TeamSection = () => {
   return (
-    <section className="w-full bg-white px-[16px] py-[48px] md:px-[120px] lg:px-[280px] md:py-[88px]">
+    <section className="w-full bg-white px-[16px] py-[48px] md:px-[120px] lg:px-[200px] md:py-[88px]">
       <div className="mx-auto max-w-7xl">
         <div className="space-y-12">
           <div className="text-center">
             <h2 className="text-[34px] font-bold text-[#19191B] md:text-[48px] lg:text-[56px] leading-[40px] md:leading-[56px] lg:leading-[68px]">
-              Meet the{" "}
+              Meet some of the{" "}
               <span className="relative">
-                <span className="absolute left-0 top-[35%] -z-1 h-[80%] w-full rounded-lg bg-[#BBE5DC] leading-[40px] md:leading-[56px] lg:leading-[68px]"></span>
+                <span className="absolute left-0 top-[35%] -z-1 h-[80%] w-full rounded-[4px] bg-[#BBE5DC] leading-[40px] md:leading-[56px] lg:leading-[68px]"></span>
                 <span className="relative z-1">minds</span>
               </span>{" "}
               behind OROX

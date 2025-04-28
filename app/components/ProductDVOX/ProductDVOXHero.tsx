@@ -201,7 +201,7 @@ export const ProductDVOXHero = () => {
               DVOX turns{" "}
               <span className="relative inline-block">
                 {/* Yellow background decoration */}
-                <span className="absolute left-0 top-[35%] z-[1] h-[80%] w-full bg-[#FFD600]/40 rounded-[8px]"></span>
+                <span className="absolute left-0 top-[35%] z-[1] h-[80%] w-full bg-[#FFD600]/40 rounded-[4px]"></span>
                 <span className="relative z-[2]">volatility</span>
               </span>{" "}
               into opportunity.

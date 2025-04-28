@@ -68,16 +68,17 @@ const products: {
   image: string | JSX.Element;
   imageAlt: string;
   bgColor: string;
+  path?: string;
 }[] = [
   {
     tag: "ODN: SET AND LET GROW",
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[4px]"></span>
           ODN
         </span>{" "}
-        is your shortcut to stable investment
+        is your shortcut to more stable investing
       </>
     ),
     description: (
@@ -94,13 +95,14 @@ const products: {
     image: "/images/products/img_odn_invest_banner.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
+    path: "/products-odn",
   },
   {
     tag: "DVOX: SUPERCHARGE YOUR INVESTMENT",
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[4px]"></span>
           DVOX
         </span>{" "}
         lets you HODL with confidence
@@ -111,6 +113,7 @@ const products: {
     image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",
+    path: "/products-dvox",
   },
 ];
 
@@ -140,14 +143,14 @@ export const HomeProducts = () => {
               </p>
               <div>
                 <Link
-                  href="#"
-                  className="inline-flex h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                  href={product.path || "#"}
+                  className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
                 >
                   <svg
-                    width="16"
-                    height="16"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
-                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    className="w-[24px] h-[24px]"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >

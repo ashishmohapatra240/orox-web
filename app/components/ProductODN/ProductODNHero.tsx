@@ -27,16 +27,16 @@ export const ProductOdnHero = () => {
               Access to stable, strategy-led performance
             </h1>
             <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-[#19191B] max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
-              <span className="font-bold">Opus Diversified Nexus (ODN)</span> focuses on risk-adjusted, hands-off
-              investing with a 90-day cycle and market-neutral strategies
-              designed for long-term stability. No wild swings, no constant
-              monitoring—just smart, market-neutral strategies designed for
-              optimal stability.
+              <span className="font-bold">Opus Diversified Nexus (ODN)</span>{" "}
+              focuses on risk-adjusted, hands-off investing with a 90-day cycle
+              and market-neutral strategies designed for long-term stability. No
+              wild swings, no constant monitoring—just smart, market-neutral
+              strategies designed for optimal stability.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button
                 variant="primary"
-                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px]"
+                className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px] px-[32px]"
               >
                 Get Started
               </Button>
@@ -52,7 +52,7 @@ export const ProductOdnHero = () => {
               muted
               loop
               playsInline
-              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px]"
+              className="absolute inset-0 h-full w-full object-cover lg:rounded-l-[32px] rounded-t-[16px] lg:rounded-r-[0px]"
             />
             {/* Pause Button */}
             <PausePlayButton

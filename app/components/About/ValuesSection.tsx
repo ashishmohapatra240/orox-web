@@ -30,7 +30,7 @@ export const ValuesSection = () => {
             <h2 className="text-4xl font-bold text-[#19191B] md:text-[42px] lg:text-5xl z-0">
               The values that drive{" "}
               <span className="relative z-0">
-                <span className="absolute left-0 top-[35%] z-0 h-[80%] w-full rounded-lg bg-[#7878FA]/30"></span>
+                <span className="absolute left-0 top-[35%] z-0 h-[80%] w-full rounded-[4px] bg-[#7878FA]/30"></span>
                 <span className="relative z-10">OROX</span>
               </span>{" "}
             </h2>
