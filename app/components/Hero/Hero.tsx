@@ -30,7 +30,7 @@ export const Hero = () => {
                   <br />
                   <span className="relative">
                     {/* Yellow background decoration */}
-                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFDE82] rounded-[8px]"></span>
+                    <span className="absolute left-0 top-[35%] -z-10 h-[60%] w-full bg-[#FFDE82] rounded-[4px]"></span>
                     Build wealth.
                   </span>
                 </h1>

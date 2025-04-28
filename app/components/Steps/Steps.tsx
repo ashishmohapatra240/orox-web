@@ -174,7 +174,7 @@ export const Steps = () => {
                       <>
                         <span className="relative inline-block z-10">
                           {/* Blue highlight only behind "5 easy steps" */}
-                          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
+                          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[4px]"></span>
                           5 easy steps
                         </span>{" "}
                         with OROX.

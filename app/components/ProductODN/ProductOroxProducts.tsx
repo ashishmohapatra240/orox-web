@@ -17,7 +17,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#BBE5DC] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#BBE5DC] rounded-[4px]"></span>
           OROX
         </span>{" "}
         and a range of powerful products

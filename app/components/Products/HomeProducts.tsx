@@ -75,10 +75,10 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[4px]"></span>
           ODN
         </span>{" "}
-        is your shortcut to stable investment
+        is your shortcut to more stable investing
       </>
     ),
     description: (
@@ -102,7 +102,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-10">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[4px]"></span>
           DVOX
         </span>{" "}
         lets you HODL with confidence

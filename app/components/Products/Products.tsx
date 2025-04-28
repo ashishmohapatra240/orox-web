@@ -47,7 +47,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-0">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[4px]"></span>
           OROX app
         </span>{" "}
         invest on autopilot
@@ -65,7 +65,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-0">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[4px]"></span>
           ODN
         </span>{" "}
         is your shortcut to stable investment
@@ -93,7 +93,7 @@ const products: {
     title: (
       <>
         <span className="relative inline-block z-0">
-          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[8px]"></span>
+          <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#FFD600] rounded-[4px]"></span>
           DVOX
         </span>{" "}
         lets you HODL with confidence
