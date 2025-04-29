@@ -89,11 +89,11 @@ export const ProductOroxProducts = () => {
 
               {/* Chart section */}
               <div
-                className={`flex items-center justify-center w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[600px] ${
+                className={`flex items-center justify-center w-full ${
                   index % 2 === 0 ? "lg:order-1" : "lg:order-2"
                 } lg:mx-auto`}
               >
-                <div className="relative aspect-[4/3] w-full flex items-center justify-center overflow-hidden rounded-[32px]">
+                <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-[32px] shadow-[0px_1px_4px_0px_#00000026] md:shadow-[0px_2px_8px_0px_#00000026] ">
                   {typeof product.image === "string" ? (
                     <Image
                       src={product.image}
