@@ -168,7 +168,7 @@ export const Footer = () => {
                 <div
                   className={`space-y-2 ${
                     isDarkTheme ? "text-[#19191B]/50" : "text-black/50"
-                  } text-[14px]`}
+                  } text-[14px] flex flex-col`}
                 >
                   <a href="tel:+61 295 336 214" className="inline-block">
                     +61 295 336 214
@@ -330,7 +330,7 @@ export const Footer = () => {
                 <div
                   className={`text-${
                     isDarkTheme ? "white" : "[#19191B]/50"
-                  } text-[14px] space-y-[8px]`}
+                  } text-[14px] space-y-[8px] flex flex-col`}
                 >
                   <a href="tel:+61 295 336 214" className="inline-block">
                     +61 295 336 214
