@@ -67,9 +67,9 @@ export const YieldChart = () => {
   }
 
   return (
-    <div className="w-full h-auto bg-white p-6 rounded-[32px] border border-[#E5E5E5] shadow-[0px_2px_8px_0px_#00000026]">
+    <div className="w-full h-auto bg-white pt-4 px-4  sm:p-6 rounded-[24px] md:rounded-[32px] border border-[#E5E5E5] ">
       <div>
-        <h2 className="text-[16px] md:text-[28px] font-bold text-[#19191B] leading-[20px] md:leading-[40px]">
+        <h2 className="text-[16px] sm:text-[20px] md:text-[28px] font-bold text-[#19191B] leading-[20px] sm:leading-[32px] md:leading-[40px]">
           Current yield: {currentYield?.toFixed(1)}% p.a.
         </h2>
         {data.length > 0 && (
@@ -79,11 +79,16 @@ export const YieldChart = () => {
           </div>
         )}
       </div>
-      <div className="h-[200px]">
+      <div className="h-[160px] sm:h-[180px] md:h-[200px] mt-2 sm:mt-4">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
-            margin={{ top: 2, right: 0, left: 0, bottom: 2 }}
+            margin={{
+              top: 2,
+              right: 0,
+              left: 0,
+              bottom: 2,
+            }}
             barGap={0}
           >
             <XAxis
@@ -100,8 +105,13 @@ export const YieldChart = () => {
               orientation="right"
               tick={{
                 fill: "#19191B",
-                fontSize: window.innerWidth < 768 ? 8 : 12,
-                dx: 10,
+                fontSize:
+                  window.innerWidth < 640
+                    ? 8
+                    : window.innerWidth < 768
+                    ? 10
+                    : 12,
+                dx: window.innerWidth < 640 ? 5 : 10,
               }}
               tickFormatter={(value) => `${value}%`}
             />
@@ -109,7 +119,9 @@ export const YieldChart = () => {
               dataKey="yield"
               fill="#78CAB9"
               radius={[4, 4, 4, 4]}
-              maxBarSize={8}
+              maxBarSize={
+                window.innerWidth < 640 ? 4 : window.innerWidth < 768 ? 8 : 10
+              }
             />
           </BarChart>
         </ResponsiveContainer>
