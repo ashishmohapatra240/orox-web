@@ -170,8 +170,12 @@ export const Footer = () => {
                     isDarkTheme ? "text-[#19191B]/50" : "text-black/50"
                   } text-[14px]`}
                 >
-                  <p>+61 295 336 214</p>
-                  <p>info@oroxglobal.com</p>
+                  <a href="tel:+61 295 336 214" className="inline-block">
+                    +61 295 336 214
+                  </a>
+                  <a href="mailto:info@oroxglobal.com" className="inline-block">
+                    info@oroxglobal.com
+                  </a>
                 </div>
               </div>
 
@@ -328,8 +332,12 @@ export const Footer = () => {
                     isDarkTheme ? "white" : "[#19191B]/50"
                   } text-[14px] space-y-[8px]`}
                 >
-                  <p>+61 295 336 214</p>
-                  <p>info@oroxglobal.com</p>
+                  <a href="tel:+61 295 336 214" className="inline-block">
+                    +61 295 336 214
+                  </a>
+                  <a href="mailto:info@oroxglobal.com" className="inline-block">
+                    info@oroxglobal.com
+                  </a>
                 </div>
               </div>
               <div className="w-[300px]">

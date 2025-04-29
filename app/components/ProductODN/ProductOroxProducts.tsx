@@ -31,8 +31,8 @@ const products: {
       </>
     ),
     image: <YieldChart />,
-    imageAlt: "ODN Investment Chart",
-    link: "/products-odn",
+    imageAlt: "OROX App Investment Chart",
+    link: "/products-orox-app",
   },
 ];
 
