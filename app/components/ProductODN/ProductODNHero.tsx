@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { Button } from "../ui/Button";
 import { PausePlayButton } from "../ui/PausePlayButton";
+import Link from "next/link";
 
 export const ProductOdnHero = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -38,7 +39,7 @@ export const ProductOdnHero = () => {
                 variant="primary"
                 className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px] px-[32px]"
               >
-                Get Started
+                <Link href="/signup">Get Started</Link>
               </Button>
             </div>
           </div>
