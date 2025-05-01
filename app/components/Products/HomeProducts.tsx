@@ -144,7 +144,7 @@ export const HomeProducts = () => {
               <div>
                 <Link
                   href={product.path || "#"}
-                  className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                  className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] hover:bg-[#212A69] text-white transform transition-transform duration-300 ease-in-out hover:scale-110"
                 >
                   <svg
                     width="24"

@@ -156,7 +156,7 @@ export const Dropdown = ({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`fixed ${isDarkTheme ? 'top-[99px]' : 'top-[89px]'} left-0 right-0 z-50 hidden md:block`}
+            className={`fixed ${isDarkTheme ? 'top-[89px]' : 'top-[89px]'} left-0 right-0 z-50 hidden md:block`}
             variants={dropdownVariants}
             initial="hidden"
             animate="visible"
