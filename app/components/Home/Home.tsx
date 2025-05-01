@@ -22,7 +22,7 @@ export default function LandingPage() {
             Just smart, data-driven investing
           </span>
         }
-        description="Skip the FOMO and stress—AI-powered quantitative investing with expert strategies from top minds in the industry."
+        description="Skip the FOMO and stress with AI-powered strategies built by industry-leading experts."
         cta="Create an account"
         path="/signup"
       />

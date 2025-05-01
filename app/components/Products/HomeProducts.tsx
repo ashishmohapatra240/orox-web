@@ -78,18 +78,16 @@ const products: {
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#ADE0EE] rounded-[4px]"></span>
           ODN
         </span>{" "}
-        is your shortcut to more stable investing
+        is your gateway to more stable investing
       </>
     ),
     description: (
       <>
-        Want steady returns without the stress?{" "}
-        <span className="font-bold">Opus Diversified Nexus (ODN)</span> focuses
-        on risk-adjusted, hands-off investing with a 90-day cycle and
-        market-neutral strategies designed for long-term stability. No wild
-        swings
-        <sup>2</sup>, no constant monitoring—just smart, steady returns while
-        you go about your life.
+        Want a hands-off strategy built for long-term consistency?{" "}
+        <span className="font-bold">Opus Diversified Nexus (ODN)</span> applies
+        market-neutral, 90-day cycles designed to target risk-adjusted returns
+        with reduced volatility. No wild swings. No constant monitoring. Just
+        disciplined strategies while you go about your life.
       </>
     ),
     image: "/images/products/img_odn_invest_banner.png",
@@ -109,7 +107,7 @@ const products: {
       </>
     ),
     description:
-      "Love crypto but hate the rollercoaster? DVOX gives you high-growth potential without the crazy ups and downs³. Powered by the OROX app and using the DVOX token, it's designed to help you grow your portfolio with more confidence. Forget diamond hands—DVOX offers exposure to a professionally managed, auto-balanced portfolio of high-grade digital assets, designed for high-growth without the hassle.",
+      "Love crypto but hate the chaos? DVOX is your access token to a professionally managed, auto-balanced crypto ecosystem that’s built for long-term confidence, not just short-term hype. Stake DVOX in the OROX app to unlock benefits and gain exposure to a curated portfolio of high-grade digital assets, actively managed by experts. Forget diamond hands—this is strategy over stress.",
     image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",

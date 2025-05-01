@@ -30,9 +30,9 @@ export const ProductOroxHero = () => {
             <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-[#19191B] max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
               The OROX app is revolutionising investing by making risk-adjusted
               strategies accessible to everyone. Whether you&apos;re looking for
-              steady, low-risk investing with ODN subscription or high growth
-              crypto exposure with the DVOX token, OROX puts your money on
-              autopilot—so you can grow without the guesswork.
+              steady, low-risk investing through a subscription model or
+              high-growth crypto exposure with reduced volatility, OROX puts
+              your money on autopilot—so you can grow without the guesswork.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button

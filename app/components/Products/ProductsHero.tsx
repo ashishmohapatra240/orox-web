@@ -34,9 +34,7 @@ export const ProductsHero = () => {
                 Our products
               </h1>
               <p className="text-[14px] md:text-[20px] text-[#19191B] leading-[20px] md:leading-[32px] mt-[12px] md:mt-[24px]">
-                OROX is a seamless investment app offering low-risk growth and
-                crypto exposure with reduced volatility. Connect effortlessly to
-                ODN and the DVOX token—all in one app.
+              OROX is a seamless investment app offering access to risk-aware strategies and curated crypto exposure—all in one place. Invest with ease through professionally managed, algorithm-driven solutions that help reduce volatility and simplify your financial journey.
               </p>
             </div>
           </div>

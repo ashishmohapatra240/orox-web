@@ -41,9 +41,11 @@ const steps = [
     title: "Choose your investment type",
     description: (
       <>
-        Want steady returns or low-volatility crypto exposure? ODN ensures
-        stability with market-neutral strategies, while DVOX offers the benefits
-        of a professionally managed, high-quality portfolio.
+        Looking for stable returns or smarter crypto exposure?{" "}
+        <span className="font-bold">ODN</span> targets consistency through
+        market-neutral strategies. <span className="font-bold">DVOX</span> is
+        your access token to gain benefits linked to a professionally managed
+        crypto ecosystem built for long-term performance.
       </>
     ),
     image: "/images/steps/steps-3-iPhone.png",
@@ -52,7 +54,7 @@ const steps = [
     number: 4,
     title: "Fund your portfolio",
     description:
-      "Deposit funds via fiat or crypto, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
+      "Deposit funds, convert seamlessly between assets, and use the DVOX token to unlock exclusive benefits—all in one app.",
     image: "/images/steps/steps-4-iPhone.png",
   },
   {
@@ -60,9 +62,9 @@ const steps = [
     title: "Sit back and grow",
     description: (
       <>
-        No market timing, no day trading—just automated, smart investing on
-        autopilot. Track your progress anytime through the OROX app and let your
-        money work for you.
+        No market timing, no day trading—just automated, data-driven strategies
+        on autopilot. Track your performance anytime through the OROX app and
+        stay informed as your portfolio evolves.
       </>
     ),
     image: "/images/steps/steps-5-iPhone.png",

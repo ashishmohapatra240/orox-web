@@ -29,11 +29,12 @@ const AboutHero = () => {
               About OROX
             </h1>
             <p className="text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] text-white max-w-[600px] leading-[24px] md:leading-[28px] lg:leading-[30px] xl:leading-[32px] mt-[24px] md:mt-[28px] lg:mt-[30px] xl:mt-[32px]">
-              OROX is revolutionising investing by making risk-adjusted
-              strategies accessible to everyone. Whether you&apos;re looking for
-              steady, low-risk investing with ODN subscription or high growth
-              crypto exposure with the DVOX token, OROX puts your money on
-              autopilot—so you can grow without the guesswork.
+              OROX transforms access to advanced investing by offering
+              risk-adjusted strategies through a seamless, user-friendly
+              platform. Whether you&apos;re seeking more consistent performance
+              with the ODN subscription or aiming to gain exposure to expertly
+              managed crypto strategies by staking the DVOX token, OROX helps
+              you invest with confidence—without the guesswork.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button variant="white" className="whitespace-nowrap px-[32px]">

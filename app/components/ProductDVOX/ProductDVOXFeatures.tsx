@@ -11,7 +11,7 @@ const features = [
   {
     icon: "/icons/dvox-features/auto-balanced.svg",
     title: "Auto-balanced",
-    description: "Ensures steady portfolio performance while minimising risk.",
+    description: "Designed to support portfolio consistency by aiming to reduce volatility.",
   },
   {
     icon: "/icons/dvox-features/staking-rewards.svg",
@@ -21,11 +21,11 @@ const features = [
   {
     icon: "/icons/dvox-features/blockchain.svg",
     title: "Blockchain transparency",
-    description: "Secure, verifiable transactions with full visibility.",
+    description: "Secure transactions with full on-chain transparency.",
   },
   {
     icon: "/icons/dvox-features/activity-history.svg",
-    title: "Sustainable growth",
+    title: "Performance potential",
     description:
       "Designed to capitalise on volatility and maximise growth over time.",
   },

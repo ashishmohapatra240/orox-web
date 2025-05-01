@@ -21,11 +21,12 @@ export const ProductDVOXCTA = () => {
         <div className="relative h-full flex flex-col items-center px-[24px] py-[32px] sm:hidden">
           <div className="text-white w-full max-w-xs text-left mt-[10px]">
             <span className="text-[14px] md:text-[16px] font-semibold text-white mb-[16px] block leading-[18px] md:leading-[28px]">
-              READY TO INVEST IN CRYPTO WITHOUT VOLATILITY?
+              LOOKING FOR CRYPTO GROWTH WITHOUT THE CHAOS?
             </span>
             <h3 className="text-[16px] md:text-[28px] font-regular mb-[32px] leading-[24px] md:leading-[40px]">
-              DVOX gives you high-growth potential with less risk, offering a
-              professionally managed, auto-balanced portfolio of digital assets.
+              DVOX connects you to a professionally managed, digital assets
+              ecosystem designed to navigate volatility and pursue long-term
+              performance.
             </h3>
             <Button
               variant="secondary"
@@ -54,11 +55,12 @@ export const ProductDVOXCTA = () => {
         <div className="relative hidden sm:flex lg:hidden h-full">
           <div className="text-white w-1/2 text-left p-8 flex flex-col justify-center">
             <span className="text-[14px] font-medium text-white/80 mb-[16px] block">
-              READY TO INVEST IN CRYPTO WITHOUT VOLATILITY?
+              LOOKING FOR CRYPTO GROWTH WITHOUT THE CHAOS?
             </span>
             <h3 className="text-[16px] md:text-[32px] font-bold mb-[32px] leading-[24px] md:leading-[40px]">
-              DVOX gives you high-growth potential with less risk, offering a
-              professionally managed, auto-balanced portfolio of digital assets.
+              DVOX connects you to a professionally managed, digital assets
+              ecosystem designed to navigate volatility and pursue long-term
+              performance.
             </h3>
             <Button
               variant="secondary"
@@ -87,11 +89,12 @@ export const ProductDVOXCTA = () => {
         <div className="relative hidden lg:flex flex-row items-center p-12">
           <div className="text-white max-w-xl text-left">
             <span className="text-[14px] font-semibold text-white mb-[16px] block">
-              READY TO INVEST IN CRYPTO WITHOUT VOLATILITY?
+              LOOKING FOR CRYPTO GROWTH WITHOUT THE CHAOS?
             </span>
             <h3 className="text-[28px] mb-[32px] leading-[40px] w-[512px]">
-              DVOX gives you high-growth potential with less risk, offering a
-              professionally managed, auto-balanced portfolio of digital assets.
+              DVOX connects you to a professionally managed, digital assets
+              ecosystem designed to navigate volatility and pursue long-term
+              performance.
             </h3>
             <Button
               variant="secondary"

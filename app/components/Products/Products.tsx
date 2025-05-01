@@ -50,11 +50,11 @@ const products: {
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#7878FA]/40 rounded-[4px]"></span>
           OROX app
         </span>{" "}
-        invest on autopilot
+        let’s you invest on autopilot
       </>
     ),
     description:
-      "OROX is your all-in-one investment app and platform, blending AI-powered quantitative strategies, blockchain security and seamless automation. Whether you're after steady, low-risk growth or crypto exposure with less volatility, OROX makes investing effortless. Easily connect with ODN, and the new OROX token—all in one place.",
+      "OROX is your all-in-one investment platform, blending AI-powered quantitative models, blockchain-backed infrastructure, and seamless automation to bring institutional-grade investing to your fingertips. Whether you’re seeking steady yields or looking to participate in digital asset markets with reduced volatility, OROX delivers a streamlined path to smarter investing—no charts, no day trading, no complexity.",
     image: "/images/products/orox-app.png",
     imageAlt: "ODN",
     bgColor: "#ADE0EE",
@@ -73,13 +73,11 @@ const products: {
     ),
     description: (
       <>
-        Want steady returns without the stress?{" "}
-        <span className="font-bold">Opus Diversified Nexus (ODN)</span> focuses
-        on risk-adjusted, hands-off investing with a 90-day cycle and
-        market-neutral strategies designed for long-term stability. No wild
-        swings
-        <sup>2</sup>, no constant monitoring—just smart, steady returns while
-        you go about your life.
+        Want a hands-off strategy built for long-term consistency?{" "}
+        <span className="font-bold"> Opus Diversified Nexus (ODN)</span> applies
+        market-neutral, 90-day cycles designed to target risk-adjusted returns
+        with reduced volatility. No wild swings. No constant monitoring. Just
+        disciplined strategies while you go about your life.
       </>
     ),
     image:
@@ -100,7 +98,7 @@ const products: {
       </>
     ),
     description:
-      "Love crypto but hate the rollercoaster? DVOX gives you high-growth potential without the crazy ups and downs³. Powered by the OROX app and using the DVOX token, it's designed to help you grow your portfolio with more confidence. Forget diamond hands—DVOX offers exposure to a professionally managed, auto-balanced portfolio of high-grade digital assets, designed for high-growth without the hassle.",
+      "Love crypto but hate the chaos? DVOX is your access token to a professionally managed, auto-balanced crypto ecosystem that’s built for long-term confidence, not just short-term hype. Stake DVOX in the OROX app to unlock benefits and gain exposure to a curated portfolio of high-grade digital assets, actively managed by experts. Forget diamond hands—this is strategy over stress.",
     image: <DVOXChart />,
     imageAlt: "DVOX Token Illustration",
     bgColor: "bg-[#FFD700]",

@@ -54,7 +54,7 @@ const products = [
     image: <DVOXChart />,
     bgColor: "bg-[#FFD700]",
     description:
-      "DVOX offers high-growth potential with less volatility. It gives you auto-balanced exposure to premium digital assets—no stress, just smarter investing.",
+      "Stake DVOX to access a professionally managed crypto strategy with lower volatility and long-term growth potential. Smarter exposure, simplified.",
     path: "products-dvox",
   },
 ];

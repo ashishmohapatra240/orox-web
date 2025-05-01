@@ -16,8 +16,8 @@ const defaultFeatures: Feature[] = [
   },
   {
     icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.svg",
-    title: "Stress-free growth",
-    description: "Stress-free gains with our proven market-neutral strategies.",
+    title: "Consistency, not speculation",
+    description: "Built to perform through ups and downs with less stress.",
   },
   {
     icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.svg",
