@@ -1,4 +1,4 @@
-import { ProductODNCalculator } from "@/app/components/ProductODN/ProductODNCalculator";
+// import { ProductODNCalculator } from "@/app/components/ProductODN/ProductODNCalculator";
 import { ProductODNFeatures } from "@/app/components/ProductODN/ProductODNFeatures";
 import ProductOdnHero from "@/app/components/ProductODN/ProductODNHero";
 import { ProductOroxProducts } from "@/app/components/ProductODN/ProductOroxProducts";
@@ -8,7 +8,7 @@ export default function ProductsOdn() {
     <div>
       <ProductOdnHero />
       <ProductODNFeatures />
-      <ProductODNCalculator />
+      {/* <ProductODNCalculator /> */}
       <ProductOroxProducts />
       <Service tag={"LOOKING FOR RELIABLE, RISK-ADJUSTED RETURNS?"} description={"ODN’s market-neutral strategy helps you grow with confidence. No wild swings, no stress."}/>
 
