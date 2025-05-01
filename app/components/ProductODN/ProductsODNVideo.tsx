@@ -81,10 +81,10 @@ export const ProductODNVideo = () => {
                 <span className="text-[14px] md:text-[16px] font-semibold text-white leading-[18px] md:leading-[28px]">
                   {p.tag}
                 </span>
-                <h2 className="mt-2 text-[32px] md:text-[56px] font-bold leading-[40px] md:leading-[68px] text-white">
+                <h2 className="mt-[8px] text-[32px] md:text-[56px] font-bold leading-[40px] md:leading-[68px] text-white">
                   {p.title}
                 </h2>
-                <p className="mt-6 mb-10 text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-white/80">
+                <p className="mt-[24px] mb-[40px] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-white/80">
                   {p.description}
                 </p>
                 <Link
