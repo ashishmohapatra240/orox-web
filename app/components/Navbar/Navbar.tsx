@@ -103,16 +103,18 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
               isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
             } rounded-lg p-1 md:p-4`}
           >
-            <span className="text-xs font-semibold text-[#999999]">
-              UPDATES
-            </span>
-            <h4
-              className={`font-medium mt-1 ${
-                isDarkTheme ? "text-white" : "text-[#19191B]"
-              } text-[16px] font-regular`}
-            >
-              Trump Earned Millions From Meme Coin, 810000 Others Lost.
-            </h4>
+            <Link href="https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/">
+              <span className="text-xs font-semibold text-[#999999]">
+                UPDATES
+              </span>
+              <h4
+                className={`font-medium mt-1 ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
+                Positive Signs For Institutional Investment In Cryptocurrencies
+              </h4>
+            </Link>
           </div>
         </DropdownItem>
 
@@ -122,16 +124,19 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
               isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
             } rounded-lg p-1 md:p-4`}
           >
-            <span className="text-xs font-semibold text-[#999999]">
-              ADVICE & TIPS
-            </span>
-            <h4
-              className={`font-medium mt-1 ${
-                isDarkTheme ? "text-white" : "text-[#19191B]"
-              } text-[16px] font-regular`}
-            >
-              Never Invest More Than You Can Afford to Lose.
-            </h4>
+            <Link href="https://www.ey.com/en_us/insights/financial-services/evolving-digital-assets-sentiment-among-investors">
+              <span className="text-xs font-semibold text-[#999999]">
+                ADVICE & TIPS
+              </span>
+              <h4
+                className={`font-medium mt-1 ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
+                Institutional sentiment points to increased adoption of digital
+                assets
+              </h4>
+            </Link>
           </div>
         </DropdownItem>
 
@@ -141,16 +146,18 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
               isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
             } rounded-lg p-1 md:p-4`}
           >
-            <span className="text-xs font-semibold text-[#999999]">
-              INSIGHTS
-            </span>
-            <h4
-              className={`font-medium mt-1 ${
-                isDarkTheme ? "text-white" : "text-[#19191B]"
-              } text-[16px] font-regular`}
-            >
-              The best crypto research tools for traders and investors.
-            </h4>
+            <Link href="https://thebull.com.au/trading-guides/market-neutral-investment-strategies/">
+              <span className="text-xs font-semibold text-[#999999]">
+                INSIGHTS
+              </span>
+              <h4
+                className={`font-medium mt-1 ${
+                  isDarkTheme ? "text-white" : "text-[#19191B]"
+                } text-[16px] font-regular`}
+              >
+                Controlling Volatility through Market Neutral Investing
+              </h4>
+            </Link>
           </div>
         </DropdownItem>
       </div>

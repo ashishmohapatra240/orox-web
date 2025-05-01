@@ -36,9 +36,7 @@ export const Hero = () => {
                   </span>
                 </h1>
                 <p className="max-w-[300px] md:max-w-[570px] text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px]">
-                  Forget stock-picking, market timing and waiting for the next
-                  bull run—OROX puts your money on autopilot for high-growth
-                  returns.
+                Forget stock-picking, market timing, and chasing the next bull run. OROX gives you access to algorithm-driven, professional-grade strategies for smarter growth.
                 </p>
               </div>
 

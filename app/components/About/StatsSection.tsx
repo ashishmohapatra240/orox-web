@@ -6,12 +6,14 @@ const stats = [
   {
     number: "159+",
     rawNumber: 159,
+    suffix: "+",
     description:
       "Curated quantitative strategies working together for smarter investing.",
   },
   {
     number: "125+",
     rawNumber: 125,
+    suffix: "+",
     description:
       "Top hedge funds, quant developers and traders in our global and local consortium.",
   },

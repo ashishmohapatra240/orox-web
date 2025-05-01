@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const OpusMomentus = () => {
   return (
-    <section className="w-full bg-[#F1F2F8] px-[16px] py-[48px] md:px-[64px] lg:px-[288px] md:py-[72px] lg:py-[88px]">
+    <section className="w-full bg-[#F1F2F8] px-[16px] py-[48px] md:px-[64px] lg:px-[120px] md:py-[72px] lg:py-[88px]">
       <div>
         <div className="text-center">
           <span className="text-[14px] md:text-[16px]  font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#4296E4] to-[#383699] text-center">
@@ -20,10 +20,11 @@ export const OpusMomentus = () => {
             >
               Opus Momentus{" "}
             </Link>
-            makes advanced investing accessible with cutting-edge technology and
-            market-neutral strategies. Powered by Opus Momentus, OROX offers a
-            seamless platform for smarter investing. Together, they&apos;re
-            shaping the future of finance.
+            makes advanced investing accessible through cutting-edge quant
+            technology and market-neutral strategies. Built on this foundation,
+            OROX delivers a seamless platform for smarter, automated investing.
+            Together, they’re shaping the future of accessible, data-driven
+            finance.
           </p>
         </div>
       </div>

@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const upcomingProducts = [
   {
-    title: "Get great value with quick conversion through our swap function",
+    title: "Fast, secure and frictionless asset swap",
     description:
       "Easily swap between assets within the OROX app. No extra steps, no hidden fees—just effortless conversions at your fingertips.",
     image: "/images/products/asset-swap.png",
   },
   {
     title:
-      "Cards for every type of credit builder and investor in your digital wallet",
+      "Spend your gains with the OROX card",
     description:
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
     // image: {

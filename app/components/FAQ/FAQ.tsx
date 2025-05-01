@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "How do I start investing?",
     answer:
-      "Download the OROX app, sign up and fund your account or buy DVOX tokens—you're in!",
+      "Download the OROX app, sign up and fund your account, subscribe to ODN or buy DVOX tokens—you’re in!",
     action: "Get the app",
     path: "https://onelink.to/65gpe9",
   },
@@ -18,16 +18,26 @@ const faqs = [
   },
   {
     question: "Difference between ODN and DVOX?",
-    answer:
-      "ODN offers steady, low-risk investing, while DVOX provides high-growth potential with crypto exposure. Choose what fits your goal.",
+    answer: (
+      <>
+        ODN offers structured, lower-volatility investing through fiat-based
+        subscription cycles.
+        <br />
+        <br />
+        DVOX provides access to crypto strategies with long-term growth
+        potential, via a utility token that can be staked for added benefits.
+        <br />
+        <br />
+        Choose the option that aligns with your goals and risk preference.
+      </>
+    ),
     action: "Learn more",
     path: "/products",
-
   },
   {
     question: "What is a market-neutral strategy?",
     answer:
-      "It's a strategy that balances risk by hedging across different assets, so you get steady gains without wild swings.",
+      "It's a strategy that balances risk by hedging long and short positions, while aiming to profit regardless of the overall direction in markets.",
   },
 ];
 

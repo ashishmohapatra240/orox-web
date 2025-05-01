@@ -43,10 +43,7 @@ export const TeamSection = () => {
               behind OROX
             </h2>
             <p className="mt-[32px] text-[16px] md:text-[18px] lg:text-[20px] text-[#19191B] leading-[24px] md:leading-[28px] lg:leading-[32px]">
-              OROX is built by a team of finance, AI and blockchain experts who
-              believe that smart investing should be effortless. Backed by Opus
-              Momentus, our team is focused on building the future of wealth
-              management through automation, innovation and security.
+            OROX is built by a team of experts in finance, AI, and blockchain who believe smart investing should be effortless. Backed by Opus Momentus, we’re redefining wealth management through automation, innovation, and institutional-grade security.
             </p>
           </div>
 
