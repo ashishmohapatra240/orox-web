@@ -172,13 +172,15 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.4 }}
           >
-            <Image
-              src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/blog.png"
-              alt="Blog Image"
-              width={600}
-              height={400}
-              className="w-[600px] h-auto"
-            />
+            <Link href="https://opusmomentus.com/coming-soon">
+              <Image
+                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/blog.png"
+                alt="Blog Image"
+                width={600}
+                height={400}
+                className="w-[600px] h-auto"
+              />
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -912,7 +914,7 @@ export const Navbar = () => {
             <div
               ref={qrModalRef}
               className={`hidden md:block absolute right-0 ${
-                isDarkTheme ? "top-[74px]" : "top-[64px]"
+                isDarkTheme ? "top-[64px]" : "top-[64px]"
               } ${
                 isDarkTheme ? "bg-[#000000]" : "bg-white"
               } w-64 md:w-80 rounded-xl border ${

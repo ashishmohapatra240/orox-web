@@ -65,7 +65,7 @@ export const ProductOroxProducts = () => {
                 <div>
                   <Link
                     href={product.link}
-                    className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                    className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] hover:bg-[#212A69] text-white transition duration-300 ease-in-out transform hover:scale-110"
                   >
                     <svg
                       width="24"

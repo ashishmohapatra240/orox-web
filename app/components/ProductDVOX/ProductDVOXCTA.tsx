@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Button } from "../ui/Button";
+import Link from "next/link";
 
 export const ProductDVOXCTA = () => {
   return (
@@ -30,7 +31,9 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className="w-full text-[#293483] hover:bg-gray-100"
             >
-              Get started with DVOX
+              <Link href="http://opusmomentus.com/coming-soon">
+                Get started with DVOX
+              </Link>
             </Button>
           </div>
 
@@ -61,7 +64,9 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className="max-w-[280px] text-[#293483] hover:bg-gray-100"
             >
-              Get started with DVOX
+              <Link href="http://opusmomentus.com/coming-soon">
+                Get started with DVOX
+              </Link>{" "}
             </Button>
           </div>
 
@@ -92,7 +97,9 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className=" text-[#293483] hover:bg-gray-100 px-[32px] py-[16px] text-[20px]"
             >
-              Get started with DVOX
+              <Link href="http://opusmomentus.com/coming-soon">
+                Get started with DVOX
+              </Link>{" "}
             </Button>
           </div>
 

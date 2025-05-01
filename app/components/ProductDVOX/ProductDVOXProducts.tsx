@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { PausePlayButton } from "../ui/PausePlayButton";
 import { Button } from "../ui/Button";
+import Link from "next/link";
 
 export const ProductDVOXProducts = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -43,7 +44,7 @@ export const ProductDVOXProducts = () => {
             variant="secondary"
             className="h-[48px] md:h-[64px] text-[16px] md:text-[20px] px-[32px] py-[16px]"
           >
-            Explore other OROX products
+            <Link href="/products"> Explore other OROX products</Link>
           </Button>
         </div>
 

@@ -38,7 +38,7 @@ export const Features = ({
   path,
   features = defaultFeatures,
 }: {
-  title: string;
+  title: string | React.ReactNode;
   description: string;
   cta?: string;
   path?: string;
@@ -50,7 +50,7 @@ export const Features = ({
         <div>
           {/* Header */}
           <div className="mx-auto space-y-8 text-center">
-            <h2 className="mx-auto text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px] max-w-[1000px]">
+            <h2 className="mx-auto text-[34px] font-bold text-[#19191B] md:text-[56px] leading-[40px] md:leading-[68px]">
               {title}
             </h2>
             <p className="text-[16px] text-[#19191B] md:text-[20px] leading-[24px] md:leading-[32px]">

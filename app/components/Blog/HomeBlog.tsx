@@ -5,36 +5,33 @@ import { useSwipeable } from "react-swipeable";
 
 const articles = [
   {
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/time-horizon.jpg",
-    title: "The Relationship Between Time Horizon and Investing Risk",
+    image: "/images/blog/positive.png",
+    title: "Positive Signs for Institutional Investment in Crpyto…",
     description:
-      "Risk is a fact of investing. Your willingness to take risk as an investor is a big part of why you...",
-    link: "#",
+      "President Trump’s second administration painted a new landscape for digital assets and…",
+    link: "https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/government-bonds.jpg",
-    title: "An introduction to the appeal of Australian Government Bonds",
+    image: "/images/blog/institutional.jpg",
+    title:
+      "Institutional sentiment points to increased adoption of digital as…",
     description:
-      "Australian Government Bonds (AGBs), or Australian treasuries, are debt securities issued...",
-    link: "#",
+      "The digital asset industry experienced significant volatility in 2023 with sustained regulator…",
+    link: "https://www.ey.com/en_us/insights/financial-services/evolving-digital-assets-sentiment-among-investors",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/aussie-websites.png",
-    title: "Aussie websites to help you make (or save) money",
+    image: "/images/blog/volatality.jpg",
+    title: "Controlling Volatility through Market Neutral Investing",
     description:
-      "We've done the research for you and found some awesome websites that might help you...",
-    link: "#",
+      "Newcomers to share market investing can be surprised to learn there are more ways to tur…",
+    link: "https://thebull.com.au/trading-guides/market-neutral-investment-strategies/",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/blog/robo-advisor.jpg",
-    title: "Difference between stand-alone adviser and robo",
+    image: "/images/blog/investment-magazine.jpg",
+    title: "Why quant investing is having a renaissance with asset owners",
     description:
-      "All independent advisers are standalone, but not all robo advisors are...",
-    link: "#",
+      "Often touted as the data-based approach to reaping alpha by exploiting human biases, quantit…",
+    link: "https://www.investmentmagazine.com.au/2024/03/why-quant-investing-is-having-a-renaissance-with-asset-owners/",
   },
 ];
 
@@ -126,7 +123,7 @@ export const HomeBlog = () => {
             <div className="mt-[40px] md:mt-[80px] flex justify-center space-x-4">
               <button
                 onClick={prevSlide}
-                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-gray-100 text-[#293483] hover:bg-gray-200 transition-transform hover:scale-110"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-gray-100 text-[#293483] hover:text-[#212A69] hover:bg-gray-200 transition-transform duration-300 ease-in-out transform hover:scale-110"
               >
                 <svg
                   width="24"
@@ -147,7 +144,7 @@ export const HomeBlog = () => {
               </button>
               <button
                 onClick={nextSlide}
-                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] hover:bg-[#212A69] text-white transform transition-transform duration-300 ease-in-out hover:scale-110"
               >
                 <svg
                   width="24"

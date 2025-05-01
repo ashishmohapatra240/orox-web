@@ -21,6 +21,8 @@ const faqs = [
     answer:
       "ODN offers steady, low-risk investing, while DVOX provides high-growth potential with crypto exposure. Choose what fits your goal.",
     action: "Learn more",
+    path: "/products",
+
   },
   {
     question: "What is a market-neutral strategy?",
