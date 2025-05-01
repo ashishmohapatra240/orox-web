@@ -18,9 +18,9 @@ export const Button = ({
         rounded-full transition-all
         ${
           variant === "primary"
-            ? "self-stretch px-4 py-2 bg-indigo-900 rounded-[32px] inline-flex justify-center items-center gap-2 hover:bg-[#293492]/90 text-white font-bold text-[14px]"
+            ? "self-stretch px-4 py-2 bg-[#293492] rounded-[32px] inline-flex justify-center items-center gap-2 hover:bg-[#212A69] text-white font-bold text-[14px]"
             : variant === "secondary"
-            ? "self-stretch px-4 py-2 bg-white rounded-[32px] border border-emerald-300 inline-flex justify-center items-center gap-2 text-[#19191B] hover:text-[#293492] font-bold text-[14px]"
+            ? "self-stretch px-4 py-2 bg-white rounded-[32px] border border-emerald-300 inline-flex justify-center items-center gap-2 text-[#19191B] hover:text-[#212A69] font-bold text-[14px]"
             : variant === "white"
             ? "self-stretch px-4 py-4 bg-white rounded-[32px] inline-flex justify-center items-center gap-2 text-[#293483] text-[16px] md:text-[20px] font-bold"
             : variant === "outline"
