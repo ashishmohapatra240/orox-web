@@ -233,7 +233,7 @@ export const Steps = () => {
                 <Link href="/signup">
                   <Button
                     variant="secondary"
-                    className="border border-[#78CAB9] hover:border-gray-300 py-[12px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap "
+                    className="border border-[#78CAB9] hover:border-gray-300 py-[12px] px-[16px] md:px-[32px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap "
                     style={{ fontWeight: "600 !important" }}
                   >
                     Create your account
