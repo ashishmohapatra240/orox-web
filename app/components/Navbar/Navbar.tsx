@@ -181,7 +181,7 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
           >
             <Link href="https://opusmomentus.com/coming-soon">
               <Image
-                src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/blog.png"
+                src="/images/products/blog.png"
                 alt="Blog Image"
                 width={600}
                 height={400}
