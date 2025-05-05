@@ -54,7 +54,7 @@ export const ValuesSection = () => {
                     src={value.icon}
                     alt={value.title}
                     fill
-                    className="object-contain transition-transform duration-300 hover:scale-110"
+                    className="object-contain"
                   />
                 </div>
                 <h3 className="mb-[8px] text-[20px] md:text-[24px] lg:text-[28px] font-bold text-[#19191B] mt-[24px] leading-[32px] md:leading-[36px] lg:leading-[40px]">
