@@ -46,9 +46,9 @@ export const HomeBlog = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const CARD_WIDTH = isMobile ? 315 : 392;
-  const CARD_GAP = isMobile ? 24 : 48;
-  const STEP = CARD_WIDTH + CARD_GAP;
+  // const CARD_WIDTH = isMobile ? 315 : 392;
+  // const CARD_GAP = isMobile ? 24 : 48;
+  const STEP = isMobile ? 315 : 280;
   const VISIBLE = isMobile ? 1 : 3;
   const MAX_SLIDE = Math.max(0, articles.length - VISIBLE);
 
