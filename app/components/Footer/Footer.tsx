@@ -384,57 +384,44 @@ export const Footer = () => {
         }
       >
         <div className="max-w-7xl mx-4 md:mx-auto py-8 md:py-8">
-          {isDarkTheme ? (
-            <p>© 2025 OROX Management Ltd. All Rights Reserved.</p>
-          ) : (
-            <p>© 2025 Opus Momentus Proprietary Ltd. All Rights Reserved.</p>
-          )}
+          <p>© 2025 OROX Management Ltd. All Rights Reserved.</p>
+
           <br />
-          {isDarkTheme ? (
-            <p>
-              <span className="font-bold">Disclaimer:</span> The materials on
-              this website are for informational and discussion purposes only
-              and do not constitute an offer or solicitation. Any offering may
-              be made solely through a confidential offering memorandum
-              delivered to eligible investors.
-              <br />
-              <br />
-              OROX is a technology platform providing access to algorithmic
-              trading strategies and digital asset tools. The ODN product is a
-              subscription-based service offering exposure to market-neutral
-              strategies. The DVOX token is a utility token that may be staked
-              within the platform to unlock access to benefits linked to a
-              professionally managed digital asset portfolio. DVOX does not
-              confer ownership rights, income entitlement, or equity interest in
-              OROX or any underlying assets, and is not intended to function as
-              a financial product, security, or regulated investment instrument
-              in any jurisdiction.
-              <br />
-              <br />
-              Participation in OROX services involves significant risks,
-              including market volatility and potential loss of capital. Returns
-              are not guaranteed. Past performance is not indicative of future
-              results. Access to the OROX platform and its products is not
-              available to U.S. persons or residents of any jurisdiction where
-              such access would be unlawful or require regulatory licensing. It
-              is the sole responsibility of users to comply with their local
-              laws and regulations.
-              <br />
-              <br />
-              Use of the platform is subject to acceptance of all applicable
-              terms, risk disclosures, and legal documentation. Please review
-              all materials carefully before engaging with any OROX product or
-              token.
-            </p>
-          ) : (
-            <p>
-              The materials on this website are for illustration and discussion
-              purposes only and do not constitute an offering. An offering may
-              be made only by delivery of a confidential offering memorandum to
-              appropriate investors. PAST PERFORMANCE IS NO GUARANTEE OF FUTURE
-              RESULTS.
-            </p>
-          )}
+
+          <p>
+            <span className="font-bold">Disclaimer:</span> The materials on this
+            website are for informational and discussion purposes only and do
+            not constitute an offer or solicitation. Any offering may be made
+            solely through a confidential offering memorandum delivered to
+            eligible investors.
+            <br />
+            <br />
+            OROX is a technology platform providing access to algorithmic
+            trading strategies and digital asset tools. The ODN product is a
+            subscription-based service offering exposure to market-neutral
+            strategies. The DVOX token is a utility token that may be staked
+            within the platform to unlock access to benefits linked to a
+            professionally managed digital asset portfolio. DVOX does not confer
+            ownership rights, income entitlement, or equity interest in OROX or
+            any underlying assets, and is not intended to function as a
+            financial product, security, or regulated investment instrument in
+            any jurisdiction.
+            <br />
+            <br />
+            Participation in OROX services involves significant risks, including
+            market volatility and potential loss of capital. Returns are not
+            guaranteed. Past performance is not indicative of future results.
+            Access to the OROX platform and its products is not available to
+            U.S. persons or residents of any jurisdiction where such access
+            would be unlawful or require regulatory licensing. It is the sole
+            responsibility of users to comply with their local laws and
+            regulations.
+            <br />
+            <br />
+            Use of the platform is subject to acceptance of all applicable
+            terms, risk disclosures, and legal documentation. Please review all
+            materials carefully before engaging with any OROX product or token.
+          </p>
         </div>
       </div>
     </footer>

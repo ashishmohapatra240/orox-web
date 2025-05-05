@@ -16,8 +16,8 @@ const defaultFeatures: Feature[] = [
   },
   {
     icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.svg",
-    title: "Consistency, not speculation",
-    description: "Built to perform through ups and downs with less stress.",
+    title: "Stress-free growth",
+    description: "Let automation and professional strategy do the heavy lifting.",
   },
   {
     icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.svg",
