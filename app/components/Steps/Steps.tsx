@@ -13,15 +13,21 @@ const steps = [
     description: (
       <>
         Get started by downloading the OROX app from the{" "}
-        <Link href="#" className="text-[#2F5DFD] underline">
+        <Link
+          href="https://apps.apple.com/au/app/orox/id6452677869"
+          className="text-[#2F5DFD] underline"
+        >
           App Store
         </Link>{" "}
         or{" "}
-        <Link href="#" className="text-[#2F5DFD] underline">
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU"
+          className="text-[#2F5DFD] underline"
+        >
           Play Store
         </Link>
         . Or{" "}
-        <Link href="#" className="text-[#2F5DFD] underline">
+        <Link href="/signup" className="text-[#2F5DFD] underline">
           sign up
         </Link>{" "}
         in minutes and access, stress-free high-growth investing.
@@ -59,12 +65,10 @@ const steps = [
   },
   {
     number: 5,
-    title: "Sit back and grow",
+    title: "Sit back and stay in control",
     description: (
       <>
-        No market timing, no day trading—just automated, data-driven strategies
-        on autopilot. Track your performance anytime through the OROX app and
-        stay informed as your portfolio evolves.
+        No market timing, no day trading—just automated, data-driven strategies on autopilot. Track your performance anytime through the OROX app and stay informed as your portfolio evolves.
       </>
     ),
     image: "/images/steps/steps-5-iPhone.png",
@@ -185,7 +189,7 @@ export const Steps = () => {
                       </>
                     ) : (
                       <>
-                        <p className="max-w-[580px]">
+                        <p className="max-w-[630px]">
                           Step {step.number}: {step.title}
                         </p>
                       </>

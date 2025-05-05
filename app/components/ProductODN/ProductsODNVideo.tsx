@@ -1,26 +1,26 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 const products = [
   {
-    tag: "PLACEHOLDER",
+    tag: "STRUCTURED PROCESS FOR PEACE OF MIND",
     title: (
       <>
+        <span> Getting started with ODN </span>
         <span className="relative inline-block z-10">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#C9CCE0]/40 rounded-[4px]" />
-          Placeholder
+          is simple
         </span>
       </>
     ),
     description: (
       <>
-        Love crypto but hate the chaos? DVOX is your access token to a
-        professionally managed, auto-balanced crypto ecosystem that&apos;s built
-        for long-term confidence, not just short-term hype. Stake DVOX in the
-        OROX app to unlock benefits and gain exposure to a curated portfolio of
-        high-grade digital assets, actively managed by experts. Forget diamond
-        hands—this is strategy over stress.
+        Once you create an account and fund your wallet, your investment enters
+        the next 90-day cycle. Each cycle runs on a market-neutral strategy
+        managed by our algorithmic trading system, designed to minimise
+        volatility and deliver consistent, risk-adjusted returns. At the end of
+        the cycle, you can choose to reinvest, withdraw or adjust your position.
       </>
     ),
     firstVideo: "/videos/OROXAnimation1.mp4",
@@ -87,7 +87,7 @@ export const ProductODNVideo = () => {
                 <p className="mt-[24px] mb-[40px] text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-white/80">
                   {p.description}
                 </p>
-                <Link
+                {/* <Link
                   href={p.link}
                   className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white hover:bg-gray-100 text-[#293483] transition-transform hover:scale-110"
                 >
@@ -100,7 +100,7 @@ export const ProductODNVideo = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                </Link>
+                </Link> */}
               </div>
 
               {/* ---------- video ---------- */}
