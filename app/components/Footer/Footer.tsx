@@ -76,7 +76,7 @@ export const Footer = () => {
 
             {/* More About Us Button */}
             <Link
-              href="https://www.opusmomentus.com/"
+              href="/about"
               className={`group inline-flex items-center font-bold ${
                 isDarkTheme ? "text-[#9499C1]" : "text-[#2F5DFD]"
               } hover:text-[#6082ff] mb-12 text-[14px] gap-1 `}
@@ -167,7 +167,7 @@ export const Footer = () => {
                 </h3>
                 <div
                   className={`space-y-2 ${
-                    isDarkTheme ? "text-[#19191B]/50" : "text-black/50"
+                    isDarkTheme ? "text-gray-400" : "text-black/50"
                   } text-[14px] flex flex-col`}
                 >
                   <a href="tel:+61 295 336 214" className="inline-block">
