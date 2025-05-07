@@ -6,7 +6,7 @@ import { useSwipeable } from "react-swipeable";
 const articles = [
   {
     image: "/images/blog/positive.png",
-    title: "Positive Signs for Institutional Investment in Crpyto…",
+    title: "Positive Signs for Institutional Investment in Crypto…",
     description:
       "President Trump’s second administration painted a new landscape for digital assets and…",
     link: "https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/",
