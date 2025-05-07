@@ -1,6 +1,22 @@
 "use client";
-import { useState, useRef, useEffect, ReactNode } from "react";
+import { useState, useRef, useEffect, ReactNode, createContext, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Create a context to pass the close function to children
+interface DropdownContextType {
+  closeDropdown: () => void;
+}
+
+const DropdownContext = createContext<DropdownContextType | undefined>(undefined);
+
+// Hook to access the dropdown context
+export const useDropdown = () => {
+  const context = useContext(DropdownContext);
+  if (!context) {
+    throw new Error("useDropdown must be used within a Dropdown component");
+  }
+  return context;
+};
 
 interface DropdownProps {
   trigger: ReactNode;
@@ -18,6 +34,11 @@ export const Dropdown = ({
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Close function that will be passed to children
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
 
   // Handle mouse enter - open with a small delay
   const handleMouseEnter = () => {
@@ -71,126 +92,61 @@ export const Dropdown = ({
   };
 
   return (
-    <div
-      className="static"
-      ref={dropdownRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <button
-        onClick={handleClick}
-        className="flex items-center"
-        aria-expanded={isOpen}
-        aria-label={`${label} menu`}
+    <DropdownContext.Provider value={{ closeDropdown }}>
+      <div
+        className="static"
+        ref={dropdownRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        {trigger}
-      </button>
+        <button
+          onClick={handleClick}
+          className="flex items-center"
+          aria-expanded={isOpen}
+          aria-label={`${label} menu`}
+        >
+          {trigger}
+        </button>
 
-      {/* Mobile dropdown */}
-      <AnimatePresence>
-        {isOpen && window.innerWidth < 768 && (
-          <motion.div
-            className={`fixed inset-0 z-50 ${
-              isDarkTheme ? "bg-black/80" : "bg-white/80"
-            } backdrop-blur-sm md:hidden`}
-            onClick={() => setIsOpen(false)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+        {/* Mobile dropdown */}
+        <AnimatePresence>
+          {isOpen && window.innerWidth < 768 && (
             <motion.div
-              className={`absolute inset-x-0 p-4 ${
-                isDarkTheme ? "bg-black" : "bg-white"
-              } shadow-lg overflow-y-auto`}
-              onClick={(e) => e.stopPropagation()}
-              variants={dropdownVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              className={`fixed inset-0 z-50 ${
+                isDarkTheme ? "bg-black/80" : "bg-white/80"
+              } backdrop-blur-sm md:hidden`}
+              onClick={() => setIsOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h2
-                    className={`text-lg font-semibold ${
-                      isDarkTheme ? "text-white" : "text-[#293483]"
-                    }`}
-                  >
-                    {label}
-                  </h2>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className={`p-2 ${
-                      isDarkTheme ? "text-white" : "text-gray-500"
-                    }`}
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+              <motion.div
+                className={`absolute inset-x-0 p-4 ${
+                  isDarkTheme ? "bg-black" : "bg-white"
+                } shadow-lg overflow-y-auto`}
+                onClick={(e) => e.stopPropagation()}
+                variants={dropdownVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <div className="max-w-7xl mx-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2
+                      className={`text-lg font-semibold ${
+                        isDarkTheme ? "text-white" : "text-[#293483]"
+                      }`}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <motion.div
-                  className="staggered-container"
-                  initial="hidden"
-                  animate="visible"
-                  custom={0}
-                >
-                  {children}
-                </motion.div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Desktop dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={`fixed ${isDarkTheme ? 'top-[89px]' : 'top-[89px]'} left-0 right-0 z-50 hidden md:block`}
-            variants={dropdownVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <div
-              className={`w-full border-t ${
-                isDarkTheme
-                  ? "border-[#3C3C3C] bg-black"
-                  : "border-[#F4F4F4] bg-white"
-              } shadow-lg`}
-            >
-              <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 relative">
-                <motion.div
-                  className="staggered-container"
-                  initial="hidden"
-                  animate="visible"
-                  custom={0}
-                >
-                  {children}
-                  <hr
-                    className={`my-10 h-[1px] ${
-                      isDarkTheme ? "bg-[#3C3C3C]" : "bg-[#E5E5E5]"
-                    }`}
-                  />
-                  <div className="absolute right-8 bottom-0 flex flex-col items-center">
+                      {label}
+                    </h2>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center space-x-2 mb-6 ${
-                        isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
-                      } hover:opacity-80 transition-opacity`}
+                      className={`p-2 ${
+                        isDarkTheme ? "text-white" : "text-gray-500"
+                      }`}
                     >
                       <svg
-                        className="h-4 w-4"
+                        className="h-6 w-6"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -202,22 +158,89 @@ export const Dropdown = ({
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>
-                      <span
-                        className={`font-semibold text-[16px] ${
-                          isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
-                        }`}
-                      >
-                        Close
-                      </span>
                     </button>
                   </div>
-                </motion.div>
+                  <motion.div
+                    className="staggered-container"
+                    initial="hidden"
+                    animate="visible"
+                    custom={0}
+                  >
+                    {children}
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Desktop dropdown */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className={`fixed ${isDarkTheme ? 'top-[89px]' : 'top-[89px]'} left-0 right-0 z-50 hidden md:block`}
+              variants={dropdownVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <div
+                className={`w-full border-t ${
+                  isDarkTheme
+                    ? "border-[#3C3C3C] bg-black"
+                    : "border-[#F4F4F4] bg-white"
+                } shadow-lg`}
+              >
+                <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 relative">
+                  <motion.div
+                    className="staggered-container"
+                    initial="hidden"
+                    animate="visible"
+                    custom={0}
+                  >
+                    {children}
+                    <hr
+                      className={`my-10 h-[1px] ${
+                        isDarkTheme ? "bg-[#3C3C3C]" : "bg-[#E5E5E5]"
+                      }`}
+                    />
+                    <div className="absolute right-8 bottom-0 flex flex-col items-center">
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className={`flex items-center space-x-2 mb-6 ${
+                          isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                        } hover:opacity-80 transition-opacity`}
+                      >
+                        <svg
+                          className="h-4 w-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                        <span
+                          className={`font-semibold text-[16px] ${
+                            isDarkTheme ? "text-[#FFDE82]" : "text-[#2F5DFD]"
+                          }`}
+                        >
+                          Close
+                        </span>
+                      </button>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </DropdownContext.Provider>
   );
 };
 

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Dropdown, DropdownItem } from "../ui/Dropdown";
+import { Dropdown, DropdownItem, useDropdown } from "../ui/Dropdown";
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -10,190 +10,207 @@ import { PlayStoreButton } from "../ui/PlayStoreButton";
 import { AppStoreButton } from "../ui/AppStoreButton";
 
 // Product dropdown content component
-const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => (
-  <div className="flex flex-col lg:flex-row gap-6">
-    <div className="space-y-2 lg:w-1/3">
-      <DropdownItem index={0}>
-        <h3
-          className={`font-semibold text-lg ${
-            isDarkTheme ? "text-white" : "text-[#19191B]"
-          } mb-6 pl-1 md:pl-4`}
-        >
-          Our product suite
-        </h3>
-      </DropdownItem>
-      <div className="space-y-4">
-        <DropdownItem index={1}>
-          <Link href="/products-orox-app">
-            <div
-              className={`${
-                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-              } rounded-lg p-1 md:p-4`}
-            >
-              <h4
-                className={`font-medium ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
-              >
-                OROX App
-              </h4>
-              <p className="text-sm text-[#999999] font-regular text-[14px]">
-                Download from App and Play Store
-              </p>
-            </div>
-          </Link>
-        </DropdownItem>
-        <DropdownItem index={2}>
-          <Link href="/products-odn">
-            <div
-              className={`${
-                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-              } rounded-lg p-1 md:p-4`}
-            >
-              <h4
-                className={`font-medium ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
-              >
-                Opus Diversified Nexus
-              </h4>
-              <p className="text-sm text-[#999999] font-regular text-[14px]">
-                Subscription
-              </p>
-            </div>
-          </Link>
-        </DropdownItem>
-        <DropdownItem index={3}>
-          <Link href="/products-dvox">
-            <div
-              className={`${
-                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-              } rounded-lg p-1 md:p-4`}
-            >
-              <h4
-                className={`font-medium ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
-              >
-                DVOX — Digital Coin
-              </h4>
-              <p className="text-sm text-[#999999] font-regular text-[14px]">
-                Utility Token
-              </p>
-            </div>
-          </Link>
-        </DropdownItem>
-      </div>
-    </div>
+const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => {
+  const { closeDropdown } = useDropdown();
 
-    <div className="space-y-2 w-full lg:w-1/3">
-      <DropdownItem index={4}>
-        <h3
-          className={`font-semibold text-lg ${
-            isDarkTheme ? "text-white" : "text-[#19191B]"
-          } mb-4 pl-1 md:pl-4`}
-        >
-          Latest from our Blog
-        </h3>
-      </DropdownItem>
-      <div className="space-y-0">
-        <DropdownItem index={5}>
-          <div
-            className={`${
-              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-            } rounded-lg p-1 md:p-4`}
+  return (
+    <div className="flex flex-col lg:flex-row gap-6">
+      <div className="space-y-2 lg:w-1/3">
+        <DropdownItem index={0}>
+          <h3
+            className={`font-semibold text-lg ${
+              isDarkTheme ? "text-white" : "text-[#19191B]"
+            } mb-6 pl-1 md:pl-4`}
           >
-            <Link href="https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/">
-              <span className="text-xs font-semibold text-[#999999]">
-                UPDATES
-              </span>
-              <h4
-                className={`font-medium mt-1 ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
-              >
-                Positive Signs For Institutional Investment In Cryptocurrencies
-              </h4>
-            </Link>
-          </div>
+            Our product suite
+          </h3>
         </DropdownItem>
-
-        <DropdownItem index={6}>
-          <div
-            className={`${
-              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-            } rounded-lg p-1 md:p-4`}
-          >
-            <Link href="https://www.ey.com/en_us/insights/financial-services/evolving-digital-assets-sentiment-among-investors">
-              <span className="text-xs font-semibold text-[#999999]">
-                ADVICE & TIPS
-              </span>
-              <h4
-                className={`font-medium mt-1 ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
+        <div className="space-y-4">
+          <DropdownItem index={1}>
+            <Link href="/products-orox-app" onClick={closeDropdown}>
+              <div
+                className={`${
+                  isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+                } rounded-lg p-1 md:p-4`}
               >
-                Institutional sentiment points to increased adoption of digital
-                assets
-              </h4>
+                <h4
+                  className={`font-medium ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  OROX App
+                </h4>
+                <p className="text-sm text-[#999999] font-regular text-[14px]">
+                  Download from App and Play Store
+                </p>
+              </div>
             </Link>
-          </div>
-        </DropdownItem>
-
-        <DropdownItem index={7}>
-          <div
-            className={`${
-              isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
-            } rounded-lg p-1 md:p-4`}
-          >
-            <Link href="https://thebull.com.au/trading-guides/market-neutral-investment-strategies/">
-              <span className="text-xs font-semibold text-[#999999]">
-                INSIGHTS
-              </span>
-              <h4
-                className={`font-medium mt-1 ${
-                  isDarkTheme ? "text-white" : "text-[#19191B]"
-                } text-[16px] font-regular`}
+          </DropdownItem>
+          <DropdownItem index={2}>
+            <Link href="/products-odn" onClick={closeDropdown}>
+              <div
+                className={`${
+                  isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+                } rounded-lg p-1 md:p-4`}
               >
-                Controlling Volatility through Market Neutral Investing
-              </h4>
+                <h4
+                  className={`font-medium ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  Opus Diversified Nexus
+                </h4>
+                <p className="text-sm text-[#999999] font-regular text-[14px]">
+                  Subscription
+                </p>
+              </div>
             </Link>
-          </div>
-        </DropdownItem>
-      </div>
-    </div>
-
-    {/* Divider - only visible on desktop */}
-    <div
-      className={`hidden lg:block w-0.5 self-stretch ${
-        isDarkTheme ? "bg-[#3C3C3C]" : "bg-neutral-200"
-      } mx-4`}
-    />
-
-    {/* Image section - only visible on larger screens */}
-    <DropdownItem index={8}>
-      <div className="hidden lg:block space-y-2 w-full">
-        <div className="flex justify-center items-center w-full">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
-            <Link href="https://opusmomentus.com/coming-soon">
-              <Image
-                src="/images/products/blog.png"
-                alt="Blog Image"
-                width={600}
-                height={400}
-                className="w-[600px] h-auto"
-              />
+          </DropdownItem>
+          <DropdownItem index={3}>
+            <Link href="/products-dvox" onClick={closeDropdown}>
+              <div
+                className={`${
+                  isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+                } rounded-lg p-1 md:p-4`}
+              >
+                <h4
+                  className={`font-medium ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  DVOX — Digital Coin
+                </h4>
+                <p className="text-sm text-[#999999] font-regular text-[14px]">
+                  Utility Token
+                </p>
+              </div>
             </Link>
-          </motion.div>
+          </DropdownItem>
         </div>
       </div>
-    </DropdownItem>
-  </div>
-);
+
+      <div className="space-y-2 w-full lg:w-1/3">
+        <DropdownItem index={4}>
+          <h3
+            className={`font-semibold text-lg ${
+              isDarkTheme ? "text-white" : "text-[#19191B]"
+            } mb-4 pl-1 md:pl-4`}
+          >
+            Latest from our Blog
+          </h3>
+        </DropdownItem>
+        <div className="space-y-0">
+          <DropdownItem index={5}>
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
+            >
+              <Link
+                href="https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/"
+                onClick={closeDropdown}
+              >
+                <span className="text-xs font-semibold text-[#999999]">
+                  UPDATES
+                </span>
+                <h4
+                  className={`font-medium mt-1 ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  Positive Signs For Institutional Investment In
+                  Cryptocurrencies
+                </h4>
+              </Link>
+            </div>
+          </DropdownItem>
+
+          <DropdownItem index={6}>
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
+            >
+              <Link
+                href="https://www.ey.com/en_us/insights/financial-services/evolving-digital-assets-sentiment-among-investors"
+                onClick={closeDropdown}
+              >
+                <span className="text-xs font-semibold text-[#999999]">
+                  ADVICE & TIPS
+                </span>
+                <h4
+                  className={`font-medium mt-1 ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  Institutional sentiment points to increased adoption of
+                  digital assets
+                </h4>
+              </Link>
+            </div>
+          </DropdownItem>
+
+          <DropdownItem index={7}>
+            <div
+              className={`${
+                isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#21275B]/10"
+              } rounded-lg p-1 md:p-4`}
+            >
+              <Link
+                href="https://thebull.com.au/trading-guides/market-neutral-investment-strategies/"
+                onClick={closeDropdown}
+              >
+                <span className="text-xs font-semibold text-[#999999]">
+                  INSIGHTS
+                </span>
+                <h4
+                  className={`font-medium mt-1 ${
+                    isDarkTheme ? "text-white" : "text-[#19191B]"
+                  } text-[16px] font-regular`}
+                >
+                  Controlling Volatility through Market Neutral Investing
+                </h4>
+              </Link>
+            </div>
+          </DropdownItem>
+        </div>
+      </div>
+
+      {/* Divider - only visible on desktop */}
+      <div
+        className={`hidden lg:block w-0.5 self-stretch ${
+          isDarkTheme ? "bg-[#3C3C3C]" : "bg-neutral-200"
+        } mx-4`}
+      />
+
+      {/* Image section - only visible on larger screens */}
+      <DropdownItem index={8}>
+        <div className="hidden lg:block space-y-2 w-full">
+          <div className="flex justify-center items-center w-full">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+            >
+              <Link
+                href="https://opusmomentus.com/coming-soon"
+                onClick={closeDropdown}
+              >
+                <Image
+                  src="/images/products/blog.png"
+                  alt="Blog Image"
+                  width={600}
+                  height={400}
+                  className="w-[600px] h-auto"
+                />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </DropdownItem>
+    </div>
+  );
+};
 
 // Support dropdown content component
 // const SupportDropdown = () => (
@@ -413,6 +430,7 @@ export const Navbar = () => {
                 ? "text-white hover:bg-white/10"
                 : "text-[#19191B] hover:bg-[#E9E9EF]"
             } transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
+            onClick={closeAllMenus}
           >
             Our Products
           </Link>
@@ -429,6 +447,7 @@ export const Navbar = () => {
                 ? "text-white hover:bg-white/10"
                 : "text-[#19191B] hover:bg-[#E9E9EF]"
             } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
+            onClick={closeAllMenus}
           >
             OROX App
           </Link>
@@ -445,6 +464,7 @@ export const Navbar = () => {
                 ? "text-white hover:bg-white/10"
                 : "text-[#19191B] hover:bg-[#E9E9EF]"
             } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
+            onClick={closeAllMenus}
           >
             Opus Diversified Nexus
           </Link>
@@ -461,6 +481,7 @@ export const Navbar = () => {
                 ? "text-white hover:bg-white/10"
                 : "text-[#19191B] hover:bg-[#E9E9EF]"
             } mt-[16px] transition-colors px-[8px] py-2 rounded-md mx-[8px]`}
+            onClick={closeAllMenus}
           >
             DVOX Token
           </Link>
@@ -650,7 +671,7 @@ export const Navbar = () => {
             {/* Close button header */}
             <div
               className={`fixed top-0 right-0 w-[280px] ${
-                isDarkTheme ? "h-[83px]" : "h-[73px]"
+                isDarkTheme ? "h-[73px]" : "h-[73px]"
               } ${
                 isDarkTheme
                   ? "bg-[#000000] border-[#3C3C3C]"
