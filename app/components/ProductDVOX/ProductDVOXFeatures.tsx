@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/Button";
+import Link from "next/link";
 
 const features = [
   {
@@ -11,7 +12,8 @@ const features = [
   {
     icon: "/icons/dvox-features/auto-balanced.svg",
     title: "Auto-balanced",
-    description: "Designed to support portfolio consistency by aiming to reduce volatility.",
+    description:
+      "Designed to support portfolio consistency by aiming to reduce volatility.",
   },
   {
     icon: "/icons/dvox-features/staking-rewards.svg",
@@ -35,10 +37,12 @@ export const ProductDVOXFeatures = ({
   title,
   description,
   cta,
+  path,
 }: {
   title: string;
   description: string;
   cta?: string;
+  path?: string;
 }) => {
   return (
     <section className="w-full bg-black text-white px-[16px] py-[44px] md:px-[80px] md:py-[88px]">
@@ -111,14 +115,16 @@ export const ProductDVOXFeatures = ({
           </div>
 
           {/* CTA Button */}
-          {cta && (
+          {cta && path && (
             <div className="text-center mt-[40px]">
-              <Button
-                variant="primary"
-                className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px] bg-[#FFD600] text-black hover:bg-[#FFD600]/90"
-              >
-                {cta}
-              </Button>
+              <Link href={path}>
+                <Button
+                  variant="secondary"
+                  className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px] px-[32px]"
+                >
+                  {cta}
+                </Button>
+              </Link>
             </div>
           )}
         </div>
