@@ -69,9 +69,7 @@ export const Footer = () => {
                 isDarkTheme ? "text-white" : "text-[#19191B]"
               } max-w-[400px] mb-6 text-[16px] leading-[2]`}
             >
-              OROX puts your money on autopilot with AI-powered quantitative
-              investing, risk-adjusted strategies and secure blockchain-backed
-              growth.
+              OROX puts your investing on autopilot. Powered by AI, driven by data and secured by blockchain.
             </p>
 
             {/* More About Us Button */}

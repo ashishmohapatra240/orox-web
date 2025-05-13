@@ -41,9 +41,9 @@ export const ProductDVOXHero = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleActionClick = () => {
-    setIsModalOpen(true);
-  };
+  // const handleActionClick = () => {
+  //   setIsModalOpen(true);
+  // };
 
   return (
     <>
@@ -51,9 +51,9 @@ export const ProductDVOXHero = () => {
         <div className="h-full max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row h-full ">
             {/* Left Content - Presale Card */}
-            <div className="px-[16px] lg:w-[540px] flex items-center justify-center py-[48px] md:py-[80px]">
+            <div className="px-[16px] lg:w-[540px] flex items-start justify-start py-[48px] md:py-[80px]">
               <div className="max-w-[520px] w-full p-[4px] rounded-[24px] bg-gradient-to-b from-[#F9DF7B] via-[#B57E10] to-[#F9DF7B]">
-                <div className="w-full h-full rounded-[20px] bg-black p-8 px-[16px] flex flex-col">
+                <div className="w-full h-full rounded-[20px] bg-black pt-8 pl-8 pr-8 px-[16px] flex flex-col">
                   {/* Logo and Title */}
                   <div className="flex-shrink-0">
                     <Image
@@ -71,7 +71,7 @@ export const ProductDVOXHero = () => {
                     </h2>
                   </div>
                   {/* Timer */}
-                  <div className="my-[24px] px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
+                  <div className=" px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
                     <div className="inline-flex justify-start items-center gap-2 md:gap-8">
                       {[
                         { label: "DAYS", value: timeLeft.days },
@@ -108,18 +108,18 @@ export const ProductDVOXHero = () => {
                   </div>
 
                   {/* Progress Bar */}
-                  <div className="flex-shrink-0">
+                  {/* <div className="flex-shrink-0">
                     <div className="text-[20px] text-center mb-[8px] leading-[32px]">
                       USDT Raised: $17,250,440.43 / $17,594,367
                     </div>
                     <div className="h-[8px] bg-[#ffffff1a] rounded-full mb-[24px]">
                       <div className="h-full w-[45%] rounded-full bg-[#FFD600]"></div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* DVOX Info */}
                   <div className="space-y-[8px] mb-[24px] text-center flex-grow flex flex-col justify-center">
-                    <div className="flex items-center justify-center">
+                    {/* <div className="flex items-center justify-center">
                       <span className="text-[16px] md:text-[20px] text-[#ffffff] leading-[24px] md:leading-[32px]">
                         Your purchased DVOX =
                       </span>
@@ -133,8 +133,8 @@ export const ProductDVOXHero = () => {
                         height={24}
                         className="ml-[16px]"
                       />
-                    </div>
-                    <div className="flex items-center justify-center">
+                    </div> */}
+                    {/* <div className="flex items-center justify-center">
                       <span className="text-[16px] md:text-[20px] text-[#ffffff] leading-[24px] md:leading-[32px]">
                         Your stakeable DVOX =
                       </span>
@@ -148,8 +148,17 @@ export const ProductDVOXHero = () => {
                         height={24}
                         className="ml-[16px]"
                       />
-                    </div>
-                    <div className="flex items-center justify-center pt-[24px]">
+                    </div> */}
+                    {/* <div className="flex items-center justify-center pt-[24px]">
+                      <hr className="w-1/4 h-tiny bg-[#C9CCE0] mr-[16px]" />
+                      <div className="text-[16px] md:text-[12px] text-[#C9CCE0] leading-[24px] md:leading-[16px] font-semibold">
+                        1 DVOX = $0.01
+                      </div>
+                      <hr className="w-1/4 h-tiny bg-[#C9CCE0] ml-[16px]" />
+                    </div> */}
+
+                    {/*to be deleted later*/}
+                    <div className="flex items-center justify-center pt-[16px]">
                       <hr className="w-1/4 h-tiny bg-[#C9CCE0] mr-[16px]" />
                       <div className="text-[16px] md:text-[12px] text-[#C9CCE0] leading-[24px] md:leading-[16px] font-semibold">
                         1 DVOX = $0.01
@@ -159,7 +168,7 @@ export const ProductDVOXHero = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex-shrink-0">
+                  {/* <div className="flex-shrink-0">
                     <div className="flex flex-col md:flex-row justify-between gap-[8px] w-full whitespace-nowrap">
                       <Button
                         variant="dvox"
@@ -188,8 +197,8 @@ export const ProductDVOXHero = () => {
                         Buy with crypto
                       </Button>
                     </div>
-                  </div>
-                  <div className="text-center mt-[24px] flex-shrink-0">
+                  </div> */}
+                  {/* <div className="text-center mt-[24px] flex-shrink-0">
                     <a
                       href="#"
                       className="text-[12px] text-[#FFDE82] font-semibold flex items-center justify-center gap-[4px]"
@@ -206,7 +215,7 @@ export const ProductDVOXHero = () => {
                         height={18}
                       />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

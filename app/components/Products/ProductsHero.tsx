@@ -34,12 +34,23 @@ export const ProductsHero = () => {
                 Our products
               </h1>
               <p className="text-[14px] md:text-[20px] text-[#19191B] leading-[20px] md:leading-[32px] mt-[12px] md:mt-[24px]">
-              OROX is a seamless investment app offering access to risk-aware strategies and curated crypto exposure—all in one place. Invest with ease through professionally managed, algorithm-driven solutions that help reduce volatility and simplify your financial journey.
+                OROX is a seamless investment app offering access to risk-aware
+                strategies and curated crypto exposure—all in one place. Invest
+                with ease through professionally managed, algorithm-driven
+                solutions that help reduce volatility and simplify your
+                financial journey.
               </p>
             </div>
           </div>
           <div className="flex justify-center">
-            <Button className="mt-[20px] md:mt-[40px] px-[20px] md:px-[32px] py-[10px] md:py-[16px] text-white font-bold rounded transition-colors duration-300 text-[12px] md:text-[20px]">
+            <Button
+              className="mt-[20px] md:mt-[40px] px-[20px] md:px-[32px] py-[10px] md:py-[16px] text-white font-bold rounded transition-colors duration-300 text-[12px] md:text-[20px]"
+              onClick={() => {
+                document.getElementById("products-showcase")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
               Scroll to learn more
             </Button>
           </div>
