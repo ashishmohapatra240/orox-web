@@ -3,6 +3,7 @@
 import { Button } from "../ui/Button";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const tokenDistributionData = [
   { name: "Strategies funding reserve", value: 25, color: "#6366F1" },
@@ -156,12 +157,14 @@ export const ProductDVOXTokenomics = () => {
               Want to learn more? Read the DVOX whitepaper for full details on
               tokenomics, strategy and future growth.
             </p>
+            <Link href="https://dvox.gitbook.io/dvox" target="_blank" rel="noopener noreferrer">
             <Button
               variant="secondary"
               className="h-[48px] md:h-[64px] px-[32px] text-[16px] md:text-[20px] w-full md:w-auto"
             >
-              Download white paper
-            </Button>
+                Download white paper
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
