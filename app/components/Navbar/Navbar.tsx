@@ -109,6 +109,8 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => {
               <Link
                 href="https://www.forbes.com/sites/digital-assets/2025/01/24/positive-signs-for-institutional-investment-in-cryptocurrencies/"
                 onClick={closeDropdown}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="text-xs font-semibold text-[#999999]">
                   UPDATES
@@ -134,6 +136,8 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => {
               <Link
                 href="https://www.ey.com/en_us/insights/financial-services/evolving-digital-assets-sentiment-among-investors"
                 onClick={closeDropdown}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="text-xs font-semibold text-[#999999]">
                   ADVICE & TIPS
@@ -159,6 +163,8 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => {
               <Link
                 href="https://thebull.com.au/trading-guides/market-neutral-investment-strategies/"
                 onClick={closeDropdown}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className="text-xs font-semibold text-[#999999]">
                   INSIGHTS
@@ -195,6 +201,8 @@ const ProductsDropdown = ({ isDarkTheme }: { isDarkTheme?: boolean }) => {
               <Link
                 href="https://opusmomentus.com/coming-soon"
                 onClick={closeDropdown}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src="/images/products/blog.png"
@@ -823,7 +831,7 @@ export const Navbar = () => {
               />
               <div className="mb-[32px]">
                 <div className="flex flex-col items-center gap-[8px]">
-                  <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU" />
+                  <PlayStoreButton href="https://play.google.com/store/apps/details?id=com.oroxlabs.app.android&hl=en_AU"/>
                   <AppStoreButton href="https://apps.apple.com/au/app/orox/id6452677869" />
                 </div>
 
