@@ -45,7 +45,7 @@ export const Hero = () => {
                   variant="primary"
                   className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 inline-flex text-white font-bold text-[16px] md:text-[20px] transition-colors mb-[64px] md:mb-[50px] mt-[40px]"
                 >
-                  <Link href="/signup">Join for free</Link>
+                  <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Join for free</Link>
                 </Button>
               </div>
             </div>

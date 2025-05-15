@@ -1,10 +1,10 @@
-import { Login } from "../../components/Auth/Login";
+// import { Login } from "../../components/Auth/Login";
 
-export const metadata = {
-  title: "Login | OROX",
-  description: "Log in to your OROX account",
-};
+// export const metadata = {
+//   title: "Login | OROX",
+//   description: "Log in to your OROX account",
+// };
 
-export default function LoginPage() {
-  return <Login />;
-}
+// export default function LoginPage() {
+//   return <Login />;
+// }

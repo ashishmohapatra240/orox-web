@@ -803,7 +803,7 @@ export const Navbar = () => {
             {/* QR Code section */}
             <div className="px-6 pb-8 mt-[24px]">
               <div className="space-y-3 mt-[64px] mb-[24px]">
-                <Link href="/login">
+                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant={isDarkTheme ? "dvox" : "secondary"}
                     className={`w-full block ${
@@ -815,7 +815,7 @@ export const Navbar = () => {
                     Log in
                   </Button>
                 </Link>
-                <Link href="/signup" className="w-full block">
+                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer" className="w-full block">
                   <Button
                     variant={isDarkTheme ? "secondary" : "primary"}
                     className={`w-full rounded-full whitespace-nowrap`}
@@ -860,7 +860,7 @@ export const Navbar = () => {
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
-          <Link href="/login">
+          <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">
             <Button
               variant={isDarkTheme ? "dvox" : "secondary"}
               className="whitespace-nowrap"
@@ -868,7 +868,7 @@ export const Navbar = () => {
               Log in
             </Button>
           </Link>
-          <Link href="/signup">
+          <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">
             <Button
               variant={isDarkTheme ? "secondary" : "primary"}
               className="px-3 md:px-4 lg:px-6 whitespace-nowrap"

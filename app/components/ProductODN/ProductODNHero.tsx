@@ -39,7 +39,7 @@ export const ProductOdnHero = () => {
                 variant="primary"
                 className="text-nowrap text-[16px] md:text-[20px] h-[48px] md:h-[56px] lg:h-[64px] px-[32px]"
               >
-                <Link href="/signup">Get Started</Link>
+                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Get Started</Link>
               </Button>
             </div>
           </div>

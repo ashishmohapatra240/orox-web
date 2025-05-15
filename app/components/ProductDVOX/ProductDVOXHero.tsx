@@ -268,7 +268,7 @@ export const ProductDVOXHero = () => {
                 variant="secondary"
                 className="mt-8 h-12 px-8 text-black hover:bg-gray-100 whitespace-nowrap w-full md:w-auto"
               >
-                <Link href="/signup">Get started</Link>
+                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Get started</Link>
               </Button>
             </div>
           </div>
