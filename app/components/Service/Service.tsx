@@ -59,7 +59,7 @@ const Service = ({ tag, description }: ServiceProps) => {
 
           {/* Phone Image - Mobile (Bottom Position) */}
           <div className="mt-[24px] flex justify-center items-center">
-            <div className="relative w-[427px] h-[330px]">
+            <div className="relative w-[300px] h-[300px]">
               <Image
                 src="/images/service/MobileCallToAction.png"
                 alt="OROX App Interface"
@@ -88,8 +88,8 @@ const Service = ({ tag, description }: ServiceProps) => {
           </div>
 
           {/* Phone Image - Tablet/Medium */}
-          <div className="absolute right-[-20px] sm:right-[-30px] md:right-[-40px] top-[50%] transform translate-y-[-50%]">
-            <div className="relative w-[500px] md:w-[600px] h-[400px] md:h-[500px]">
+          <div className="absolute right-[-20px] sm:right-[-30px] md:right-[0px] top-[50%] transform translate-y-[-50%]">
+            <div className="relative w-[500px] h-[400px] md:w-[400px] md:h-[300px]">
               <Image
                 src="/images/service/MobileCallToActionWeb.png"
                 alt="OROX App Interface"
@@ -120,13 +120,13 @@ const Service = ({ tag, description }: ServiceProps) => {
           </div>
 
           {/* Phone Image - Desktop */}
-          <div className="absolute right-[-60px] -top-[120px] z-10">
-            <div className="relative w-[950px] h-700px]">
+          <div className="absolute right-[-280px] -top-[80px] z-10">
+            <div className="relative w-[480px] h-[300px] md:w-[950px] md:h-[700px]">
               <Image
                 src="/images/service/MobileCallToActionWeb.png"
                 alt="OROX App Interface"
-                width={1096}
-                height={846}
+                width={680}
+                height={600}
                 className="drop-shadow-2xl object-contain hover:scale-105 transition-all duration-300"
               />
             </div>
