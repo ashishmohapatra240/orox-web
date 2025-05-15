@@ -13,7 +13,7 @@ export const ReadyToInvest = () => {
               risk-adjusted strategies designed for growth.
             </h2>
             <Button className="bg-white text-[#293483] hover:bg-white/90">
-              <Link href="/signup"> Get started with OROX</Link>
+              <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer"> Get started with OROX</Link>
             </Button>
           </div>
 

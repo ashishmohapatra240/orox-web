@@ -66,7 +66,7 @@ export const ProductDVOXHero = () => {
                     <div className="text-[#B89C49] text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-amber-300  to-yellow-600 ">
                       NEW DIGITAL TOKEN - COMING SOON
                     </div>
-                    <h2 className="text-[28px] md:text-[36px] font-bold leading-[32px] md:leading-[48px] mt-[8px]">
+                    <h2 className="text-[28px] md:text-[36px] font-bold leading-[32px] md:leading-[48px] mt-[8px] mb-[16px]">
                       Don&apos;t miss out on the new DVOX token presale!
                     </h2>
                   </div>
@@ -268,7 +268,7 @@ export const ProductDVOXHero = () => {
                 variant="secondary"
                 className="mt-8 h-12 px-8 text-black hover:bg-gray-100 whitespace-nowrap w-full md:w-auto"
               >
-                <Link href="/signup">Get started</Link>
+                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Get started</Link>
               </Button>
             </div>
           </div>

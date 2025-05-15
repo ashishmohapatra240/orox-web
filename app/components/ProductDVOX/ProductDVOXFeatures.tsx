@@ -117,7 +117,7 @@ export const ProductDVOXFeatures = ({
           {/* CTA Button */}
           {cta && path && (
             <div className="text-center mt-[40px]">
-              <Link href={path}>
+              <Link href={path} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   className="text-[16px] md:text-[20px] font-bold w-full md:w-auto h-[48px] md:h-[64px] px-[32px]"
