@@ -92,7 +92,7 @@ export const ProductDVOXTokenomics = () => {
           <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-center max-w-[1040px] mb-[40px]">
             {activeTab === "distribution"
               ? "The DVOX token puts you in control of crypto without the chaos. Engineered for long-term potential and built to ride smarter, not wilder, DVOX gives you access to a professionally managed, auto-balanced ecosystem that thrives on volatility—not fear. It's designed for sustainability, backed by blockchain and focused on delivering powerful outcomes with real transparency and liquidity."
-              : "From the Community to the Community."}
+              : "From the community, for the community."}
           </p>
 
           <div
