@@ -18,9 +18,9 @@ export const OpusMomentus = () => {
               href={"https://www.opusmomentus.com/"}
               className="text-[#2F5DFD] underline"
             >
-              Opus Momentus{" "}
+              Opus Momentus
             </Link>
-            makes advanced investing accessible through cutting-edge quant
+            {" "}makes advanced investing accessible through cutting-edge quant
             technology and market-neutral strategies. Built on this foundation,
             OROX delivers a seamless platform for smarter, automated investing.
             Together, they’re shaping the future of accessible, data-driven
