@@ -133,7 +133,7 @@ export const Products = () => {
               <div>
                 <Link
                   href={product.path || "#"}
-                  className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+                  className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110 hover:bg-[#212A69]"
                 >
                   <svg
                     width="24"
