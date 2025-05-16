@@ -136,7 +136,7 @@ export const TestimonialSection = () => {
                 );
                 resetAnimation();
               }}
-              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#293483] transition-transform hover:scale-110"
+              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-white text-[#293483] transition-transform hover:scale-110 hover:bg-[#F2F2F2]"
             >
               <svg
                 width="24"
@@ -184,7 +184,7 @@ export const TestimonialSection = () => {
                 setCurrentSlide((prev) => (prev + 1) % testimonials.length);
                 resetAnimation();
               }}
-              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110"
+              className="inline-flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#293483] text-white transition-transform hover:scale-110 hover:bg-[#212A69]"
             >
               <svg
                 width="24"
