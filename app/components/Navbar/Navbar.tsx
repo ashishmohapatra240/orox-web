@@ -587,36 +587,34 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-5">
-          <Link href="/products">
-            <Dropdown
-              label="Products"
-              isDarkTheme={isDarkTheme}
-              trigger={
-                <div
-                  className={`flex items-center space-x-1 ${
-                    isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
-                  } rounded-md px-3 py-2 transition-colors`}
+          <Dropdown
+            label="Products"
+            isDarkTheme={isDarkTheme}
+            trigger={
+              <div
+                className={`flex items-center space-x-1 ${
+                  isDarkTheme ? "hover:bg-white/10" : "hover:bg-[#E9E9EF]"
+                } rounded-md px-3 py-2 transition-colors`}
+              >
+                <span>Products</span>
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <span>Products</span>
-                  <svg
-                    className="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              }
-            >
-              <ProductsDropdown isDarkTheme={isDarkTheme} />
-            </Dropdown>
-          </Link>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            }
+          >
+            <ProductsDropdown isDarkTheme={isDarkTheme} />
+          </Dropdown>
 
           {/* <Link
             href="/"
