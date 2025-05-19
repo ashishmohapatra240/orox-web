@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const values = [
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/transparency.svg",
+    icon: "/images/features/transparency.svg",
     title: "Transparency",
     description:
       "No hidden fees, no complicated jargon—just clear, honest investing with visibility.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/accountability.svg",
+    icon: "/images/features/accountability.svg",
     title: "Accountability",
     description:
       "We take responsibility for every decision, ensuring trust and reliability in all we do.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/challenge.svg",
+    icon: "/images/features/challenge.svg",
     title: "Challenge the status quo",
     description:
       "Embracing innovation to create smarter, more secure investment solutions.",

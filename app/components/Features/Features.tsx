@@ -10,22 +10,22 @@ type Feature = {
 
 const defaultFeatures: Feature[] = [
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/smart-investing.svg",
+    icon: "/images/features/smart-investing.svg",
     title: "Easy, smart investing",
     description: "Smarter investing made easy with AI and our sleek OROX app.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/growth.svg",
+    icon: "/images/features/growth.svg",
     title: "Stress-free growth",
     description: "Let automation and professional strategy do the heavy lifting.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/secure.svg",
+    icon: "/images/features/secure.svg",
     title: "Secure and transparent",
     description: "Secure and transparent with blockchain-backed tech.",
   },
   {
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/features/trust.svg",
+    icon: "/images/features/trust.svg",
     title: "Built with trust",
     description: "Aussie-built, trusted and accessible to investors worldwide.",
   },

@@ -81,7 +81,7 @@ const products: {
       </>
     ),
     image:
-      "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/img_odn_invest_banner.png",
+      "/images/products/img_odn_invest_banner.png",
     imageAlt: "ODN Investment Chart",
     bgColor: "bg-[#293483]",
     path: "/products-odn",
