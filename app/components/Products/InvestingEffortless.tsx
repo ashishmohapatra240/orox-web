@@ -4,22 +4,22 @@ const features = [
   {
     title: "Easy, smart investing",
     description: "Simple, automated investing that works on every device.",
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/icons/easy-investing.svg",
+    icon: "/images/icons/easy-investing.svg",
   },
   {
     title: "Stress-free growth",
     description: "Market-neutral strategies create reliable returns.",
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/icons/stress-free.svg",
+    icon: "/images/icons/stress-free.svg",
   },
   {
     title: "Secure and transparent",
     description: "Know exactly what's happening with your money.",
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/icons/secure.svg",
+    icon: "/images/icons/secure.svg",
   },
   {
     title: "Built with trust",
     description: "Institutional-grade security measures available.",
-    icon: "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/icons/trust.svg",
+    icon: "/images/icons/trust.svg",
   },
 ];
 

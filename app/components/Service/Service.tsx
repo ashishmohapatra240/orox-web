@@ -22,7 +22,7 @@ const Service = ({ tag, description }: ServiceProps) => {
         {/* Mobile Background */}
         <div className="absolute inset-0 h-auto w-full overflow-hidden rounded-2xl sm:hidden">
           <Image
-            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/bg-tile-phone.png"
+            src="/images/service/bg-tile-phone.png"
             alt="Background pattern"
             fill
             className="opacity-100 object-cover"
@@ -32,7 +32,7 @@ const Service = ({ tag, description }: ServiceProps) => {
         {/* Desktop/Tablet Background */}
         <div className="absolute inset-0 h-full w-full overflow-hidden rounded-2xl hidden sm:block">
           <Image
-            src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/service/bg-tile.png"
+            src="/images/service/bg-tile.png"
             alt="Background pattern"
             fill
             className="opacity-100 object-cover"

@@ -17,9 +17,9 @@ const upcomingProducts = [
       "Use your investments in the real world with an OROX debit card. Make purchases or withdraw cash—all while keeping your portfolio growing.",
     // image: {
     //   default:
-    //     "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains.png",
+    //     "/images/products/spend-gains.png",
     //   mobile:
-    //     "https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/products/spend-gains-mobile.png",
+    //     "/images/products/spend-gains-mobile.png",
     // },
 
     image: "/images/products/spend-gain.png",

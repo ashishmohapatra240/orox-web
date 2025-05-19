@@ -843,7 +843,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* <Image
-                  src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                  src="/images/qr-code.png"
                   alt="QR Code"
                   width={220}
                   height={220}
@@ -926,7 +926,7 @@ export const Navbar = () => {
                 {/* QR Code */}
                 <div className="block mb-8">
                   <Image
-                    src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                    src="/images/qr-code.png"
                     alt="OROX App QR Code"
                     width={300}
                     height={300}
@@ -982,7 +982,7 @@ export const Navbar = () => {
                     {/* QR Code */}
                     <div className="block mb-8">
                       <Image
-                        src="https://raw.githubusercontent.com/ashishmohapatra240/orox-web/refs/heads/main/public/images/qr-code.png"
+                        src="/images/qr-code.png"
                         alt="OROX App QR Code"
                         width={300}
                         height={300}
