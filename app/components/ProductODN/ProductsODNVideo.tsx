@@ -10,17 +10,13 @@ const products = [
         <span> Getting started with ODN </span>
         <span className="relative inline-block z-10">
           <span className="absolute left-0 top-[35%] -z-10 h-[80%] w-full bg-[#C9CCE0]/40 rounded-[4px]" />
-          is simple
+          is simple.
         </span>
       </>
     ),
     description: (
       <>
-        Once you create an account and fund your wallet, your investment enters
-        the next 90-day cycle. Each cycle runs on a market-neutral strategy
-        managed by our algorithmic trading system, designed to minimise
-        volatility and deliver consistent, risk-adjusted returns. At the end of
-        the cycle, you can choose to reinvest, withdraw or adjust your position.
+        Once you create and fund your account, a subscription enters the next 90-day cycle. Each cycle runs on market-neutral strategies managed by our algorithmic trading system, designed to minimise volatility and deliver consistent, risk-adjusted returns. At the end of the cycle, you can choose to reinvest, withdraw or adjust your position.
       </>
     ),
     firstVideo: "/videos/OROXAnimation1.mp4",
