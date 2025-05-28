@@ -102,7 +102,7 @@ export const ProductDVOXHero = () => {
                         />
                       </div>
                       <div className="text-[#E0C49F] text-[12px] font-normal">
-                        Until next price increase
+                        Until presale begins
                       </div>
                     </div>
                   </div>
@@ -268,7 +268,13 @@ export const ProductDVOXHero = () => {
                 variant="secondary"
                 className="mt-8 h-12 px-8 whitespace-nowrap w-full md:w-auto"
               >
-                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Get started</Link>
+                <Link
+                  href="https://orox-plus.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get started
+                </Link>
               </Button>
             </div>
           </div>
