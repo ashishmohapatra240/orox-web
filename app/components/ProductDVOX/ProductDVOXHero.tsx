@@ -6,7 +6,7 @@ import { ComingSoonModal } from "../ui/ComingSoonModal";
 import Link from "next/link";
 
 const calculateTimeLeft = () => {
-  const targetDate = new Date("2025-07-01T00:00:00");
+  const targetDate = new Date("2025-08-15T00:00:00");
   const now = new Date();
   const difference = targetDate.getTime() - now.getTime();
 
