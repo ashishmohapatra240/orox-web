@@ -269,7 +269,7 @@ export const ProductDVOXHero = () => {
                 className="mt-8 h-12 px-8 whitespace-nowrap w-full md:w-auto"
               >
                 <Link
-                  href="https://orox-plus.web.app/"
+                  href="https://orox.app/register"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

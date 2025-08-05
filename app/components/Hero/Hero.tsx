@@ -36,7 +36,7 @@ export const Hero = () => {
                   </span>
                 </h1>
                 <p className="max-w-[300px] md:max-w-[570px] text-[16px] md:text-[20px] text-[#19191B] leading-[24px] md:leading-[32px] mt-[24px]">
-                Forget stock-picking, market timing, and chasing the next bull run. OROX gives you access to algorithm-driven, professional-grade strategies for smarter growth.
+                  Forget stock-picking, market timing, and chasing the next bull run. OROX gives you access to algorithm-driven, professional-grade strategies for smarter growth.
                 </p>
               </div>
 
@@ -45,7 +45,7 @@ export const Hero = () => {
                   variant="primary"
                   className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 inline-flex text-white font-bold text-[16px] md:text-[20px] transition-colors mb-[64px] md:mb-[50px] mt-[40px]"
                 >
-                  <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Join for free</Link>
+                  <Link href="https://orox.app/join-waitlist" target="_blank" rel="noopener noreferrer">Join waitlist</Link>
                 </Button>
               </div>
             </div>

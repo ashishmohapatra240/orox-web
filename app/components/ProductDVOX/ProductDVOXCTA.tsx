@@ -32,7 +32,7 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className="w-full text-[#293483] hover:bg-gray-100"
             >
-              <Link href="http://opusmomentus.com/coming-soon">
+              <Link href="https://orox.app/register">
                 Get started with DVOX
               </Link>
             </Button>
@@ -66,7 +66,7 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className="max-w-[280px] text-[#293483] hover:bg-gray-100"
             >
-              <Link href="http://opusmomentus.com/coming-soon">
+              <Link href="https://orox.app/register">
                 Get started with DVOX
               </Link>{" "}
             </Button>
@@ -100,7 +100,7 @@ export const ProductDVOXCTA = () => {
               variant="secondary"
               className=" text-[#293483] hover:bg-gray-100 px-[32px] py-[16px] text-[20px]"
             >
-              <Link href="http://opusmomentus.com/coming-soon">
+              <Link href="https://orox.app/register">
                 Get started with DVOX
               </Link>{" "}
             </Button>

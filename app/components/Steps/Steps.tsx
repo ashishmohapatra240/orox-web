@@ -234,7 +234,7 @@ export const Steps = () => {
                 </div>
               </div>
               <div className="flex justify-between mt-[36px] pb-[0] md:pb-[72px] items-center">
-                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">
+                <Link href="https://orox.app/register" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="secondary"
                     className="py-[12px] px-[16px] md:px-[32px] md:py-4 text-[16px] md:text-[20px] font-[600] w-full md:w-auto text-[#293483] whitespace-nowrap "

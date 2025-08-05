@@ -32,7 +32,7 @@ export const ProductODNFeatures = () => {
       title="ODN is your shortcut to stable investment"
       description="Invest with confidence. ODN offers risk-adjusted, hands-off investing designed for long-term stability. With a 90-day cycle and market-neutral strategies, ODN minimises volatility while maximising steady returns."
       cta="Get started with DVOX"
-      path="/products-dvox"
+      path="https://orox.app/register"
       features={odnFeatures}
     />
   );

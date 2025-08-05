@@ -38,7 +38,7 @@ const AboutHero = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4 mt-[32px] md:mt-[36px] lg:mt-[36px] xl:mt-[40px]">
               <Button variant="white" className="whitespace-nowrap px-[32px]">
-                <Link href="https://orox-plus.web.app/" target="_blank" rel="noopener noreferrer">Join for free</Link>
+                <Link href="https://orox.app/join-waitlist" target="_blank" rel="noopener noreferrer">Join waitlist</Link>
               </Button>
               <Button variant="outline" className="whitespace-nowrap px-[32px]">
                 <Link href="/contact">Get in touch with us</Link>

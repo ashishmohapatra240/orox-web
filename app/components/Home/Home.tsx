@@ -24,7 +24,7 @@ export default function LandingPage() {
         }
         description="Skip the FOMO and stress with AI-powered strategies built by industry-leading experts."
         cta="Create an account"
-        path="https://orox-plus.web.app/"
+        path="https://orox.app/register"
       />
       <Steps />
       <HomeProducts />

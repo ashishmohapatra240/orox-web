@@ -802,7 +802,7 @@ export const Navbar = () => {
             <div className="px-6 pb-8 mt-[24px]">
               <div className="space-y-3 mt-[64px] mb-[24px]">
                 <Link
-                  href="https://orox-plus.web.app/"
+                  href="https://orox.app/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -818,7 +818,7 @@ export const Navbar = () => {
                   </Button>
                 </Link>
                 <Link
-                  href="https://orox-plus.web.app/"
+                  href="https://orox.app/join-waitlist"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full block"
@@ -827,7 +827,7 @@ export const Navbar = () => {
                     variant={isDarkTheme ? "secondary" : "primary"}
                     className={`w-full rounded-full whitespace-nowrap`}
                   >
-                    Join for free
+                    Join Waitlist
                   </Button>
                 </Link>
               </div>
@@ -868,7 +868,7 @@ export const Navbar = () => {
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4">
           <Link
-            href="https://orox-plus.web.app/"
+            href="https://orox.app/login"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -880,7 +880,7 @@ export const Navbar = () => {
             </Button>
           </Link>
           <Link
-            href="https://orox-plus.web.app/"
+            href="https://orox.app/join-waitlist"
             target="_blank"
             rel="noopener noreferrer"
           >
