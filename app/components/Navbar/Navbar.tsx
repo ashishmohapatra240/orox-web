@@ -587,6 +587,7 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1 md:space-x-3 lg:space-x-5">
+          <Link href="/products">
           <Dropdown
             label="Products"
             isDarkTheme={isDarkTheme}
@@ -615,6 +616,7 @@ export const Navbar = () => {
           >
             <ProductsDropdown isDarkTheme={isDarkTheme} />
           </Dropdown>
+          </Link>
 
           {/* <Link
             href="/"
