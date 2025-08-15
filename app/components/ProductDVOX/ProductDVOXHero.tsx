@@ -1,45 +1,45 @@
 "use client";
 import { Button } from "../ui/Button";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ComingSoonModal } from "../ui/ComingSoonModal";
 import Link from "next/link";
 
-const calculateTimeLeft = () => {
-  const targetDate = new Date("2025-08-15T00:00:00");
-  const now = new Date();
-  const difference = targetDate.getTime() - now.getTime();
+// const calculateTimeLeft = () => {
+//   const targetDate = new Date("2025-08-15T00:00:00");
+//   const now = new Date();
+//   const difference = targetDate.getTime() - now.getTime();
 
-  if (difference <= 0) {
-    return { days: "00", hours: "00", minutes: "00", seconds: "00" };
-  }
+//   if (difference <= 0) {
+//     return { days: "00", hours: "00", minutes: "00", seconds: "00" };
+//   }
 
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+//   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor(
+//     (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//   );
+//   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-  return {
-    days: days.toString().padStart(2, "0"),
-    hours: hours.toString().padStart(2, "0"),
-    minutes: minutes.toString().padStart(2, "0"),
-    seconds: seconds.toString().padStart(2, "0"),
-  };
-};
+//   return {
+//     days: days.toString().padStart(2, "0"),
+//     hours: hours.toString().padStart(2, "0"),
+//     minutes: minutes.toString().padStart(2, "0"),
+//     seconds: seconds.toString().padStart(2, "0"),
+//   };
+// };
 
 export const ProductDVOXHero = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // const handleActionClick = () => {
   //   setIsModalOpen(true);
@@ -57,21 +57,33 @@ export const ProductDVOXHero = () => {
                   {/* Logo and Title */}
                   <div className="flex-shrink-0">
                     <Image
-                      src="/images/products/Bull.png"
+                      src="/images/products/DVOX Coin.png"
                       alt="DVOX Logo"
                       width={80}
                       height={80}
                       className="w-[80px] h-[80px] rounded-full mb-[16px]"
                     />
                     <div className="text-[#B89C49] text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-amber-300  to-yellow-600 ">
-                      NEW DIGITAL TOKEN - COMING SOON
+                      NEW DIGITAL TOKEN: PRIVATE PRE-SALE
                     </div>
                     <h2 className="text-[28px] md:text-[36px] font-bold leading-[32px] md:leading-[48px] mt-[8px] mb-[16px]">
-                      Don&apos;t miss out on the new DVOX token presale!
+                      Don&apos;t miss out on the new DVOX token private sale!
                     </h2>
                   </div>
+                  <Link href={"/contact"}>
+                    <Button variant="dvox" className="whitespace-nowrap w-full">
+                      <Image
+                        src="/icons/ic_email.svg"
+                        alt="Contact"
+                        width={20}
+                        height={20}
+                      />
+                      <p className="py-[4px]">Contact us for more details</p>
+
+                    </Button>
+                  </Link>
                   {/* Timer */}
-                  <div className=" px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
+                  {/* <div className=" px-4 pt-[16px] pb-2 bg-gradient-to-r from-yellow-950 to-stone-900 rounded-2xl flex flex-col justify-center items-center gap-2 flex-shrink-0">
                     <div className="inline-flex justify-start items-center gap-2 md:gap-8">
                       {[
                         { label: "DAYS", value: timeLeft.days },
@@ -105,7 +117,7 @@ export const ProductDVOXHero = () => {
                         Until presale begins
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Progress Bar */}
                   {/* <div className="flex-shrink-0">
@@ -156,15 +168,14 @@ export const ProductDVOXHero = () => {
                       </div>
                       <hr className="w-1/4 h-tiny bg-[#C9CCE0] ml-[16px]" />
                     </div> */}
-
-                    {/*to be deleted later*/}
+                    {/* 
                     <div className="flex items-center justify-center pt-[16px]">
                       <hr className="w-1/4 h-tiny bg-[#C9CCE0] mr-[16px]" />
                       <div className="text-[16px] md:text-[12px] text-[#C9CCE0] leading-[24px] md:leading-[16px] font-semibold">
                         1 DVOX = $0.01
                       </div>
                       <hr className="w-1/4 h-tiny bg-[#C9CCE0] ml-[16px]" />
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Buttons */}
