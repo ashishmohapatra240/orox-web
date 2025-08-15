@@ -14,7 +14,7 @@ const DVOXChart = () => (
       priority
     />
     <Image
-      src="/images/products/Bull.png"
+      src="/images/products/3D-Coin.png"
       alt="Bull Icon"
       width={180}
       height={180}
