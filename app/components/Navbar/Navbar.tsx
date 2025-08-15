@@ -888,7 +888,7 @@ export const Navbar = () => {
               variant={isDarkTheme ? "secondary" : "primary"}
               className="px-3 md:px-4 lg:px-6 whitespace-nowrap"
             >
-              Join for free
+              Join waitlist
             </Button>
           </Link>
 
