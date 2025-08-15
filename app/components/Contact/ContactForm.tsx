@@ -36,6 +36,11 @@ export default function ContactForm() {
   });
   const [focusedField, setFocusedField] = useState<FocusedField>(null);
   const [errors, setErrors] = useState<Partial<ContactInput>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   const validateField = (field: keyof ContactInput, value: string) => {
     try {
@@ -48,12 +53,47 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitStatus({ type: null, message: "" });
+
     try {
+      // Validate form data
       contactSchema.parse(formData);
-      console.log(formData);
-      // Proceed with form submission
+      setErrors({});
+
+      // Set loading state
+      setIsSubmitting(true);
+
+      // Submit to API
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          mobile: "",
+          reason: "",
+          message: "",
+        });
+      } else {
+        const errorData = await response.json();
+        setSubmitStatus({
+          type: "error",
+          message: errorData.message || "Failed to send message. Please try again.",
+        });
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Partial<ContactInput> = {};
@@ -63,7 +103,14 @@ export default function ContactForm() {
           }
         });
         setErrors(fieldErrors);
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: "An unexpected error occurred. Please try again.",
+        });
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -93,13 +140,12 @@ export default function ContactForm() {
               {/* Name Field */}
               <div className="relative">
                 <div
-                  className={`relative h-[56px] rounded-[12px] border ${
-                    focusedField === "name"
+                  className={`relative h-[56px] rounded-[12px] border ${focusedField === "name"
                       ? "border-[#19191B]"
                       : errors.name
-                      ? "border-[#C91F3B]"
-                      : "border-[#E5E5E5]"
-                  }`}
+                        ? "border-[#C91F3B]"
+                        : "border-[#E5E5E5]"
+                    }`}
                 >
                   <input
                     type="text"
@@ -117,11 +163,10 @@ export default function ContactForm() {
                     placeholder=" "
                   />
                   <div
-                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                      formData.name || focusedField === "name"
+                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.name || focusedField === "name"
                         ? "text-[12px] -top-2.5 bg-white px-1"
                         : "text-[16px] top-4"
-                    } text-[#19191B]`}
+                      } text-[#19191B]`}
                   >
                     Your name<span className="text-[#C91F3B]">*</span>
                   </div>
@@ -136,13 +181,12 @@ export default function ContactForm() {
               {/* Email Field */}
               <div className="relative">
                 <div
-                  className={`relative h-[56px] rounded-[12px] border ${
-                    focusedField === "email"
+                  className={`relative h-[56px] rounded-[12px] border ${focusedField === "email"
                       ? "border-[#19191B]"
                       : errors.email
-                      ? "border-[#C91F3B]"
-                      : "border-[#E5E5E5]"
-                  }`}
+                        ? "border-[#C91F3B]"
+                        : "border-[#E5E5E5]"
+                    }`}
                 >
                   <input
                     type="email"
@@ -160,11 +204,10 @@ export default function ContactForm() {
                     placeholder=" "
                   />
                   <div
-                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                      formData.email || focusedField === "email"
+                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.email || focusedField === "email"
                         ? "text-[12px] -top-2.5 bg-white px-1"
                         : "text-[16px] top-4"
-                    } text-[#19191B]`}
+                      } text-[#19191B]`}
                   >
                     Email<span className="text-[#C91F3B]">*</span>
                   </div>
@@ -179,13 +222,12 @@ export default function ContactForm() {
               {/* Mobile Field */}
               <div className="relative">
                 <div
-                  className={`relative h-[56px] rounded-[12px] border ${
-                    focusedField === "mobile"
+                  className={`relative h-[56px] rounded-[12px] border ${focusedField === "mobile"
                       ? "border-[#19191B]"
                       : errors.mobile
-                      ? "border-[#C91F3B]"
-                      : "border-[#E5E5E5]"
-                  }`}
+                        ? "border-[#C91F3B]"
+                        : "border-[#E5E5E5]"
+                    }`}
                 >
                   <input
                     type="tel"
@@ -203,11 +245,10 @@ export default function ContactForm() {
                     placeholder=" "
                   />
                   <div
-                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                      formData.mobile || focusedField === "mobile"
+                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.mobile || focusedField === "mobile"
                         ? "text-[12px] -top-2.5 bg-white px-1"
                         : "text-[16px] top-4"
-                    } text-[#19191B]`}
+                      } text-[#19191B]`}
                   >
                     Mobile<span className="text-[#C91F3B]">*</span>
                   </div>
@@ -222,13 +263,12 @@ export default function ContactForm() {
               {/* Reason Dropdown */}
               <div className="relative">
                 <div
-                  className={`relative h-[56px] rounded-[12px] border ${
-                    focusedField === "reason"
+                  className={`relative h-[56px] rounded-[12px] border ${focusedField === "reason"
                       ? "border-[#19191B]"
                       : errors.reason
-                      ? "border-[#C91F3B]"
-                      : "border-[#E5E5E5]"
-                  }`}
+                        ? "border-[#C91F3B]"
+                        : "border-[#E5E5E5]"
+                    }`}
                 >
                   <select
                     value={formData.reason}
@@ -251,11 +291,10 @@ export default function ContactForm() {
                     ))}
                   </select>
                   <div
-                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                      formData.reason || focusedField === "reason"
+                    className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.reason || focusedField === "reason"
                         ? "text-[12px] -top-2.5 bg-white px-1"
                         : "text-[16px] top-4"
-                    } text-[#19191B]`}
+                      } text-[#19191B]`}
                   >
                     Reason for contact<span className="text-[#C91F3B]">*</span>
                   </div>
@@ -279,13 +318,12 @@ export default function ContactForm() {
             {/* Message Field */}
             <div className="relative">
               <div
-                className={`relative rounded-[12px] border ${
-                  focusedField === "message"
+                className={`relative rounded-[12px] border ${focusedField === "message"
                     ? "border-[#19191B]"
                     : errors.message
-                    ? "border-[#C91F3B]"
-                    : "border-[#E5E5E5]"
-                }`}
+                      ? "border-[#C91F3B]"
+                      : "border-[#E5E5E5]"
+                  }`}
               >
                 <textarea
                   value={formData.message}
@@ -302,11 +340,10 @@ export default function ContactForm() {
                   placeholder=" "
                 />
                 <div
-                  className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                    formData.message || focusedField === "message"
+                  className={`absolute left-4 transition-all duration-200 pointer-events-none ${formData.message || focusedField === "message"
                       ? "text-[12px] -top-2.5 bg-white px-1"
                       : "text-[16px] top-4"
-                  } text-[#19191B]`}
+                    } text-[#19191B]`}
                 >
                   Type your message
                 </div>
@@ -318,14 +355,26 @@ export default function ContactForm() {
               )}
             </div>
 
+            {submitStatus.type && (
+              <div
+                className={`p-4 rounded-lg text-center ${submitStatus.type === "success"
+                    ? "bg-green-50 text-green-800 border border-green-200"
+                    : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="flex justify-center md:justify-end w-full pt-[24px]">
               <Button
                 variant="primary"
                 type="submit"
-                className="w-full md:w-auto px-[16px] py-[12px] md:px-[32px] md:py-[16px] text-[16px] md:text-[20px] font-bold"
+                disabled={isSubmitting}
+                className="w-full md:w-auto px-[16px] py-[12px] md:px-[32px] md:py-[16px] text-[16px] md:text-[20px] font-bold disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit
+                {isSubmitting ? "Sending..." : "Submit"}
               </Button>
             </div>
           </form>
